@@ -7,7 +7,17 @@ public class Entity : MonoBehaviour
     public float health_Max;
     public float resis;
     public float resis_Max;
+
+    /// <summary>
+    /// 耐力回复速度
+    /// </summary>
+    public float resis_ResponSpeed;
+
     public float attackValue;
+
+    public bool transBreakStun;
+
+    public bool beingBreakStun;
 
     public string StartStateName = "STEmpty";// Resources/Prefabs/State中的名称
 
@@ -116,5 +126,37 @@ public class Entity : MonoBehaviour
     public virtual void GetHurt(Entity entity)
     {
         health -= entity.attackValue;
+    }
+
+    /// <summary>
+    /// 降低耐性
+    /// </summary>
+    /// <param name="entity"></param>
+    public virtual void DetectResis(Entity entity)
+    {
+        if (entity is Player player)
+        {
+            if (!beingBreakStun)
+            {
+                resis = Mathf.Clamp(resis - player.attackResisValue, 0, resis_Max);//降低耐性
+                                                                                   //破防
+                if (Mathf.Approximately(resis, 0f))
+                {
+                    StartBreakStun(player);
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// 被破防
+    /// </summary>
+    /// <param name="entity"></param>
+    public virtual void StartBreakStun(Entity entity)
+    {
+        transBreakStun = true;
+
+        //慢动作、近镜头
+
     }
 }

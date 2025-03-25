@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
-public class STPlayerDefend : State
+public class STPlayerDefend_Achieve : State
 {
+    public Entity target;
     public override void StateExit(Entity entity)
     {
         Destroy(gameObject);
@@ -17,8 +19,17 @@ public class STPlayerDefend : State
         //速度为0
         Player player = (Player)entity;
         player._rb.velocity = Vector2.zero;
-        //defend-cd
-        player.cd_DefendOrAngry = player.cdMax_DefendOrAngry;
+
+        //降低目标耐性
+        target = player.transDefend_achieve_TgtEntity;
+        target.resis -= player.attackResisValue * 1.5f;
+
+        //转换条件
+        player.transDefend_Achieve = false;
+        player.transDefend_achieve_TgtEntity = null;
+
+        //no defend-cd
+        player.cd_DefendOrAngry = 0f;
     }
 
     public override void UPStateBehaviour(Entity entity)

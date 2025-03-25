@@ -33,7 +33,7 @@ public abstract class State : MonoBehaviour
     ////////////////
     //-------------方法------------
     ////////////////
-    public bool Finished()
+    public virtual bool Finished(Entity entity)
     {
         if (playableDirector.time >= playableDirector.duration)
         {

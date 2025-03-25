@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8826278015195682173}
   - component: {fileID: 8826278015195682172}
   m_Layer: 0
-  m_Name: STEnemy_WarriorStun
+  m_Name: STEnemy_WarriorBreakStun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

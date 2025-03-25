@@ -28,9 +28,18 @@ public class Enemy_Warrior : Entity
     public override void UPCheckStateTrans()
     {
         base.UPCheckStateTrans();
+
+        //任意状态
+        if (transBreakStun)         //破防硬直
+        {
+            StateCurrent = InstantiateState("STEnemy_WarriorBreakStun");
+            return;
+        }
+
+
         if (stateCurrentName == "STEnemy_WarriorAttack")    //攻击
         {
-            if (StateCurrent.Finished())                    //待机
+            if (StateCurrent.Finished(this))                    //待机
             {
                 StateCurrent = InstantiateState("STEnemy_WarriorIdle");
             }
@@ -42,9 +51,12 @@ public class Enemy_Warrior : Entity
                 StateCurrent = InstantiateState("STEnemy_WarriorAttack");
             }
         }
-        else if (stateCurrentName == "STEnemy_WarriorStun")
+        else if (stateCurrentName == "STEnemy_WarriorBreakStun")//破防硬直
         {
-
+            if (StateCurrent.Finished(this))                        //待机
+            {
+                StateCurrent = InstantiateState("STEnemy_WarriorIdle");
+            }
         }
 
     }
