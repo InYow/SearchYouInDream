@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -7,6 +8,9 @@ public class Entity : MonoBehaviour
     public float health_Max;
     public float resis;
     public float resis_Max;
+
+    //buff集 <buff的名称，buff相关信息>
+    public Dictionary<string, Buff> buffs = new();
 
     /// <summary>
     /// 耐力回复速度
@@ -68,6 +72,8 @@ public class Entity : MonoBehaviour
         //-------------- 状态机 -----------------
         //帧初始化
         UPInit();
+        //buff集帧更新
+        UPBuffs();
         //帧输入
         UPInput();
         //检测状态转换
@@ -82,6 +88,17 @@ public class Entity : MonoBehaviour
     public virtual void UPInit()
     {
         StateCurrent.UPStateInit(this);
+    }
+
+    /// <summary>
+    /// buff集帧更新
+    /// </summary>
+    public virtual void UPBuffs()
+    {
+        foreach (var buff in buffs)
+        {
+            buff.Value.UpdateBuff(this);
+        }
     }
 
     /// <summary>
@@ -156,7 +173,48 @@ public class Entity : MonoBehaviour
     {
         transBreakStun = true;
 
-        //慢动作、近镜头
+        //将信息传递出去（player，UI提示）
 
+
+        //慢动作、近镜头
+        SlowMotion.StartSlow();
+    }
+
+    //----------------方法-buff集-----------------
+
+    /// <summary>
+    /// buff集包含buff
+    /// </summary>
+    /// <param name="buffName"></param>
+    /// <returns></returns>
+    public bool BuffContain(string buffName)
+    {
+        return buffs.ContainsKey(buffName);
+    }
+
+    public Buff BuffGet(string buffName)
+    {
+        buffs.TryGetValue(buffName, out Buff buff);
+        return buff;
+    }
+
+    public void BuffAdd(string buffName)
+    {
+        buffs.TryGetValue(buffName, out Buff buff);
+        //buff已存在
+        if (buff != null)
+        {
+            buff.AddAgain(this);
+        }
+        //buff未存在
+        else
+        {
+            GameObject buffPrbGO = Resources.Load<GameObject>("Prefabs/Buff/" + buffName);
+            buff = Instantiate(buffPrbGO, transform).GetComponent<Buff>();//实例化一个buff
+            //添加到buff集
+            buffs.Add(buff.BuffName, buff);
+            //生命周期-StartBuff()
+            buff.StartBuff(this);
+        }
     }
 }
