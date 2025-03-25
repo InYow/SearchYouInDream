@@ -95,8 +95,13 @@ public class Entity : MonoBehaviour
     /// </summary>
     public virtual void UPBuffs()
     {
+        //TODO:Unity字典遍历安全删除对象
         foreach (var buff in buffs)
         {
+            if (buff.Value == null) // 检查 Buff 是否被销毁
+            {
+                continue; // 跳过 Update 调用
+            }
             buff.Value.UpdateBuff(this);
         }
     }
@@ -174,16 +179,14 @@ public class Entity : MonoBehaviour
         transBreakStun = true;
 
         //将信息传递出去（player，UI提示）
+        MessageManager.BreakStun(this);
 
-
-        //慢动作、近镜头
-        SlowMotion.StartSlow();
     }
 
     //----------------方法-buff集-----------------
 
     /// <summary>
-    /// buff集包含buff
+    /// buff集是否包含buff
     /// </summary>
     /// <param name="buffName"></param>
     /// <returns></returns>
@@ -192,19 +195,29 @@ public class Entity : MonoBehaviour
         return buffs.ContainsKey(buffName);
     }
 
+    /// <summary>
+    /// 获得已有buff
+    /// </summary>
+    /// <param name="buffName"></param>
+    /// <returns></returns>
     public Buff BuffGet(string buffName)
     {
         buffs.TryGetValue(buffName, out Buff buff);
         return buff;
     }
 
-    public void BuffAdd(string buffName)
+    /// <summary>
+    /// 添加buff
+    /// </summary>
+    /// <param name="buffName"></param>
+    public Buff BuffAdd(string buffName)
     {
         buffs.TryGetValue(buffName, out Buff buff);
         //buff已存在
         if (buff != null)
         {
             buff.AddAgain(this);
+            return buff;
         }
         //buff未存在
         else
@@ -215,6 +228,21 @@ public class Entity : MonoBehaviour
             buffs.Add(buff.BuffName, buff);
             //生命周期-StartBuff()
             buff.StartBuff(this);
+            return buff;
+        }
+    }
+
+    /// <summary>
+    /// 移除buff
+    /// </summary>
+    /// <param name="buffName"></param>
+    public void BuffRemove(string buffName)
+    {
+        buffs.TryGetValue(buffName, out Buff buff);
+        if (buff != null)
+        {
+            buffs.Remove(buffName);
+            buff.FinishBuff(this);
         }
     }
 }

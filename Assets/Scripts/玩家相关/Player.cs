@@ -24,6 +24,7 @@ public class Player : Entity
     {
         base.Start();
         _rb = GetComponent<Rigidbody2D>();
+        MessageManager.ACBreakStun += GuideBreakAttack;
     }
 
     public override void Update()
@@ -72,6 +73,16 @@ public class Player : Entity
             transStun = false;
             StateCurrent = InstantiateState("STPlayerStun");
             return;
+        }
+
+        //拥有GuideBreakAttack的buff
+        if (BuffContain("BFPlayerGuideBreakAttack"))
+        {
+            if (Input.GetKeyDown(KeyCode.U))    //击破攻击
+            {
+                StateCurrent = InstantiateState("STPlayerBreakAttack");
+                BuffRemove("BFPlayerGuideBreakAttack");
+            }
         }
 
         //待机
@@ -198,16 +209,31 @@ public class Player : Entity
                 StateCurrent = InstantiateState("STPlayerDefend");
             }
         }
+        //击破攻击
+        else if (stateCurrentName == "STPlayerBreakAttack")
+        {
+            if (StateCurrent.Finished(this))                //待机 or 移动
+            {
+                if (dic_Input == Vector2.zero)              //待机
+                {
+                    StateCurrent = InstantiateState("STPlayerIdle");
+                }
+                else if (dic_Input != Vector2.zero)         //移动
+                {
+                    StateCurrent = InstantiateState("STPlayerWalk");
+                }
+            }
+        }
         //受击硬直
         else if (stateCurrentName == "STPlayerStun")
         {
             if (StateCurrent.Finished(this))             //待机 or 移动
             {
-                if (dic_Input == Vector2.zero)      //待机
+                if (dic_Input == Vector2.zero)          //待机
                 {
                     StateCurrent = InstantiateState("STPlayerIdle");
                 }
-                else if (dic_Input != Vector2.zero) //移动
+                else if (dic_Input != Vector2.zero)     //移动
                 {
                     StateCurrent = InstantiateState("STPlayerWalk");
                 }
@@ -318,5 +344,12 @@ public class Player : Entity
             base.GetHurt(entity);//扣health
             transStun = true;//进入硬直}
         }
+    }
+
+    public void GuideBreakAttack(Entity entity)
+    {
+        Buff buff = BuffAdd("BFPlayerGuideBreakAttack");
+        BFPlayerGuideBreakAttack BF = buff as BFPlayerGuideBreakAttack;
+        BF.e_target = entity;
     }
 }
