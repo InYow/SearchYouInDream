@@ -9,6 +9,12 @@ public class Entity : MonoBehaviour
     public float resis;
     public float resis_Max;
 
+    //状态机参数
+    public bool transExecution;
+    public Entity transExecution_DamageSourceEntity;
+    public string transExecution_Type;
+    public AttackBox transExecution_AttackBox;
+
     //buff集 <buff的名称，buff相关信息>
     public Dictionary<string, Buff> buffs = new();
 
@@ -143,20 +149,40 @@ public class Entity : MonoBehaviour
     /// 伤害Entity
     /// </summary>
     /// <param name="entity"></param>
-    public virtual void Hurt(Entity entity)
+    public virtual void Hurt(Entity entity, AttackBox attackBox)
     {
-        entity.GetHurt(this);
+        entity.GetHurt(this, attackBox);
     }
 
     /// <summary>
     /// 被Entity伤害
     /// </summary>
     /// <param name="entity"></param>
-    public virtual void GetHurt(Entity entity)
+    public virtual void GetHurt(Entity entity, AttackBox attackBox)
     {
         if (!BuffContain("BFPlayerUnselected"))
         {
             health -= entity.attackValue;
+
+            //死掉了
+            if (health <= 0f)
+            {
+                Execution(entity, attackBox);
+            }
+        }
+    }
+
+    /// <summary>
+    /// 处决死亡
+    /// </summary>
+    public virtual void Execution(Entity entity, AttackBox attackBox)
+    {
+        if (attackBox.descrition == "")
+        {
+            transExecution = true;
+            transExecution_Type = "fly";
+            transExecution_DamageSourceEntity = entity;
+            transExecution_AttackBox = attackBox;
         }
     }
 

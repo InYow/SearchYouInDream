@@ -6,8 +6,9 @@ using UnityEngine;
 public class AttackBox : MonoBehaviour
 {
     public Vector2 boxSize = new Vector2(5f, 5f); // 矩形区域大小
-    public LayerMask targetLayer; // 目标层
+    public LayerMask targetLayer;   // 目标层
     public Entity entity_master;
+    public string descrition;       //该攻击框的描述
 
     public List<Entity> entities = new();
     private void OnEnable()
@@ -34,14 +35,12 @@ public class AttackBox : MonoBehaviour
                 var e = col.gameObject.GetComponent<Entity>();
                 if (e != null && e != entity_master && !entities.Contains(e))
                 {
-                    entity_master.Hurt(e);
+                    entity_master.Hurt(e, this);
                     entities.Add(e);
                 }
             }
         }
     }
-
-
 
     void OnDrawGizmos()
     {

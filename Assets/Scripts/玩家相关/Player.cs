@@ -107,15 +107,16 @@ public class Player : Entity
         {
             if (Input.GetKey(KeyCode.A))
             {
-                Debug.Log("技能-A");
+                Debug.Log("释放终结技");
+                //StateCurrent = InstantiateState(SkillManager.GetSkillName(1));
             }
             if (Input.GetKey(KeyCode.W))
             {
-                Debug.Log("技能-W");
+                StateCurrent = InstantiateState(SkillManager.GetSkillName(2));
             }
             if (Input.GetKey(KeyCode.S))
             {
-                Debug.Log("技能-S");
+                StateCurrent = InstantiateState(SkillManager.GetSkillName(3));
             }
             if (Input.GetKey(KeyCode.D))
             {
@@ -350,6 +351,34 @@ public class Player : Entity
         }
 
         //-----技能-----
+        else if (stateCurrentName == "STPlayerSkillW1")
+        {
+            if (StateCurrent.Finished(this))                //待机 or 移动
+            {
+                if (dic_Input == Vector2.zero)              //待机
+                {
+                    StateCurrent = InstantiateState("STPlayerIdle");
+                }
+                else if (dic_Input != Vector2.zero)         //移动
+                {
+                    StateCurrent = InstantiateState("STPlayerWalk");
+                }
+            }
+        }
+        else if (stateCurrentName == "STPlayerSkillS1")
+        {
+            if (StateCurrent.Finished(this))                //待机 or 移动
+            {
+                if (dic_Input == Vector2.zero)              //待机
+                {
+                    StateCurrent = InstantiateState("STPlayerIdle");
+                }
+                else if (dic_Input != Vector2.zero)         //移动
+                {
+                    StateCurrent = InstantiateState("STPlayerWalk");
+                }
+            }
+        }
         else if (stateCurrentName == "STPlayerSkillD1")
         {
             if (StateCurrent.Finished(this))                //待机 or 移动
@@ -382,9 +411,9 @@ public class Player : Entity
         cd_DefendOrAngry = Mathf.Clamp(cd_DefendOrAngry - Time.deltaTime, 0f, cd_DefendOrAngry);
     }
     //-----------------方法-----------------
-    public override void Hurt(Entity entity)
+    public override void Hurt(Entity entity, AttackBox attackBox)
     {
-        base.Hurt(entity);
+        base.Hurt(entity, attackBox);
 
         //治疗灰色生命
         float h = healthGray - health;
@@ -397,7 +426,7 @@ public class Player : Entity
         entity.DetectResis(this);
     }
 
-    public override void GetHurt(Entity entity)
+    public override void GetHurt(Entity entity, AttackBox attackBox)
     {
         if (stateCurrentName == "STPlayerDefend")
         {
@@ -410,7 +439,7 @@ public class Player : Entity
         }
         else
         {
-            base.GetHurt(entity);//扣health
+            base.GetHurt(entity, attackBox);//扣health
             transStun = true;//进入硬直}
         }
     }

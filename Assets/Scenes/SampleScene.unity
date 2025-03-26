@@ -581,6 +581,10 @@ MonoBehaviour:
   health_Max: 10
   resis: 1
   resis_Max: 1
+  transExecution: 0
+  transExecution_DamageSourceEntity: {fileID: 0}
+  transExecution_Type: 
+  transExecution_AttackBox: {fileID: 0}
   resis_ResponSpeed: 1
   attackValue: 1
   transBreakStun: 0
@@ -652,7 +656,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!4 &589571563
 Transform:
   m_ObjectHideFlags: 0
@@ -936,7 +940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5584688857841016594, guid: d0f8bd09b404bcb4a91ac89aa4811ae8, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5584688857841016594, guid: d0f8bd09b404bcb4a91ac89aa4811ae8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1068,6 +1072,7 @@ GameObject:
   - component: {fileID: 996811444}
   - component: {fileID: 996811443}
   - component: {fileID: 996811446}
+  - component: {fileID: 996811447}
   m_Layer: 6
   m_Name: Enemy_Warrior
   m_TagString: Untagged
@@ -1091,12 +1096,17 @@ MonoBehaviour:
   health_Max: 10
   resis: 10
   resis_Max: 10
+  transExecution: 0
+  transExecution_DamageSourceEntity: {fileID: 0}
+  transExecution_Type: 
+  transExecution_AttackBox: {fileID: 0}
   resis_ResponSpeed: 1
   attackValue: 1
   transBreakStun: 0
   beingBreakStun: 0
   StartStateName: STEnemy_WarriorAttack
   stateCurrentName: 
+  _rb: {fileID: 996811447}
 --- !u!212 &996811443
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1148,7 +1158,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &996811444
 Animator:
   serializedVersion: 5
@@ -1213,6 +1223,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.63173604, y: 0.5771457}
   m_EdgeRadius: 0
+--- !u!50 &996811447
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996811441}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1005343177
 GameObject:
   m_ObjectHideFlags: 0
@@ -2036,8 +2067,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skill1: 
-  skill2: 
-  skill3: 
+  skill2: STPlayerSkillW1
+  skill3: STPlayerSkillS1
   skill4: STPlayerSkillD1
 --- !u!1 &1563367617
 GameObject:
