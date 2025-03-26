@@ -9,7 +9,7 @@ public class BFPlayerGuideBreakAttack : Buff
     {
         base.StartBuff(entity);
 
-        //慢动作、近镜头
+        //TODO 慢动作、近镜头
         SlowMotion.StartSlow();
     }
     public override void UpdateBuff(Entity entity)

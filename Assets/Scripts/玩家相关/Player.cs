@@ -60,6 +60,32 @@ public class Player : Entity
         }
         dic_Input = dic_Input.normalized;
 
+        //进入技能输入时间
+        if (Input.GetKeyDown(KeyCode.I) && !BuffContain("BFPlayerGuideBreakAttack") && stateCurrentName != "STPlayerStun")
+        {
+            BuffAdd("BFPlayerSkillInputSlowMotion");
+        }
+        //技能输入时间期间
+        if (BuffContain("BFPlayerSkillInputSlowMotion"))
+        {
+            if (Input.GetKey(KeyCode.A))
+            {
+                SkillChooseUI.ChooseSkill("A");
+            }
+            if (Input.GetKey(KeyCode.W))
+            {
+                SkillChooseUI.ChooseSkill("W");
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                SkillChooseUI.ChooseSkill("S");
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                SkillChooseUI.ChooseSkill("D");
+            }
+        }
+
         base.UPInput();
     }
 
@@ -67,7 +93,8 @@ public class Player : Entity
     {
         base.UPCheckStateTrans();
 
-        //任意状态
+        //-----------任意状态-----------
+        //硬直
         if (transStun)
         {
             transStun = false;
@@ -75,15 +102,37 @@ public class Player : Entity
             return;
         }
 
-        //拥有GuideBreakAttack的buff
-        if (BuffContain("BFPlayerGuideBreakAttack"))
+        //技能释放
+        if (BuffContain("BFPlayerSkillInputSlowMotion") && Input.GetKeyUp(KeyCode.I))
         {
-            if (Input.GetKeyDown(KeyCode.U))    //击破攻击
+            if (Input.GetKey(KeyCode.A))
             {
-                StateCurrent = InstantiateState("STPlayerBreakAttack");
-                BuffRemove("BFPlayerGuideBreakAttack");
+                Debug.Log("技能-A");
             }
+            if (Input.GetKey(KeyCode.W))
+            {
+                Debug.Log("技能-W");
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                Debug.Log("技能-S");
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                StateCurrent = InstantiateState(SkillManager.GetSkillName(4));
+            }
+            BuffRemove("BFPlayerSkillInputSlowMotion");
+            return;
         }
+
+        //拥有GuideBreakAttack的buff        //击破攻击
+        if (BuffContain("BFPlayerGuideBreakAttack") && Input.GetKeyDown(KeyCode.U))
+        {
+            StateCurrent = InstantiateState("STPlayerBreakAttack");
+            BuffRemove("BFPlayerGuideBreakAttack");
+            return;
+        }
+        //-----------------------------
 
         //待机
         if (stateCurrentName == "STPlayerIdle")
@@ -299,6 +348,22 @@ public class Player : Entity
             }
 
         }
+
+        //-----技能-----
+        else if (stateCurrentName == "STPlayerSkillD1")
+        {
+            if (StateCurrent.Finished(this))                //待机 or 移动
+            {
+                if (dic_Input == Vector2.zero)              //待机
+                {
+                    StateCurrent = InstantiateState("STPlayerIdle");
+                }
+                else if (dic_Input != Vector2.zero)         //移动
+                {
+                    StateCurrent = InstantiateState("STPlayerWalk");
+                }
+            }
+        }
     }
 
     public override void UPStateBehaviour()
@@ -339,6 +404,10 @@ public class Player : Entity
             transDefend_Achieve = true;//进入弹反
             transDefend_achieve_TgtEntity = entity;
         }
+        else if (BuffContain("BFPlayerUnselected"))
+        {
+            //不操作
+        }
         else
         {
             base.GetHurt(entity);//扣health
@@ -346,10 +415,15 @@ public class Player : Entity
         }
     }
 
+    /// <summary>
+    /// 开始引导击破攻击。绑定到message manager了。
+    /// </summary>
+    /// <param name="entity"></param>
     public void GuideBreakAttack(Entity entity)
     {
         Buff buff = BuffAdd("BFPlayerGuideBreakAttack");
         BFPlayerGuideBreakAttack BF = buff as BFPlayerGuideBreakAttack;
         BF.e_target = entity;
     }
+
 }

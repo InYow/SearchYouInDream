@@ -95,14 +95,21 @@ public class Entity : MonoBehaviour
     /// </summary>
     public virtual void UPBuffs()
     {
-        //TODO:Unity字典遍历安全删除对象
+        //字典遍历安全删除对象
+        List<string> keysToRemove = new List<string>(); // 记录待删除的键
         foreach (var buff in buffs)
         {
             if (buff.Value == null) // 检查 Buff 是否被销毁
             {
+                keysToRemove.Add(buff.Key); // 记录要删除的键
                 continue; // 跳过 Update 调用
             }
             buff.Value.UpdateBuff(this);
+        }
+        // 删除所有标记的 Buff
+        foreach (string key in keysToRemove)
+        {
+            buffs.Remove(key);
         }
     }
 
@@ -147,7 +154,10 @@ public class Entity : MonoBehaviour
     /// <param name="entity"></param>
     public virtual void GetHurt(Entity entity)
     {
-        health -= entity.attackValue;
+        if (!BuffContain("BFPlayerUnselected"))
+        {
+            health -= entity.attackValue;
+        }
     }
 
     /// <summary>
@@ -243,6 +253,32 @@ public class Entity : MonoBehaviour
         {
             buffs.Remove(buffName);
             buff.FinishBuff(this);
+        }
+    }
+
+    /// <summary>
+    /// 翻转
+    /// </summary>
+    /// <param name="b"></param>
+    public virtual void FlipX(bool b)
+    {
+        if (!b)
+        {
+            Vector3 v = gameObject.transform.localScale;
+            v.x = 1f;
+            gameObject.transform.localScale = v;
+            //unscale
+            v.x = 1f;
+            transform.GetChild(0).localScale = v;
+        }
+        else if (b)
+        {
+            Vector3 v = gameObject.transform.localScale;
+            v.x = -1f;
+            gameObject.transform.localScale = v;
+            //unscale
+            v.x = -1f;
+            transform.GetChild(0).localScale = v;
         }
     }
 }

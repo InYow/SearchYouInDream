@@ -11,24 +11,13 @@ public class STPlayerWalk : State
         Player player = (Player)entity;
         Vector2 dic_input = player.dic_Input;
 
-        //翻转人物
         if (dic_input.x > 0f)
         {
-            Vector3 v = player.gameObject.transform.localScale;
-            v.x = 1f;
-            player.gameObject.transform.localScale = v;
-            //unscale
-            v.x = 1f;
-            player.transform.GetChild(0).localScale = v;
+            player.FlipX(false);
         }
         else if (dic_input.x < 0f)
         {
-            Vector3 v = player.gameObject.transform.localScale;
-            v.x = -1f;
-            player.gameObject.transform.localScale = v;
-            //unscale
-            v.x = -1f;
-            player.transform.GetChild(0).localScale = v;
+            player.FlipX(true);
         }
 
         //移动
