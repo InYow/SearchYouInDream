@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class BFPlayerGuideBreakAttack : Buff
 {
-    public Entity e_target;
+    public GameObject guideGO;  //引导UI
+    public Entity e_target;     //破防的敌人
     public override void StartBuff(Entity entity)
     {
         base.StartBuff(entity);
+        //值
+        Player player = entity as Player;
+        e_target = player.eTarget_BreakAttack;
 
-        //TODO 慢动作、近镜头
+        //TODO 慢动作、近镜头、UI提示
         SlowMotion.StartSlow();
+        //UI
+        guideGO.transform.SetParent(null);      //无视scale
+        guideGO.transform.localScale = Vector3.one;
+        guideGO.SetActive(true);
+        guideGO.transform.position = e_target.transform.position;
     }
     public override void UpdateBuff(Entity entity)
     {
@@ -31,7 +40,10 @@ public class BFPlayerGuideBreakAttack : Buff
         e_target = null;
 
 
-        //关闭慢动作、近镜头
+        //关闭慢动作、近镜头、UI
         SlowMotion.FinishSlow();
+        //UI
+        guideGO.SetActive(false);
+        guideGO.transform.localPosition = Vector3.zero;
     }
 }

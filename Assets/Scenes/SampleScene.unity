@@ -595,7 +595,7 @@ MonoBehaviour:
   healthGray_LoseSpeed: 1
   _rb: {fileID: 589571564}
   speed_walk: 3
-  attackResisValue: 1
+  attackResisValue: 3
   dic_Input: {x: 0, y: 0}
   transStun: 0
   transDefend_Achieve: 0
@@ -605,6 +605,7 @@ MonoBehaviour:
   time_StunMax: 3
   cd_DefendOrAngry: 0
   cdMax_DefendOrAngry: 5
+  eTarget_BreakAttack: {fileID: 0}
 --- !u!212 &589571562
 SpriteRenderer:
   m_ObjectHideFlags: 0

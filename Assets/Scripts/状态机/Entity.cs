@@ -214,7 +214,7 @@ public class Entity : MonoBehaviour
     {
         transBreakStun = true;
 
-        //将信息传递出去（player，UI提示）
+        //将信息传递出去
         MessageManager.BreakStun(this);
 
     }
