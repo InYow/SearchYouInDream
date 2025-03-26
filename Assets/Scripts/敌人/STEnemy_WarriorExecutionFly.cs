@@ -4,7 +4,7 @@ using UnityEngine;
 public class STEnemy_WarriorExecutionFly : State
 {
     public Entity damageSourceEntity;
-    public AttackBox damageSourceAttackBox;
+    public CheckBox damageSourceAttackBox;
     public float speed_fly;
     public float time_fly;
     public float timeMax_fly;

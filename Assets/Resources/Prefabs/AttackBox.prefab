@@ -44,9 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15edc2cdda12a7e45af0f217f807e9f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkBoxType: 0
+  entity_master: {fileID: 0}
   boxSize: {x: 1, y: 1}
-  targetLayer:
+  attackLayer:
     serializedVersion: 2
     m_Bits: 64
-  entity_master: {fileID: 0}
+  descrition: 
   entities: []
+  pickLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  picked: 0

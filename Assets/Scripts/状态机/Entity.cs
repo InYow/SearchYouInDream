@@ -13,7 +13,7 @@ public class Entity : MonoBehaviour
     public bool transExecution;
     public Entity transExecution_DamageSourceEntity;
     public string transExecution_Type;
-    public AttackBox transExecution_AttackBox;
+    public CheckBox transExecution_AttackBox;
 
     //buff集 <buff的名称，buff相关信息>
     public Dictionary<string, Buff> buffs = new();
@@ -149,7 +149,7 @@ public class Entity : MonoBehaviour
     /// 伤害Entity
     /// </summary>
     /// <param name="entity"></param>
-    public virtual void Hurt(Entity entity, AttackBox attackBox)
+    public virtual void Hurt(Entity entity, CheckBox attackBox)
     {
         entity.GetHurt(this, attackBox);
     }
@@ -158,7 +158,7 @@ public class Entity : MonoBehaviour
     /// 被Entity伤害
     /// </summary>
     /// <param name="entity"></param>
-    public virtual void GetHurt(Entity entity, AttackBox attackBox)
+    public virtual void GetHurt(Entity entity, CheckBox attackBox)
     {
         if (!BuffContain("BFPlayerUnselected"))
         {
@@ -175,7 +175,7 @@ public class Entity : MonoBehaviour
     /// <summary>
     /// 处决死亡
     /// </summary>
-    public virtual void Execution(Entity entity, AttackBox attackBox)
+    public virtual void Execution(Entity entity, CheckBox attackBox)
     {
         if (attackBox.descrition == "")
         {

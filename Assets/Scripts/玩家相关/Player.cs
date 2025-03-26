@@ -136,7 +136,7 @@ public class Player : Entity
         }
         //-----------------------------
 
-        //待机
+        //ST待机
         if (stateCurrentName == "STPlayerIdle")
         {
             if (Input.GetKeyDown(KeyCode.J))        //攻击
@@ -166,13 +166,17 @@ public class Player : Entity
                     StateCurrent = InstantiateState("STPlayerAttack04");
                 }
             }
-            else if (dic_Input != Vector2.zero) //移动
+            else if (dic_Input != Vector2.zero)                             //移动
             {
                 StateCurrent = InstantiateState("STPlayerWalk");
             }
-            else if (Input.GetKeyDown(KeyCode.K) && cd_DefendOrAngry <= 0f)//格挡
+            else if (Input.GetKeyDown(KeyCode.K) && cd_DefendOrAngry <= 0f) //格挡
             {
                 StateCurrent = InstantiateState("STPlayerDefend");
+            }
+            else if (Input.GetKeyDown(KeyCode.L))                            //拾取
+            {
+                StateCurrent = InstantiateState("STPlayerPick");
             }
         }
         //ST移动
@@ -447,7 +451,7 @@ public class Player : Entity
                 StateCurrent = InstantiateState("STPlayerDefend_Achieve");
             }
         }
-        //弹反
+        //ST弹反
         else if (stateCurrentName == "STPlayerDefend_Achieve")
         {
             if (StateCurrent.Finished(this) && dic_Input == Vector2.zero)//待机
@@ -489,8 +493,38 @@ public class Player : Entity
             {
                 StateCurrent = InstantiateState("STPlayerWalk");
             }
-
         }
+        //ST拾取
+        else if (stateCurrentName == "STPlayerPick")
+        {
+            if (StateCurrent.Finished(this))             //待机 or 移动
+            {
+                if (dic_Input == Vector2.zero)      //待机
+                {
+                    StateCurrent = InstantiateState("STPlayerIdle");
+                }
+                else if (dic_Input != Vector2.zero) //移动
+                {
+                    StateCurrent = InstantiateState("STPlayerWalk");
+                }
+            }
+        }
+        //ST投掷
+        else if (stateCurrentName == "STPlayerThrow")
+        {
+            if (StateCurrent.Finished(this))             //待机 or 移动
+            {
+                if (dic_Input == Vector2.zero)      //待机
+                {
+                    StateCurrent = InstantiateState("STPlayerIdle");
+                }
+                else if (dic_Input != Vector2.zero) //移动
+                {
+                    StateCurrent = InstantiateState("STPlayerWalk");
+                }
+            }
+        }
+
 
         //-----技能-----
         else if (stateCurrentName == "STPlayerSkillW1")
@@ -553,7 +587,7 @@ public class Player : Entity
         cd_DefendOrAngry = Mathf.Clamp(cd_DefendOrAngry - Time.deltaTime, 0f, cd_DefendOrAngry);
     }
     //-----------------方法-----------------
-    public override void Hurt(Entity entity, AttackBox attackBox)
+    public override void Hurt(Entity entity, CheckBox attackBox)
     {
         base.Hurt(entity, attackBox);
 
@@ -568,7 +602,7 @@ public class Player : Entity
         entity.DetectResis(this);
     }
 
-    public override void GetHurt(Entity entity, AttackBox attackBox)
+    public override void GetHurt(Entity entity, CheckBox attackBox)
     {
         if (stateCurrentName == "STPlayerDefend")
         {
