@@ -47,7 +47,7 @@ public class Enemy_Warrior : Enemy
         }
         //----------------------
 
-        if (stateCurrentName == "STEnemy_WarriorAttack")    //攻击
+        if (stateCurrentName == "STEnemy_WarriorAttack")        //攻击
         {
             if (StateCurrent.Finished(this))                    //待机
             {

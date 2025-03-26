@@ -56,6 +56,8 @@ public class Buff : MonoBehaviour
         time = 0f;
     }
 
+    //-----------方法------------
+
     /// <summary>
     /// 又被添加了一遍
     /// </summary>
