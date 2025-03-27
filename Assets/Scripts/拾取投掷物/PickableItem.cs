@@ -7,7 +7,14 @@ public class PickableItem : MonoBehaviour
     public Rigidbody2D _rb;
     public void Picked(Entity entity)
     {
-        transform.parent.SetParent(entity.transform);
+        Debug.Log(entity.name);
+        transform.SetParent(entity.transform, true);
         transform.localPosition = Vector3.zero;
+        _rb.simulated = false;
+    }
+
+    public void Throw(Entity entity)
+    {
+
     }
 }
