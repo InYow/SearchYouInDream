@@ -88,6 +88,14 @@ public class Player : Entity
                 SkillChooseUI.ChooseSkill("D");
             }
         }
+        //预输入
+        if (StateCurrent.GetCurrentStateInputWindType() == InputWindType.inputpre)
+        {
+            if (Input.GetKeyDown(KeyCode.J))
+            {
+                InputManager.LogPreInput(KeyCode.J);
+            }
+        }
 
         base.UPInput();
     }
@@ -168,7 +176,7 @@ public class Player : Entity
                     StateCurrent = InstantiateState("STPlayerAttack04");
                 }
             }
-            else if (dic_Input != Vector2.zero)                             //移动
+            else if (dic_Input != Vector2.zero && !BuffContain("BFPlayerSkillInputSlowMotion"))                             //移动
             {
                 StateCurrent = InstantiateState("STPlayerWalk");
             }
@@ -230,6 +238,17 @@ public class Player : Entity
             {
                 StateCurrent = InstantiateState("STPlayerDefend");
             }
+            else if (Input.GetKeyDown(KeyCode.L))   //拾取、投掷
+            {
+                if (pickableItem == null)   //拾取
+                {
+                    StateCurrent = InstantiateState("STPlayerPick");
+                }
+                else                        //投掷
+                {
+                    StateCurrent = InstantiateState("STPlayerThrow");
+                }
+            }
         }
         //攻击01
         else if (stateCurrentName == "STPlayerAttack01")
@@ -240,13 +259,14 @@ public class Player : Entity
                 {
                     StateCurrent = InstantiateState("STPlayerIdle");
                 }
-                else if (dic_Input != Vector2.zero) //移动
+                else if (dic_Input != Vector2.zero && !BuffContain("BFPlayerSkillInputSlowMotion")) //移动
                 {
                     StateCurrent = InstantiateState("STPlayerWalk");
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.J))    //攻击02
+            else if ((Input.GetKeyDown(KeyCode.J) || InputManager.ReadPreInput(KeyCode.J)) && StateCurrent.GetCurrentStateInputWindType() == InputWindType.inputable)    //攻击02
             {
+                InputManager.ClearPreInput();
                 StateCurrent = InstantiateState("STPlayerAttack02");
             }
             else if (Input.GetKeyDown(KeyCode.K) && cd_DefendOrAngry <= 0f)   //格挡
@@ -266,13 +286,14 @@ public class Player : Entity
                 {
                     StateCurrent = InstantiateState("STPlayerIdle");
                 }
-                else if (dic_Input != Vector2.zero) //移动
+                else if (dic_Input != Vector2.zero && !BuffContain("BFPlayerSkillInputSlowMotion")) //移动
                 {
                     StateCurrent = InstantiateState("STPlayerWalk");
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.J))    //攻击02
+            else if ((Input.GetKeyDown(KeyCode.J) || InputManager.ReadPreInput(KeyCode.J)) && StateCurrent.GetCurrentStateInputWindType() == InputWindType.inputable)    //攻击02
             {
+                InputManager.ClearPreInput();
                 StateCurrent = InstantiateState("STPlayerAttack02");
             }
             else if (Input.GetKeyDown(KeyCode.K) && cd_DefendOrAngry <= 0f)   //格挡
@@ -292,13 +313,14 @@ public class Player : Entity
                 {
                     StateCurrent = InstantiateState("STPlayerIdle");
                 }
-                else if (dic_Input != Vector2.zero) //移动
+                else if (dic_Input != Vector2.zero && !BuffContain("BFPlayerSkillInputSlowMotion")) //移动
                 {
                     StateCurrent = InstantiateState("STPlayerWalk");
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.J))    //攻击03
+            else if ((Input.GetKeyDown(KeyCode.J) || InputManager.ReadPreInput(KeyCode.J)) && StateCurrent.GetCurrentStateInputWindType() == InputWindType.inputable)    //攻击03
             {
+                InputManager.ClearPreInput();
                 StateCurrent = InstantiateState("STPlayerAttack03");
             }
             else if (Input.GetKeyDown(KeyCode.K) && cd_DefendOrAngry <= 0f)   //格挡
@@ -318,13 +340,14 @@ public class Player : Entity
                 {
                     StateCurrent = InstantiateState("STPlayerIdle");
                 }
-                else if (dic_Input != Vector2.zero) //移动
+                else if (dic_Input != Vector2.zero && !BuffContain("BFPlayerSkillInputSlowMotion")) //移动
                 {
                     StateCurrent = InstantiateState("STPlayerWalk");
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.J))    //攻击04
+            else if ((Input.GetKeyDown(KeyCode.J) || InputManager.ReadPreInput(KeyCode.J)) && StateCurrent.GetCurrentStateInputWindType() == InputWindType.inputable)    //攻击04
             {
+                InputManager.ClearPreInput();
                 StateCurrent = InstantiateState("STPlayerAttack04");
             }
             else if (Input.GetKeyDown(KeyCode.K) && cd_DefendOrAngry <= 0f)   //格挡
@@ -344,13 +367,14 @@ public class Player : Entity
                 {
                     StateCurrent = InstantiateState("STPlayerIdle");
                 }
-                else if (dic_Input != Vector2.zero) //移动
+                else if (dic_Input != Vector2.zero && !BuffContain("BFPlayerSkillInputSlowMotion")) //移动
                 {
                     StateCurrent = InstantiateState("STPlayerWalk");
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.J))    //攻击01
+            else if ((Input.GetKeyDown(KeyCode.J) || InputManager.ReadPreInput(KeyCode.J)) && StateCurrent.GetCurrentStateInputWindType() == InputWindType.inputable)    //攻击01
             {
+                InputManager.ClearPreInput();
                 StateCurrent = InstantiateState("STPlayerAttack01");
             }
             else if (Input.GetKeyDown(KeyCode.K) && cd_DefendOrAngry <= 0f)   //格挡
@@ -370,7 +394,7 @@ public class Player : Entity
                 {
                     StateCurrent = InstantiateState("STPlayerIdle");
                 }
-                else if (dic_Input != Vector2.zero)         //移动
+                else if (dic_Input != Vector2.zero && !BuffContain("BFPlayerSkillInputSlowMotion"))         //移动
                 {
                     StateCurrent = InstantiateState("STPlayerWalk");
                 }
@@ -385,7 +409,7 @@ public class Player : Entity
                 {
                     StateCurrent = InstantiateState("STPlayerIdle");
                 }
-                else if (dic_Input != Vector2.zero)     //移动
+                else if (dic_Input != Vector2.zero && !BuffContain("BFPlayerSkillInputSlowMotion"))     //移动
                 {
                     StateCurrent = InstantiateState("STPlayerWalk");
                 }
@@ -416,7 +440,7 @@ public class Player : Entity
                     BuffRemove("BFPlayerAngryEnhanceAttack01");
                 }
             }
-            else if (dic_Input != Vector2.zero) //移动
+            else if (dic_Input != Vector2.zero && !BuffContain("BFPlayerSkillInputSlowMotion")) //移动
             {
                 StateCurrent = InstantiateState("STPlayerWalk");
             }
@@ -424,7 +448,7 @@ public class Player : Entity
             {
                 StateCurrent = InstantiateState("STPlayerDefend");
             }
-            else if (dic_Input != Vector2.zero) //移动
+            else if (dic_Input != Vector2.zero && !BuffContain("BFPlayerSkillInputSlowMotion")) //移动
             {
                 StateCurrent = InstantiateState("STPlayerWalk");
             }
@@ -444,7 +468,7 @@ public class Player : Entity
                 {
                     StateCurrent = InstantiateState("STPlayerIdle");
                 }
-                else if (dic_Input != Vector2.zero) //移动
+                else if (dic_Input != Vector2.zero && !BuffContain("BFPlayerSkillInputSlowMotion")) //移动
                 {
                     StateCurrent = InstantiateState("STPlayerWalk");
                 }
@@ -494,7 +518,7 @@ public class Player : Entity
             {
                 StateCurrent = InstantiateState("STPlayerDefend");
             }
-            else if (dic_Input != Vector2.zero)         //移动
+            else if (dic_Input != Vector2.zero && !BuffContain("BFPlayerSkillInputSlowMotion"))         //移动
             {
                 StateCurrent = InstantiateState("STPlayerWalk");
             }
@@ -508,7 +532,7 @@ public class Player : Entity
                 {
                     StateCurrent = InstantiateState("STPlayerIdle");
                 }
-                else if (dic_Input != Vector2.zero) //移动
+                else if (dic_Input != Vector2.zero && !BuffContain("BFPlayerSkillInputSlowMotion")) //移动
                 {
                     StateCurrent = InstantiateState("STPlayerWalk");
                 }
@@ -523,7 +547,7 @@ public class Player : Entity
                 {
                     StateCurrent = InstantiateState("STPlayerIdle");
                 }
-                else if (dic_Input != Vector2.zero) //移动
+                else if (dic_Input != Vector2.zero && !BuffContain("BFPlayerSkillInputSlowMotion")) //移动
                 {
                     StateCurrent = InstantiateState("STPlayerWalk");
                 }
@@ -540,7 +564,7 @@ public class Player : Entity
                 {
                     StateCurrent = InstantiateState("STPlayerIdle");
                 }
-                else if (dic_Input != Vector2.zero)         //移动
+                else if (dic_Input != Vector2.zero && !BuffContain("BFPlayerSkillInputSlowMotion"))         //移动
                 {
                     StateCurrent = InstantiateState("STPlayerWalk");
                 }
@@ -554,7 +578,7 @@ public class Player : Entity
                 {
                     StateCurrent = InstantiateState("STPlayerIdle");
                 }
-                else if (dic_Input != Vector2.zero)         //移动
+                else if (dic_Input != Vector2.zero && !BuffContain("BFPlayerSkillInputSlowMotion"))         //移动
                 {
                     StateCurrent = InstantiateState("STPlayerWalk");
                 }
@@ -568,7 +592,7 @@ public class Player : Entity
                 {
                     StateCurrent = InstantiateState("STPlayerIdle");
                 }
-                else if (dic_Input != Vector2.zero)         //移动
+                else if (dic_Input != Vector2.zero && !BuffContain("BFPlayerSkillInputSlowMotion"))         //移动
                 {
                     StateCurrent = InstantiateState("STPlayerWalk");
                 }

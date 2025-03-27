@@ -30,17 +30,19 @@ public class STPlayerSkillD1 : State
         Player player = (Player)entity;
 
         //求出冲锋方向
+        //REVIEW 如果释放技能想换个方向怎么办？
+        //给人的感觉是——AWSD选择释放对应的技能？；还是AWSD带有面朝方向的感觉？。
         forward = Vector2.zero;
-        if (player.dic_Input.x != 0f)   //有输入
-        {
-            forward.x = Mathf.Sign(player.dic_Input.x);
-            forward = forward.normalized;
-        }
-        else                            //无输入
-        {
-            forward.x = player.transform.lossyScale.x;
-            forward = forward.normalized;
-        }
+        // if (player.dic_Input.x != 0f)   //有输入
+        // {
+        //     forward.x = Mathf.Sign(player.dic_Input.x);
+        //     forward = forward.normalized;
+        // }
+        // else                            //无输入
+        // {
+        forward.x = player.transform.lossyScale.x;
+        forward = forward.normalized;
+        // }
 
         //翻转
         if (forward.x > 0f)

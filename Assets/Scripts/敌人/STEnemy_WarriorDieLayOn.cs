@@ -12,6 +12,9 @@ public class STEnemy_WarriorDieLayOn : State
     {
         BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
         playableDirector.Play();
+
+        Enemy enemy = (Enemy)entity;
+        enemy._rb.simulated = false;
     }
 
     public override void UPStateBehaviour(Entity entity)
