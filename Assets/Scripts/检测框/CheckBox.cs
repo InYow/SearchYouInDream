@@ -6,6 +6,7 @@ public enum CheckBoxType
 {
     attack = 0,
     pick,
+    attack_throwitem,
 }
 
 public class CheckBox : MonoBehaviour
@@ -13,27 +14,40 @@ public class CheckBox : MonoBehaviour
     public CheckBoxType checkBoxType;
     public Entity entity_master;
     [Header("attacktype")]
-    public Vector2 boxSize = new Vector2(5f, 5f); // 矩形区域大小
-    public LayerMask attackLayer;   // 目标层
-    public string descrition;       //该攻击框的描述
+    public Vector2 boxSize = new Vector2(5f, 5f); //矩形区域大小
+    public LayerMask attackLayer;   //目标层
+    public string descrition;       //攻击类型描述
     public List<Entity> entities = new();
     [Header("picktype")]
     public LayerMask pickLayer;
     public bool picked;
+    [Header("attack_throwitem")]
+    public PickableItem pickableItem_master;
     private void OnEnable()
     {
         //初始化值
         //通用
         entity_master = GetComponentInParent<Entity>();
         //attack
-        entities.Clear();
-        if (entity_master == null)
+        if (checkBoxType == CheckBoxType.attack)
         {
-            entity_master = transform.parent.GetComponentInParent<Entity>();
+            entities.Clear();
+            if (entity_master == null)
+            {
+                entity_master = transform.parent.GetComponentInParent<Entity>();
+            }
         }
-
         //pick
-        picked = false;
+        else if (checkBoxType == CheckBoxType.pick)
+        {
+            picked = false;
+        }
+        //attack_throwitem
+        else if (checkBoxType == CheckBoxType.attack_throwitem)
+        {
+            pickableItem_master = GetComponentInParent<PickableItem>();
+            entity_master = pickableItem_master.entity_master;
+        }
     }
 
     void Update()
@@ -78,6 +92,29 @@ public class CheckBox : MonoBehaviour
                 }
             }
         }
+        else if (checkBoxType == CheckBoxType.attack_throwitem)
+        {
+            Collider2D[] hits = Physics2D.OverlapBoxAll(boxCenter, boxSize, 0f, attackLayer);
+            //处理区域内List<entity>
+            if (hits.Length > 0)
+            {
+                bool b = false; //只攻击一次
+                foreach (Collider2D col in hits)
+                {
+                    var e = col.gameObject.GetComponent<Entity>();
+                    if (e != null && e != entity_master)
+                    {
+                        entity_master.Hurt(e, this);
+                        b = true;
+                    }
+                }
+                if (b)
+                {
+                    pickableItem_master.Stop();             //攻击飞行停止
+                    gameObject.SetActive(false);            //关闭攻击检测框
+                }
+            }
+        }
     }
 
     void OnDrawGizmos()
@@ -92,8 +129,20 @@ public class CheckBox : MonoBehaviour
         //通用
         entity_master = null;
         //attack
-        entities.Clear();
+        if (checkBoxType == CheckBoxType.attack)
+        {
+            entities.Clear();
+        }
         //pick
-        picked = false;
+        else if (checkBoxType == CheckBoxType.pick)
+        {
+            picked = false;
+        }
+        //attack_throwitem
+        else if (checkBoxType == CheckBoxType.attack_throwitem)
+        {
+            pickableItem_master = null;
+            entity_master = null;
+        }
     }
 }

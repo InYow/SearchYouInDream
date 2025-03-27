@@ -8,6 +8,8 @@ public class Player : Entity
     public Rigidbody2D _rb;
     public float speed_walk;
     public float attackResisValue;
+    public PickableItem pickableItem;   //拾取的物品
+    public float speed_throw;           //投掷的物品的速度
 
     [Header("状态机全局变量")]
     public Vector2 dic_Input;   //四键方向
@@ -174,9 +176,16 @@ public class Player : Entity
             {
                 StateCurrent = InstantiateState("STPlayerDefend");
             }
-            else if (Input.GetKeyDown(KeyCode.L))                            //拾取
+            else if (Input.GetKeyDown(KeyCode.L))   //拾取、投掷
             {
-                StateCurrent = InstantiateState("STPlayerPick");
+                if (pickableItem == null)   //拾取
+                {
+                    StateCurrent = InstantiateState("STPlayerPick");
+                }
+                else                        //投掷
+                {
+                    StateCurrent = InstantiateState("STPlayerThrow");
+                }
             }
         }
         //ST移动
@@ -423,10 +432,6 @@ public class Player : Entity
             {
                 StateCurrent = InstantiateState("STPlayerIdle");
             }
-            else if (Input.GetKeyDown(KeyCode.K) && cd_DefendOrAngry <= 0f)   //格挡
-            {
-                StateCurrent = InstantiateState("STPlayerDefend");
-            }
         }
         //格挡
         else if (stateCurrentName == "STPlayerDefend")
@@ -447,7 +452,7 @@ public class Player : Entity
             else if (transDefend_Achieve)            //弹反
             {
                 //弹反成功，buff期间能续普攻连招
-                (BuffGet("BFPlayerAttackContinuity") as BFPlayerAttackContinuity).Active();
+                (BuffGet("BFPlayerAttackContinuity") as BFPlayerAttackContinuity)?.Active();
                 StateCurrent = InstantiateState("STPlayerDefend_Achieve");
             }
         }

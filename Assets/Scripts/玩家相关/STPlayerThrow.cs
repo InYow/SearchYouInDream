@@ -18,6 +18,9 @@ public class STPlayerThrow : State
         //速度为0
         Player player = (Player)entity;
         player._rb.velocity = Vector2.zero;
+
+        //投掷物品
+        player.pickableItem.Throw(player);
     }
 
     public override void UPStateBehaviour(Entity entity)
