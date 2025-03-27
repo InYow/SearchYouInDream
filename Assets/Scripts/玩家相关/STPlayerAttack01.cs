@@ -29,6 +29,7 @@ public class STPlayerAttack01 : State
 
     public override void UPStateBehaviour(Entity entity)
     {
+        GetCurrentStateWindType();
     }
 
     public override void UPStateInit(Entity entity)
