@@ -117,7 +117,7 @@ public abstract class State : MonoBehaviour
         {
             if (currentTime >= clip.start && currentTime <= clip.end)
             {
-                Debug.Log("当前处于段落：" + (clip.asset as WindTypeSectionClipAsset).template.sectionWindType);
+                //Debug.Log("当前处于段落：" + (clip.asset as WindTypeSectionClipAsset).template.sectionWindType);
                 return (clip.asset as WindTypeSectionClipAsset).template.sectionWindType;
             }
         }
@@ -136,7 +136,7 @@ public abstract class State : MonoBehaviour
         {
             if (currentTime >= clip.start && currentTime <= clip.end)
             {
-                Debug.Log("当前处于段落：" + (clip.asset as InputWindTypeSectionClipAsset).template.sectionInputWindType);
+                //Debug.Log("当前处于段落：" + (clip.asset as InputWindTypeSectionClipAsset).template.sectionInputWindType);
                 return (clip.asset as InputWindTypeSectionClipAsset).template.sectionInputWindType;
             }
         }

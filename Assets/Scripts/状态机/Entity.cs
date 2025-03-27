@@ -197,8 +197,8 @@ public class Entity : MonoBehaviour
             if (!beingBreakStun)
             {
                 resis = Mathf.Clamp(resis - player.attackResisValue, 0, resis_Max);//降低耐性
-                                                                                   //破防
-                if (Mathf.Approximately(resis, 0f))
+                //破防
+                if (Mathf.Approximately(resis, 0f) && health > 0f)
                 {
                     StartBreakStun(player);
                 }
