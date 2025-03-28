@@ -37,6 +37,8 @@ public enum RankABCD
 
 public abstract class State : MonoBehaviour
 {
+    public PlayableDirector playableDirector;
+
     [ReadOnly]
     [SerializeField]
     [Tooltip("按什么评级执行")] private RankABCD rankABCD = RankABCD.A;
@@ -80,8 +82,6 @@ public abstract class State : MonoBehaviour
             rankABCD = value;
         }
     }
-
-    public PlayableDirector playableDirector;
 
     public PlayableAsset playableAsset_A;
     public PlayableAsset playableAsset_B;
