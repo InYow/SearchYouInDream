@@ -782,8 +782,8 @@ BoxCollider2D:
   m_Offset: {x: -0.031964928, y: 0.24095231}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.91224927, y: 1.0664062}
+    pivot: {x: 0.5, y: 0.2}
+    oldSize: {x: 3.6375, y: 1.6525}
     newSize: {x: 0.91224927, y: 1.0664062}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1155,7 +1155,7 @@ PlayableDirector:
   m_GameObject: {fileID: 941983732}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: a25b0514135405d4a8e7ba8088e01f57, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: d7f16fec39d3f2c4ab2e61f44fa4ed02, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -1176,6 +1176,14 @@ PlayableDirector:
   - key: {fileID: 3378653506218653326, guid: 9ebc136b772215949ab117edfd5df006, type: 2}
     value: {fileID: 589571565}
   - key: {fileID: 5650294042877642713, guid: e2ca39579cde9824fa184f5ace2730ec, type: 2}
+    value: {fileID: 589571565}
+  - key: {fileID: 1088360652674316647, guid: 5a41acf6766946c4a981b76dbf785022, type: 2}
+    value: {fileID: 589571565}
+  - key: {fileID: -8216917877877993980, guid: e61d21b381db789468da70e4c96077b3, type: 2}
+    value: {fileID: 589571565}
+  - key: {fileID: 3378653506218653326, guid: b88853e2bdff3a1409d887aaa30045b7, type: 2}
+    value: {fileID: 589571565}
+  - key: {fileID: 5650294042877642713, guid: d7f16fec39d3f2c4ab2e61f44fa4ed02, type: 2}
     value: {fileID: 589571565}
   m_ExposedReferences:
     m_References: []

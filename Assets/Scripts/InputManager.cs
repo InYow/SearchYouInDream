@@ -23,7 +23,6 @@ public class InputManager : MonoBehaviour
 
     public static void LogPreInput(KeyCode keyCode)
     {
-        Debug.Log("预输入J");
         inputManager.keyCodePre = keyCode;
     }
 
