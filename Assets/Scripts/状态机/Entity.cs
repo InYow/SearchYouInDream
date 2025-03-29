@@ -219,6 +219,45 @@ public class Entity : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// 翻转
+    /// </summary>
+    /// <param name="b"></param>
+    public virtual void FlipX(bool b)
+    {
+        if (!b)
+        {
+            Vector3 v = gameObject.transform.localScale;
+            v.x = 1f;
+            gameObject.transform.localScale = v;
+            //unscale
+            v.x = 1f;
+            transform.GetChild(0).localScale = v;
+        }
+        else if (b)
+        {
+            Vector3 v = gameObject.transform.localScale;
+            v.x = -1f;
+            gameObject.transform.localScale = v;
+            //unscale
+            v.x = -1f;
+            transform.GetChild(0).localScale = v;
+        }
+    }
+
+    public virtual Vector2 GetFlipX()
+    {
+        if (gameObject.transform.localScale.x == 1f)
+        {
+            return Vector2.right;
+        }
+        else if (gameObject.transform.localScale.x == -1f)
+        {
+            return Vector2.left;
+        }
+        return Vector2.right;
+    }
+
     //----------------方法-buff集-----------------
 
     /// <summary>
@@ -279,32 +318,6 @@ public class Entity : MonoBehaviour
         {
             buffs.Remove(buffName);
             buff.FinishBuff(this);
-        }
-    }
-
-    /// <summary>
-    /// 翻转
-    /// </summary>
-    /// <param name="b"></param>
-    public virtual void FlipX(bool b)
-    {
-        if (!b)
-        {
-            Vector3 v = gameObject.transform.localScale;
-            v.x = 1f;
-            gameObject.transform.localScale = v;
-            //unscale
-            v.x = 1f;
-            transform.GetChild(0).localScale = v;
-        }
-        else if (b)
-        {
-            Vector3 v = gameObject.transform.localScale;
-            v.x = -1f;
-            gameObject.transform.localScale = v;
-            //unscale
-            v.x = -1f;
-            transform.GetChild(0).localScale = v;
         }
     }
 }

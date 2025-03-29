@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -7,9 +8,14 @@ public class Player : Entity
     public float healthGray_LoseSpeed;
     public Rigidbody2D _rb;
     public float speed_walk;
+    public float speed_fly;
     public float attackResisValue;
     public PickableItem pickableItem;   //拾取的物品
     public float speed_throw;           //投掷的物品的速度
+    public float radius_outer = 5f;     //扇形内径
+    public float radius_inner = 2f;     //扇形外径
+    public float angle = 60f;           //扇形角度
+    public LayerMask targetLayer;       //目标层
 
     [Header("状态机全局变量")]
     public Vector2 dic_Input;   //四键方向
@@ -22,6 +28,7 @@ public class Player : Entity
     public float cd_DefendOrAngry;      //格挡or暴怒CD
     public float cdMax_DefendOrAngry;
     public Entity eTarget_BreakAttack;  //引导击破攻击的目标
+    public Entity eTarget_Attack01F;    //追击的目标
 
     public override void Start()
     {
@@ -144,6 +151,7 @@ public class Player : Entity
             BuffRemove("BFPlayerGuideBreakAttack");
             return;
         }
+
         //-----------------------------
 
         //ST待机
@@ -201,16 +209,26 @@ public class Player : Entity
         {
             if (Input.GetKeyDown(KeyCode.J))        //攻击
             {
+                Enemy enemy_closest = MethodFight.GetAtkFTarget(transform.position, GetFlipX(), radius_outer, radius_inner, angle, targetLayer);  //获取扇形所有Enemy
                 BFPlayerAttackContinuity buff_atk_continuity = BuffGet("BFPlayerAttackContinuity") as BFPlayerAttackContinuity;
                 BFPlayerAngryEnhanceAttack01 buff_atk01_enhance = BuffGet("BFPlayerAngryEnhanceAttack01") as BFPlayerAngryEnhanceAttack01;
-                if ((buff_atk_continuity == null || (buff_atk_continuity.IfActive() && buff_atk_continuity.attackID == 4)) && buff_atk01_enhance == null)    //攻击01
+                if (enemy_closest == null &&/*不追击*/(buff_atk_continuity == null || (buff_atk_continuity.IfActive() && buff_atk_continuity.attackID == 4)) && buff_atk01_enhance == null)    //攻击01
                 {
                     StateCurrent = InstantiateState("STPlayerAttack01");
                 }
-                else if (buff_atk01_enhance != null)          //强化攻击01
+                else if (enemy_closest == null &&/*不追击*/buff_atk01_enhance != null)          //强化攻击01
                 {
                     StateCurrent = InstantiateState("STPlayerAttack01_Enhance");
                     BuffRemove("BFPlayerAngryEnhanceAttack01");
+                }
+                else if (enemy_closest != null &&/*追击*/(buff_atk_continuity == null || (buff_atk_continuity.IfActive() && buff_atk_continuity.attackID == 4)) && buff_atk01_enhance == null)
+                {
+                    eTarget_Attack01F = enemy_closest;
+                    StateCurrent = InstantiateState("STPlayerAttack01F_Start");
+                }
+                else if (enemy_closest != null &&/*追击*/buff_atk01_enhance != null)//强化攻击01F_Start
+                {
+                    Debug.Log("追击强普");
                 }
                 //连携普攻
                 else if (buff_atk_continuity.IfActive() && buff_atk_continuity.attackID == 1)                 //攻击02
@@ -250,7 +268,7 @@ public class Player : Entity
                 }
             }
         }
-        //攻击01
+        //ST攻击01
         else if (stateCurrentName == "STPlayerAttack01")
         {
             if (StateCurrent.Finished(this))            //待机 or 移动
@@ -302,6 +320,30 @@ public class Player : Entity
                 //格挡不打断普攻连携
                 BFPlayerAttackContinuity buff = BuffAdd("BFPlayerAttackContinuity") as BFPlayerAttackContinuity;
                 buff.attackID = 1;
+            }
+        }
+        //ST攻击01追击_开始
+        else if (stateCurrentName == "STPlayerAttack01F_Start")
+        {
+            if (StateCurrent.Finished(this))            //攻击01追击_飞行
+            {
+                StateCurrent = InstantiateState("STPlayerAttack01F_Fly");
+            }
+        }
+        //ST攻击01追击_飞行
+        else if (stateCurrentName == "STPlayerAttack01F_Fly")
+        {
+            if (StateCurrent.Finished(this))            //攻击01追击_抵达
+            {
+                StateCurrent = InstantiateState("STPlayerAttack01F_Arrive");
+            }
+        }
+        //ST攻击01追击_抵达
+        else if (stateCurrentName == "STPlayerAttack01F_Arrive")
+        {
+            if (StateCurrent.Finished(this))            //待机 or 移动
+            {
+                StateCurrent = InstantiateState("STPlayerIdle");
             }
         }
         //攻击02
@@ -659,4 +701,25 @@ public class Player : Entity
         Buff buff = BuffAdd("BFPlayerGuideBreakAttack");
     }
 
+    //--------Gizmos--------
+    private void OnDrawGizmosSelected()
+    {
+        DrawSector(transform.position, transform.forward, radius_outer, radius_inner, angle);
+    }
+
+    void DrawSector(Vector3 center, Vector3 forward, float radius_outer, float radius_inner, float angle)
+    {
+        Gizmos.color = Color.red;
+        //绘制弧
+        Gizmos.DrawWireSphere(center, radius_outer);
+        //绘制弧
+        Gizmos.DrawWireSphere(center, radius_inner);
+        //计算弧边界点
+        Vector3 lastPoint1 = new(center.x + radius_outer * Mathf.Cos(Mathf.Deg2Rad * angle / 2f), center.y + radius_outer * Mathf.Sin(Mathf.Deg2Rad * angle / 2f), center.z);
+        Vector3 lastPoint2 = new(center.x + radius_outer * Mathf.Cos(-Mathf.Deg2Rad * angle / 2f), center.y + radius_outer * Mathf.Sin(-Mathf.Deg2Rad * angle / 2f), center.z);
+        //绘制半径
+        Gizmos.DrawLine(center, lastPoint1);
+        Gizmos.DrawLine(center, lastPoint2);
+    }
 }
+
