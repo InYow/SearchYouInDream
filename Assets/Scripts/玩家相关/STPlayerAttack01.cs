@@ -22,7 +22,7 @@ public class STPlayerAttack01 : State
         //根据评级，改变播放的Timeline
         //FIN 将根据评级变化的逻辑简化为设置枚举值
         //FIN 根据枚举值的不同，读取不同Timeline的自定义轨道信息
-        RankABCD = RankABCD.B;
+        RankABCD = RankSystem.GetRankABCD();
 
         BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
         playableDirector.Play();

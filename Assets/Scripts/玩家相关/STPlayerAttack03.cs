@@ -19,6 +19,8 @@ public class STPlayerAttack03 : State
 
     public override void StateStart(Entity entity)
     {
+        RankABCD = RankSystem.GetRankABCD();
+
         BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
         playableDirector.Play();
 
