@@ -52,7 +52,6 @@ public class CheckBox : MonoBehaviour
 
     void Update()
     {
-
         Vector2 boxCenter = transform.position; // 以当前物体为检测中心
 
         if (checkBoxType == CheckBoxType.attack)

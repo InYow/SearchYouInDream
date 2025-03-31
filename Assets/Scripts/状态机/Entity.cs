@@ -152,6 +152,7 @@ public class Entity : MonoBehaviour
     public virtual void Hurt(Entity entity, CheckBox attackBox)
     {
         entity.GetHurt(this, attackBox);
+        CameraShake.Shake(new Vector3(1, 0, 0), 0.3f);
     }
 
     /// <summary>
