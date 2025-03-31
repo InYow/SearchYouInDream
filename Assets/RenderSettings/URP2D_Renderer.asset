@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 371fd6f3852317042a81e5463d362734, type: 3}
   m_Name: RenderFeatureRadialBlur
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   material: {fileID: 2100000, guid: 70c6bf3c0b598c4459cea9fd1c7bf2c5, type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
