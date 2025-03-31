@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: Global Volume Profile
+  m_Name: Volumn Profile
   m_EditorClassIdentifier: 
   components:
-  - {fileID: 9008345983428488891}
---- !u!114 &9008345983428488891
+  - {fileID: 6767907986462484490}
+--- !u!114 &6767907986462484490
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -29,18 +29,18 @@ MonoBehaviour:
   active: 1
   loop:
     m_OverrideState: 1
-    m_Value: 5
+    m_Value: 6
   blur:
     m_OverrideState: 1
-    m_Value: 6.02
+    m_Value: 3
   radialSmoothness:
     m_OverrideState: 1
-    m_Value: 20
+    m_Value: 10
   downsample:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 2
   radialCenter:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {x: 0.5, y: 0.5}
   enableEffect:
     m_OverrideState: 1
