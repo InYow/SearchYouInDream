@@ -1,11 +1,15 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [Serializable]
 public class SkillDataPair
 {
     public int skillID;
+    public bool isAvailable;
     public string skillStatePath;
+    public Sprite skillIcon;
 }
 
 public class SkillDataBase : MonoBehaviour
@@ -28,5 +32,19 @@ public class SkillDataBase : MonoBehaviour
     public SkillDataPair[] GetAllSkills()
     {
         return skillDataBase;
+    }
+
+    public List<int> GetAllAvailableSkills()
+    {
+        var allSkills = skillDataBase.ToList();
+        List<int> availableSkillsId = new List<int>();
+        foreach (var skill in skillDataBase)
+        {
+            if (skill.isAvailable)
+            {
+                availableSkillsId.Add(skill.skillID);
+            }
+        }
+        return availableSkillsId;
     }
 }

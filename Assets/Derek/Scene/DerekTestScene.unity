@@ -395,7 +395,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &402637628
 MonoBehaviour:
@@ -410,6 +410,84 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PrefabFilePath: Prefabs/UICanvas
+--- !u!1 &693584955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 693584957}
+  - component: {fileID: 693584956}
+  - component: {fileID: 693584958}
+  m_Layer: 0
+  m_Name: SkillDataBase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &693584956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693584955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad711ccc51cac4f44a670429cbaabae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillDataBase:
+  - skillID: 1
+    isAvailable: 1
+    skillStatePath: 
+    skillIcon: {fileID: 0}
+  - skillID: 2
+    isAvailable: 0
+    skillStatePath: 
+    skillIcon: {fileID: 0}
+  - skillID: 5
+    isAvailable: 1
+    skillStatePath: 
+    skillIcon: {fileID: 0}
+  - skillID: 7
+    isAvailable: 0
+    skillStatePath: 
+    skillIcon: {fileID: 0}
+--- !u!4 &693584957
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693584955}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.9838697, y: -2.1920576, z: 0.039846495}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &693584958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693584955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2ed4ed1127830040837285f320ef905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skill1: 
+  skill2: 
+  skill3: 
+  skill4: 
 --- !u!1 &818748738
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,7 +673,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1340476717
 MonoBehaviour:
