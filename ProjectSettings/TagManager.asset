@@ -14,7 +14,7 @@ TagManager:
   - Entity
   - PickableItem
   - CM collider
-  - 
+  - Obstacles
   - 
   - 
   - 
@@ -46,4 +46,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 1056580707
+    locked: 0
+  - name: Obstacles
+    uniqueID: 3848840463
     locked: 0

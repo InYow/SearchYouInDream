@@ -5,25 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Derek/Scripts/UI/Panel.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Derek/Scripts/UI/Panel/BagPackPanel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Derek/Scripts/UI/Panel/BagPackPanel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Derek/Scripts/UI/Panel/SkillSelectorPanel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Derek/Scripts/UI/Panel/SkillSelectorPanel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Derek/Scripts/UI/PanelElements.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Derek/Scripts/UI/PanelElements/SkillUISlot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Derek/Scripts/UI/PanelElements/SkillUISlot.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UISystem/UIFramework/UIPanel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UISystem/UIFramework/UIPanel.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Derek/Scene/DerekTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Scene/DerekTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Derek/Scripts/SkillData/SkillDataBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Scripts/SkillData/SkillDataBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Derek/Scripts/UI/PlayerMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Scripts/UI/PlayerMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Attribute Processors.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Editor Windows.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Sample - RPG Editor.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UICanvas/PlayerMenuCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/UICanvas/PlayerMenuCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_WarriorBreakStun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_WarriorBreakStun.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STPlayerAttack01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STPlayerAttack01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +23,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Derek/Scripts/UI/PlayerMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Derek/Scripts/UITest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UISystem/UIFramework/UICanvas.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.6.5/Runtime/TrackAsset.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -114,6 +101,7 @@
       <updated>1743492200051</updated>
       <workItem from="1743492202750" duration="4145000" />
       <workItem from="1743640337444" duration="4544000" />
+      <workItem from="1743749936884" duration="1736000" />
     </task>
     <servers />
   </component>
