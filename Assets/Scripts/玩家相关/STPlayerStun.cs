@@ -32,6 +32,7 @@ public class STPlayerStun : State
     {
         Player player = (Player)entity;
         player.time_Stun -= Time.deltaTime;
+
     }
 
     public override void UPStateInit(Entity entity)

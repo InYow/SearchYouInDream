@@ -9,12 +9,14 @@ public class STEnemy_WarriorExecutionFly : State
     public float time_fly;
     public float timeMax_fly;
     public Vector2 forward_fly;
+
+    private Enemy enemy;
     public override void StateExit(Entity entity)
     {
         Destroy(gameObject);
         time_fly = 0f;
         //停止飞行
-        Enemy enemy = (Enemy)entity;
+        enemy = (Enemy)entity;
         enemy._rb.velocity = Vector2.zero;
     }
 
@@ -27,6 +29,7 @@ public class STEnemy_WarriorExecutionFly : State
         damageSourceEntity = entity.transExecution_DamageSourceEntity;
         damageSourceAttackBox = entity.transExecution_AttackBox;
         entity.transExecution = false;
+        enemy.behaviourTree.SetVariableValue("bCanExecute",entity.transExecution);
         entity.transExecution_AttackBox = null;
         entity.transExecution_DamageSourceEntity = null;
         entity.transExecution_Type = null;

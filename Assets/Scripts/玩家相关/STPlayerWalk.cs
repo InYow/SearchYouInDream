@@ -22,6 +22,7 @@ public class STPlayerWalk : State
 
         //移动
         player._rb.velocity = player.speed_walk * dic_input;
+
     }
 
     public override void UPStateInit(Entity entity)

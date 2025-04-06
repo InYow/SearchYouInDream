@@ -16,6 +16,7 @@ public class STPlayerIdle : State
 
     }
 
+
     public override void UPStateInit(Entity entity)
     {
     }

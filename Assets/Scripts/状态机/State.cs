@@ -26,7 +26,6 @@ public enum InputWindType
     inputable,      //输入有效
 }
 
-
 public enum RankABCD
 {
     A,

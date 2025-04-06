@@ -23,10 +23,11 @@ public class STPlayerAttack01F_Start : State
         Player player = (Player)entity;
         player._rb.velocity = Vector2.zero;
     }
-
     public override void UPStateBehaviour(Entity entity)
     {
+
     }
+
 
     public override void UPStateInit(Entity entity)
     {

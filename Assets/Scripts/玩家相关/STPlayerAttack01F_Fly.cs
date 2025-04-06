@@ -36,6 +36,7 @@ public class STPlayerAttack01F_Fly : State
         //移动
         Vector2 forward = (eTarget.transform.position - player.transform.position).normalized;
         player._rb.velocity = player.speed_fly * forward;
+
     }
 
     public override void UPStateInit(Entity entity)

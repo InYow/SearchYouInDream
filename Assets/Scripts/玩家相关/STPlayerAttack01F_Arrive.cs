@@ -26,7 +26,9 @@ public class STPlayerAttack01F_Arrive : State
 
     public override void UPStateBehaviour(Entity entity)
     {
+
     }
+
 
     public override void UPStateInit(Entity entity)
     {

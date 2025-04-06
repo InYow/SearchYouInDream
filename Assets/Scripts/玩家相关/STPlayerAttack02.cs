@@ -31,6 +31,7 @@ public class STPlayerAttack02 : State
 
     public override void UPStateBehaviour(Entity entity)
     {
+
     }
 
     public override void UPStateInit(Entity entity)

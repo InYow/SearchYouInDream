@@ -22,7 +22,9 @@ public class STPlayerPick : State
 
     public override void UPStateBehaviour(Entity entity)
     {
+
     }
+
 
     public override void UPStateInit(Entity entity)
     {

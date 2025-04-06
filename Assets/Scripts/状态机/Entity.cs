@@ -181,6 +181,11 @@ public class Entity : MonoBehaviour
         if (attackBox.descrition == "")
         {
             transExecution = true;
+            var enemy = entity as Enemy;
+            if (enemy)
+            {   
+                enemy.behaviourTree.SetVariableValue("bCanExecute",transExecution);
+            }
             transExecution_Type = "fly";
             transExecution_DamageSourceEntity = entity;
             transExecution_AttackBox = attackBox;
@@ -214,7 +219,11 @@ public class Entity : MonoBehaviour
     public virtual void StartBreakStun(Entity entity)
     {
         transBreakStun = true;
-
+        var enemy = entity as Enemy;
+        if (enemy)
+        {   
+            enemy.behaviourTree.SetVariableValue("bStun",entity.transBreakStun);
+        }
         //将信息传递出去
         MessageManager.BreakStun(this);
 

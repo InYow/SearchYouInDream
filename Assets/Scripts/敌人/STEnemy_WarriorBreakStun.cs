@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class STEnemy_WarriorBreakStun : State
 {
-    private Entity e;
+    private Enemy e;
     public override void StateExit(Entity entity)
     {
         Destroy(gameObject);
@@ -16,12 +16,13 @@ public class STEnemy_WarriorBreakStun : State
     public override void StateStart(Entity entity)
     {
         //记录e的引用
-        e = entity;
+        e = entity as Enemy;
 
         BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
         playableDirector.Play();
 
         entity.transBreakStun = false;
+        e.behaviourTree.SetVariableValue("bStun",entity.transBreakStun);
         e.beingBreakStun = true;
     }
 

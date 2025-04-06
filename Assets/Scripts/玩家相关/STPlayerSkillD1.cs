@@ -66,6 +66,7 @@ public class STPlayerSkillD1 : State
     {
         Player player = (Player)entity;
         player._rb.velocity = forward * speed;
+
     }
 
     public override void UPStateInit(Entity entity)
