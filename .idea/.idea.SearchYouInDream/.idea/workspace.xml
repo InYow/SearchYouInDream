@@ -6,39 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animator/Enemy_Warrior/Enemy_Warrior.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animator/Enemy_Warrior/Enemy_Warrior.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Derek/Scene/DerekTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Scene/DerekTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_WarriorDieLayOn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_WarriorDieLayOn.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/Enemy_Warrior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/Enemy_Warrior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorBreakStun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorBreakStun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorDieLayOn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorDieLayOn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorExecutionFly.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorExecutionFly.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/状态机/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/状态机/Entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/状态机/STEmpty.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/状态机/STEmpty.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/状态机/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/状态机/State.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerAngry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerAngry.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerAttack01.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerAttack01.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerAttack01F_Arrive.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerAttack01F_Arrive.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerAttack01F_Fly.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerAttack01F_Fly.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerAttack01F_Start.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerAttack01F_Start.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerAttack01_Enhance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerAttack01_Enhance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerAttack02.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerAttack02.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerAttack03.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerAttack03.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerAttack04.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerAttack04.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerBreakAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerBreakAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerDefend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerDefend.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerDefend_Achieve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerDefend_Achieve.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerIdle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerIdle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerPick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerPick.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerSkillD1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerSkillD1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerSkillS1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerSkillS1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerSkillW1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerSkillW1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerStun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerStun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerThrow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerThrow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerWalk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerWalk.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,12 +17,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6dc3ec5737384bf59192241a1e5f1aa11d200/7f/1d760c15/Action.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6dc3ec5737384bf59192241a1e5f1aa11d200/7f/1d760c15/Action.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6dc3ec5737384bf59192241a1e5f1aa11d200/84/6c48ac9d/Conditional.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6dc3ec5737384bf59192241a1e5f1aa11d200/88/a29849b6/Task.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6dc3ec5737384bf59192241a1e5f1aa11d200/88/a29849b6/Task.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Derek/Scripts/UI/PlayerMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Derek/Scripts/UITest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Action/BTAction_MoveToPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DestroyableItem/IDestroyableItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UISystem/UIFramework/UICanvas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.6.5/Runtime/TrackAsset.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -136,7 +105,8 @@
       <workItem from="1743640337444" duration="4544000" />
       <workItem from="1743749936884" duration="2215000" />
       <workItem from="1743858932225" duration="7205000" />
-      <workItem from="1743904103268" duration="14345000" />
+      <workItem from="1743904103268" duration="14904000" />
+      <workItem from="1744018078743" duration="2823000" />
     </task>
     <servers />
   </component>
