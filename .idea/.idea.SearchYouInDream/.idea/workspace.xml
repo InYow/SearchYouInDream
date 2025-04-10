@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Action/BTAction_MoveToProperPosition.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Action/BTAction_MoveToProperPosition.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Derek/Scene/DerekTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Scene/DerekTestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_Warrior.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_Warrior.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Action/BTAction_MoveToPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Action/BTAction_MoveToPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Sensor/SightSensor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Sensor/SightSensor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DestroyableItem/DestroyableItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DestroyableItem/DestroyableItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/Enemy_Warrior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/Enemy_Warrior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorBreakStun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorBreakStun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorExecutionFly.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorExecutionFly.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/状态机/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/状态机/Entity.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +28,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6dc3ec5737384bf59192241a1e5f1aa11d200/7f/1d760c15/Action.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6dc3ec5737384bf59192241a1e5f1aa11d200/7f/1d760c15/Action.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6dc3ec5737384bf59192241a1e5f1aa11d200/84/6c48ac9d/Conditional.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6dc3ec5737384bf59192241a1e5f1aa11d200/88/a29849b6/Task.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6dc3ec5737384bf59192241a1e5f1aa11d200/88/a29849b6/Task.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Derek/Scripts/UI/PlayerMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Derek/Scripts/UITest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Action/BTAction_MoveToPlayer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -106,7 +117,9 @@
       <workItem from="1743749936884" duration="2215000" />
       <workItem from="1743858932225" duration="7205000" />
       <workItem from="1743904103268" duration="14904000" />
-      <workItem from="1744018078743" duration="2823000" />
+      <workItem from="1744018078743" duration="2993000" />
+      <workItem from="1744114679165" duration="11021000" />
+      <workItem from="1744253918616" duration="1677000" />
     </task>
     <servers />
   </component>

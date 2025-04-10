@@ -11,10 +11,7 @@ public class BTAction_MoveToPlayer : Action
     private AIPath aiPath;
     private Animator animator;
 
-    public SharedBool hasFoundTarget;
-    public SharedFloat distanceToTarget;
-    public float loseTargetDistance = 6;
-    public float closeTargetDistance = 1;
+    public SharedTransform targetPosition;
     
     public override void OnAwake()
     {
@@ -28,16 +25,21 @@ public class BTAction_MoveToPlayer : Action
     {
         base.OnStart();
         aiPath.canMove = true;
+        aiPath.destination = targetPosition.Value.position;
         animator.SetFloat("MoveSpeed",aiPath.maxSpeed);
     }
 
     public override TaskStatus OnUpdate()
     {
-        if (!hasFoundTarget.Value ||  
-            loseTargetDistance < distanceToTarget.Value ||
-            closeTargetDistance > distanceToTarget.Value)
+        //达到位置后或玩家脱战后结束任务
+        if (aiPath.reachedEndOfPath || targetPosition.Value == null)
         {
             return TaskStatus.Success;
+        }
+        //更新位置
+        if (aiPath.destination != targetPosition.Value.position)
+        {
+            aiPath.destination = targetPosition.Value.position;
         }
         
         Vector3 dir = Vector3.Normalize(aiPath.destination - entity.transform.position);
@@ -52,7 +54,7 @@ public class BTAction_MoveToPlayer : Action
         
         return TaskStatus.Running;
     }
-
+    
     public override void OnEnd()
     {
         base.OnEnd();

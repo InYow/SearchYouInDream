@@ -44,6 +44,6 @@ public class DestroyableItem : MonoBehaviour,IDestroyableItem
         if (collision == null) return;
         
         gameObject.layer = 0 << gameObject.layer;
-        AstarPath.active.UpdateGraphs(collision.bounds);
+        AstarPath.active?.UpdateGraphs(collision.bounds);
     }
 }

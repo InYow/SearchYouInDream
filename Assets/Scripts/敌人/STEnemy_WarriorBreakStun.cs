@@ -48,10 +48,13 @@ public class STEnemy_WarriorBreakStun : State
         {
             return true;
         }
-        else
+        else if(entity.transExecution)
         {
-            return false;
+            e.behaviourTree.SetVariableValue("bCanExecute",entity.transExecution);
+            return true;
         }
+        
+        return false;
     }
 
 }

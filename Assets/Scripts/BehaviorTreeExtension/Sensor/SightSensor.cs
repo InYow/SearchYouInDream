@@ -4,7 +4,8 @@ using UnityEngine.Serialization;
 
 public class SightSensor : MonoBehaviour,IBehaviorSensor
 {
-    public float sightRange;
+    public float sightRange = 6;
+    public float runRange = 7;
     public Transform player; //Fixme Later 
     public BehaviorTree behaviourTree;
     public void FixedUpdate()
@@ -23,7 +24,7 @@ public class SightSensor : MonoBehaviour,IBehaviorSensor
                 behaviourTree.SetVariableValue("PlayerTransform", player);
                 behaviourTree.SetVariableValue("bFoundPlayer", true);
             }
-            else
+            if(distance > runRange)
             {
                 behaviourTree.SetVariableValue("PlayerTransform", null);
                 behaviourTree.SetVariableValue("bFoundPlayer", false);

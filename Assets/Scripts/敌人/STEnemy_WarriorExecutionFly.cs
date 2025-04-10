@@ -16,7 +16,6 @@ public class STEnemy_WarriorExecutionFly : State
         Destroy(gameObject);
         time_fly = 0f;
         //停止飞行
-        enemy = (Enemy)entity;
         enemy._rb.velocity = Vector2.zero;
     }
 
@@ -26,6 +25,7 @@ public class STEnemy_WarriorExecutionFly : State
         playableDirector.Play();
 
         //值
+        enemy = (Enemy)entity;
         damageSourceEntity = entity.transExecution_DamageSourceEntity;
         damageSourceAttackBox = entity.transExecution_AttackBox;
         entity.transExecution = false;

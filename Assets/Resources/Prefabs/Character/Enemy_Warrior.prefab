@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 3225463772063427281}
   - component: {fileID: 3225463772063427280}
   - component: {fileID: 3225463772063427295}
-  - component: {fileID: 3225463772063427282}
   - component: {fileID: 3225463772063427284}
   m_Layer: 6
   m_Name: Enemy_Warrior
@@ -150,7 +149,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3225463772063427294}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.7620463, y: -2.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -329,9 +328,9 @@ MonoBehaviour:
   logTaskChanges: 0
   group: 0
   resetValuesOnRestart: 0
-  externalBehavior: {fileID: 0}
+  externalBehavior: {fileID: 11400000, guid: 64e35aaf79ea18240becf6e867a326b1, type: 2}
   mBehaviorSource:
-    behaviorName: Behavior
+    behaviorName: WarriorBehaviorBase
     behaviorDescription: 
     mTaskData:
       types: []
@@ -348,7 +347,7 @@ MonoBehaviour:
         Float Compare","Instant":true,"SharedFloatglobalVariable":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},"SharedFloatcomparTO":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"ComparisonTypecomparisonType":"Less"},{"Type":"BehaviorTreeExtension.BTAction_TransitState","NodeData":{"Offset":"(140.540955,116.756653)","Comment":"NormalAttack"},"ID":16,"Name":"BT
         Action   Transit State","Instant":true,"StringstateName":"STEnemy_WarriorAttack","StringdefaultStateName":"STEmpty"}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(263.255768,178.423279)"},"ID":17,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"SharedFloatCompare","NodeData":{"Offset":"(-119.45948,120)"},"ID":18,"Name":"Shared
         Float Compare","Instant":true,"SharedFloatglobalVariable":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},"SharedFloatcomparTO":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"ComparisonTypecomparisonType":"GreaterOrEqual"},{"Type":"BTAction_MoveToPlayer","NodeData":{"Offset":"(123.40799,121.428146)"},"ID":19,"Name":"BT
-        Action   Move To Player","Instant":true,"SharedBoolhasFoundTarget":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},"SharedFloatdistanceToTarget":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},"SingleloseTargetDistance":6}]}]}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(588.7499,184.9999)"},"ID":20,"Name":"Sequence","Instant":true,"AbortTypeabortType":"Self","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.SharedVariables.CompareSharedBool","NodeData":{"Offset":"(-130.000122,120.000015)"},"ID":21,"Name":"Compare
+        Action   Move To Player","Instant":true,"SharedBoolhasFoundTarget":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},"SharedFloatdistanceToTarget":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},"SingleloseTargetDistance":6,"SinglecloseTargetDistance":1}]}]}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(588.7499,184.9999)"},"ID":20,"Name":"Sequence","Instant":true,"AbortTypeabortType":"Self","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.SharedVariables.CompareSharedBool","NodeData":{"Offset":"(-130.000122,120.000015)"},"ID":21,"Name":"Compare
         Shared Bool","Instant":true,"SharedBoolvariable":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},"SharedBoolcompareTo":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false}},{"Type":"BehaviorTreeExtension.BTAction_TransitState","NodeData":{"Offset":"(118.235336,105.8822)","Comment":"Idle"},"ID":22,"Name":"BT
         Action   Transit State","Instant":true,"StringstateName":"STEnemy_WarriorIdle","StringdefaultStateName":"STEmpty"}]}]},"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"FoundPlayer","IsShared":true,"IsDynamic":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"PlayerTransform","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanExecute","IsShared":true,"BooleanmValue":false}]}'
       fieldSerializationData:
@@ -437,21 +436,6 @@ MonoBehaviour:
   slowWhenNotFacingTarget: 1
   preventMovingBackwards: 0
   constrainInsideGraph: 0
---- !u!114 &3225463772063427282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3225463772063427294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1073741824
-  target: {fileID: 0}
-  useRotation: 0
 --- !u!114 &3225463772063427284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,6 +449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sightRange: 6
+  runRange: 7
   player: {fileID: 0}
   behaviourTree: {fileID: 3225463772063427281}
 --- !u!1 &3225463772152844366
