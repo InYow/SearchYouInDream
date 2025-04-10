@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 public class STEnemy_WarriorDieLayOn : State
 {
+    private Enemy enemy;
     public override void StateExit(Entity entity)
     {
+        enemy.behaviourTree.SetVariableValue("bCanExecute",entity.transExecution);
+        
         Destroy(gameObject);
     }
 
@@ -13,7 +16,7 @@ public class STEnemy_WarriorDieLayOn : State
         BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
         playableDirector.Play();
 
-        Enemy enemy = (Enemy)entity;
+        enemy = (Enemy)entity;
         enemy._rb.simulated = false;
     }
 
@@ -24,5 +27,10 @@ public class STEnemy_WarriorDieLayOn : State
 
     public override void UPStateInit(Entity entity)
     {
+    }
+
+    public override bool Finished(Entity entity)
+    {
+        return false;
     }
 }

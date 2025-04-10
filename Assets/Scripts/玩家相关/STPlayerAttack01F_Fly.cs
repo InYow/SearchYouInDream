@@ -39,9 +39,7 @@ public class STPlayerAttack01F_Fly : State
 
     }
 
-    public override void UPStateInit(Entity entity)
-    {
-    }
+    public override void UPStateInit(Entity entity) { }
 
     public override bool Finished(Entity entity)
     {

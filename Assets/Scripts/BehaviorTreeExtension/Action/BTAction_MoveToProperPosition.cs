@@ -8,6 +8,7 @@ namespace BehaviorTreeExtension
 {
     public class BTAction_MoveToProperPosition : Action
     {
+        public bool isInverse = false;
         public SharedTransform playerTransform;
         public float moveMaxDistance;//与敌人自己当前位置的最大距离
         public float moveMinDistance;//与敌人自己当前位置的最小距离
@@ -38,6 +39,7 @@ namespace BehaviorTreeExtension
         private Vector3 GetTargetPosition()
         {
             Vector3 dir = Vector3.Normalize(entity.transform.position - playerTransform.Value.position);
+            dir = isInverse ? -dir : dir;
             Vector3 right = Vector3.Normalize(Vector3.Cross( Vector3.forward,dir));
             
             float theta = Random.Range(0f, Mathf.PI);

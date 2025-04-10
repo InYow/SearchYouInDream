@@ -8,7 +8,8 @@ public class STEnemy_WarriorBreakStun : State
     {
         Destroy(gameObject);
         e.beingBreakStun = false;
-
+        entity.transBreakStun = false;
+        e.behaviourTree.SetVariableValue("bStun",entity.transBreakStun);
         //清空e的引用
         e = null;
     }
@@ -20,9 +21,7 @@ public class STEnemy_WarriorBreakStun : State
 
         BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
         playableDirector.Play();
-
-        entity.transBreakStun = false;
-        e.behaviourTree.SetVariableValue("bStun",entity.transBreakStun);
+        
         e.beingBreakStun = true;
     }
 

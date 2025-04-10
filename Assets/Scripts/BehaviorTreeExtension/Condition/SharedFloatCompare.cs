@@ -46,7 +46,6 @@ public class SharedFloatCompare : Conditional
         
     public override TaskStatus OnUpdate()
     {
-        Debug.Log("globalVariable.Value");
         // 先判断条件是否成立，如果不成立则直接返回失败
         if (!CanExecute())
         {

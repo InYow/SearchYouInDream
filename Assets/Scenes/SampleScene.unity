@@ -264,7 +264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3225463772063427294, guid: 3eb3382cfb08cd046a4b50c8820d4bdc, type: 3}
       propertyPath: m_Name
-      value: Enemy_Warrior (3)
+      value: Enemy_Warrior
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3eb3382cfb08cd046a4b50c8820d4bdc, type: 3}
@@ -4433,6 +4433,7 @@ MonoBehaviour:
   _rb: {fileID: 996811447}
   behaviourTree: {fileID: 0}
   aiPath: {fileID: 0}
+  target: {fileID: 0}
 --- !u!212 &996811443
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6255,6 +6256,7 @@ MonoBehaviour:
   _rb: {fileID: 1303070547}
   behaviourTree: {fileID: 0}
   aiPath: {fileID: 0}
+  target: {fileID: 0}
 --- !u!4 &1303070552
 Transform:
   m_ObjectHideFlags: 0
@@ -9344,6 +9346,7 @@ MonoBehaviour:
   _rb: {fileID: 1892548663}
   behaviourTree: {fileID: 0}
   aiPath: {fileID: 0}
+  target: {fileID: 0}
 --- !u!4 &1892548668
 Transform:
   m_ObjectHideFlags: 0
