@@ -8,17 +8,14 @@ namespace BehaviorTreeExtension
 {
     public class BTAction_MoveToProperPosition : Action
     {
-        public bool isInverse = false;
         public SharedTransform playerTransform;
-        public float moveMaxDistance;//与敌人自己当前位置的最大距离
-        public float moveMinDistance;//与敌人自己当前位置的最小距离
+        public float moveMaxDistance;//敌人与玩家的最大距离
+        public float moveMinDistance;//敌人与玩家的最小距离
         
         private Enemy entity;
         private AIPath aiPath;
-        private AIDestinationSetter aiDestinationSetter;
         private Animator animator;
         
-        private Vector3 playerPosTemp;
         public override void OnAwake()
         {
             base.OnAwake();
@@ -31,22 +28,24 @@ namespace BehaviorTreeExtension
         {
             base.OnStart();
             aiPath.destination = GetTargetPosition();
-            playerPosTemp = playerTransform.Value.position;
+            
             aiPath.canMove = true;
             animator.SetFloat("MoveSpeed",aiPath.maxSpeed);
         }
 
         private Vector3 GetTargetPosition()
         {
-            Vector3 dir = Vector3.Normalize(entity.transform.position - playerTransform.Value.position);
-            dir = isInverse ? -dir : dir;
+            Vector3 dir =  Vector3.Normalize(entity.transform.position - playerTransform.Value.position);
+            
             Vector3 right = Vector3.Normalize(Vector3.Cross( Vector3.forward,dir));
             
-            float theta = Random.Range(0f, Mathf.PI);
+            float theta = Random.Range(0.25f * Mathf.PI, 0.75f * Mathf.PI);
             float dist = Random.Range(moveMinDistance, moveMaxDistance);
-            Vector3 offset = dist*(right*Mathf.Cos(theta)+dir*Mathf.Sin(theta));
+            Vector3 destination = playerTransform.Value.position + dist*(right*Mathf.Cos(theta)+dir*Mathf.Sin(theta));
+
+            GraphNode node = AstarPath.active.GetNearest(destination, NNConstraint.Walkable).node;
             
-            return entity.transform.position + offset;
+            return (Vector3)node.position;
         }
 
         public override TaskStatus OnUpdate()
@@ -56,14 +55,9 @@ namespace BehaviorTreeExtension
             {
                 return TaskStatus.Success;
             }
-            //更新位置
-            if (playerPosTemp != playerTransform.Value.position)
-            {
-                aiPath.destination = GetTargetPosition();
-                playerPosTemp = playerTransform.Value.position;
-            }
         
             Vector3 dir = Vector3.Normalize(aiPath.destination - entity.transform.position);
+            animator.SetFloat("MoveSpeed",aiPath.maxSpeed);
             if (dir.x < 0)
             {
                 entity.gameObject.transform.localScale = new Vector3(-1, 1, 1);
@@ -78,9 +72,23 @@ namespace BehaviorTreeExtension
       
         public override void OnEnd()
         {
-            base.OnEnd();
             aiPath.canMove = false;
             animator.SetFloat("MoveSpeed",0);
+
+            if (playerTransform.Value != null)
+            {
+                Vector3 dir = Vector3.Normalize(playerTransform.Value.position - entity.transform.position);
+                if (dir.x < 0)
+                {
+                    entity.gameObject.transform.localScale = new Vector3(-1, 1, 1);
+                }
+                else if(dir.x > 0)
+                {
+                    entity.gameObject.transform.localScale = new Vector3(1, 1, 1);
+                }
+            }
+            
+            base.OnEnd();
         }
     }
 }

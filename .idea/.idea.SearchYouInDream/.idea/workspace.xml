@@ -5,23 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/Enemy_ShooterBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/Enemy_ShooterBase.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/Enemy_WarriorBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animator/Enemy_Warrior/Enemy_Warrior.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animator/Enemy_Warrior/Enemy_Warrior.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/DashEnemyBehaviorBaseTemplate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/DashEnemyBehaviorBaseTemplate.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/ShooterEnemyBehaviorBaseTemplate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/ShooterEnemyBehaviorBaseTemplate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/WarriorEnemyBehaviorBaseTemplate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/WarriorEnemyBehaviorBaseTemplate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_Dash.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_Dash.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_Shooter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_Shooter.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_Warrior.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_Warrior.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Action/BTAction_MoveToProperPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Action/BTAction_MoveToProperPosition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Condition/SharedFloatCompare.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Condition/SharedFloatCompare.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/Enemy_Warrior.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/Enemy_Warrior.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/Enemy_WarriorBase.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorBreakStun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorBreakStun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorExecutionFly.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorExecutionFly.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerAttack01F_Fly.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/玩家相关/STPlayerAttack01F_Fly.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/Enemy_ShooterBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/Enemy_ShooterBase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +34,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DestroyableItem/IDestroyableItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UISystem/UIFramework/UICanvas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorDash.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorShoot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.6.5/Runtime/TrackAsset.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -126,6 +120,10 @@
       <workItem from="1744114679165" duration="11021000" />
       <workItem from="1744253918616" duration="1677000" />
       <workItem from="1744284690186" duration="6946000" />
+      <workItem from="1744508931653" duration="318000" />
+      <workItem from="1744511157098" duration="5964000" />
+      <workItem from="1744638256658" duration="791000" />
+      <workItem from="1744799680543" duration="6899000" />
     </task>
     <servers />
   </component>
