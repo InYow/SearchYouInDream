@@ -103,7 +103,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "\u6295\u63B7_831x566_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3530
+        width: 831
+        height: 566
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 540612804f198bd4b96de9916865b01b
+      internalID: -630745628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u6295\u63B7_831x566_1"
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 3530
+        width: 831
+        height: 566
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb4d968c7f42824d91cd255240e3244
+      internalID: -1848014837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u6295\u63B7_831x566_2"
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 3530
+        width: 831
+        height: 566
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d992c026f1f314e874e8b6e10ae43b
+      internalID: -244677474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u6295\u63B7_831x566_3"
+      rect:
+        serializedVersion: 2
+        x: 2493
+        y: 3530
+        width: 831
+        height: 566
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 480c4a6c3bb39a54c9470ae78b83225e
+      internalID: -959831133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u6295\u63B7_831x566_4"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2964
+        width: 831
+        height: 566
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b27826c9ca42c5e41a1757fb9f64c70b
+      internalID: 2005632951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u6295\u63B7_831x566_5"
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 2964
+        width: 831
+        height: 566
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c314ff194d89e54ca32c83a03b65d12
+      internalID: 884987773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u6295\u63B7_831x566_6"
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 2964
+        width: 831
+        height: 566
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e936e2a22c7d54f43926571544299033
+      internalID: -1361430017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +261,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "\u6295\u63B7_831x566_0": -630745628
+      "\u6295\u63B7_831x566_1": -1848014837
+      "\u6295\u63B7_831x566_2": -244677474
+      "\u6295\u63B7_831x566_3": -959831133
+      "\u6295\u63B7_831x566_4": 2005632951
+      "\u6295\u63B7_831x566_5": 884987773
+      "\u6295\u63B7_831x566_6": -1361430017
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
