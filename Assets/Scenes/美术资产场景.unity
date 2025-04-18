@@ -501,7 +501,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &493214812
 Transform:
   m_ObjectHideFlags: 0
@@ -510,7 +510,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493214811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4, z: 0}
+  m_LocalPosition: {x: 0.83, y: -1.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -558,12 +558,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 230451297, guid: 2df23baeb966ecf4e8c2c48885d2aa7a, type: 3}
+  m_Sprite: {fileID: -1891999696, guid: 55a7dd43547ac544e808accad01e371d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.125, y: 1.71875}
+  m_Size: {x: 1.4550781, y: 1.0566406}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -581,8 +581,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a91b28f82f8bd64faec0266d60f4a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timelineAsset: {fileID: 11400000, guid: 2167d8e603d2d9c449e75c6b18e1348d, type: 2}
-  directorWrapMode: 1
+  timelineAsset: {fileID: 11400000, guid: 144324bb9d8772647acb79a37c6bd1c5, type: 2}
+  directorWrapMode: 0
   frame: 30
 --- !u!320 &493214816
 PlayableDirector:
@@ -593,9 +593,9 @@ PlayableDirector:
   m_GameObject: {fileID: 493214811}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 2167d8e603d2d9c449e75c6b18e1348d, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 144324bb9d8772647acb79a37c6bd1c5, type: 2}
   m_InitialState: 0
-  m_WrapMode: 1
+  m_WrapMode: 0
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
@@ -612,6 +612,64 @@ PlayableDirector:
   - key: {fileID: -2924569798581855094, guid: f287e68c116cc204aa9b7aaf4024ad73, type: 2}
     value: {fileID: 493214817}
   - key: {fileID: 7519100959027086907, guid: 2167d8e603d2d9c449e75c6b18e1348d, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: -6977939894143624894, guid: fa07ad5178c323645a7474455fb7cd52, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: -4309150483907183913, guid: f568cf594379d2a4f85154e59afe8917, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: -2524755848077914936, guid: 91951313127e90a4a95c881c23649539, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: 3787326199155447395, guid: b763788c58b27a342b9068ce163ba9fc, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: -2524755848077914936, guid: 7f11cfefb5eb8d14ab60f7c701336064, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: -2524755848077914936, guid: c4c65e43b309bda4aa6a72307a95cc72, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: 5650294042877642713, guid: d7f16fec39d3f2c4ab2e61f44fa4ed02, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: 5650294042877642713, guid: e2ca39579cde9824fa184f5ace2730ec, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: 3378653506218653326, guid: 9ebc136b772215949ab117edfd5df006, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: -8216917877877993980, guid: a25b0514135405d4a8e7ba8088e01f57, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: 4634087835928218167, guid: eb404d937fddfc840ade713010be6470, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: 8951524118827638382, guid: ac0942fbc6fe42c438f523904b2cbebd, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: 3949345943273157835, guid: 61ee77ed61af6b6479ce3c5244d0086e, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: -143462088296528078, guid: fd8c5c8466de0e942a42fccd9d3cc8a9, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: 1088360652674316647, guid: 992651249e1635e4a8d193cd0a6ddecc, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: -43813661078717394, guid: 66f0c8102430ec344aa8cb5c0f17ce16, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: -750820184153409471, guid: e5aedb480ee4d7643a183292e15900c0, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: -4430815080433177479, guid: 0e65b27be1cff61459cc5faa71b1823c, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: -4837768186456418291, guid: 5630e415755e77446a3dda06c3dbc80c, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: -2524755848077914936, guid: 20a43934891414f40a1e8511ae1b604e, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: 1079950092643237769, guid: 1b76bd9f855e59040b8599ebe285a81a, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: -5984183694837841838, guid: 44046957475626d4daf7eb84363818ca, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: -7371284701866553530, guid: 5905457cd302ed44eb72febccc76476e, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: 3005761365845923004, guid: 3ce0f9c175b7cd84484084de97350b95, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: -6562838723145232531, guid: be44e9d58e8bdd74ba74f2d57b740318, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: -935526158901606393, guid: 08be6fb298fa54943a0af372cef9c72e, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: 7244449668683333490, guid: 2edb607bb16269a49a142089ef9ef04c, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: -5451553171102710332, guid: ee32b3ec2670fb24c81661b5d6ac47ac, type: 2}
+    value: {fileID: 493214817}
+  - key: {fileID: -2014854083360174889, guid: 144324bb9d8772647acb79a37c6bd1c5, type: 2}
     value: {fileID: 493214817}
   m_ExposedReferences:
     m_References: []
@@ -940,7 +998,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.91224927, y: 1.0664062}
+  m_Size: {x: 7.16, y: 4.9}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -954,7 +1012,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589571560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4699998, y: -1.8299999, z: 0}
+  m_LocalPosition: {x: -0.85, y: -1.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1025,7 +1083,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
     oldSize: {x: 0.9121094, y: 1.0664062}
-    newSize: {x: 0.91224927, y: 1.0664062}
+    newSize: {x: 7.16, y: 4.9}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0

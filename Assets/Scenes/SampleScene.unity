@@ -2016,7 +2016,7 @@ MonoBehaviour:
   _rb: {fileID: 589571564}
   speed_walk: 3
   speed_fly: 10
-  attackResisValue: 50
+  attackResisValue: 2
   pickableItem: {fileID: 0}
   speed_throw: 10
   radius_outer: 5
@@ -2031,9 +2031,9 @@ MonoBehaviour:
   transDefend_achieve_TgtEntity: {fileID: 0}
   time_Stun: 0
   time_Angry: 0
-  time_StunMax: 3
+  time_StunMax: 1.25
   cd_DefendOrAngry: 0
-  cdMax_DefendOrAngry: 5
+  cdMax_DefendOrAngry: 2
   eTarget_BreakAttack: {fileID: 0}
   eTarget_Attack01F: {fileID: 0}
 --- !u!212 &589571562
