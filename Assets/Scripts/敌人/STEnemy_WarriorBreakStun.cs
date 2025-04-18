@@ -6,12 +6,12 @@ public class STEnemy_WarriorBreakStun : State
     private Enemy e;
     public override void StateExit(Entity entity)
     {
-        Destroy(gameObject);
         e.beingBreakStun = false;
         entity.transBreakStun = false;
-        e.behaviourTree.SetVariableValue("bStun",entity.transBreakStun);
+        e.behaviourTree.SetVariableValue("bStun", entity.transBreakStun);
         //清空e的引用
         e = null;
+        Destroy(gameObject);
     }
 
     public override void StateStart(Entity entity)
@@ -21,7 +21,9 @@ public class STEnemy_WarriorBreakStun : State
 
         BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
         playableDirector.Play();
-        
+
+        //将信息传递出去
+        MessageManager.BreakStun(e);
         e.beingBreakStun = true;
     }
 
@@ -47,12 +49,12 @@ public class STEnemy_WarriorBreakStun : State
         {
             return true;
         }
-        else if(entity.transExecution)
+        else if (entity.transExecution)
         {
-            e.behaviourTree.SetVariableValue("bCanExecute",entity.transExecution);
+            e.behaviourTree.SetVariableValue("bCanExecute", entity.transExecution);
             return true;
         }
-        
+
         return false;
     }
 

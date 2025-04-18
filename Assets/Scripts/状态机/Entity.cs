@@ -183,8 +183,8 @@ public class Entity : MonoBehaviour
             transExecution = true;
             var enemy = this as Enemy;
             if (enemy)
-            {   
-                enemy.behaviourTree.SetVariableValue("bCanExecute",transExecution);
+            {
+                enemy.behaviourTree.SetVariableValue("bCanExecute", transExecution);
             }
             transExecution_Type = "fly";
             transExecution_DamageSourceEntity = entity;
@@ -221,11 +221,11 @@ public class Entity : MonoBehaviour
         transBreakStun = true;
         var enemy = this as Enemy;
         if (enemy)
-        {   
-            enemy.behaviourTree.SetVariableValue("bStun",enemy.transBreakStun);
+        {
+            enemy.behaviourTree.SetVariableValue("bStun", enemy.transBreakStun);
         }
         //将信息传递出去
-        MessageManager.BreakStun(this);
+        //MessageManager.BreakStun(this);
 
     }
 
