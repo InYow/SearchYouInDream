@@ -218,6 +218,7 @@ public class Entity : MonoBehaviour
     /// <param name="entity"></param>
     public virtual void StartBreakStun(Entity entity)
     {
+        Debug.LogError("StartBreakStun");
         transBreakStun = true;
         var enemy = this as Enemy;
         if (enemy)
