@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Playables;
@@ -49,3 +50,4 @@ public class AnimaTrackInspector : MonoBehaviour
     }
 
 }
+#endif
