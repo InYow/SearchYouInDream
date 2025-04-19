@@ -21,6 +21,11 @@ public class SkillManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 1234 AWSD
+    /// </summary>
+    /// <param name="skillID"></param>
+    /// <returns></returns>
     public static string GetSkillName(int skillID)
     {
         switch (skillID)

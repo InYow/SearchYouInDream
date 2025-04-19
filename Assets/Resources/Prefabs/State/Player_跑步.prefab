@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 667160220043223675}
   - component: {fileID: 3751899750072831814}
   m_Layer: 0
-  m_Name: STPlayerWalk
+  m_Name: "Player_\u8DD1\u6B65"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
