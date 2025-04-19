@@ -11,7 +11,7 @@ public class BFPlayerGuideBreakAttack : Buff
         base.StartBuff(entity);
         //值
         Player player = entity as Player;
-        e_target = player.eTarget_BreakAttack;
+        e_target = player.eTarget_击破;
 
         //TODO 慢动作、近镜头、UI提示
         SlowMotion.StartSlow();

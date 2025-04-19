@@ -44,11 +44,13 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 08be6fb298fa54943a0af372cef9c72e, type: 2}
   m_InitialState: 0
-  m_WrapMode: 1
+  m_WrapMode: 0
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: -6275934815771256228, guid: 0faf38de877fa32469bed02db7f91efa, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -935526158901606393, guid: 08be6fb298fa54943a0af372cef9c72e, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
@@ -65,7 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playableDirector: {fileID: 2801350880359868691}
-  wrapMode: 1
+  wrapMode: 0
   rankABCD: 0
   playableAsset_A: {fileID: 11400000, guid: 08be6fb298fa54943a0af372cef9c72e, type: 2}
   playableAsset_B: {fileID: 0}
@@ -79,3 +81,5 @@ MonoBehaviour:
   inputWindTypeSectionClipList_C: []
   windTypeSectionClipList_D: []
   inputWindTypeSectionClipList_D: []
+  eTarget: {fileID: 0}
+  "\u5C0F\u4E8E\u8BE5\u8DDD\u79BB\u89C6\u4E3A\u62B5\u8FBE": 0

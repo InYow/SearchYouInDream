@@ -27,8 +27,8 @@ public class Player : Entity
     public float time_StunMax;
     public float cd_DefendOrAngry;      //格挡or暴怒CD
     public float cdMax_DefendOrAngry;
-    public Entity eTarget_BreakAttack;  //引导击破攻击的目标
-    public Entity eTarget_Attack01F;    //追击的目标
+    public Entity eTarget_击破;  //击破攻击的目标
+    public Entity eTarget_普攻1_冲刺_阶段2;    //追击的目标
 
     public override void Start()
     {
@@ -104,7 +104,7 @@ public class Player : Entity
         //拥有GuideBreakAttack的buff        //击破攻击
         if (BuffContain("BFPlayerGuideBreakAttack") && Input.GetKeyDown(KeyCode.U))
         {
-            StateCurrent = InstantiateState("Player_击破_践踏_阶段2");
+            StateCurrent = InstantiateState("Player_击破_浩克掌_拍掌");
             BuffRemove("BFPlayerGuideBreakAttack");
             return;
         }
@@ -180,7 +180,7 @@ public class Player : Entity
                 }
                 else if (enemy_closest != null &&/*追击*/(buff_atk_continuity == null || (buff_atk_continuity.IfActive() && buff_atk_continuity.attackID == 4)) && buff_atk01_enhance == null)
                 {
-                    eTarget_Attack01F = enemy_closest;
+                    eTarget_普攻1_冲刺_阶段2 = enemy_closest;
                     StateCurrent = InstantiateState("Player_普攻1_冲刺_阶段1");
                 }
                 else if (enemy_closest != null &&/*追击*/buff_atk01_enhance != null)//强化攻击01F_Start
@@ -570,7 +570,7 @@ public class Player : Entity
             }
         }
 
-        //-----技能-----
+        //-----------------技能------------------
         else if (stateCurrentName == "Player_增幅_愤怒")
         {
             if (StateCurrent.Finished(this))                //待机 or 移动
@@ -614,17 +614,63 @@ public class Player : Entity
             }
         }
 
-        //-------------default-------------
-        else
+        //-------------default/测试区域-------------
+        //测试区域-0
+        else if (SkillManager.instance.skillList.Count > 1 && stateCurrentName == SkillManager.GetSkillNameTestArea(0))
         {
-            if (dic_Input != Vector2.zero)          //移动
+            if (StateCurrent.Finished(this))
             {
-                StateCurrent = InstantiateState("Player_跑步");
+                StateCurrent = InstantiateState(SkillManager.GetSkillNameTestArea(1));
             }
-            else if (StateCurrent.Finished(this))   //待机
+        }
+        //测试区域-1
+        else if (SkillManager.instance.skillList.Count > 2 && stateCurrentName == SkillManager.GetSkillNameTestArea(1))
+        {
+            if (StateCurrent.Finished(this))
             {
-                StateCurrent = InstantiateState("Player_待机");
+                StateCurrent = InstantiateState(SkillManager.GetSkillNameTestArea(2));
             }
+        }
+        //测试区域-2
+        else if (SkillManager.instance.skillList.Count > 3 && stateCurrentName == SkillManager.GetSkillNameTestArea(2))
+        {
+            if (StateCurrent.Finished(this))
+            {
+                StateCurrent = InstantiateState(SkillManager.GetSkillNameTestArea(3));
+            }
+        }
+        //测试区域-3
+        else if (SkillManager.instance.skillList.Count > 4 && stateCurrentName == SkillManager.GetSkillNameTestArea(3))
+        {
+            if (StateCurrent.Finished(this))
+            {
+                StateCurrent = InstantiateState(SkillManager.GetSkillNameTestArea(4));
+            }
+        }
+        //测试区域-4
+        else if (SkillManager.instance.skillList.Count > 5 && stateCurrentName == SkillManager.GetSkillNameTestArea(4))
+        {
+            if (StateCurrent.Finished(this))
+            {
+                StateCurrent = InstantiateState(SkillManager.GetSkillNameTestArea(5));
+            }
+        }
+        //测试区域-5
+        else if (SkillManager.instance.skillList.Count > 6 && stateCurrentName == SkillManager.GetSkillNameTestArea(5))
+        {
+            if (StateCurrent.Finished(this))
+            {
+                StateCurrent = InstantiateState(SkillManager.GetSkillNameTestArea(6));
+            }
+        }
+        //default
+        else if (dic_Input != Vector2.zero)          //移动
+        {
+            StateCurrent = InstantiateState("Player_跑步");
+        }
+        else if (StateCurrent.Finished(this))   //待机
+        {
+            StateCurrent = InstantiateState("Player_待机");
         }
     }
 
@@ -683,7 +729,7 @@ public class Player : Entity
     /// <param name="entity"></param>
     public void GuideBreakAttack(Entity entity)
     {
-        eTarget_BreakAttack = entity;
+        eTarget_击破 = entity;
         Buff buff = BuffAdd("BFPlayerGuideBreakAttack");
     }
 
@@ -708,4 +754,3 @@ public class Player : Entity
         Gizmos.DrawLine(center, lastPoint2);
     }
 }
-

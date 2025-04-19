@@ -17,8 +17,8 @@ public class Player_普攻1_冲刺_阶段2 : State
     {
         //值
         Player player = (Player)entity;
-        eTarget = player.eTarget_Attack01F;
-        player.eTarget_Attack01F = null;
+        eTarget = player.eTarget_普攻1_冲刺_阶段2;
+        player.eTarget_普攻1_冲刺_阶段2 = null;
 
         //根据评级，改变播放的Timeline
         RankABCD = RankSystem.GetRankABCD();
