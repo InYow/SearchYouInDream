@@ -2009,7 +2009,7 @@ MonoBehaviour:
   attackValue: 1
   transBreakStun: 0
   beingBreakStun: 0
-  StartStateName: STPlayerIdle
+  StartStateName: "Player_\u5F85\u673A"
   stateCurrentName: 
   healthGray: 10
   healthGray_LoseSpeed: 1
@@ -2165,8 +2165,8 @@ BoxCollider2D:
   m_Offset: {x: -0.031964928, y: 0.24095231}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.38, y: 0.19}
-    oldSize: {x: 2.8417969, y: 1.2910156}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.9121094, y: 1.0664062}
     newSize: {x: 0.9121094, y: 1.0664062}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5835,9 +5835,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skill1: 
-  skill2: STPlayerSkillW1
-  skill3: STPlayerSkillS1
-  skill4: STPlayerSkillD1
+  skill2: "Player_\u589E\u5E45_\u6124\u6012"
+  skill3: "Player_\u63A7\u5236_\u88C2\u5730"
+  skill4: "Player_\u8FDB\u653B_\u70C8\u7130\u51B2\u649E"
 --- !u!1 &1494277268
 GameObject:
   m_ObjectHideFlags: 0
