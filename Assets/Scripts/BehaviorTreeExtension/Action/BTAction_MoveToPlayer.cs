@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
+using BehaviorDesigner.Runtime.Tasks.Unity.UnityGameObject;
 using Pathfinding;
 using UnityEngine;
 
@@ -12,6 +13,7 @@ public class BTAction_MoveToPlayer : Action
     private Animator animator;
 
     public SharedTransform targetPosition;
+    public string walkState = "STEnemy_WarriorMoveToPlayer";
     
     public override void OnAwake()
     {
@@ -24,6 +26,7 @@ public class BTAction_MoveToPlayer : Action
     public override void OnStart()
     {
         base.OnStart();
+        entity.StateCurrent = entity.InstantiateState(walkState);
         aiPath.canMove = true;
         aiPath.destination = targetPosition.Value.position;
         animator.SetFloat("MoveSpeed",aiPath.maxSpeed);
