@@ -65,8 +65,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playableDirector: {fileID: 5793999947137041535}
+  wrapMode: 0
   rankABCD: 0
-  playableAsset_A: {fileID: 0}
+  playableAsset_A: {fileID: 11400000, guid: b763788c58b27a342b9068ce163ba9fc, type: 2}
   playableAsset_B: {fileID: 0}
   playableAsset_C: {fileID: 0}
   playableAsset_D: {fileID: 0}

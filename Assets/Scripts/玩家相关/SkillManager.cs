@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SkillManager : MonoBehaviour
@@ -8,6 +9,9 @@ public class SkillManager : MonoBehaviour
     public string skill2;//W
     public string skill3;//S
     public string skill4;//D
+
+    [Header("测试区域")]
+    public List<string> skillList = new List<string>(); //测试区域
 
     private void Awake()
     {
@@ -51,6 +55,11 @@ public class SkillManager : MonoBehaviour
                     return null;
                 }
         }
+    }
+
+    public static string GetSkillNameTestArea(int testSkillID)
+    {
+        return instance.skillList[testSkillID];
     }
 
     public static void SetSkillName(int skillID, string skillName)

@@ -87,6 +87,12 @@ public class Player : Entity
         base.UPCheckStateTrans();
 
         //-----------任意状态-----------
+        //测试区
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            StateCurrent = InstantiateState(SkillManager.GetSkillNameTestArea(0));
+            return;
+        }
         //硬直
         if (transStun)
         {
@@ -218,7 +224,8 @@ public class Player : Entity
                     StateCurrent = InstantiateState("Player_投掷");
                 }
             }
-            else if (Input.GetKey(KeyCode.I) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)))        //技能
+            else if (Input.GetKey(KeyCode.I) && //技能
+            (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)))        //技能
             {
                 if (Input.GetKey(KeyCode.W))
                 {
@@ -563,7 +570,6 @@ public class Player : Entity
             }
         }
 
-
         //-----技能-----
         else if (stateCurrentName == "Player_增幅_愤怒")
         {
@@ -605,6 +611,19 @@ public class Player : Entity
                 {
                     StateCurrent = InstantiateState("Player_跑步");
                 }
+            }
+        }
+
+        //-------------default-------------
+        else
+        {
+            if (dic_Input != Vector2.zero)          //移动
+            {
+                StateCurrent = InstantiateState("Player_跑步");
+            }
+            else if (StateCurrent.Finished(this))   //待机
+            {
+                StateCurrent = InstantiateState("Player_待机");
             }
         }
     }

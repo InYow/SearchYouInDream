@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3571741331947014768}
   - component: {fileID: 7247197338386615903}
+  - component: {fileID: 7248518059184589830}
   m_Layer: 0
   m_Name: STEmpty
   m_TagString: Untagged
@@ -44,3 +45,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba198bf3aea25a429dd84c9a7b4a4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playableDirector: {fileID: 7248518059184589830}
+  wrapMode: 0
+  rankABCD: 0
+  playableAsset_A: {fileID: 0}
+  playableAsset_B: {fileID: 0}
+  playableAsset_C: {fileID: 0}
+  playableAsset_D: {fileID: 0}
+  windTypeSectionClipList_A: []
+  inputWindTypeSectionClipList_A: []
+  windTypeSectionClipList_B: []
+  inputWindTypeSectionClipList_B: []
+  windTypeSectionClipList_C: []
+  inputWindTypeSectionClipList_C: []
+  windTypeSectionClipList_D: []
+  inputWindTypeSectionClipList_D: []
+--- !u!320 &7248518059184589830
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8063822601428982144}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 0}
+  m_InitialState: 1
+  m_WrapMode: 0
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []

@@ -42,7 +42,7 @@ PlayableDirector:
   m_GameObject: {fileID: 9117474669274388353}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 0faf38de877fa32469bed02db7f91efa, type: 2}
+  m_PlayableAsset: {fileID: 0}
   m_InitialState: 0
   m_WrapMode: 0
   m_DirectorUpdateMode: 1
@@ -65,6 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playableDirector: {fileID: 9117474669274388365}
+  wrapMode: 0
   rankABCD: 0
   playableAsset_A: {fileID: 0}
   playableAsset_B: {fileID: 0}

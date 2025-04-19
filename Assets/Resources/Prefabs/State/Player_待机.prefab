@@ -46,6 +46,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playableDirector: {fileID: 939240469302173346}
+  wrapMode: 1
+  rankABCD: 0
+  playableAsset_A: {fileID: 11400000, guid: 0e65b27be1cff61459cc5faa71b1823c, type: 2}
+  playableAsset_B: {fileID: 0}
+  playableAsset_C: {fileID: 0}
+  playableAsset_D: {fileID: 0}
+  windTypeSectionClipList_A: []
+  inputWindTypeSectionClipList_A: []
+  windTypeSectionClipList_B: []
+  inputWindTypeSectionClipList_B: []
+  windTypeSectionClipList_C: []
+  inputWindTypeSectionClipList_C: []
+  windTypeSectionClipList_D: []
+  inputWindTypeSectionClipList_D: []
 --- !u!320 &939240469302173346
 PlayableDirector:
   m_ObjectHideFlags: 0

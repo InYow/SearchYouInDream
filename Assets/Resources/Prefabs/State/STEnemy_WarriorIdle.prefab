@@ -44,7 +44,7 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 9be49927985df30479ddc4155f443f6e, type: 2}
   m_InitialState: 0
-  m_WrapMode: 1
+  m_WrapMode: 0
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
@@ -65,8 +65,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playableDirector: {fileID: 757702075433948754}
+  wrapMode: 0
   rankABCD: 0
-  playableAsset_A: {fileID: 0}
+  playableAsset_A: {fileID: 11400000, guid: 9be49927985df30479ddc4155f443f6e, type: 2}
   playableAsset_B: {fileID: 0}
   playableAsset_C: {fileID: 0}
   playableAsset_D: {fileID: 0}

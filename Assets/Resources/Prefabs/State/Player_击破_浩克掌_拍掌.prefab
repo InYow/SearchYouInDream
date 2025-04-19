@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2801350880359868700}
-  - component: {fileID: 2801350880359868690}
   - component: {fileID: 2801350880359868691}
+  - component: {fileID: -4831574168535499046}
   m_Layer: 0
-  m_Name: STaTemplate
+  m_Name: "Player_\u51FB\u7834_\u6D69\u514B\u638C_\u62CD\u638C"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,19 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2801350880359868690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2801350880359868703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 468567bbb3058404f924c4d598764b22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playableDirector: {fileID: 2801350880359868691}
 --- !u!320 &2801350880359868691
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -55,7 +42,7 @@ PlayableDirector:
   m_GameObject: {fileID: 2801350880359868703}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 0faf38de877fa32469bed02db7f91efa, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: be44e9d58e8bdd74ba74f2d57b740318, type: 2}
   m_InitialState: 0
   m_WrapMode: 0
   m_DirectorUpdateMode: 1
@@ -65,3 +52,30 @@ PlayableDirector:
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
+--- !u!114 &-4831574168535499046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2801350880359868703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a255d7956212a64ab676ddebbe5cc29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playableDirector: {fileID: 2801350880359868691}
+  wrapMode: 0
+  rankABCD: 0
+  playableAsset_A: {fileID: 11400000, guid: be44e9d58e8bdd74ba74f2d57b740318, type: 2}
+  playableAsset_B: {fileID: 0}
+  playableAsset_C: {fileID: 0}
+  playableAsset_D: {fileID: 0}
+  windTypeSectionClipList_A: []
+  inputWindTypeSectionClipList_A: []
+  windTypeSectionClipList_B: []
+  inputWindTypeSectionClipList_B: []
+  windTypeSectionClipList_C: []
+  inputWindTypeSectionClipList_C: []
+  windTypeSectionClipList_D: []
+  inputWindTypeSectionClipList_D: []

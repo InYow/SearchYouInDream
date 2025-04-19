@@ -43,14 +43,15 @@ public class Player_受击 : State
 
     public override bool Finished(Entity entity)
     {
-        Player player = (Player)entity;
-        if (player.time_Stun <= 0f)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return base.Finished(entity);
+        // Player player = (Player)entity;
+        // if (player.time_Stun <= 0f)
+        // {
+        //     return true;
+        // }
+        // else
+        // {
+        //     return false;
+        // }
     }
 }

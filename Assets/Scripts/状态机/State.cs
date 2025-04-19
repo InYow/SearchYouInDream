@@ -34,9 +34,13 @@ public enum RankABCD
     D
 }
 
+[RequireComponent(typeof(PlayableDirector))]
 public abstract class State : MonoBehaviour
 {
+    [HideInInspector]
     public PlayableDirector playableDirector;
+
+    public DirectorWrapMode wrapMode;
 
     [ReadOnly]
     [SerializeField]
@@ -129,6 +133,20 @@ public abstract class State : MonoBehaviour
     /// </summary>
     /// <param name="entity"></param>
     public abstract void StateExit(Entity entity);
+
+    public virtual void OnValidate()
+    {
+        if (playableDirector == null)
+        {
+            playableDirector = GetComponent<PlayableDirector>();
+        }
+        if (playableDirector != null)
+        {
+            if (playableDirector.playableAsset == null)
+                playableDirector.playableAsset = playableAsset_A;
+            playableDirector.extrapolationMode = wrapMode;
+        }
+    }
 
     ////////////////
     //-------------方法------------

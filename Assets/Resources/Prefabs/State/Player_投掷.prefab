@@ -42,7 +42,7 @@ PlayableDirector:
   m_GameObject: {fileID: 6336377362169397095}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: e5aedb480ee4d7643a183292e15900c0, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 44046957475626d4daf7eb84363818ca, type: 2}
   m_InitialState: 0
   m_WrapMode: 0
   m_DirectorUpdateMode: 1
@@ -53,6 +53,8 @@ PlayableDirector:
   - key: {fileID: 6454768730602795952, guid: e5aedb480ee4d7643a183292e15900c0, type: 2}
     value: {fileID: 0}
   - key: {fileID: -750820184153409471, guid: e5aedb480ee4d7643a183292e15900c0, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -5984183694837841838, guid: 44046957475626d4daf7eb84363818ca, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
@@ -69,3 +71,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playableDirector: {fileID: 6336377362169397099}
+  wrapMode: 0
+  rankABCD: 0
+  playableAsset_A: {fileID: 11400000, guid: 44046957475626d4daf7eb84363818ca, type: 2}
+  playableAsset_B: {fileID: 0}
+  playableAsset_C: {fileID: 0}
+  playableAsset_D: {fileID: 0}
+  windTypeSectionClipList_A: []
+  inputWindTypeSectionClipList_A: []
+  windTypeSectionClipList_B: []
+  inputWindTypeSectionClipList_B: []
+  windTypeSectionClipList_C: []
+  inputWindTypeSectionClipList_C: []
+  windTypeSectionClipList_D: []
+  inputWindTypeSectionClipList_D: []
