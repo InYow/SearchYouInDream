@@ -13,7 +13,8 @@ public class BFPlayerGuideBreakAttack : Buff
         Player player = entity as Player;
         e_target = player.eTarget_击破;
 
-        //TODO 慢动作、近镜头、UI提示
+        //TODO 近镜头、UI提示
+        //FIN 慢动作
         SlowMotion.StartSlow();
         //UI
         guideGO.transform.SetParent(null);      //无视scale
@@ -45,5 +46,11 @@ public class BFPlayerGuideBreakAttack : Buff
         //UI
         guideGO.SetActive(false);
         guideGO.transform.localPosition = Vector3.zero;
+    }
+
+    public override void AddAgain(Entity entity)
+    {
+        //FIXME 如果在击破buff期间，又有敌人被击破了怎么办？
+        base.AddAgain(entity);
     }
 }

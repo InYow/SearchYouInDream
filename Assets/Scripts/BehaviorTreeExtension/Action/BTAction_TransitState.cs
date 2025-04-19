@@ -1,4 +1,4 @@
-    using BehaviorDesigner.Runtime.Tasks;
+using BehaviorDesigner.Runtime.Tasks;
 
 namespace BehaviorTreeExtension
 {
@@ -8,7 +8,7 @@ namespace BehaviorTreeExtension
         public string stateName;
 
         public string defaultStateName = "STEmpty";
-		
+
         private Entity m_Entity;
 
         public override void OnAwake()
@@ -21,7 +21,7 @@ namespace BehaviorTreeExtension
         {
             if (m_Entity != null)
             {
-                m_Entity.StateCurrent = m_Entity.InstantiateState(stateName);;
+                m_Entity.StateCurrent = m_Entity.InstantiateState(stateName); ;
             }
         }
 

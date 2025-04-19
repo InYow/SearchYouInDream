@@ -5,10 +5,22 @@ public class SkillManager : MonoBehaviour
 {
     public static SkillManager instance;
 
-    public string skill1;//A
-    public string skill2;//W
-    public string skill3;//S
-    public string skill4;//D
+    public string skill1;       //AD
+                                //Player_增幅_愤怒
+
+    public string skill2;       //W
+                                //Player_控制_裂地
+
+    public string skill3;       //S
+                                //Player_进攻_烈焰冲撞
+
+    public string skill4;
+
+    public string skill5;       //击破
+                                //Player_击破_气爆拳
+                                //Player_击破_浩克掌
+
+
 
     [Header("测试区域")]
     public List<string> skillList = new List<string>(); //测试区域
@@ -49,6 +61,10 @@ public class SkillManager : MonoBehaviour
             case 4://D
                 {
                     return instance.skill4;
+                }
+            case 5://击破   
+                {
+                    return instance.skill5;
                 }
             default:
                 {

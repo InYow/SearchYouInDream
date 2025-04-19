@@ -262,6 +262,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3225463772063427293, guid: 3eb3382cfb08cd046a4b50c8820d4bdc, type: 3}
+      propertyPath: resis
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225463772063427293, guid: 3eb3382cfb08cd046a4b50c8820d4bdc, type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225463772063427293, guid: 3eb3382cfb08cd046a4b50c8820d4bdc, type: 3}
+      propertyPath: resis_Max
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225463772063427293, guid: 3eb3382cfb08cd046a4b50c8820d4bdc, type: 3}
+      propertyPath: health_Max
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3225463772063427294, guid: 3eb3382cfb08cd046a4b50c8820d4bdc, type: 3}
       propertyPath: m_Name
       value: Enemy_Warrior
@@ -1178,6 +1194,7 @@ Transform:
   - {fileID: 241996251}
   - {fileID: 1072917657}
   - {fileID: 1546399311}
+  - {fileID: 1725878047}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2016,7 +2033,7 @@ MonoBehaviour:
   _rb: {fileID: 589571564}
   speed_walk: 3
   speed_fly: 10
-  attackResisValue: 2
+  attackResisValue: 100
   pickableItem: {fileID: 0}
   speed_throw: 10
   radius_outer: 5
@@ -2025,15 +2042,17 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 192
-  dic_Input: {x: 0, y: 0}
-  transStun: 0
-  transDefend_Achieve: 0
-  transDefend_achieve_TgtEntity: {fileID: 0}
+  "distance_\u51FB\u7834_\u6C14\u7206\u62F3": 1
+  "distance_\u51FB\u7834_\u6D69\u514B\u638C": 1
   time_Stun: 0
   time_Angry: 0
   time_StunMax: 1.25
   cd_DefendOrAngry: 0
   cdMax_DefendOrAngry: 2
+  dic_Input: {x: 0, y: 0}
+  transStun: 0
+  transDefend_Achieve: 0
+  transDefend_achieve_TgtEntity: {fileID: 0}
   "eTarget_\u51FB\u7834": {fileID: 0}
   "eTarget_\u666E\u653B1_\u51B2\u523A_\u9636\u6BB52": {fileID: 0}
 --- !u!212 &589571562
@@ -5838,6 +5857,7 @@ MonoBehaviour:
   skill2: "Player_\u589E\u5E45_\u6124\u6012"
   skill3: "Player_\u63A7\u5236_\u88C2\u5730"
   skill4: "Player_\u8FDB\u653B_\u70C8\u7130\u51B2\u649E"
+  skill5: "Player_\u51FB\u7834_\u6C14\u7206\u62F3"
   skillList:
   - "Player_\u51FB\u7834_\u6C14\u7206\u62F3_\u51C6\u5907"
   - "Player_\u51FB\u7834_\u6C14\u7206\u62F3_\u8D77\u8DF3"
@@ -6599,6 +6619,50 @@ Transform:
   m_Father: {fileID: 716609266}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1725878046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1725878047}
+  - component: {fileID: 1725878048}
+  m_Layer: 0
+  m_Name: MessageManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1725878047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725878046}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 247337775}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1725878048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725878046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ebf86534181ba4db814f4051851184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1745424109
 GameObject:
   m_ObjectHideFlags: 0
