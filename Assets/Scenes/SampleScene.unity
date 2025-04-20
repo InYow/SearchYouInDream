@@ -284,7 +284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3225463772063427294, guid: 3eb3382cfb08cd046a4b50c8820d4bdc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3eb3382cfb08cd046a4b50c8820d4bdc, type: 3}
@@ -4614,13 +4614,17 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 589571563}
+    - target: {fileID: 8545397529654295127, guid: 44ad02382fea86e47a88dc74308ab1a0, type: 3}
+      propertyPath: dashCD
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8545397529654295131, guid: 44ad02382fea86e47a88dc74308ab1a0, type: 3}
       propertyPath: m_Name
       value: Enemy_Dash
       objectReference: {fileID: 0}
     - target: {fileID: 8545397529654295131, guid: 44ad02382fea86e47a88dc74308ab1a0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8545397529654295135, guid: 44ad02382fea86e47a88dc74308ab1a0, type: 3}
       propertyPath: m_RootOrder
