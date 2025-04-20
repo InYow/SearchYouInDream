@@ -2042,7 +2042,7 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 192
-  "distance_\u51FB\u7834_\u6C14\u7206\u62F3": 1
+  "distance_\u51FB\u7834_\u6C14\u7206\u62F3": 1.4
   "distance_\u51FB\u7834_\u6D69\u514B\u638C": 1
   time_Stun: 0
   time_Angry: 0
@@ -5860,9 +5860,6 @@ MonoBehaviour:
   skill5: "Player_\u51FB\u7834_\u6D69\u514B\u638C"
   skillList:
   - "Player_\u51FB\u7834_\u6C14\u7206\u62F3_\u51C6\u5907"
-  - "Player_\u51FB\u7834_\u6C14\u7206\u62F3_\u8D77\u8DF3"
-  - "Player_\u51FB\u7834_\u6C14\u7206\u62F3_\u98DE\u884C"
-  - "Player_\u51FB\u7834_\u6C14\u7206\u62F3_\u653B\u51FB"
 --- !u!1 &1494277268
 GameObject:
   m_ObjectHideFlags: 0
