@@ -20,7 +20,7 @@ public class UITest : MonoBehaviour
             else
             {
                 UIManager.instance.CloseCanvas(canvasType);
-                gate = false;
+                gate = true;
             }
         }
     }

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Derek.Scripts.UI.Panel;
+using Inventory;
 using UI.UISystem.UIFramework;
 using UnityEngine;
 using UnityEngine.UI;
@@ -42,6 +43,9 @@ public class PlayerMenu : UICanvas
         {
             bagPackPanel = playerBagPack.GetComponent<BagPackPanel>();
         }
+
+        //var inventoryData= InventoryManager.instance.GetInventoryData();
+        //bagPackPanel.InitialInventoryPanel(inventoryData);
     }
 
     public override void OnCanvasExit(UIManager manager)
