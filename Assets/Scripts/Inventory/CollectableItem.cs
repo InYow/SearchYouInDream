@@ -11,7 +11,13 @@ namespace Inventory
 
         public void PickUp()
         {
-            //InventoryManager.ins
+            InventoryManager.instance.AddItemToInventory(collectableData);
+            Invoke(nameof(DelayDestroy),0.5f);
+        }
+
+        private void DelayDestroy()
+        {
+            Destroy(this.gameObject);
         }
     }
 }
