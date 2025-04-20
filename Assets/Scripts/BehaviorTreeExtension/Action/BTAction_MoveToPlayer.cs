@@ -14,7 +14,7 @@ public class BTAction_MoveToPlayer : Action
 
     public SharedTransform targetPosition;
     public string walkState = "STEnemy_WarriorMoveToPlayer";
-    
+
     public override void OnAwake()
     {
         base.OnAwake();
@@ -29,7 +29,7 @@ public class BTAction_MoveToPlayer : Action
         entity.StateCurrent = entity.InstantiateState(walkState);
         aiPath.canMove = true;
         aiPath.destination = targetPosition.Value.position;
-        animator.SetFloat("MoveSpeed",aiPath.maxSpeed);
+        animator.SetFloat("MoveSpeed", aiPath.maxSpeed);
     }
 
     public override TaskStatus OnUpdate()
@@ -44,24 +44,24 @@ public class BTAction_MoveToPlayer : Action
         {
             aiPath.destination = targetPosition.Value.position;
         }
-        
+
         Vector3 dir = Vector3.Normalize(aiPath.destination - entity.transform.position);
         if (dir.x < 0)
         {
             entity.gameObject.transform.localScale = new Vector3(-1, 1, 1);
         }
-        else if(dir.x > 0)
+        else if (dir.x > 0)
         {
             entity.gameObject.transform.localScale = new Vector3(1, 1, 1);
         }
-        
+
         return TaskStatus.Running;
     }
-    
+
     public override void OnEnd()
     {
         base.OnEnd();
         aiPath.canMove = false;
-        animator.SetFloat("MoveSpeed",0);
+        animator.SetFloat("MoveSpeed", 0);
     }
 }
