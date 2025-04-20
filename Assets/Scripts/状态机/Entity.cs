@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
+    public List<string> 血VFX_List = new List<string> { "血1", "血2" };
     public float health;
     public float health_Max;
     public float resis;
@@ -164,6 +165,7 @@ public class Entity : MonoBehaviour
         if (!BuffContain("BFPlayerUnselected"))
         {
             health -= entity.attackValue;
+            FlowBlood();
 
             //死掉了
             if (health <= 0f)
@@ -171,6 +173,11 @@ public class Entity : MonoBehaviour
                 Execution(entity, attackBox);
             }
         }
+    }
+
+    public virtual void FlowBlood()
+    {
+        VisualEffectManager.PlayEffect(血VFX_List[0], transform);
     }
 
     /// <summary>
