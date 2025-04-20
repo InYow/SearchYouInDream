@@ -16,17 +16,19 @@ public class Player : Entity
     public float radius_inner = 2f;     //扇形外径
     public float angle = 60f;           //扇形角度
     public LayerMask targetLayer;       //目标层
+    public float distance_击破_气爆拳;   //击破_气爆拳_追击距离
+    public float distance_击破_浩克掌;   //击破_浩克掌_追击距离
+    [ReadOnly] public float time_Stun;  //硬直时长
+    public float time_Angry;            //解除的硬直时长
+    public float time_StunMax;
+    public float cd_DefendOrAngry;      //格挡or暴怒CD
+    public float cdMax_DefendOrAngry;
 
     [Header("状态机全局变量")]
     public Vector2 dic_Input;   //四键方向
     public bool transStun;      //进入stun布尔值
     public bool transDefend_Achieve;//进入 弹反 布尔值
     public Entity transDefend_achieve_TgtEntity;//弹反目标
-    [ReadOnly] public float time_Stun;  //硬直时长
-    public float time_Angry;            //解除的硬直时长
-    public float time_StunMax;
-    public float cd_DefendOrAngry;      //格挡or暴怒CD
-    public float cdMax_DefendOrAngry;
     public Entity eTarget_击破;  //击破攻击的目标
     public Entity eTarget_普攻1_冲刺_阶段2;    //追击的目标
 
@@ -34,7 +36,7 @@ public class Player : Entity
     {
         base.Start();
         _rb = GetComponent<Rigidbody2D>();
-        MessageManager.ACBreakStun += GuideBreakAttack;
+        MessageManager.Instance.OnBreakStun += GuideBreakAttack;
     }
 
     public override void Update()
@@ -101,10 +103,26 @@ public class Player : Entity
             return;
         }
 
-        //拥有GuideBreakAttack的buff        //击破攻击
+        //击破攻击  拥有GuideBreakAttack的buff
         if (BuffContain("BFPlayerGuideBreakAttack") && Input.GetKeyDown(KeyCode.U))
         {
-            StateCurrent = InstantiateState("Player_击破_浩克掌_拍掌");
+            //浩克掌
+            if (SkillManager.GetSkillName(5) == "Player_击破_浩克掌")
+            {
+                if ((transform.position - eTarget_击破.transform.position).magnitude > distance_击破_浩克掌)   //Player_击破_浩克掌_起飞
+                {
+                    StateCurrent = InstantiateState("Player_击破_浩克掌_起飞");
+                }
+                else
+                {
+                    StateCurrent = InstantiateState("Player_击破_浩克掌_拍掌");                                 //Player_击破_浩克掌_拍掌
+                }
+            }
+            //气爆拳
+            else if (SkillManager.GetSkillName(5) == "Player_击破_气爆拳")
+            {
+                StateCurrent = InstantiateState("Player_击破_气爆拳_准备");                                     //Player_击破_气爆拳_准备
+            }
             BuffRemove("BFPlayerGuideBreakAttack");
             return;
         }
@@ -401,8 +419,77 @@ public class Player : Entity
                 buff.attackID = 4;
             }
         }
-        //击破攻击
+        //ST击破攻击
         else if (stateCurrentName == "Player_击破_践踏_阶段2")
+        {
+            if (StateCurrent.Finished(this))                //待机 or 移动
+            {
+                if (dic_Input == Vector2.zero)              //待机
+                {
+                    StateCurrent = InstantiateState("Player_待机");
+                }
+                else if (dic_Input != Vector2.zero)         //移动
+                {
+                    StateCurrent = InstantiateState("Player_跑步");
+                }
+            }
+        }
+        //ST Player_击破_浩克掌_起飞
+        else if (stateCurrentName == "Player_击破_浩克掌_起飞")
+        {
+            if (StateCurrent.Finished(this))                //Player_击破_浩克掌_拍掌
+            {
+                StateCurrent = InstantiateState("Player_击破_浩克掌_拍掌");
+            }
+        }
+        //ST Player_击破_浩克掌_拍掌
+        else if (stateCurrentName == "Player_击破_浩克掌_拍掌")
+        {
+            if (StateCurrent.Finished(this))                //待机 or 移动
+            {
+                if (dic_Input == Vector2.zero)              //待机
+                {
+                    StateCurrent = InstantiateState("Player_待机");
+                }
+                else if (dic_Input != Vector2.zero)         //移动
+                {
+                    StateCurrent = InstantiateState("Player_跑步");
+                }
+            }
+        }
+        //ST Player_击破_气爆拳_准备
+        else if (stateCurrentName == "Player_击破_气爆拳_准备")
+        {
+            if (StateCurrent.Finished(this))
+            {
+                if ((transform.position - eTarget_击破.transform.position).magnitude > distance_击破_气爆拳)//Player_击破_气爆拳_起跳
+                {
+                    StateCurrent = InstantiateState("Player_击破_气爆拳_起跳");
+                }
+                else
+                {
+                    StateCurrent = InstantiateState("Player_击破_气爆拳_攻击");//Player_击破_气爆拳_攻击
+                }
+            }
+        }
+        //ST Player_击破_气爆拳_起跳
+        else if (stateCurrentName == "Player_击破_气爆拳_起跳")
+        {
+            if (StateCurrent.Finished(this))                //Player_击破_气爆拳_飞行
+            {
+                StateCurrent = InstantiateState("Player_击破_气爆拳_飞行");
+            }
+        }
+        //ST Player_击破_气爆拳_飞行
+        else if (stateCurrentName == "Player_击破_气爆拳_飞行")
+        {
+            if (StateCurrent.Finished(this))                //Player_击破_气爆拳_攻击
+            {
+                StateCurrent = InstantiateState("Player_击破_气爆拳_攻击");
+            }
+        }
+        //ST Player_击破_气爆拳_攻击
+        else if (stateCurrentName == "Player_击破_气爆拳_攻击")
         {
             if (StateCurrent.Finished(this))                //待机 or 移动
             {

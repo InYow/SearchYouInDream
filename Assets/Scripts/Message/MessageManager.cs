@@ -5,15 +5,30 @@ using UnityEngine;
 
 public class MessageManager : MonoBehaviour
 {
-    public static Action<Entity> ACBreakStun;
+    public static MessageManager Instance;
 
+    public event Action<Entity> OnBreakStun;
 
-    /// <summary>
-    /// 有entity被破防了
-    /// </summary>
-    /// <param name="entity">target</param>
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public static void BreakStun(Entity entity)
     {
-        ACBreakStun?.Invoke(entity);
+        if (entity == null || entity.gameObject == null)
+        {
+            Debug.LogWarning("尝试调用 BreakStun，但目标 Entity 已被销毁。");
+            return;
+        }
+
+        Instance.OnBreakStun?.Invoke(entity);
     }
 }

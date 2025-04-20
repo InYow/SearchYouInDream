@@ -17,12 +17,10 @@ public class Player_击破_气爆拳_飞行 : State
     {
         //值
         Player player = (Player)entity;
-        eTarget = player.eTarget_普攻1_冲刺_阶段2;
-        player.eTarget_普攻1_冲刺_阶段2 = null;
+        eTarget = player.eTarget_击破;
+        player.eTarget_击破 = null;
 
         //根据评级，改变播放的Timeline
-        //FIN 将根据评级变化的逻辑简化为设置枚举值
-        //FIN 根据枚举值的不同，读取不同Timeline的自定义轨道信息
         RankABCD = RankSystem.GetRankABCD();
 
         BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
@@ -34,9 +32,24 @@ public class Player_击破_气爆拳_飞行 : State
 
     public override void UPStateBehaviour(Entity entity)
     {
-
+        Player player = (Player)entity;
+        //移动
+        Vector2 forward = (eTarget.transform.position - player.transform.position).normalized;
+        player._rb.velocity = player.speed_fly * forward;
     }
     public override void UPStateInit(Entity entity)
     {
+    }
+    public override bool Finished(Entity entity)
+    {
+        float distance = (eTarget.transform.position - entity.transform.position).magnitude;
+        if (distance <= 小于该距离视为抵达)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

@@ -82,4 +82,4 @@ MonoBehaviour:
   windTypeSectionClipList_D: []
   inputWindTypeSectionClipList_D: []
   eTarget: {fileID: 0}
-  "\u5C0F\u4E8E\u8BE5\u8DDD\u79BB\u89C6\u4E3A\u62B5\u8FBE": 0
+  "\u5C0F\u4E8E\u8BE5\u8DDD\u79BB\u89C6\u4E3A\u62B5\u8FBE": 1.2
