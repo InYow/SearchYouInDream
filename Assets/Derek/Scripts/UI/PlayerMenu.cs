@@ -1,83 +1,95 @@
 using System.Collections.Generic;
 using Derek.Scripts.UI.Panel;
 using Inventory;
+using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using UI.UISystem.UIFramework;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerMenu : UICanvas
 {
-    public Toggle bagPackToggle;
-    public Toggle skillToggle;
-    public GameObject playerBagPack;
-    public GameObject playerSkillSelector;
+
+    public InventorySlot[] bagPackSlots;
     
-    private SkillDataBase skillDataSingleton;
-    private BagPackPanel bagPackPanel;
-    private SkillSelectorPanel skillSelectorPanel;
+    [ShowInInspector]public Dictionary<InventorySlot,int> bagSlotDataCache = new Dictionary<InventorySlot,int>();
     
     public override void OnCanvasEnter(UIManager manager)
     {
         base.OnCanvasEnter(manager);
-
-        InitialCanvas();
-        
-        //Bind Event
-        bagPackToggle.onValueChanged.AddListener(EnableBagPackPanel);
-        skillToggle.onValueChanged.AddListener(EnableSkillPanel);
-        //Set UI State
-        bagPackToggle.isOn = true;
-        skillToggle.isOn = false;
+        InitialBagSlotUI();
     }
-
-    private void InitialCanvas()
+    
+    /// <summary>
+    /// 根据数据初始化UI
+    /// </summary>
+    private void InitialBagSlotUI()
     {
-        skillDataSingleton = SkillDataBase.instance;
-        
-        if (skillSelectorPanel == null)
+        var inventoryData= InventoryManager.instance.GetInventoryData();
+        int dataLength = inventoryData.Count;
+        if (bagSlotDataCache.Count == 0)
         {
-            skillSelectorPanel = playerSkillSelector.GetComponent<SkillSelectorPanel>();
+            for (int i=0; i<bagPackSlots.Length; ++i)
+            {
+                if (i < dataLength)
+                {
+                    bagPackSlots[i].SetSlotData(inventoryData[i].Value);
+                }
+                else
+                {
+                    bagPackSlots[i].SetSlotData(null);
+                }
+            }
         }
-
-        if (bagPackPanel == null)
+        else
         {
-            bagPackPanel = playerBagPack.GetComponent<BagPackPanel>();
-        }
+            List<InventorySlot> emptySlots = new List<InventorySlot>();
+            foreach (var slot in bagPackSlots)
+            {
+                if (!bagSlotDataCache.ContainsKey(slot))
+                {
+                    emptySlots.Add(slot);
+                    slot.SetSlotData(null);
+                }
+                else
+                {
+                    var data = inventoryData.Find(
+                        (d) => d.Key == bagSlotDataCache[slot]);
+                    slot.SetSlotData(data.Value);
+                }
+            }
 
-        //var inventoryData= InventoryManager.instance.GetInventoryData();
-        //bagPackPanel.InitialInventoryPanel(inventoryData);
+            int index = 0;
+            int emptySlotsCount = emptySlots.Count;
+            foreach(var item in inventoryData)
+            {
+                if (!bagSlotDataCache.ContainsValue(item.Key))
+                {
+                    emptySlots[index].SetSlotData(item.Value);
+                    index++;
+                }
+            }
+        }
     }
 
     public override void OnCanvasExit(UIManager manager)
     {
         base.OnCanvasExit(manager);
+
+        SaveBagSlotUI();
         //Unbind Event
-        bagPackToggle.onValueChanged.RemoveListener(EnableBagPackPanel);
-        skillToggle.onValueChanged.RemoveListener(EnableSkillPanel);
-        
-        skillDataSingleton = null;
     }
 
-    private void EnableBagPackPanel(bool value)
+    private void SaveBagSlotUI()
     {
-        playerBagPack.SetActive(value);
-        
-        skillToggle.SetIsOnWithoutNotify(!value);
-        playerSkillSelector.SetActive(!value);
-    }
-
-    private void EnableSkillPanel(bool value)
-    {
-        List<int> skills = new List<int>();
-        if (skillDataSingleton != null)
-        { 
-            skills = skillDataSingleton.GetAllAvailableSkills();
+        bagSlotDataCache.Clear();
+        for (int i=0; i<bagPackSlots.Length; ++i)
+        {
+            int id = bagPackSlots[i].GetSlotDataID();
+            if (id > 0)
+            {
+                bagSlotDataCache.Add(bagPackSlots[i],id);
+            }
         }
-        skillSelectorPanel.InitialSkillPanel(skills);
-        
-        playerSkillSelector.SetActive(value);
-        
-        bagPackToggle.SetIsOnWithoutNotify(!value);
-        playerBagPack.SetActive(!value);
     }
 }

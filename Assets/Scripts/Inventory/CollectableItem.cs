@@ -1,21 +1,23 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Inventory
 {
-    /// <summary>
-    /// 场景中的可放入背包的物体
-    /// </summary>
-    public abstract class CollectableItem : MonoBehaviour
+    public class CollectableItem : CollectableItemAbstract
     {
-        [SerializeField]private CollectableDataScriptableObject collectableData;
-
-        public void PickUp()
+        public override void PickUp()
         {
-            InventoryManager.instance.AddItemToInventory(collectableData);
-            Invoke(nameof(DelayDestroy),0.5f);
+            if (InventoryManager.instance.CanAddItem())
+            {
+                InventoryManager.instance.AddItemToInventory(collectableData);
+                Invoke(nameof(DelayDestroy),0.5f);
+            }
+            else
+            {
+                Debug.LogError("You do not have enough resources to pick up");
+            }
         }
 
-        private void DelayDestroy()
+        protected override void DelayDestroy()
         {
             Destroy(this.gameObject);
         }

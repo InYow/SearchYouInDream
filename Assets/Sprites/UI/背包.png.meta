@@ -121,11 +121,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1048
-        width: 1705
-        height: 1000
+        y: 1997
+        width: 72
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -133,6 +133,69 @@ TextureImporter:
       bones: []
       spriteID: 1ca96d0ce564ee24f86b8a7bd82d92f2
       internalID: -780144619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u80CC\u5305_2"
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1052
+        width: 1201
+        height: 996
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6127c3fd99a63649bc4f3f232d4dc66
+      internalID: 1152627828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u80CC\u5305_3"
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 1540
+        width: 363
+        height: 507
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 28, y: 90, z: 28, w: 90}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413d709f1221a4d449a47c618a999425
+      internalID: -1523830951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u80CC\u5305_4"
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1575
+        width: 68
+        height: 449
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e84ef073405e9b341a16d34ab16bd076
+      internalID: -1778760780
       vertices: []
       indices: 
       edges: []
@@ -149,6 +212,11 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       "\u80CC\u5305_0": -780144619
+      "\u80CC\u5305_1": 60840218
+      "\u80CC\u5305_2": 1152627828
+      "\u80CC\u5305_3": -1523830951
+      "\u80CC\u5305_4": -1778760780
+      "\u80CC\u5305_5": -2090880322
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

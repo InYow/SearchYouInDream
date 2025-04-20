@@ -5,15 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/CollectableItemAbstract.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/CollectableItemAbstract.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/Interface/IInventorySlot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/Interface/IInventorySlot.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/SlotItem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/SlotItem.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Derek/Scene/DerekTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Scene/DerekTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Derek/Scripts/UI/Panel/BagPackPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Scripts/UI/Panel/BagPackPanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Derek/Scripts/UI/PlayerMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Scripts/UI/PlayerMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Derek/Scripts/UITest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Scripts/UITest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PickupItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PickupItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_击破_气爆拳_飞行.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_击破_气爆拳_飞行.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_击破_浩克掌_起飞.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_击破_浩克掌_起飞.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UICanvas/PlayerMenuCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/UICanvas/PlayerMenuCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UICanvas/PlayerMenuCanvas.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/UICanvas/PlayerMenuCanvas.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/CollectableItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/CollectableItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/CollectableItem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/CollectableItem.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/Interface/IInventoryItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/Interface/IInventoryItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/Interface/IInventoryItem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/Interface/IInventoryItem.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/ScriptableObject/CollectableDataScriptableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/ScriptableObject/CollectableDataScriptableObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UISystem/UIFramework/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UISystem/UIFramework/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/背包.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/背包.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,10 +45,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Derek/Scripts/UITest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Action/BTAction_MoveToPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DestroyableItem/IDestroyableItem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/CollectableItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/CollectableItemAbstract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UISystem/UIFramework/UICanvas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorDash.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorShoot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.9/Scripts/Runtime/TextMeshProUGUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.6.5/Runtime/TrackAsset.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -64,6 +79,14 @@
       <option name="EXE_PATH" value="D:\ProgramFiles\Unity\2021.3.23f1c1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath D:\ProjectBackup\SchoolBoxer\SearchYouInDream -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\ProjectBackup\SchoolBoxer\SearchYouInDream" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="独立播放器" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="E:/UnityOutputTest/GameCreation\SearchYouInDream.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="E:\UnityOutputTest\GameCreation" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
@@ -126,6 +149,7 @@
       <workItem from="1744799680543" duration="6899000" />
       <workItem from="1745043968076" duration="9257000" />
       <workItem from="1745113562520" duration="7272000" />
+      <workItem from="1745126054988" duration="15998000" />
     </task>
     <servers />
   </component>

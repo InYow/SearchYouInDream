@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Inventory
 {
@@ -13,6 +14,9 @@ namespace Inventory
         #endregion
         //记录物品数量；
         private Dictionary<int,CollectableDataScriptableObject> inventory = new Dictionary<int,CollectableDataScriptableObject>();
+
+        public int maxCapacity = 18;
+        [FormerlySerializedAs("currentCapacity")] public int currentSize;
         
         private void Awake()
         {
@@ -29,6 +33,11 @@ namespace Inventory
             inventory.Clear();
         }
 
+        public bool CanAddItem()
+        {
+            return currentSize <= maxCapacity;
+        }
+        
         /// <summary>
         /// 添加物品
         /// </summary>
@@ -38,12 +47,14 @@ namespace Inventory
             int id = itemData.ItemID;
             if (inventory.ContainsKey(id))
             {
-                inventory[id].AddSameItemCount();
+                inventory[id].AddSameItemCount(itemData.ItemCount);
             }
             else
             {
                 inventory.Add(id,itemData);
             }
+
+            currentSize++;
         }
 
         /// <summary>
@@ -60,6 +71,7 @@ namespace Inventory
                 {
                     inventory.Remove(id);
                 }
+                currentSize--;
                 return true;
             }
             return false;
@@ -79,6 +91,7 @@ namespace Inventory
                 {
                     inventory.Remove(itemData.ItemID);
                 }
+                currentSize--;
                 return true;
             }
             return false;
@@ -88,9 +101,9 @@ namespace Inventory
         /// 获取背包数据
         /// </summary>
         /// <returns></returns>
-        public KeyValuePair<int,CollectableDataScriptableObject>[] GetInventoryData()
+        public List<KeyValuePair<int,CollectableDataScriptableObject>> GetInventoryData()
         {
-            return inventory.ToArray();
+            return inventory.ToList();
         }
         
     }
