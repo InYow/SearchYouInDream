@@ -5,10 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Attribute Processors.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Editor Windows.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Sample - RPG Editor.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/Enemy_Warrior/Enemy_Warrior.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/Enemy_Warrior/Enemy_Warrior.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/击飞后起身.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/击飞后起身.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/待机.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/待机.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/攻击.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/攻击.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/破防.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/破防.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/破防恢复.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/破防恢复.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/被击飞.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/被击飞.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/跑步.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/跑步.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/ShooterEnemyBehaviorBaseTemplate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/ShooterEnemyBehaviorBaseTemplate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/WarriorEnemyBehaviorBaseTemplate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/WarriorEnemyBehaviorBaseTemplate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_WarriorIdle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_WarriorIdle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_WarriorShoot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_WarriorShoot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/状态机/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/状态机/Entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/铅笔怪/铅笔怪_击飞后起身_785x766.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/铅笔怪/铅笔怪_击飞后起身_785x766.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/铅笔怪/铅笔怪_受击_930x652.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/铅笔怪/铅笔怪_受击_930x652.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/铅笔怪/铅笔怪_待机_609x672.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/铅笔怪/铅笔怪_待机_609x672.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/铅笔怪/铅笔怪_攻击_1563x662.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/铅笔怪/铅笔怪_攻击_1563x662.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/铅笔怪/铅笔怪_破防_737x570.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/铅笔怪/铅笔怪_破防_737x570.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/铅笔怪/铅笔怪_破防恢复_914x881.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/铅笔怪/铅笔怪_破防恢复_914x881.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/铅笔怪/铅笔怪_被击飞_930x730.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/铅笔怪/铅笔怪_被击飞_930x730.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/铅笔怪/铅笔怪_跑步_613x676.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/铅笔怪/铅笔怪_跑步_613x676.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +150,7 @@
       <workItem from="1745043968076" duration="9257000" />
       <workItem from="1745113562520" duration="7272000" />
       <workItem from="1745126054988" duration="16684000" />
+      <workItem from="1745215401874" duration="2045000" />
     </task>
     <servers />
   </component>
