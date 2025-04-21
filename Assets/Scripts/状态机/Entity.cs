@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
-    public List<string> 血VFX_List = new List<string> { "血1", "血2" };
+    [Header("Hit VFX")]
+    public List<string> 血VFX_List = new List<string> { "血1", "血2", "血3", "血4", "血5" };
+    public Transform hitVFX_Pivot;
+    [Header("Entity")]
     public float health;
     public float health_Max;
     public float resis;
@@ -146,6 +149,15 @@ public class Entity : MonoBehaviour
 
     //---------------方法--------------
 
+    [ContextMenu("OnValidate")]
+    public virtual void OnValidate()
+    {
+        if (hitVFX_Pivot == null)
+        {
+            hitVFX_Pivot = transform.Find("HitVFX Pivot");
+        }
+    }
+
     /// <summary>
     /// 伤害Entity
     /// </summary>
@@ -177,7 +189,19 @@ public class Entity : MonoBehaviour
 
     public virtual void FlowBlood()
     {
-        VisualEffectManager.PlayEffect(血VFX_List[0], transform);
+        if (血VFX_List.Count > 0)
+        {
+            // 随机选择一个特效
+            int randomIndex = Random.Range(0, 血VFX_List.Count);
+            string randomEffect = 血VFX_List[randomIndex];
+
+            // 播放随机特效
+            VisualEffectManager.PlayEffect(randomEffect, hitVFX_Pivot);
+        }
+        else
+        {
+            Debug.LogWarning("血VFX_List 为空，无法播放特效！");
+        }
     }
 
     /// <summary>

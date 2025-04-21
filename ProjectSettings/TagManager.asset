@@ -38,15 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Scene
+  - name: "\u5730\u677F"
     uniqueID: 3550185903
+    locked: 0
+  - name: "\u540E\u9762"
+    uniqueID: 1056580707
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: UI
-    uniqueID: 1056580707
-    locked: 0
-  - name: Obstacles
+  - name: "\u524D\u9762"
     uniqueID: 3848840463
+    locked: 0
+  - name: "\u4E0A\u5C42"
+    uniqueID: 876091675
     locked: 0

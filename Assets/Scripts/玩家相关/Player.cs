@@ -806,6 +806,7 @@ public class Player : Entity
         else
         {
             base.GetHurt(entity, attackBox);//扣health
+            受伤Canvas.instance.PlayAnimation();//播放受伤UI动画
             transStun = true;//进入硬直}
         }
     }
