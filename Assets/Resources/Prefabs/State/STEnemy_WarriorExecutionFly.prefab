@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4026665763986083849}
   - component: {fileID: 4026665763986083846}
   - component: {fileID: 4026665763986083854}
+  - component: {fileID: 7396403082339354060}
   m_Layer: 0
   m_Name: STEnemy_WarriorExecutionFly
   m_TagString: Untagged
@@ -79,9 +80,25 @@ MonoBehaviour:
   inputWindTypeSectionClipList_C: []
   windTypeSectionClipList_D: []
   inputWindTypeSectionClipList_D: []
+  hitFly: {fileID: 0}
   damageSourceEntity: {fileID: 0}
   damageSourceAttackBox: {fileID: 0}
   speed_fly: 8
+  forward_fly: {x: 0, y: 0}
   time_fly: 0
   timeMax_fly: 0.5
-  forward_fly: {x: 0, y: 0}
+--- !u!114 &7396403082339354060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4026665763986083850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5a922cc06db654f85a8f7c875e5e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flySpeed: 3
+  flyTime: 0.5
+  flyDirection: {x: 1, y: 0}

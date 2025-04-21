@@ -262,9 +262,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3225463772063427293, guid: 3eb3382cfb08cd046a4b50c8820d4bdc, type: 3}
+      propertyPath: health
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225463772063427293, guid: 3eb3382cfb08cd046a4b50c8820d4bdc, type: 3}
+      propertyPath: health_Max
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3225463772063427294, guid: 3eb3382cfb08cd046a4b50c8820d4bdc, type: 3}
       propertyPath: m_Name
       value: Enemy_Warrior
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225463772063427294, guid: 3eb3382cfb08cd046a4b50c8820d4bdc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3eb3382cfb08cd046a4b50c8820d4bdc, type: 3}
@@ -4302,7 +4314,7 @@ PlayableDirector:
   m_GameObject: {fileID: 941983732}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: c4c65e43b309bda4aa6a72307a95cc72, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 20a43934891414f40a1e8511ae1b604e, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -4341,6 +4353,8 @@ PlayableDirector:
   - key: {fileID: -4430815080433177479, guid: 0e65b27be1cff61459cc5faa71b1823c, type: 2}
     value: {fileID: 0}
   - key: {fileID: -2524755848077914936, guid: c4c65e43b309bda4aa6a72307a95cc72, type: 2}
+    value: {fileID: 589571565}
+  - key: {fileID: -2524755848077914936, guid: 20a43934891414f40a1e8511ae1b604e, type: 2}
     value: {fileID: 589571565}
   m_ExposedReferences:
     m_References: []

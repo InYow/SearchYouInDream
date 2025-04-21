@@ -3,20 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 public class STEnemy_WarriorExecutionFly : State
 {
-    public Entity damageSourceEntity;
-    public CheckBox damageSourceAttackBox;
-    public float speed_fly;
-    public float time_fly;
-    public float timeMax_fly;
-    public Vector2 forward_fly;
-
+    public HitFly hitFly;
     private Enemy enemy;
+
     public override void StateExit(Entity entity)
     {
-        time_fly = 0f;
         //停止飞行
-        enemy._rb.velocity = Vector2.zero;
-        
+        //enemy._rb.velocity = Vector2.zero;
+        hitFly.FlyExit(enemy._rb);
+
         Destroy(gameObject);
     }
 
@@ -26,9 +21,12 @@ public class STEnemy_WarriorExecutionFly : State
         playableDirector.Play();
 
         //值
-        enemy = (Enemy)entity;
-        damageSourceEntity = entity.transExecution_DamageSourceEntity;
-        damageSourceAttackBox = entity.transExecution_AttackBox;
+        hitFly = GetComponent<HitFly>();
+        this.enemy = (Enemy)entity;
+        hitFly.sourceEntity = entity.transExecution_DamageSourceEntity;
+        hitFly.sourceAttackBox = entity.transExecution_AttackBox;
+        //damageSourceEntity = entity.transExecution_DamageSourceEntity;
+        //damageSourceAttackBox = entity.transExecution_AttackBox;
         entity.transExecution = false;
         entity.transExecution_AttackBox = null;
         entity.transExecution_DamageSourceEntity = null;

@@ -4,7 +4,7 @@ using UnityEngine.Playables;
 //有持续时间，时间到了自然解除
 public class Player_受击 : State
 {
-
+    public HitFly hitFly;
     public override void StateExit(Entity entity)
     {
         Destroy(gameObject);
@@ -13,7 +13,6 @@ public class Player_受击 : State
         //硬直时长归零
         player.time_Angry = player.time_Stun;
         player.time_Stun = 0f;
-
     }
 
     public override void StateStart(Entity entity)
@@ -21,9 +20,11 @@ public class Player_受击 : State
         BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
         playableDirector.Play();
 
-        //速度为0
+        hitFly = GetComponent<HitFly>();
+
+        //速度被击飞
         Player player = (Player)entity;
-        player._rb.velocity = Vector2.zero;
+        hitFly.FlyStart(player._rb);
         //硬直时长初始化
         player.time_Stun = player.time_StunMax;
     }
