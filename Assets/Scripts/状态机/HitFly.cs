@@ -12,11 +12,9 @@ public class HitFly : MonoBehaviour
 
     public void FlyStart(Rigidbody2D rb)
     {
-        rb.velocity = flyDirection * flySpeed;
-
         time_fly = timeMax_fly;
         flyDirection = Vector2.zero;
-        //计算飞行方向
+        //飞行方向
         Vector3 scale = sourceAttackBox.transform.lossyScale;
         if (scale.x >= 0f)  //向右
         {

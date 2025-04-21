@@ -93,6 +93,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5a922cc06db654f85a8f7c875e5e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sourceEntity: {fileID: 0}
+  sourceAttackBox: {fileID: 0}
   flySpeed: 10
-  flyTime: 0.5
   flyDirection: {x: 1, y: 0}
+  timeMax_fly: 0
+  time_fly: 0
