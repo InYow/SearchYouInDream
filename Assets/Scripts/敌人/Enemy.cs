@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class Enemy : Entity
 {
-    public Rigidbody2D _rb;
     public BehaviorTree behaviourTree;
     public AIPath aiPath;
     public Transform target;

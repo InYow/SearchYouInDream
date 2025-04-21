@@ -7,6 +7,9 @@ public class Entity : MonoBehaviour
     [Header("Hit VFX")]
     public List<string> 血VFX_List = new List<string> { "血1", "血2", "血3", "血4", "血5" };
     public Transform hitVFX_Pivot;
+    [Header("Component")]
+    public CheckBox attackBox;
+    public Rigidbody2D _rb;
     [Header("Entity")]
     public float health;
     public float health_Max;
@@ -151,6 +154,16 @@ public class Entity : MonoBehaviour
         if (hitVFX_Pivot == null)
         {
             hitVFX_Pivot = transform.Find("HitVFX Pivot");
+        }
+        if (hitVFX_Pivot == null)
+        {
+            Debug.LogWarning($"{gameObject.name}没有hitVFX_Pivot");
+        }
+
+        attackBox = GetComponentInChildren<CheckBox>(true);
+        if (attackBox == null)
+        {
+            Debug.LogWarning($"{gameObject.name}没有找到子物体中的CheckBox组件");
         }
     }
 

@@ -7,7 +7,6 @@ public class Player : Entity
     [Header("玩家")]
     public float healthGray;
     public float healthGray_LoseSpeed;
-    public Rigidbody2D _rb;
     public float speed_walk;
     public float speed_fly;
     public float attackResisValue;

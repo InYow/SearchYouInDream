@@ -8,6 +8,8 @@ public class Player_普攻1 : State
 {
     public override void StateExit(Entity entity)
     {
+        //解绑Entity.AttackBox.OnHurtEntity
+        entity.attackBox.OnHurtEntity -= PlayAttackVFX;
         Destroy(gameObject);
     }
 
@@ -18,8 +20,12 @@ public class Player_普攻1 : State
         //FIN 根据枚举值的不同，读取不同Timeline的自定义轨道信息
         RankABCD = RankSystem.GetRankABCD();
 
+        //绑定Timeline-Animator
         BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
         playableDirector.Play();
+
+        //绑定Entity.AttackBox.OnHurtEntity
+        entity.attackBox.OnHurtEntity += PlayAttackVFX;
 
         //速度为0
         Player player = (Player)entity;

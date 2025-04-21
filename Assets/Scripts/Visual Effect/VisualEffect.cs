@@ -8,6 +8,8 @@ public class VisualEffect : MonoBehaviour
     private void OnValidate()
     {
         _animator = GetComponent<Animator>();
+        if (_animator == null)
+            _animator = GetComponentInChildren<Animator>(true);
     }
     private void Update()
     {

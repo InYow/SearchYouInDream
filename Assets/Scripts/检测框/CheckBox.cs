@@ -21,6 +21,8 @@ public class CheckBox : MonoBehaviour
     public CheckBoxType checkBoxType;
     private Entity entity_master;
 
+    public Action<CheckBox, List<Entity>> OnHurtEntity;
+
     //Attack
     public Vector2 boxSize = new Vector2(5f, 5f); //矩形区域大小
     public LayerMask attackLayer;   //目标层
@@ -59,9 +61,20 @@ public class CheckBox : MonoBehaviour
             pickableItem_master = GetComponentInParent<PickableItem>();
             entity_master = pickableItem_master.entity_master;
         }
+
+        OverlapBox();
     }
 
     void Update()
+    {
+        // bool flowControl = OverlapBox();
+        // if (!flowControl)
+        // {
+        //     return;
+        // }
+    }
+
+    private bool OverlapBox()
     {
         Vector2 boxCenter = transform.position; // 以当前物体为检测中心
 
@@ -76,17 +89,24 @@ public class CheckBox : MonoBehaviour
                     var e = col.gameObject.GetComponent<Entity>();
                     if (e != null && e != entity_master && !entities.Contains(e))
                     {
+
                         Debug.Log("伤害" + e.name + entity_master.stateCurrentName);
+
+
                         entity_master.Hurt(e, this);
                         entities.Add(e);
                     }
                 }
+
+                //调用外部方法
+                if (entities.Count > 0)
+                    OnHurtEntity?.Invoke(this, entities);
             }
         }
         else if (checkBoxType == CheckBoxType.pick)
         {
             if (picked)
-                return;
+                return false;
             Collider2D[] hits = Physics2D.OverlapBoxAll(boxCenter, boxSize, 0f, pickLayer);
             //处理区域PickableItem
             if (hits.Length > 0)
@@ -126,6 +146,7 @@ public class CheckBox : MonoBehaviour
                 }
             }
         }
+        return true;
     }
 
     void OnDrawGizmos()

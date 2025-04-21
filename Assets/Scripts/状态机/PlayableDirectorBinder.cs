@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
+//弃用
 public class PlayableDirectorBinder : MonoBehaviour
 {
     public PlayableDirector playableDirector;

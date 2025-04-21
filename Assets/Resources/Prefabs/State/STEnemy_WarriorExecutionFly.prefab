@@ -72,6 +72,7 @@ MonoBehaviour:
   playableAsset_B: {fileID: 0}
   playableAsset_C: {fileID: 0}
   playableAsset_D: {fileID: 0}
+  hitVFX: 
   windTypeSectionClipList_A: []
   inputWindTypeSectionClipList_A: []
   windTypeSectionClipList_B: []
@@ -93,9 +94,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5a922cc06db654f85a8f7c875e5e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitFlyType: 0
   sourceEntity: {fileID: 0}
   sourceAttackBox: {fileID: 0}
   flySpeed: 3
-  flyDirection: {x: 1, y: 0}
+  flyCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   timeMax_fly: 0
-  time_fly: 0
