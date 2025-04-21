@@ -263,12 +263,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3225463772063427293, guid: 3eb3382cfb08cd046a4b50c8820d4bdc, type: 3}
+      propertyPath: resis
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225463772063427293, guid: 3eb3382cfb08cd046a4b50c8820d4bdc, type: 3}
       propertyPath: health
-      value: 1
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225463772063427293, guid: 3eb3382cfb08cd046a4b50c8820d4bdc, type: 3}
+      propertyPath: resis_Max
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3225463772063427293, guid: 3eb3382cfb08cd046a4b50c8820d4bdc, type: 3}
       propertyPath: health_Max
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3225463772063427294, guid: 3eb3382cfb08cd046a4b50c8820d4bdc, type: 3}
       propertyPath: m_Name
@@ -2245,15 +2253,15 @@ MonoBehaviour:
   health_Max: 10
   resis: 1
   resis_Max: 1
+  resis_ResponSpeed: 1
+  attackValue: 1
+  StartStateName: "Player_\u5F85\u673A"
   transExecution: 0
   transExecution_DamageSourceEntity: {fileID: 0}
   transExecution_Type: 
   transExecution_AttackBox: {fileID: 0}
-  resis_ResponSpeed: 1
-  attackValue: 1
   transBreakStun: 0
   beingBreakStun: 0
-  StartStateName: "Player_\u5F85\u673A"
   stateCurrentName: 
   healthGray: 10
   healthGray_LoseSpeed: 1
@@ -2278,6 +2286,8 @@ MonoBehaviour:
   cdMax_DefendOrAngry: 2
   dic_Input: {x: 0, y: 0}
   transStun: 0
+  transHitFly_SourceEntity: {fileID: 0}
+  transHitFly_SourceAttackBox: {fileID: 0}
   transDefend_Achieve: 0
   transDefend_achieve_TgtEntity: {fileID: 0}
   "eTarget_\u51FB\u7834": {fileID: 0}
@@ -2412,8 +2422,8 @@ BoxCollider2D:
   m_Offset: {x: -0.031964928, y: 0.24095231}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.9121094, y: 1.0664062}
+    pivot: {x: 0.35, y: 0}
+    oldSize: {x: 1.3984375, y: 0.95703125}
     newSize: {x: 0.9121094, y: 1.0664062}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4314,7 +4324,7 @@ PlayableDirector:
   m_GameObject: {fileID: 941983732}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 20a43934891414f40a1e8511ae1b604e, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 992651249e1635e4a8d193cd0a6ddecc, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1

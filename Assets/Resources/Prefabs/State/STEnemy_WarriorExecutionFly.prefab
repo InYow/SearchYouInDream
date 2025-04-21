@@ -81,12 +81,6 @@ MonoBehaviour:
   windTypeSectionClipList_D: []
   inputWindTypeSectionClipList_D: []
   hitFly: {fileID: 0}
-  damageSourceEntity: {fileID: 0}
-  damageSourceAttackBox: {fileID: 0}
-  speed_fly: 8
-  forward_fly: {x: 0, y: 0}
-  time_fly: 0
-  timeMax_fly: 0.5
 --- !u!114 &7396403082339354060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,6 +93,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5a922cc06db654f85a8f7c875e5e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flySpeed: 3
-  flyTime: 0.5
-  flyDirection: {x: 1, y: 0}
+  hitFlyType: 0
+  sourceEntity: {fileID: 0}
+  sourceAttackBox: {fileID: 0}
+  flySpeed: 10
+  flyCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  timeMax_fly: 0.5

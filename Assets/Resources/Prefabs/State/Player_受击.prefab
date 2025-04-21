@@ -93,9 +93,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5a922cc06db654f85a8f7c875e5e25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitFlyType: 1
   sourceEntity: {fileID: 0}
   sourceAttackBox: {fileID: 0}
   flySpeed: 10
-  flyDirection: {x: 1, y: 0}
-  timeMax_fly: 0
-  time_fly: 0
+  flyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 10
+      inSlope: -20
+      outSlope: -20
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.2
+      value: 6
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.42460832
+      value: 5.5490813
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  timeMax_fly: 0.35

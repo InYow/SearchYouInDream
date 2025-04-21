@@ -1,14 +1,26 @@
 using UnityEngine;
 
+public enum HitFlyType
+{
+    Float,
+    Curve,
+}
+
 public class HitFly : MonoBehaviour
 {
     [Header("击飞参数")]
-    public Entity sourceEntity;         //来源
+    public HitFlyType hitFlyType;       //击飞类型
+    [HideInInspector]
+    public Entity sourceEntity;         //来源 
+    [HideInInspector]
     public CheckBox sourceAttackBox;    //来源
+    [HideInInspector]
     public float flySpeed;              //速度
-    public Vector2 flyDirection;        //方向
+    [HideInInspector]
+    public AnimationCurve flyCurve;              //速度曲线
+    private Vector2 flyDirection;        //方向
     public float timeMax_fly;           //时长
-    public float time_fly;
+    private float time_fly;
 
     public void FlyStart(Rigidbody2D rb)
     {
@@ -26,13 +38,36 @@ public class HitFly : MonoBehaviour
         }
         //开始飞行
         {
-            rb.velocity = flyDirection * flySpeed;
+            if (hitFlyType == HitFlyType.Float)
+            {
+                rb.velocity = flyDirection * flySpeed;
+            }
+            else if (hitFlyType == HitFlyType.Curve)
+            {
+                rb.velocity = flyDirection * flyCurve.Evaluate(timeMax_fly - time_fly);
+            }
         }
     }
 
-    public void FlyBehaviour()
+    public void FlyBehaviour(Rigidbody2D rb)
     {
-
+        if (time_fly > 0f)
+        {
+            if (hitFlyType == HitFlyType.Float)
+            {
+                rb.velocity = flyDirection * flySpeed;
+            }
+            else if (hitFlyType == HitFlyType.Curve)
+            {
+                rb.velocity = flyDirection * flyCurve.Evaluate(timeMax_fly - time_fly);
+            }
+            //流逝 飞行时间
+            time_fly -= Time.deltaTime;
+        }
+        else
+        {
+            rb.velocity = Vector2.zero;
+        }
     }
 
     public void FlyExit(Rigidbody2D rb)

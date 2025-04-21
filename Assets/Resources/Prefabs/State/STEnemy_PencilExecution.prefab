@@ -79,9 +79,4 @@ MonoBehaviour:
   inputWindTypeSectionClipList_C: []
   windTypeSectionClipList_D: []
   inputWindTypeSectionClipList_D: []
-  damageSourceEntity: {fileID: 0}
-  damageSourceAttackBox: {fileID: 0}
-  speed_fly: 8
-  time_fly: 0
-  timeMax_fly: 0.5
-  forward_fly: {x: 0, y: 0}
+  hitFly: {fileID: 0}

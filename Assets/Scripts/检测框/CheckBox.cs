@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 public enum CheckBoxType
 {
     attack = 0,
@@ -9,19 +10,29 @@ public enum CheckBoxType
     attack_throwitem,
 }
 
+public enum attacktype
+{
+    none = 0,
+    poison
+}
+
 public class CheckBox : MonoBehaviour
 {
     public CheckBoxType checkBoxType;
-    public Entity entity_master;
-    [Header("attacktype")]
+    private Entity entity_master;
+
+    //Attack
     public Vector2 boxSize = new Vector2(5f, 5f); //矩形区域大小
     public LayerMask attackLayer;   //目标层
-    public string descrition;       //攻击类型描述
+    public attacktype attacktype = attacktype.none;       //攻击类型描述    
     public List<Entity> entities = new();
-    [Header("picktype")]
+
+
+    //Pick
     public LayerMask pickLayer;
     public bool picked;
-    [Header("attack_throwitem")]
+
+    //PickableItem
     public PickableItem pickableItem_master;
     private void OnEnable()
     {
@@ -65,6 +76,7 @@ public class CheckBox : MonoBehaviour
                     var e = col.gameObject.GetComponent<Entity>();
                     if (e != null && e != entity_master && !entities.Contains(e))
                     {
+                        Debug.Log("伤害" + e.name + entity_master.stateCurrentName);
                         entity_master.Hurt(e, this);
                         entities.Add(e);
                     }

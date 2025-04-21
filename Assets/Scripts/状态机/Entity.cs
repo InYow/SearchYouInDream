@@ -12,28 +12,24 @@ public class Entity : MonoBehaviour
     public float health_Max;
     public float resis;
     public float resis_Max;
+    /// <summary>
+    /// 耐力回复速度
+    /// </summary>
+    public float resis_ResponSpeed;
+    public float attackValue;
 
     //状态机参数
+    public string StartStateName = "STEmpty";// Resources/Prefabs/State中的名称
     public bool transExecution;
     public Entity transExecution_DamageSourceEntity;
     public string transExecution_Type;
     public CheckBox transExecution_AttackBox;
 
-    //buff集 <buff的名称，buff相关信息>
-    public Dictionary<string, Buff> buffs = new();
-
-    /// <summary>
-    /// 耐力回复速度
-    /// </summary>
-    public float resis_ResponSpeed;
-
-    public float attackValue;
-
     public bool transBreakStun;
-
     public bool beingBreakStun;
 
-    public string StartStateName = "STEmpty";// Resources/Prefabs/State中的名称
+    //buff集 <buff的名称，buff相关信息>
+    public Dictionary<string, Buff> buffs = new();
 
     /// <summary>
     /// 当前状态
@@ -209,7 +205,7 @@ public class Entity : MonoBehaviour
     /// </summary>
     public virtual void Execution(Entity entity, CheckBox attackBox)
     {
-        if (attackBox.descrition == "")
+        if (attackBox.attacktype == attacktype.none)
         {
             transExecution = true;
             var enemy = this as Enemy;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : Entity
 {
+    [Header("玩家")]
     public float healthGray;
     public float healthGray_LoseSpeed;
     public Rigidbody2D _rb;
@@ -26,11 +27,16 @@ public class Player : Entity
 
     [Header("状态机全局变量")]
     public Vector2 dic_Input;   //四键方向
+
     public bool transStun;      //进入stun布尔值
+    public Entity transHitFly_SourceEntity;         //击飞源实体
+    public CheckBox transHitFly_SourceAttackBox;    //击飞源攻击盒子
+
     public bool transDefend_Achieve;//进入 弹反 布尔值
     public Entity transDefend_achieve_TgtEntity;//弹反目标
     public Entity eTarget_击破;  //击破攻击的目标
     public Entity eTarget_普攻1_冲刺_阶段2;    //追击的目标
+
 
     public override void Start()
     {
@@ -807,6 +813,8 @@ public class Player : Entity
         {
             base.GetHurt(entity, attackBox);//扣health
             受伤Canvas.instance.PlayAnimation();//播放受伤UI动画
+            transHitFly_SourceAttackBox = attackBox;
+            transHitFly_SourceEntity = entity;
             transStun = true;//进入硬直}
         }
     }

@@ -26,7 +26,7 @@ public class VisualEffectManager : MonoBehaviour
             Vector3 vector3 = transform.localScale;
             vector3.x = transform.lossyScale.x;
             transform.localScale = vector3;
-            Debug.Log($"特效 {VFXName} 已生成，位置设置为 {transform.position}");
+            //Debug.Log($"特效 {VFXName} 已生成，位置设置为 {transform.position}");
         }
         else
         {

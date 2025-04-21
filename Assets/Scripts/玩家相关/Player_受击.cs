@@ -13,6 +13,8 @@ public class Player_受击 : State
         //硬直时长归零
         player.time_Angry = player.time_Stun;
         player.time_Stun = 0f;
+        //停止飞行
+        hitFly.FlyExit(player._rb);
     }
 
     public override void StateStart(Entity entity)
@@ -20,10 +22,15 @@ public class Player_受击 : State
         BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
         playableDirector.Play();
 
+        //值
         hitFly = GetComponent<HitFly>();
-
-        //速度被击飞
         Player player = (Player)entity;
+        hitFly.sourceEntity = player.transHitFly_SourceEntity;
+        hitFly.sourceAttackBox = player.transHitFly_SourceAttackBox;
+        player.transHitFly_SourceEntity = null;
+        player.transHitFly_SourceAttackBox = null;
+
+        //被击飞
         hitFly.FlyStart(player._rb);
         //硬直时长初始化
         player.time_Stun = player.time_StunMax;
@@ -34,6 +41,7 @@ public class Player_受击 : State
         Player player = (Player)entity;
         player.time_Stun -= Time.deltaTime;
 
+        hitFly.FlyBehaviour(player._rb);
     }
 
     public override void UPStateInit(Entity entity)
@@ -45,14 +53,5 @@ public class Player_受击 : State
     public override bool Finished(Entity entity)
     {
         return base.Finished(entity);
-        // Player player = (Player)entity;
-        // if (player.time_Stun <= 0f)
-        // {
-        //     return true;
-        // }
-        // else
-        // {
-        //     return false;
-        // }
     }
 }
