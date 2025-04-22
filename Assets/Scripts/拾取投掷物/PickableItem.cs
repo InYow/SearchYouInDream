@@ -1,10 +1,9 @@
 using UnityEngine;
 
-public class PickableItem : MonoBehaviour
+public class PickableItem : ProjectileBase
 {
     public Rigidbody2D _rb;
     public Animator _animator;
-    public Entity entity_master;
     public GameObject attack_throwitemGO;
 
     /// <summary>
@@ -58,7 +57,7 @@ public class PickableItem : MonoBehaviour
     /// 飞行攻击停止
     /// </summary>
     /// <param name="entity">扔出的entity</param>
-    public void Stop()
+    public override void Stop()
     {
         _animator.Play("stop");         //播放动画
         _rb.velocity = Vector2.zero;    //速度为0

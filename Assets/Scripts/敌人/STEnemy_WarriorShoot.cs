@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Timeline;
 
 public class STEnemy_WarriorShoot : State
 {
+    //public SignalReceiver signalReceiver;
     public LayerMask obstacleLayer; 
+    public GameObject bulletPrefab;
+    public Transform bulletSpawnPosition;
+    
     private Enemy_ShooterBase shootEnemy;
     private Vector3 targetDirection;
     private Vector3 targetPosition;
@@ -25,6 +30,9 @@ public class STEnemy_WarriorShoot : State
         {
             shouldBreak = true;
         }
+
+        UpdateFaceDirection();
+            
         // shootEnemy._rb.velocity = Vector2.zero;
         //
         // targetDirection = Vector3.Normalize(shootEnemy.target.position-shootEnemy.transform.position);
@@ -73,5 +81,29 @@ public class STEnemy_WarriorShoot : State
         }
         
         return base.Finished(entity);
+    }
+
+    public void FireBullet()
+    {
+        Vector3 dir = (shootEnemy.target.position - shootEnemy.transform.position).normalized;
+        float angle = Mathf.Acos(Vector3.Dot(dir,Vector3.right))* Mathf.Rad2Deg;
+        Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward); 
+        
+        GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPosition.position, q);
+        var projectile = bullet.GetComponent<ProjectileBase>();
+        projectile.EmmitProjectile(dir);
+    }
+
+    private void UpdateFaceDirection()
+    {
+        Vector3 dir = Vector3.Normalize(shootEnemy.target.position - shootEnemy.transform.position);
+        if (dir.x < 0)
+        {
+            shootEnemy.gameObject.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else if(dir.x > 0)
+        {
+            shootEnemy.gameObject.transform.localScale = new Vector3(1, 1, 1);
+        }
     }
 }

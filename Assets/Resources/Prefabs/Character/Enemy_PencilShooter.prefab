@@ -45,12 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkBoxType: 0
-  entity_master: {fileID: 5310659708864972210}
   boxSize: {x: 1, y: 1}
   attackLayer:
     serializedVersion: 2
     m_Bits: 64
-  descrition: 
+  attacktype: 0
   entities: []
   pickLayer:
     serializedVersion: 2
@@ -212,7 +211,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1056580707
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f86678f0733dfb14382074f856af2f5e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -270,7 +269,7 @@ SortingGroup:
   m_GameObject: {fileID: 5310659708710405314}
   m_Enabled: 1
   m_SortingLayerID: 1056580707
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
 --- !u!114 &5310659708710405312
 MonoBehaviour:
@@ -358,7 +357,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1056580707
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f86678f0733dfb14382074f856af2f5e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -436,7 +435,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5310659708864972107}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.74, y: -4.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -462,21 +461,23 @@ MonoBehaviour:
   "\u8840VFX_List":
   - "\u88401"
   - "\u88402"
+  hitVFX_Pivot: {fileID: 0}
+  attackBox: {fileID: 302739751851670112}
+  _rb: {fileID: 5310659708864972109}
   health: 10
   health_Max: 10
   resis: 10
   resis_Max: 10
+  resis_ResponSpeed: 0
+  attackValue: 0
+  StartStateName: STEmpty
   transExecution: 0
   transExecution_DamageSourceEntity: {fileID: 0}
   transExecution_Type: 
   transExecution_AttackBox: {fileID: 0}
-  resis_ResponSpeed: 0
-  attackValue: 0
   transBreakStun: 0
   beingBreakStun: 0
-  StartStateName: STEmpty
   stateCurrentName: 
-  _rb: {fileID: 5310659708864972109}
   behaviourTree: {fileID: 5310659708864972100}
   aiPath: {fileID: 5310659708864972106}
   target: {fileID: 0}
@@ -790,7 +791,7 @@ SortingGroup:
   m_GameObject: {fileID: 5310659708971960181}
   m_Enabled: 1
   m_SortingLayerID: 1056580707
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
 --- !u!114 &5310659708971960171
 MonoBehaviour:
@@ -877,7 +878,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1056580707
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f86678f0733dfb14382074f856af2f5e, type: 3}
   m_Color: {r: 0, g: 1, b: 0, a: 1}
@@ -961,7 +962,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1056580707
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f86678f0733dfb14382074f856af2f5e, type: 3}
   m_Color: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
@@ -1045,7 +1046,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1056580707
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f86678f0733dfb14382074f856af2f5e, type: 3}
   m_Color: {r: 1, g: 1, b: 0, a: 1}

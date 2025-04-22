@@ -2,6 +2,7 @@
 using BehaviorDesigner.Runtime.Tasks;
 using OfficeOpenXml.FormulaParsing.Excel.Functions.Math;
 using Pathfinding;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace BehaviorTreeExtension
@@ -35,17 +36,46 @@ namespace BehaviorTreeExtension
 
         private Vector3 GetTargetPosition()
         {
-            Vector3 dir =  Vector3.Normalize(entity.transform.position - playerTransform.Value.position);
-            
-            Vector3 right = Vector3.Normalize(Vector3.Cross( Vector3.forward,dir));
-            
-            float theta = Random.Range(0.25f * Mathf.PI, 0.75f * Mathf.PI);
-            float dist = Random.Range(moveMinDistance, moveMaxDistance);
-            Vector3 destination = playerTransform.Value.position + dist*(right*Mathf.Cos(theta)+dir*Mathf.Sin(theta));
+            // Vector3 dir =  Vector3.Normalize(entity.transform.position - playerTransform.Value.position);
+            //
+            // Vector3 right = Vector3.Normalize(Vector3.Cross( Vector3.forward,dir));
+            //
+            // float theta = Random.Range(0.25f * Mathf.PI, 0.75f * Mathf.PI);
+            // float dist = Random.Range(moveMinDistance, moveMaxDistance);
+            // Vector3 destination = playerTransform.Value.position + dist*(right*Mathf.Cos(theta)+dir*Mathf.Sin(theta));
+            //
+            // GraphNode node = AstarPath.active.GetNearest(destination, NNConstraint.Walkable).node;
+            // node.
+            //
+            // return (Vector3)node.position;
+            Vector3 enemyPos = transform.position;
+            Vector3 playerPos = playerTransform.Value.position;
+            Vector3 baseDir = (enemyPos - playerPos).normalized;
 
-            GraphNode node = AstarPath.active.GetNearest(destination, NNConstraint.Walkable).node;
-            
-            return (Vector3)node.position;
+            float bestDistance = -1f;
+            Vector3 bestTarget = transform.position;
+
+            for (int i = 0; i < 8; i++)
+            {
+                // 扇形采样多个方向
+                float angle = (360f / 8) * i;
+                Vector3 dir = Quaternion.Euler(0, 0, angle) * baseDir;
+                Vector3 samplePoint = enemyPos + dir * Random.Range(moveMinDistance, moveMaxDistance);
+
+                var nearest = AstarPath.active.GetNearest(samplePoint);
+                if (nearest.node != null && nearest.node.Walkable)
+                {
+                    float distanceToPlayer = Vector2.Distance(nearest.position, playerPos);
+
+                    if (distanceToPlayer > bestDistance)
+                    {
+                        bestDistance = distanceToPlayer;
+                        bestTarget = (Vector3)nearest.position;
+                    }
+                }
+            }
+
+            return bestTarget;
         }
 
         public override TaskStatus OnUpdate()
