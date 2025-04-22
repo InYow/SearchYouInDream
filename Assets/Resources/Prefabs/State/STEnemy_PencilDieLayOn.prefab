@@ -75,7 +75,7 @@ MonoBehaviour:
   playableAsset_B: {fileID: 0}
   playableAsset_C: {fileID: 0}
   playableAsset_D: {fileID: 0}
-  hitVFX: 
+  hitVFX: {fileID: 0}
   windTypeSectionClipList_A: []
   inputWindTypeSectionClipList_A: []
   windTypeSectionClipList_B: []

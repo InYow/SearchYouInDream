@@ -90,7 +90,7 @@ public abstract class State : MonoBehaviour
     public PlayableAsset playableAsset_B;
     public PlayableAsset playableAsset_C;
     public PlayableAsset playableAsset_D;
-    public string hitVFX;
+    public GameObject hitVFX;
 
     public List<TimelineClip> windTypeSectionClipList_A = new();
     public List<TimelineClip> inputWindTypeSectionClipList_A = new();
@@ -388,5 +388,7 @@ public abstract class State : MonoBehaviour
     public void PlayAttackVFX(CheckBox checkBox, List<Entity> entities)
     {
         Debug.Log("播放特效");
+        if (hitVFX != null)
+            hitVFX.SetActive(true);
     }
 }

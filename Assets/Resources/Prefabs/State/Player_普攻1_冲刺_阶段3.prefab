@@ -52,7 +52,7 @@ MonoBehaviour:
   playableAsset_B: {fileID: 11400000, guid: 2035a9556284b684783ab9d748912efa, type: 2}
   playableAsset_C: {fileID: 0}
   playableAsset_D: {fileID: 0}
-  hitVFX: 
+  hitVFX: {fileID: 0}
   windTypeSectionClipList_A:
   - m_Version: 1
     m_Start: 0
