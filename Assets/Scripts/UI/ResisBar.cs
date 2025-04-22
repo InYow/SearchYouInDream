@@ -10,6 +10,14 @@ public class ResisBar : MonoBehaviour
 
     private void Update()
     {
-        SR_Resis.size = new Vector2(entity.resis / entity.resis_Max, 0.1f);
+        SR_Resis.size = new Vector2(1 - entity.resis / entity.resis_Max, 0.1f);
+        if (entity.breakAttackTimes > 0 && entity.beingBreakStun)
+        {
+            SR_Resis.color = Color.yellow;
+        }
+        else
+        {
+            SR_Resis.color = Color.gray;
+        }
     }
 }

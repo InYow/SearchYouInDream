@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5f8c795319506c47b39b96acbf17aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rankGUI: {fileID: 0}
-  image: {fileID: 0}
+  ranks: []
   rankValue: 0
+  time: 3
+  t: 3

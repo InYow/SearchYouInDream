@@ -109,6 +109,7 @@ public abstract class State : MonoBehaviour
     private void Start()
     {
         //InitClipDiction();
+        InitClipDiction();
     }
 
     /// <summary>
@@ -385,7 +386,7 @@ public abstract class State : MonoBehaviour
         }
     }
 
-    public void PlayAttackVFX(CheckBox checkBox, List<Entity> entities)
+    public void PlayAttackVFX(CheckBoxBehaviour checkBoxBehaviour, List<Entity> entities)
     {
         Debug.Log("播放特效");
         if (hitVFX != null)

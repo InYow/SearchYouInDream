@@ -797,6 +797,21 @@ public class Player : Entity
         entity.DetectResis(this);
     }
 
+    public override void Hurt(Entity entity, CheckBoxBehaviour checkBoxBehaviour)
+    {
+        base.Hurt(entity, checkBoxBehaviour);
+
+        //治疗灰色生命
+        float h = healthGray - health;
+        if (h > 0f)
+        {
+            health = Mathf.Clamp(health + attackValue, health, healthGray);
+        }
+
+        //降低目标耐性
+        entity.DetectResis(this, checkBoxBehaviour);
+    }
+
     public override void GetHurt(Entity entity, CheckBox attackBox)
     {
         if (stateCurrentName == "Player_防御")

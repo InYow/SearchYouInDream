@@ -1,11 +1,13 @@
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
     [Header("Hit VFX")]
-    public List<string> 血VFX_List = new List<string> { "血1", "血2", "血3", "血4", "血5" };
+    public List<string> hitVFX_List = new List<string> { };
+    public List<string> 血VFX_List = new List<string> { };
     public Transform hitVFX_Pivot;
     [Header("Component")]
     public CheckBox attackBox;
@@ -20,6 +22,8 @@ public class Entity : MonoBehaviour
     /// </summary>
     public float resis_ResponSpeed;
     public float attackValue;
+    public int breakAttackTimes = 1;
+    public int breakAttackTimes_Max = 1;
 
     //状态机参数
     public string StartStateName = "STEmpty";// Resources/Prefabs/State中的名称
@@ -62,6 +66,7 @@ public class Entity : MonoBehaviour
     public virtual void Start()
     {
         StateCurrent = InstantiateState(StartStateName);
+        breakAttackTimes = breakAttackTimes_Max;
     }
 
     /// <summary>
@@ -176,6 +181,11 @@ public class Entity : MonoBehaviour
         entity.GetHurt(this, attackBox);
         CameraShake.Shake(new Vector3(1, 0, 0), 0.3f);
     }
+    public virtual void Hurt(Entity entity, CheckBoxBehaviour checkBoxBehaviour)
+    {
+        entity.GetHurt(this, checkBoxBehaviour);
+        CameraShake.Shake(new Vector3(1, 0, 0), 0.3f);
+    }
 
     /// <summary>
     /// 被Entity伤害
@@ -195,6 +205,20 @@ public class Entity : MonoBehaviour
             }
         }
     }
+    public virtual void GetHurt(Entity entity, CheckBoxBehaviour checkBoxBehaviour)
+    {
+        if (!BuffContain("BFPlayerUnselected"))
+        {
+            health -= entity.attackValue;
+            FlowBlood();
+
+            //死掉了
+            if (health <= 0f)
+            {
+                Execution(entity, checkBoxBehaviour);
+            }
+        }
+    }
 
     public virtual void FlowBlood()
     {
@@ -211,6 +235,20 @@ public class Entity : MonoBehaviour
         {
             Debug.LogWarning("血VFX_List 为空，无法播放特效！");
         }
+
+        if (hitVFX_List.Count > 0)
+        {
+            // 随机选择一个特效
+            int randomIndex = Random.Range(0, hitVFX_List.Count);
+            string randomEffect = hitVFX_List[randomIndex];
+
+            // 播放随机特效
+            VisualEffectManager.PlayEffect(randomEffect, hitVFX_Pivot);
+        }
+        else
+        {
+            Debug.LogWarning("hitVFX_List 为空，无法播放特效！");
+        }
     }
 
     /// <summary>
@@ -218,7 +256,22 @@ public class Entity : MonoBehaviour
     /// </summary>
     public virtual void Execution(Entity entity, CheckBox attackBox)
     {
-        if (attackBox.attacktype == attacktype.none)
+        if (attackBox.attacktype == AttackType.none)
+        {
+            transExecution = true;
+            var enemy = this as Enemy;
+            if (enemy)
+            {
+                enemy.behaviourTree.SetVariableValue("bCanExecute", transExecution);
+            }
+            transExecution_Type = "fly";
+            transExecution_DamageSourceEntity = entity;
+            transExecution_AttackBox = attackBox;
+        }
+    }
+    public virtual void Execution(Entity entity, CheckBoxBehaviour checkBoxBehaviour)
+    {
+        if (checkBoxBehaviour.attacktype == AttackType.none)
         {
             transExecution = true;
             var enemy = this as Enemy;
@@ -244,9 +297,38 @@ public class Entity : MonoBehaviour
             {
                 resis = Mathf.Clamp(resis - player.attackResisValue, 0, resis_Max);//降低耐性
                 //破防
-                if (Mathf.Approximately(resis, 0f) && health > 0f)
+                if (Mathf.Approximately(resis, 0f) && health > 0f && breakAttackTimes > 0)
                 {
                     StartBreakStun(player);
+                }
+            }
+        }
+    }
+    public virtual void DetectResis(Entity entity, CheckBoxBehaviour checkBoxBehaviour)
+    {
+        if (entity is Player player)
+        {
+            if (!beingBreakStun)
+            {
+                resis = Mathf.Clamp(resis - player.attackResisValue, 0, resis_Max);//降低耐性
+                //破防
+                if (Mathf.Approximately(resis, 0f) && health > 0f && breakAttackTimes > 0)
+                {
+                    StartBreakStun(player);
+
+                    //击破攻击
+                    if (checkBoxBehaviour.canBreakAttackType == CanBreakAttackType.can && this is Enemy)
+                    {
+                        MessageManager.BreakStun(this);
+                    }
+                }
+            }
+            else
+            {
+                //击破攻击
+                if (checkBoxBehaviour.canBreakAttackType == CanBreakAttackType.can && this is Enemy)
+                {
+                    MessageManager.BreakStun(this);
                 }
             }
         }
@@ -264,9 +346,11 @@ public class Entity : MonoBehaviour
         {
             enemy.behaviourTree.SetVariableValue("bStun", enemy.transBreakStun);
         }
-        //将信息传递出去
-        //MessageManager.BreakStun(this);
+    }
 
+    public virtual void ExitBreakStun()
+    {
+        breakAttackTimes = breakAttackTimes_Max;
     }
 
     /// <summary>

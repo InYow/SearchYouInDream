@@ -15,7 +15,7 @@ TagManager:
   - PickableItem
   - CM collider
   - Obstacles
-  - 
+  - ShadowCast
   - 
   - 
   - 

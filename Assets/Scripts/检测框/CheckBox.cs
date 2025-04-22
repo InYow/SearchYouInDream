@@ -10,10 +10,16 @@ public enum CheckBoxType
     attack_throwitem,
 }
 
-public enum attacktype
+public enum AttackType
 {
     none = 0,
     poison
+}
+
+public enum CanBreakAttackType
+{
+    cannot = 0,
+    can,
 }
 
 public class CheckBox : MonoBehaviour
@@ -26,7 +32,7 @@ public class CheckBox : MonoBehaviour
     //Attack
     public Vector2 boxSize = new Vector2(5f, 5f); //矩形区域大小
     public LayerMask attackLayer;   //目标层
-    public attacktype attacktype = attacktype.none;       //攻击类型描述    
+    public AttackType attacktype = AttackType.none;       //攻击类型描述    
     public List<Entity> entities = new();
 
 

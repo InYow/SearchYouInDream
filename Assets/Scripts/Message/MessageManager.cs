@@ -28,7 +28,11 @@ public class MessageManager : MonoBehaviour
             Debug.LogWarning("尝试调用 BreakStun，但目标 Entity 已被销毁。");
             return;
         }
+        if (entity.breakAttackTimes > 0)
+        {
+            entity.breakAttackTimes--;
+            Instance.OnBreakStun?.Invoke(entity);
+        }
 
-        Instance.OnBreakStun?.Invoke(entity);
     }
 }

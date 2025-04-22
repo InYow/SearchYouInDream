@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using OfficeOpenXml.FormulaParsing.Excel.Functions.Text;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
@@ -24,15 +25,13 @@ public class RankSystem : MonoBehaviour
 {
     public static RankSystem rankSystem;
 
-    public TextMeshProUGUI rankGUI;
-
-    public Image image;
-
+    [SerializeField]
     //配置各评级
-    private static float[] ranks;
+    private float[] ranks;
 
+    [SerializeField]
     //评值最大值
-    private static float RankValueMax
+    private float RankValueMax
     {
         get
         {
@@ -44,6 +43,9 @@ public class RankSystem : MonoBehaviour
     [ReadOnly]
     [SerializeField]
     private float rankValue;
+
+    public float time;  //评值降低的时间
+    public float t;
 
     private void Awake()
     {
@@ -76,12 +78,29 @@ public class RankSystem : MonoBehaviour
     private void Start()
     {
         ACRankValueOverflow += LogRankValueOverflow;
+        SetRankValue(0f);
+        t = time;
     }
-
     private void Update()
     {
-        rankGUI.text = GetRank().ToString();
-        image.fillAmount = GetCurrentRankHasValue() / GetRankVolumn(GetRank());
+        //评值降低
+        if (rankValue > 0f)
+        {
+            if (t >= 0f)
+                t -= Time.deltaTime;
+            else
+            {
+                DetectRankValue(1f * Time.deltaTime); //减少评值
+            }
+        }
+    }
+    //---------------评值行为方法--------、
+
+    //攻击行为
+    public static void Attack()
+    {
+        AddRankValue(1f); //增加评值
+        rankSystem.t = rankSystem.time; //重置评值降低时间
     }
 
     //---------------方法---------------
@@ -90,11 +109,11 @@ public class RankSystem : MonoBehaviour
     public static Rank GetRank()
     {
         Rank rk = Rank.F;
-        float value = ranks[(int)rk]; // 评级对应的阈值
-        while ((int)rk < ranks.Length - 1 && value < rankSystem.rankValue)
+        float value = rankSystem.ranks[(int)rk]; // 评级对应的阈值
+        while ((int)rk < rankSystem.ranks.Length - 1 && value < rankSystem.rankValue)
         {
             rk = (Rank)((int)rk + 1); // 使用安全的方式递增枚举
-            value += ranks[(int)rk];  // 更新阈值
+            value += rankSystem.ranks[(int)rk];  // 更新阈值
         }
         return rk;
     }
@@ -149,7 +168,7 @@ public class RankSystem : MonoBehaviour
         {
             //溢出值
             float overValue;
-            float max = RankValueMax;
+            float max = rankSystem.RankValueMax;
             //没有溢出
             if (value <= max)
             {
@@ -308,7 +327,7 @@ public class RankSystem : MonoBehaviour
     //获得特定评级容纳多少评值
     public static float GetRankVolumn(Rank rank)
     {
-        return ranks[(int)rank];
+        return rankSystem.ranks[(int)rank];
     }
 
     //获得特定评级下最多拥有多少评值
@@ -317,7 +336,7 @@ public class RankSystem : MonoBehaviour
         float value = 0f;
         for (int i = 0; i <= (int)rank; i++)
         {
-            value += ranks[i]; // 修正这里的索引
+            value += rankSystem.ranks[i]; // 修正这里的索引
         }
         return value;
     }

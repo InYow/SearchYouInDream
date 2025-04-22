@@ -22,7 +22,7 @@ public class VisualEffectManager : MonoBehaviour
         GameObject effectPrefab = Resources.Load<GameObject>("Prefabs/VFX/" + VFXName);
         if (effectPrefab != null)
         {
-            GameObject effectInstance = Instantiate(effectPrefab, transform.position, transform.rotation);
+            GameObject effectInstance = Instantiate(effectPrefab, transform.position, Quaternion.Euler(0, 0, Random.Range(0f, 360f)));
             Vector3 vector3 = transform.localScale;
             vector3.x = transform.lossyScale.x;
             transform.localScale = vector3;

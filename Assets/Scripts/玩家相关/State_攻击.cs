@@ -9,7 +9,7 @@ public class State_攻击 : State
     public override void StateExit(Entity entity)
     {
         //解绑Entity.AttackBox.OnHurtEntity
-        entity.attackBox.OnHurtEntity -= PlayAttackVFX;
+        //entity.attackBox.OnHurtEntity -= PlayAttackVFX;
         //销毁
         Destroy(gameObject);
     }
@@ -24,7 +24,7 @@ public class State_攻击 : State
         playableDirector.Play();
 
         //绑定Entity.AttackBox.OnHurtEntity
-        entity.attackBox.OnHurtEntity += PlayAttackVFX;
+        //entity.attackBox.OnHurtEntity += PlayAttackVFX;
 
         //速度为0
         Player player = (Player)entity;
