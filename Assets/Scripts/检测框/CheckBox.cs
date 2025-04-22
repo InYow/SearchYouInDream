@@ -41,7 +41,7 @@ public class CheckBox : MonoBehaviour
     public bool picked;
 
     //PickableItem
-    public PickableItem pickableItem_master;
+    public ProjectileBase pickableItem_master;
     private void OnEnable()
     {
         //初始化值
@@ -64,7 +64,7 @@ public class CheckBox : MonoBehaviour
         //attack_throwitem
         else if (checkBoxType == CheckBoxType.attack_throwitem)
         {
-            pickableItem_master = GetComponentInParent<PickableItem>();
+            pickableItem_master = GetComponentInParent<ProjectileBase>();
             entity_master = pickableItem_master.entity_master;
         }
 
