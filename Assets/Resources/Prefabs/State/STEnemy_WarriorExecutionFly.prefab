@@ -81,7 +81,7 @@ MonoBehaviour:
   inputWindTypeSectionClipList_C: []
   windTypeSectionClipList_D: []
   inputWindTypeSectionClipList_D: []
-  hitFly: {fileID: 0}
+  hitFly: {fileID: 7396403082339354060}
 --- !u!114 &7396403082339354060
 MonoBehaviour:
   m_ObjectHideFlags: 0

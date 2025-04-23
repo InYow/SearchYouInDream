@@ -86,8 +86,8 @@ public class STEnemy_WarriorShoot : State
     public void FireBullet()
     {
         Vector3 dir = (shootEnemy.target.position - shootEnemy.transform.position).normalized;
-        float angle = Mathf.Acos(Vector3.Dot(dir,Vector3.right))* Mathf.Rad2Deg;
-        Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward); 
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        Quaternion q = Quaternion.Euler(0, 0, angle);  // 绕Z轴旋转angle度
         
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPosition.position, q);
         var projectile = bullet.GetComponent<ProjectileBase>();

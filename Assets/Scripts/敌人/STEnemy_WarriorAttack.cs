@@ -14,12 +14,7 @@ public class STEnemy_WarriorAttack : State
         playableDirector.Play();
     }
 
-    public override void UPStateBehaviour(Entity entity)
-    {
+    public override void UPStateBehaviour(Entity entity) { }
 
-    }
-
-    public override void UPStateInit(Entity entity)
-    {
-    }
+    public override void UPStateInit(Entity entity) { }
 }
