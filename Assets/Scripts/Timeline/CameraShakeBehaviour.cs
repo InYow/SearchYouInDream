@@ -11,6 +11,8 @@ public class CameraShakeBehaviour : PlayableBehaviour
     public override void OnBehaviourPlay(Playable playable, FrameData info)
     {
         base.OnBehaviourPlay(playable, info);
+        if (!Application.isPlaying)
+            return;
         CameraShake.Shake(shakeVelocity, shakeForce);
     }
 }

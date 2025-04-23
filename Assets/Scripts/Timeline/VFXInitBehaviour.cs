@@ -10,6 +10,10 @@ public class VFXInitBehaviour : PlayableBehaviour
     public override void OnBehaviourPlay(Playable playable, FrameData info)
     {
         base.OnBehaviourPlay(playable, info);
+        if (!Application.isPlaying)
+        {
+            return;
+        }
         Debug.Log($"播放特效: {visualEffectName}");
         // 在这里添加逻辑，例如实例化特效
         if (!string.IsNullOrEmpty(visualEffectName))

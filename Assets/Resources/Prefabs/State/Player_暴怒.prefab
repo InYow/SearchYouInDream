@@ -45,7 +45,7 @@ PlayableDirector:
   m_PlayableAsset: {fileID: 11400000, guid: c4c65e43b309bda4aa6a72307a95cc72, type: 2}
   m_InitialState: 0
   m_WrapMode: 0
-  m_DirectorUpdateMode: 1
+  m_DirectorUpdateMode: 2
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: -2524755848077914936, guid: c4c65e43b309bda4aa6a72307a95cc72, type: 2}
@@ -68,9 +68,9 @@ MonoBehaviour:
   wrapMode: 0
   rankABCD: 0
   playableAsset_A: {fileID: 11400000, guid: c4c65e43b309bda4aa6a72307a95cc72, type: 2}
-  playableAsset_B: {fileID: 0}
-  playableAsset_C: {fileID: 0}
-  playableAsset_D: {fileID: 0}
+  playableAsset_B: {fileID: 11400000, guid: c4c65e43b309bda4aa6a72307a95cc72, type: 2}
+  playableAsset_C: {fileID: 11400000, guid: c4c65e43b309bda4aa6a72307a95cc72, type: 2}
+  playableAsset_D: {fileID: 11400000, guid: c4c65e43b309bda4aa6a72307a95cc72, type: 2}
   hitVFX: {fileID: 0}
   windTypeSectionClipList_A: []
   inputWindTypeSectionClipList_A: []

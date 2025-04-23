@@ -70,9 +70,9 @@ MonoBehaviour:
   wrapMode: 0
   rankABCD: 0
   playableAsset_A: {fileID: 11400000, guid: 2edb607bb16269a49a142089ef9ef04c, type: 2}
-  playableAsset_B: {fileID: 0}
-  playableAsset_C: {fileID: 0}
-  playableAsset_D: {fileID: 0}
+  playableAsset_B: {fileID: 11400000, guid: 2edb607bb16269a49a142089ef9ef04c, type: 2}
+  playableAsset_C: {fileID: 11400000, guid: 2edb607bb16269a49a142089ef9ef04c, type: 2}
+  playableAsset_D: {fileID: 11400000, guid: 2edb607bb16269a49a142089ef9ef04c, type: 2}
   hitVFX: {fileID: 0}
   windTypeSectionClipList_A: []
   inputWindTypeSectionClipList_A: []

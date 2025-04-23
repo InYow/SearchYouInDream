@@ -5,6 +5,7 @@ using UnityEngine.Playables;
 public class Player_受击 : State
 {
     public HitFly hitFly;
+    public float slowtime = 0.4f;
     public override void StateExit(Entity entity)
     {
         Destroy(gameObject);
@@ -15,6 +16,8 @@ public class Player_受击 : State
         player.time_Stun = 0f;
         //停止飞行
         hitFly.FlyExit(player._rb);
+
+        //SlowMotion.FinishSlow();
     }
 
     public override void StateStart(Entity entity)
@@ -34,6 +37,7 @@ public class Player_受击 : State
         hitFly.FlyStart(player._rb);
         //硬直时长初始化
         player.time_Stun = player.time_StunMax;
+        SlowMotion.StartSlow(slowtime);
     }
 
     public override void UPStateBehaviour(Entity entity)

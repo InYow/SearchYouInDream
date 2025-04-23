@@ -145,8 +145,9 @@ public class Player : Entity
             if (Input.GetKeyDown(KeyCode.J))        //攻击
             {
                 BFPlayerAttackContinuity buff_atk_continuity = BuffGet("BFPlayerAttackContinuity") as BFPlayerAttackContinuity;
+                BFPlayerAttackContinuity_New buff_atk_continuity_New = BuffGet("BFPlayerAttackContinuity_New") as BFPlayerAttackContinuity_New;
                 BFPlayerAngryEnhanceAttack01 buff_atk01_enhance = BuffGet("BFPlayerAngryEnhanceAttack01") as BFPlayerAngryEnhanceAttack01;
-                if ((buff_atk_continuity == null || (buff_atk_continuity.IfActive() && buff_atk_continuity.attackID == 4)) && buff_atk01_enhance == null)    //攻击01
+                if (buff_atk_continuity_New == null || (buff_atk_continuity_New.attackID == 4 && buff_atk01_enhance == null))    //攻击01
                 {
                     StateCurrent = InstantiateState("Player_普攻1");
                 }
@@ -155,16 +156,16 @@ public class Player : Entity
                     StateCurrent = InstantiateState("Player_普攻1_强化");
                     BuffRemove("BFPlayerAngryEnhanceAttack01");
                 }
-                //连携普攻
-                else if (buff_atk_continuity.IfActive() && buff_atk_continuity.attackID == 1)                 //攻击02
+                //连携普攻_New
+                else if (buff_atk_continuity_New.attackID == 1)                 //攻击02
                 {
                     StateCurrent = InstantiateState("Player_普攻2");
                 }
-                else if (buff_atk_continuity.IfActive() && buff_atk_continuity.attackID == 2)                 //攻击03
+                else if (buff_atk_continuity_New.attackID == 2)                 //攻击03
                 {
                     StateCurrent = InstantiateState("Player_普攻3");
                 }
-                else if (buff_atk_continuity.IfActive() && buff_atk_continuity.attackID == 3)                 //攻击04
+                else if (buff_atk_continuity_New.attackID == 3)                 //攻击04
                 {
                     StateCurrent = InstantiateState("Player_普攻4");
                 }
@@ -196,8 +197,9 @@ public class Player : Entity
             {
                 Enemy enemy_closest = MethodFight.GetAtkFTarget(transform.position, GetFlipX(), radius_outer, radius_inner, angle, targetLayer);  //获取扇形所有Enemy
                 BFPlayerAttackContinuity buff_atk_continuity = BuffGet("BFPlayerAttackContinuity") as BFPlayerAttackContinuity;
+                BFPlayerAttackContinuity_New buff_atk_continuity_New = BuffGet("BFPlayerAttackContinuity_New") as BFPlayerAttackContinuity_New;
                 BFPlayerAngryEnhanceAttack01 buff_atk01_enhance = BuffGet("BFPlayerAngryEnhanceAttack01") as BFPlayerAngryEnhanceAttack01;
-                if (enemy_closest == null &&/*不追击*/(buff_atk_continuity == null || (buff_atk_continuity.IfActive() && buff_atk_continuity.attackID == 4)) && buff_atk01_enhance == null)    //攻击01
+                if (buff_atk_continuity_New == null || (buff_atk_continuity_New.attackID == 4 && buff_atk01_enhance == null))    //攻击01
                 {
                     StateCurrent = InstantiateState("Player_普攻1");
                 }
@@ -215,16 +217,30 @@ public class Player : Entity
                 {
                     Debug.Log("追击强普");
                 }
-                //连携普攻
-                else if (buff_atk_continuity.IfActive() && buff_atk_continuity.attackID == 1)                 //攻击02
+
+                //连携普攻_New
+                else if (buff_atk_continuity_New.attackID == 1)                 //攻击02
                 {
                     StateCurrent = InstantiateState("Player_普攻2");
                 }
-                else if (buff_atk_continuity.IfActive() && buff_atk_continuity.attackID == 2)                 //攻击03
+                else if (buff_atk_continuity_New.attackID == 2)                 //攻击03
                 {
                     StateCurrent = InstantiateState("Player_普攻3");
                 }
-                else if (buff_atk_continuity.IfActive() && buff_atk_continuity.attackID == 3)                 //攻击04
+                else if (buff_atk_continuity_New.attackID == 3)                 //攻击04
+                {
+                    StateCurrent = InstantiateState("Player_普攻4");
+                }
+                //连携普攻_New
+                else if (buff_atk_continuity_New.attackID == 1)                 //攻击02
+                {
+                    StateCurrent = InstantiateState("Player_普攻2");
+                }
+                else if (buff_atk_continuity_New.attackID == 2)                 //攻击03
+                {
+                    StateCurrent = InstantiateState("Player_普攻3");
+                }
+                else if (buff_atk_continuity_New.attackID == 3)                 //攻击04
                 {
                     StateCurrent = InstantiateState("Player_普攻4");
                 }
@@ -602,9 +618,10 @@ public class Player : Entity
             }
             else if (Input.GetKeyDown(KeyCode.J))        //攻击
             {
+                BFPlayerAttackContinuity_New buff_atk_continuity_New = BuffGet("BFPlayerAttackContinuity_New") as BFPlayerAttackContinuity_New;
                 BFPlayerAttackContinuity buff_atk_continuity = BuffGet("BFPlayerAttackContinuity") as BFPlayerAttackContinuity;
                 BFPlayerAngryEnhanceAttack01 buff_atk01_enhance = BuffGet("BFPlayerAngryEnhanceAttack01") as BFPlayerAngryEnhanceAttack01;
-                if ((buff_atk_continuity == null || (buff_atk_continuity.IfActive() && buff_atk_continuity.attackID == 4)) && buff_atk01_enhance == null)    //攻击01
+                if (buff_atk_continuity_New == null || (buff_atk_continuity_New.attackID == 4 && buff_atk01_enhance == null))    //攻击01
                 {
                     StateCurrent = InstantiateState("Player_普攻1");
                 }
@@ -613,16 +630,17 @@ public class Player : Entity
                     StateCurrent = InstantiateState("Player_普攻1_强化");
                     BuffRemove("BFPlayerAngryEnhanceAttack01");
                 }
-                //连携普攻
-                else if (buff_atk_continuity.IfActive() && buff_atk_continuity.attackID == 1)                 //攻击02
+
+                //连携普攻_New
+                else if (buff_atk_continuity_New.attackID == 1)                 //攻击02
                 {
                     StateCurrent = InstantiateState("Player_普攻2");
                 }
-                else if (buff_atk_continuity.IfActive() && buff_atk_continuity.attackID == 2)                 //攻击03
+                else if (buff_atk_continuity_New.attackID == 2)                 //攻击03
                 {
                     StateCurrent = InstantiateState("Player_普攻3");
                 }
-                else if (buff_atk_continuity.IfActive() && buff_atk_continuity.attackID == 3)                 //攻击04
+                else if (buff_atk_continuity_New.attackID == 3)                 //攻击04
                 {
                     StateCurrent = InstantiateState("Player_普攻4");
                 }
@@ -666,7 +684,27 @@ public class Player : Entity
                 }
             }
         }
+        //ST冲刺
         else if (stateCurrentName == "Player_冲刺")
+        {
+            if (Input.GetKeyDown(KeyCode.J))
+            {
+                StateCurrent = InstantiateState("Player_冲刺攻击");
+            }
+            else if (StateCurrent.Finished(this))             //待机 or 移动
+            {
+                if (dic_Input == Vector2.zero)      //待机
+                {
+                    StateCurrent = InstantiateState("Player_待机");
+                }
+                else if (dic_Input != Vector2.zero) //移动
+                {
+                    StateCurrent = InstantiateState("Player_跑步");
+                }
+            }
+        }
+        //ST冲刺攻击
+        else if (stateCurrentName == "Player_冲刺攻击")
         {
             if (StateCurrent.Finished(this))             //待机 or 移动
             {
@@ -845,7 +883,7 @@ public class Player : Entity
         else
         {
             base.GetHurt(entity, attackBox);//扣health
-            受伤Canvas.instance.PlayAnimation();//播放受伤UI动画
+            受伤Canvas.Instance.PlayAnimation();//播放受伤UI动画
             transHitFly_SourceAttackBox = attackBox;
             transHitFly_SourceEntity = entity;
             transStun = true;//进入硬直}

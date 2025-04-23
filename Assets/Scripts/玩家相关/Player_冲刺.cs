@@ -25,6 +25,21 @@ public class Player_冲刺 : State_攻击
             forward = Vector2.right;
             entity.FlipX(false);
         }
+        else
+        {
+            forward = Vector2.zero;
+        }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            forward += Vector2.up;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            forward += Vector2.down;
+        }
+
+        forward = forward.normalized;
     }
     public override void UPStateBehaviour(Entity entity)
     {

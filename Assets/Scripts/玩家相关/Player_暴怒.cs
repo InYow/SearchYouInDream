@@ -8,6 +8,7 @@ public class Player_暴怒 : State
     public override void StateExit(Entity entity)
     {
         Destroy(gameObject);
+        SlowMotion.FinishSlow();
     }
 
     public override void StateStart(Entity entity)
@@ -18,6 +19,7 @@ public class Player_暴怒 : State
         //速度为0
         Player player = (Player)entity;
         player._rb.velocity = Vector2.zero;
+        SlowMotion.StartSlow();
     }
 
     public override void UPStateBehaviour(Entity entity)

@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e445c53af1c1f9f45bd6f92988961fc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  finishType: 0
   _animator: {fileID: 3320511728311208686}
 --- !u!95 &3320511728311208686
 Animator:
@@ -111,7 +112,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: f6a9e89da392421488b8a0f0d0bec5b1, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0

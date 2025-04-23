@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class 受伤Canvas : MonoBehaviour
 {
-    public static 受伤Canvas instance;
+    public static 受伤Canvas Instance;
     public AnimationCurve animationCurve;
     public Image image;
     public float t = 0f;
@@ -13,9 +13,9 @@ public class 受伤Canvas : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
         }
         else
         {
@@ -54,5 +54,10 @@ public class 受伤Canvas : MonoBehaviour
     {
         t = 0f;
         isPlaying = true;
+    }
+
+    public void StopAniamtion()
+    {
+        t = 1f;
     }
 }
