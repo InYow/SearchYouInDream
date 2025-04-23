@@ -107,6 +107,11 @@ public class Player : Entity
             StateCurrent = InstantiateState("Player_受击");
             return;
         }
+        //冲刺
+        if (Input.GetKeyDown(KeyCode.Space) && stateCurrentName != "Player_冲刺")
+        {
+            StateCurrent = InstantiateState("Player_冲刺");
+        }
 
         //击破攻击  拥有GuideBreakAttack的buff
         if (BuffContain("BFPlayerGuideBreakAttack") && Input.GetKeyDown(KeyCode.U))
@@ -648,6 +653,20 @@ public class Player : Entity
         }
         //ST投掷
         else if (stateCurrentName == "Player_投掷")
+        {
+            if (StateCurrent.Finished(this))             //待机 or 移动
+            {
+                if (dic_Input == Vector2.zero)      //待机
+                {
+                    StateCurrent = InstantiateState("Player_待机");
+                }
+                else if (dic_Input != Vector2.zero) //移动
+                {
+                    StateCurrent = InstantiateState("Player_跑步");
+                }
+            }
+        }
+        else if (stateCurrentName == "Player_冲刺")
         {
             if (StateCurrent.Finished(this))             //待机 or 移动
             {

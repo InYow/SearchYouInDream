@@ -14,26 +14,26 @@ public class RankUI : MonoBehaviour
 
     private void Start()
     {
-        RankSystem.ACIntoF += OpenGO_F;
-        RankSystem.ACOutofF += CloseGO_F;
-        RankSystem.ACIntoE += OpenGO_E;
-        RankSystem.ACOutofE += CloseGO_E;
-        RankSystem.ACIntoD += OpenGO_D;
-        RankSystem.ACOutofD += CloseGO_D;
-        RankSystem.ACIntoC += OpenGO_C;
-        RankSystem.ACOutofC += CloseGO_C;
-        RankSystem.ACIntoB += OpenGO_B;
-        RankSystem.ACOutofB += CloseGO_B;
-        RankSystem.ACIntoA += OpenGO_A;
-        RankSystem.ACOutofA += CloseGO_A;
-        RankSystem.ACIntoS += OpenGO_S;
-        RankSystem.ACOutofS += CloseGO_S;
-        RankSystem.ACIntoSS += OpenGO_SS;
-        RankSystem.ACOutofSS += CloseGO_SS;
-        RankSystem.ACIntoO += OpenGO_O;
-        RankSystem.ACOutofO += CloseGO_O;
-        RankSystem.ACIntoX += OpenGO_X;
-        RankSystem.ACOutofX += CloseGO_X;
+        RankSystem.rankSystem.ACIntoF += OpenGO_F;
+        RankSystem.rankSystem.ACOutofF += CloseGO_F;
+        RankSystem.rankSystem.ACIntoE += OpenGO_E;
+        RankSystem.rankSystem.ACOutofE += CloseGO_E;
+        RankSystem.rankSystem.ACIntoD += OpenGO_D;
+        RankSystem.rankSystem.ACOutofD += CloseGO_D;
+        RankSystem.rankSystem.ACIntoC += OpenGO_C;
+        RankSystem.rankSystem.ACOutofC += CloseGO_C;
+        RankSystem.rankSystem.ACIntoB += OpenGO_B;
+        RankSystem.rankSystem.ACOutofB += CloseGO_B;
+        RankSystem.rankSystem.ACIntoA += OpenGO_A;
+        RankSystem.rankSystem.ACOutofA += CloseGO_A;
+        RankSystem.rankSystem.ACIntoS += OpenGO_S;
+        RankSystem.rankSystem.ACOutofS += CloseGO_S;
+        RankSystem.rankSystem.ACIntoSS += OpenGO_SS;
+        RankSystem.rankSystem.ACOutofSS += CloseGO_SS;
+        RankSystem.rankSystem.ACIntoO += OpenGO_O;
+        RankSystem.rankSystem.ACOutofO += CloseGO_O;
+        RankSystem.rankSystem.ACIntoX += OpenGO_X;
+        RankSystem.rankSystem.ACOutofX += CloseGO_X;
     }
 
     private void Update()

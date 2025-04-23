@@ -6,8 +6,8 @@ using UnityEngine;
 public class Entity : MonoBehaviour
 {
     [Header("Hit VFX")]
-    public List<string> hitVFX_List = new List<string> { };
-    public List<string> 血VFX_List = new List<string> { };
+    public List<string> hitVFX_List = new List<string> { "受伤特效x" };
+    public List<string> 血VFX_List = new List<string> { "血1" };
     public Transform hitVFX_Pivot;
     [Header("Component")]
     public CheckBox attackBox;

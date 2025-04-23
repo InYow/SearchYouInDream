@@ -62,9 +62,9 @@ public class RankSystem : MonoBehaviour
         //配置各评级
         ranks = new float[10]
         {
-            5,  //F
-            6,  //E
-            7,  //D
+            0,  //F
+            0,  //E
+            0,  //D
             8,  //C
             9,  //B
             10,  //A
@@ -195,52 +195,52 @@ public class RankSystem : MonoBehaviour
             {
                 case Rank.F:
                     {
-                        ACOutofF?.Invoke();
+                        rankSystem.ACOutofF?.Invoke();
                         break;
                     }
                 case Rank.E:
                     {
-                        ACOutofE?.Invoke();
+                        rankSystem.ACOutofE?.Invoke();
                         break;
                     }
                 case Rank.D:
                     {
-                        ACOutofD?.Invoke();
+                        rankSystem.ACOutofD?.Invoke();
                         break;
                     }
                 case Rank.C:
                     {
-                        ACOutofC?.Invoke();
+                        rankSystem.ACOutofC?.Invoke();
                         break;
                     }
                 case Rank.B:
                     {
-                        ACOutofB?.Invoke();
+                        rankSystem.ACOutofB?.Invoke();
                         break;
                     }
                 case Rank.A:
                     {
-                        ACOutofA?.Invoke();
+                        rankSystem.ACOutofA?.Invoke();
                         break;
                     }
                 case Rank.S:
                     {
-                        ACOutofS?.Invoke();
+                        rankSystem.ACOutofS?.Invoke();
                         break;
                     }
                 case Rank.SS:
                     {
-                        ACOutofSS?.Invoke();
+                        rankSystem.ACOutofSS?.Invoke();
                         break;
                     }
                 case Rank.O:
                     {
-                        ACOutofO?.Invoke();
+                        rankSystem.ACOutofO?.Invoke();
                         break;
                     }
                 case Rank.X:
                     {
-                        ACOutofX?.Invoke();
+                        rankSystem.ACOutofX?.Invoke();
                         break;
                     }
             }
@@ -250,52 +250,52 @@ public class RankSystem : MonoBehaviour
             {
                 case Rank.F:
                     {
-                        ACIntoF?.Invoke();
+                        rankSystem.ACIntoF?.Invoke();
                         break;
                     }
                 case Rank.E:
                     {
-                        ACIntoE?.Invoke();
+                        rankSystem.ACIntoE?.Invoke();
                         break;
                     }
                 case Rank.D:
                     {
-                        ACIntoD?.Invoke();
+                        rankSystem.ACIntoD?.Invoke();
                         break;
                     }
                 case Rank.C:
                     {
-                        ACIntoC?.Invoke();
+                        rankSystem.ACIntoC?.Invoke();
                         break;
                     }
                 case Rank.B:
                     {
-                        ACIntoB?.Invoke();
+                        rankSystem.ACIntoB?.Invoke();
                         break;
                     }
                 case Rank.A:
                     {
-                        ACIntoA?.Invoke();
+                        rankSystem.ACIntoA?.Invoke();
                         break;
                     }
                 case Rank.S:
                     {
-                        ACIntoS?.Invoke();
+                        rankSystem.ACIntoS?.Invoke();
                         break;
                     }
                 case Rank.SS:
                     {
-                        ACIntoSS?.Invoke();
+                        rankSystem.ACIntoSS?.Invoke();
                         break;
                     }
                 case Rank.O:
                     {
-                        ACIntoO?.Invoke();
+                        rankSystem.ACIntoO?.Invoke();
                         break;
                     }
                 case Rank.X:
                     {
-                        ACIntoX?.Invoke();
+                        rankSystem.ACIntoX?.Invoke();
                         break;
                     }
             }
@@ -303,12 +303,12 @@ public class RankSystem : MonoBehaviour
             //评级提升
             if (rankAfter > rankBefore)
             {
-                ACRankUp?.Invoke();
+                rankSystem.ACRankUp?.Invoke();
             }
             //评级降低
             else
             {
-                ACRankDown?.Invoke();
+                rankSystem.ACRankDown?.Invoke();
             }
         }
 
@@ -372,37 +372,37 @@ public class RankSystem : MonoBehaviour
         Debug.Log($"评值溢出了{overValue}");
     }
 
-    public static Action ACIntoF;
-    public static Action ACOutofF;
+    public Action ACIntoF;
+    public Action ACOutofF;
 
-    public static Action ACIntoE;
-    public static Action ACOutofE;
+    public Action ACIntoE;
+    public Action ACOutofE;
 
-    public static Action ACIntoD;
-    public static Action ACOutofD;
+    public Action ACIntoD;
+    public Action ACOutofD;
 
-    public static Action ACIntoC;
-    public static Action ACOutofC;
+    public Action ACIntoC;
+    public Action ACOutofC;
 
-    public static Action ACIntoB;
-    public static Action ACOutofB;
+    public Action ACIntoB;
+    public Action ACOutofB;
 
-    public static Action ACIntoA;
-    public static Action ACOutofA;
+    public Action ACIntoA;
+    public Action ACOutofA;
 
-    public static Action ACIntoS;
-    public static Action ACOutofS;
+    public Action ACIntoS;
+    public Action ACOutofS;
 
-    public static Action ACIntoSS;
-    public static Action ACOutofSS;
+    public Action ACIntoSS;
+    public Action ACOutofSS;
 
-    public static Action ACIntoO;
-    public static Action ACOutofO;
+    public Action ACIntoO;
+    public Action ACOutofO;
 
-    public static Action ACIntoX;
-    public static Action ACOutofX;
+    public Action ACIntoX;
+    public Action ACOutofX;
 
-    public static Action ACRankUp;
-    public static Action ACRankDown;
+    public Action ACRankUp;
+    public Action ACRankDown;
 
 }
