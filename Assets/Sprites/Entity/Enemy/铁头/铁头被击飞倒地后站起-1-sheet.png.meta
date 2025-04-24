@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 512
+  spritePixelsToUnits: 640
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -124,8 +124,8 @@ TextureImporter:
         y: 2150
         width: 880
         height: 905
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -145,8 +145,8 @@ TextureImporter:
         y: 2150
         width: 880
         height: 905
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -166,8 +166,8 @@ TextureImporter:
         y: 2150
         width: 880
         height: 905
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -187,8 +187,8 @@ TextureImporter:
         y: 1245
         width: 880
         height: 905
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,11 +215,6 @@ TextureImporter:
       "\u94C1\u5934\u88AB\u51FB\u98DE\u5012\u5730\u540E\u7AD9\u8D77-1-sheet_1": 195771178
       "\u94C1\u5934\u88AB\u51FB\u98DE\u5012\u5730\u540E\u7AD9\u8D77-1-sheet_2": 2055104436
       "\u94C1\u5934\u88AB\u51FB\u98DE\u5012\u5730\u540E\u7AD9\u8D77-1-sheet_3": 1305070579
-      "\u94C1\u5934\u88AB\u51FB\u98DE\u5012\u5730\u540E\u7AD9\u8D77-1-sheet_4": -864936310
-      "\u94C1\u5934\u88AB\u51FB\u98DE\u5012\u5730\u540E\u7AD9\u8D77-1-sheet_5": 2120452735
-      "\u94C1\u5934\u88AB\u51FB\u98DE\u5012\u5730\u540E\u7AD9\u8D77-1-sheet_6": -1684598672
-      "\u94C1\u5934\u88AB\u51FB\u98DE\u5012\u5730\u540E\u7AD9\u8D77-1-sheet_7": -1513921404
-      "\u94C1\u5934\u88AB\u51FB\u98DE\u5012\u5730\u540E\u7AD9\u8D77-1-sheet_8": -653725765
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

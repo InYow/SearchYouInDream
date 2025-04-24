@@ -29,8 +29,10 @@ public class STEnemy_WarriorExecutionFly : State
         entity.transExecution_DamageSourceEntity = null;
         entity.transExecution_Type = null;
 
+        enemy.isGetHurt = false;
+        enemy.behaviourTree.SetVariableValue("bIsGetHurt",enemy.isGetHurt);
+        
         hitFly.FlyStart(enemy._rb);
-
     }
 
     public override void UPStateBehaviour(Entity entity)

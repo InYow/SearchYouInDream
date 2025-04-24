@@ -13,6 +13,7 @@ public class STEnemy_WarriorShoot : State
     private Enemy_ShooterBase shootEnemy;
     private Vector3 targetDirection;
     private Vector3 targetPosition;
+    private Vector3 playerDirection;
 
     private bool shouldBreak = false;
     public override void StateStart(Entity entity)
@@ -85,23 +86,22 @@ public class STEnemy_WarriorShoot : State
 
     public void FireBullet()
     {
-        Vector3 dir = (shootEnemy.target.position - shootEnemy.transform.position).normalized;
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(playerDirection.y, playerDirection.x) * Mathf.Rad2Deg;
         Quaternion q = Quaternion.Euler(0, 0, angle);  // 绕Z轴旋转angle度
         
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPosition.position, q);
         var projectile = bullet.GetComponent<ProjectileBase>();
-        projectile.EmmitProjectile(dir);
+        projectile.EmmitProjectile(playerDirection);
     }
 
     private void UpdateFaceDirection()
     {
-        Vector3 dir = Vector3.Normalize(shootEnemy.target.position - shootEnemy.transform.position);
-        if (dir.x < 0)
+        playerDirection = Vector3.Normalize(shootEnemy.target.position - shootEnemy.transform.position);
+        if (playerDirection.x < 0)
         {
             shootEnemy.gameObject.transform.localScale = new Vector3(-1, 1, 1);
         }
-        else if(dir.x > 0)
+        else if(playerDirection.x > 0)
         {
             shootEnemy.gameObject.transform.localScale = new Vector3(1, 1, 1);
         }
