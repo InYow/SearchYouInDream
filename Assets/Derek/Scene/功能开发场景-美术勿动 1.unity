@@ -2049,7 +2049,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 305021991}
-  - component: {fileID: 305021990}
   - component: {fileID: 305021989}
   - component: {fileID: 305021988}
   - component: {fileID: 305021987}
@@ -2058,6 +2057,7 @@ GameObject:
   - component: {fileID: 305021984}
   - component: {fileID: 305021983}
   - component: {fileID: 305021982}
+  - component: {fileID: 305021992}
   m_Layer: 6
   m_Name: Enemy_TieTou
   m_TagString: Untagged
@@ -2245,8 +2245,8 @@ BoxCollider2D:
   m_Offset: {x: -0.0446198, y: 0.16411334}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.03}
-    oldSize: {x: 1.375, y: 1.4144378}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1.2484375, y: 1.2844849}
     newSize: {x: 3.125, y: 1.71875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2328,7 +2328,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &305021990
+--- !u!4 &305021991
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305021981}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.71, y: -4.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1065885825}
+  - {fileID: 556540792}
+  - {fileID: 159259686}
+  - {fileID: 1968531555}
+  - {fileID: 1320033325}
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &305021992
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2337,7 +2357,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 305021981}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 913db0a06fc8619418465063be72e774, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a5b9f0a55d608346ad5f75195342273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hitVFX_List:
@@ -2345,7 +2365,7 @@ MonoBehaviour:
   "\u8840VFX_List":
   - "\u88401"
   - "\u88402"
-  hitVFX_Pivot: {fileID: 1968531555}
+  hitVFX_Pivot: {fileID: 6428281465124429166}
   attackBox: {fileID: 556540791}
   _rb: {fileID: 305021986}
   health: 0
@@ -2368,29 +2388,9 @@ MonoBehaviour:
   aiPath: {fileID: 305021983}
   target: {fileID: 0}
   isGetHurt: 0
-  dashEnable: 1
-  dashCD: 8
-  dashSpeed: 2
-  dashDistance: 5
---- !u!4 &305021991
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 305021981}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.71, y: -4.7, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1065885825}
-  - {fileID: 556540792}
-  - {fileID: 159259686}
-  - {fileID: 1968531555}
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  shootEnable: 1
+  shootCD: 5
+  shootDistance: 0
 --- !u!1 &337124444
 GameObject:
   m_ObjectHideFlags: 0
@@ -5579,6 +5579,77 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &897905739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 897905740}
+  - component: {fileID: 897905741}
+  m_Layer: 6
+  m_Name: STEnemy_FatBallIdle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &897905740
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897905739}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1190805388808361219}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &897905741
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897905739}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 3ddaa82be728ff94c8d86e5de4b06170, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 6701697680179182353, guid: 49df6b57bcc2f164b928b3ab97d5df08, type: 2}
+    value: {fileID: 1190805388808361218}
+  - key: {fileID: -2836740395612648219, guid: fa396bc7514668f49abe9f8f33304ed5, type: 2}
+    value: {fileID: 1190805388808361218}
+  - key: {fileID: -3058492715354371208, guid: 820a6785eca1f124788dca10e5cbe568, type: 2}
+    value: {fileID: 1190805388808361218}
+  - key: {fileID: -4602883149843985805, guid: a0aed19b00f012a41a780ad93dc64ce8, type: 2}
+    value: {fileID: 1190805388808361218}
+  - key: {fileID: -3934392438024444218, guid: 20e40f983d961bb409ebe27e9d4bf5f9, type: 2}
+    value: {fileID: 1190805388808361218}
+  - key: {fileID: 1697141529350040118, guid: c4639390e0d7a0a4bb9814532dbd3b1a, type: 2}
+    value: {fileID: 1190805388808361218}
+  - key: {fileID: -2569807045965094353, guid: a593b925490bfe443aa19f3e49552931, type: 2}
+    value: {fileID: 1190805388808361218}
+  - key: {fileID: 6701697680179182353, guid: e6fa9377423a22946bf5810154d2fadc, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 6701697680179182353, guid: 7b5afd7527bcc0343802a90527b67a93, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 6701697680179182353, guid: 91cc2c2ef18ff56448ce0afd852e7396, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 6701697680179182353, guid: 3ddaa82be728ff94c8d86e5de4b06170, type: 2}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &905498197
 GameObject:
   m_ObjectHideFlags: 0
@@ -8273,6 +8344,69 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1320033324
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1320033325}
+  - component: {fileID: 1320033326}
+  m_Layer: 6
+  m_Name: STEnemy_TieTou
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1320033325
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320033324}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 305021991}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &1320033326
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320033324}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: eedcef8dd43335f4c8579e85ecf5881b, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 7482569257932747696, guid: 628d7d36b79dd0e4f87ebc7aee6e646f, type: 2}
+    value: {fileID: 305021989}
+  - key: {fileID: -1510149087204014587, guid: e530c76cf64f07140909efcc9bd5cb6a, type: 2}
+    value: {fileID: 305021989}
+  - key: {fileID: 1697141529350040118, guid: c4639390e0d7a0a4bb9814532dbd3b1a, type: 2}
+    value: {fileID: 305021989}
+  - key: {fileID: -5523146216799604358, guid: 3ac74ca03c5fbb743aca4fd1307e2626, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 7419472909965291068, guid: 2c444dfe980389743877de0fb8a21d24, type: 2}
+    value: {fileID: 305021989}
+  - key: {fileID: 4954924411032780222, guid: 5efd6b08cacc5e84ea45ad846e583a37, type: 2}
+    value: {fileID: 305021989}
+  - key: {fileID: 1300113087553911251, guid: eedcef8dd43335f4c8579e85ecf5881b, type: 2}
+    value: {fileID: 305021989}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &1352660645
 GameObject:
   m_ObjectHideFlags: 0
@@ -13840,10 +13974,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_PencilShooter
       objectReference: {fileID: 0}
-    - target: {fileID: 4926185296017489350, guid: 259cee07f351cbc49acdc8d53f2e1214, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.17
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 259cee07f351cbc49acdc8d53f2e1214, type: 3}
 --- !u!212 &1190805388697157670
@@ -14131,6 +14261,7 @@ Transform:
   - {fileID: 6703146097212746285}
   - {fileID: 1190805388697157671}
   - {fileID: 6428281465124429166}
+  - {fileID: 897905740}
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14242,7 +14373,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1190805388808361219}
-  - component: {fileID: 1190805388808361231}
   - component: {fileID: 1190805388808361230}
   - component: {fileID: 1190805388808361218}
   - component: {fileID: 1190805388808361221}
@@ -14278,7 +14408,7 @@ MonoBehaviour:
   logTaskChanges: 0
   group: 0
   resetValuesOnRestart: 0
-  externalBehavior: {fileID: 11400000, guid: b61a0e6ffab01a64b9e7ee3dedfa84ba, type: 2}
+  externalBehavior: {fileID: 11400000, guid: 6390c3ee043caa847b0964af93f4fe6d, type: 2}
   mBehaviorSource:
     behaviorName: WarriorBehaviorBase
     behaviorDescription: 
@@ -14287,19 +14417,7 @@ MonoBehaviour:
       parentIndex: 
       startIndex: 
       variableStartIndex: 
-      JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(313,-17.1428528)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(-3.99999619,120.857162)"},"ID":1,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-705.4838,199.999985)"},"ID":2,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(2.16235161,102.972961)"},"ID":3,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-348.505157,139.729736)"},"ID":4,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.SharedVariables.CompareSharedBool","NodeData":{"Offset":"(-199.743835,144.622)"},"ID":5,"Name":"Compare
-        Shared Bool","Instant":true,"SharedBoolvariable":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanExecute","IsShared":true,"BooleanmValue":false},"SharedBoolcompareTo":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true}},{"Type":"BehaviorTreeExtension.BTAction_TransitState","NodeData":{"Offset":"(-2.1773262,136.486526)","Comment":"Execute"},"ID":6,"Name":"BT
-        Action   Transit State","Instant":true,"StringstateName":"STEnemy_WarriorExecutionFly","StringdefaultStateName":"STEmpty"},{"Type":"BehaviorTreeExtension.BTAction_TransitState","NodeData":{"Offset":"(197.646973,135.294128)","Comment":"Die"},"ID":7,"Name":"BT
-        Action   Transit State","Instant":true,"StringstateName":"STEnemy_WarriorDieLayOn","StringdefaultStateName":"STEmpty"}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(171.271667,150.5405)"},"ID":8,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.SharedVariables.CompareSharedBool","NodeData":{"Offset":"(-86.75681,143.24292)"},"ID":9,"Name":"Compare
-        Shared Bool","Instant":true,"SharedBoolvariable":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bStun","IsShared":true,"BooleanmValue":false},"SharedBoolcompareTo":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true}},{"Type":"BehaviorTreeExtension.BTAction_TransitState","NodeData":{"Offset":"(97.56681,147.027008)","Comment":"Stun"},"ID":10,"Name":"BT
-        Action   Transit State","Instant":true,"StringstateName":"STEnemy_WarriorBreakStun","StringdefaultStateName":"STEmpty"}]}]}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-1.419735,190.424652)"},"ID":11,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.SharedVariables.CompareSharedBool","NodeData":{"Offset":"(-134.054047,120)"},"ID":12,"Name":"Compare
-        Shared Bool","Instant":true,"SharedBoolvariable":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},"SharedBoolcompareTo":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true}},{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(37.41292,122.673004)"},"ID":13,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-190.694839,184.90979)"},"ID":14,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"SharedFloatCompare","NodeData":{"Offset":"(-100,120)"},"ID":15,"Name":"Shared
-        Float Compare","Instant":true,"SharedFloatglobalVariable":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},"SharedFloatcomparTO":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"ComparisonTypecomparisonType":"Less"},{"Type":"BehaviorTreeExtension.BTAction_TransitState","NodeData":{"Offset":"(140.540955,116.756653)","Comment":"NormalAttack"},"ID":16,"Name":"BT
-        Action   Transit State","Instant":true,"StringstateName":"STEnemy_WarriorAttack","StringdefaultStateName":"STEmpty"}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(263.255768,178.423279)"},"ID":17,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"SharedFloatCompare","NodeData":{"Offset":"(-119.45948,120)"},"ID":18,"Name":"Shared
-        Float Compare","Instant":true,"SharedFloatglobalVariable":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},"SharedFloatcomparTO":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"ComparisonTypecomparisonType":"GreaterOrEqual"},{"Type":"BTAction_MoveToPlayer","NodeData":{"Offset":"(123.40799,121.428146)"},"ID":19,"Name":"BT
-        Action   Move To Player","Instant":true,"SharedTransformtargetPosition":{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":null},"StringwalkState":"STEnemy_WarriorMoveToPlayer"}]}]}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(588.7499,184.9999)"},"ID":20,"Name":"Sequence","Instant":true,"AbortTypeabortType":"Self","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.SharedVariables.CompareSharedBool","NodeData":{"Offset":"(-130.000122,120.000015)"},"ID":21,"Name":"Compare
-        Shared Bool","Instant":true,"SharedBoolvariable":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},"SharedBoolcompareTo":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false}},{"Type":"BehaviorTreeExtension.BTAction_TransitState","NodeData":{"Offset":"(118.235336,105.8822)","Comment":"Idle"},"ID":22,"Name":"BT
-        Action   Transit State","Instant":true,"StringstateName":"STEnemy_WarriorIdle","StringdefaultStateName":"STEmpty"}]}]},"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"FoundPlayer","IsShared":true,"IsDynamic":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"PlayerTransform","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanExecute","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bInShootCD","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bIsGetHurt","IsShared":true,"BooleanmValue":false}]}'
+      JSONSerialization: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"FoundPlayer","IsShared":true,"IsDynamic":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"PlayerTransform","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanExecute","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bInDashCD","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bIsGetHurt","IsShared":true,"BooleanmValue":false}]}'
       fieldSerializationData:
         typeName: []
         fieldNameHash: 
@@ -14399,49 +14517,6 @@ MonoBehaviour:
   dashCD: 8
   dashSpeed: 2
   dashDistance: 5
---- !u!114 &1190805388808361231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190805388808361223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5b9f0a55d608346ad5f75195342273, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitVFX_List:
-  - "\u53D7\u4F24\u7279\u6548x"
-  "\u8840VFX_List":
-  - "\u88401"
-  - "\u88402"
-  hitVFX_Pivot: {fileID: 6428281465124429166}
-  attackBox: {fileID: 6703146097212746284}
-  _rb: {fileID: 305021986}
-  health: 0
-  health_Max: 0
-  resis: 0
-  resis_Max: 0
-  resis_ResponSpeed: 0
-  attackValue: 0
-  breakAttackTimes: 1
-  breakAttackTimes_Max: 1
-  StartStateName: STEmpty
-  transExecution: 0
-  transExecution_DamageSourceEntity: {fileID: 0}
-  transExecution_Type: 
-  transExecution_AttackBox: {fileID: 0}
-  transBreakStun: 0
-  beingBreakStun: 0
-  stateCurrentName: 
-  behaviourTree: {fileID: 305021985}
-  aiPath: {fileID: 305021983}
-  target: {fileID: 0}
-  isGetHurt: 0
-  shootEnable: 1
-  shootCD: 5
-  shootDistance: 0
 --- !u!114 &1190805388962993292
 MonoBehaviour:
   m_ObjectHideFlags: 0
