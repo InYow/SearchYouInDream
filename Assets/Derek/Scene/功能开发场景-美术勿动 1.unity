@@ -2064,7 +2064,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &305021982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5579,77 +5579,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &897905739
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 897905740}
-  - component: {fileID: 897905741}
-  m_Layer: 6
-  m_Name: STEnemy_FatBallIdle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &897905740
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 897905739}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1190805388808361219}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!320 &897905741
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 897905739}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 3ddaa82be728ff94c8d86e5de4b06170, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 6701697680179182353, guid: 49df6b57bcc2f164b928b3ab97d5df08, type: 2}
-    value: {fileID: 1190805388808361218}
-  - key: {fileID: -2836740395612648219, guid: fa396bc7514668f49abe9f8f33304ed5, type: 2}
-    value: {fileID: 1190805388808361218}
-  - key: {fileID: -3058492715354371208, guid: 820a6785eca1f124788dca10e5cbe568, type: 2}
-    value: {fileID: 1190805388808361218}
-  - key: {fileID: -4602883149843985805, guid: a0aed19b00f012a41a780ad93dc64ce8, type: 2}
-    value: {fileID: 1190805388808361218}
-  - key: {fileID: -3934392438024444218, guid: 20e40f983d961bb409ebe27e9d4bf5f9, type: 2}
-    value: {fileID: 1190805388808361218}
-  - key: {fileID: 1697141529350040118, guid: c4639390e0d7a0a4bb9814532dbd3b1a, type: 2}
-    value: {fileID: 1190805388808361218}
-  - key: {fileID: -2569807045965094353, guid: a593b925490bfe443aa19f3e49552931, type: 2}
-    value: {fileID: 1190805388808361218}
-  - key: {fileID: 6701697680179182353, guid: e6fa9377423a22946bf5810154d2fadc, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 6701697680179182353, guid: 7b5afd7527bcc0343802a90527b67a93, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 6701697680179182353, guid: 91cc2c2ef18ff56448ce0afd852e7396, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 6701697680179182353, guid: 3ddaa82be728ff94c8d86e5de4b06170, type: 2}
-    value: {fileID: 0}
-  m_ExposedReferences:
-    m_References: []
 --- !u!1 &905498197
 GameObject:
   m_ObjectHideFlags: 0
@@ -13974,6 +13903,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_PencilShooter
       objectReference: {fileID: 0}
+    - target: {fileID: 4926185296008679101, guid: 259cee07f351cbc49acdc8d53f2e1214, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 259cee07f351cbc49acdc8d53f2e1214, type: 3}
 --- !u!212 &1190805388697157670
@@ -14152,7 +14085,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190805388800124543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.66, z: 0}
+  m_LocalPosition: {x: 0, y: 0.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14194,7 +14127,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 2.253961, y: 2.3964844}
+    oldSize: {x: 1.8031688, y: 1.9171875}
     newSize: {x: 3.125, y: 1.71875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -14253,7 +14186,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190805388808361223}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.89, y: -4.45, z: 0}
+  m_LocalPosition: {x: -9.11, y: -4.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14261,7 +14194,6 @@ Transform:
   - {fileID: 6703146097212746285}
   - {fileID: 1190805388697157671}
   - {fileID: 6428281465124429166}
-  - {fileID: 897905740}
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14493,12 +14425,12 @@ MonoBehaviour:
   hitVFX_Pivot: {fileID: 6428281465124429166}
   attackBox: {fileID: 6703146097212746284}
   _rb: {fileID: 1190805388808361217}
-  health: 0
-  health_Max: 0
-  resis: 0
-  resis_Max: 0
-  resis_ResponSpeed: 0
-  attackValue: 0
+  health: 20
+  health_Max: 20
+  resis: 5
+  resis_Max: 5
+  resis_ResponSpeed: 10
+  attackValue: 1
   breakAttackTimes: 1
   breakAttackTimes_Max: 1
   StartStateName: STEmpty
@@ -14531,7 +14463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SR_Health: {fileID: 1190805389617739029}
   SR_HealthGray: {fileID: 1190805390129697872}
-  entity: {fileID: 0}
+  entity: {fileID: 1190805388808361230}
 --- !u!210 &1190805388962993293
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -14788,7 +14720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SR_Resis: {fileID: 1190805390055175307}
-  entity: {fileID: 0}
+  entity: {fileID: 1190805388808361230}
 --- !u!1 &1190805389758404409
 GameObject:
   m_ObjectHideFlags: 0

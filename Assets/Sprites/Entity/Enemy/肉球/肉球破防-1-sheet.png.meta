@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 512
+  spritePixelsToUnits: 640
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -385,27 +385,6 @@ TextureImporter:
       bones: []
       spriteID: a896d20e6b1294447a9e1a2f11f2e7a4
       internalID: 919065654
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u8089\u7403\u7834\u9632-1-sheet_13"
-      rect:
-        serializedVersion: 2
-        x: 8112
-        y: 0
-        width: 1352
-        height: 1112
-      alignment: 9
-      pivot: {x: 0.5, y: 0.02}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd88bea18615cd9449ada3f58fb5799d
-      internalID: -67873384
       vertices: []
       indices: 
       edges: []

@@ -1,13 +1,24 @@
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.Serialization;
 
 public class STEnemy_WarriorDash : State
 {
     public LayerMask obstacleLayer; 
+    public PlayableAsset dashStartAsset;
+    public PlayableAsset dashLoopAsset;
+    public PlayableAsset dashEndAsset;
+    public float stopDistance = 2.5f;
+    
     private Enemy_DashBase dashEnemy;
     private Vector3 targetDirection;
     private Vector3 targetPosition;
 
     private bool shouldBreak = false;
+    
+    private bool isDashing = false;
+    private bool isDashEnd = false;
+    
     public override void StateStart(Entity entity)
     {
         shouldBreak = false;
@@ -33,7 +44,16 @@ public class STEnemy_WarriorDash : State
             shouldBreak = true;
         }
         targetPosition = entity.transform.position + targetDirection*dashEnemy.dashDistance;
+        if (targetDirection.x < 0)
+        {
+            dashEnemy.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else
+        {
+            dashEnemy.transform.localScale = new Vector3(1, 1, 1);
+        }
         
+        playableDirector.playableAsset = dashStartAsset;
         BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
         playableDirector.Play();
     }
@@ -42,7 +62,22 @@ public class STEnemy_WarriorDash : State
 
     public override void UPStateBehaviour(Entity entity)
     {
-        dashEnemy._rb.velocity = dashEnemy.dashSpeed * targetDirection;
+        if (isDashing)
+        {
+            float distance = (entity.transform.position - targetPosition).magnitude;
+            if (distance <= stopDistance)
+            {
+                isDashing = false;
+                playableDirector.playableAsset = dashEndAsset;
+                playableDirector.extrapolationMode = DirectorWrapMode.Hold;
+                BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
+                playableDirector.Play();
+            }
+            else
+            {
+                dashEnemy._rb.velocity = dashEnemy.dashSpeed * targetDirection;
+            }
+        }
     }
 
     public override void StateExit(Entity entity)
@@ -51,6 +86,9 @@ public class STEnemy_WarriorDash : State
         {
             dashEnemy._rb.velocity = Vector2.zero;
         }
+
+        isDashing = false;
+        isDashEnd = false;
         
         Destroy(gameObject);
     }
@@ -73,14 +111,20 @@ public class STEnemy_WarriorDash : State
             return true;
         }
         
-        float distance = (entity.transform.position - targetPosition).magnitude;
-        if (distance <= 0.01f)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return isDashEnd;
+    }
+
+    public void OnDashStartEnd()
+    {
+        playableDirector.playableAsset = dashLoopAsset;
+        playableDirector.extrapolationMode = DirectorWrapMode.Loop;
+        BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
+        playableDirector.Play();
+        isDashing = true;
+    }
+    
+    public void OnDashEndFinish()
+    {
+        isDashEnd = true;
     }
 }

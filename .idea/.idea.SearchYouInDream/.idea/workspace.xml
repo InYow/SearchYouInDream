@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="" />
+    <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_DashEnd.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_DashEnd.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_DashLoop.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_DashLoop.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_DashLoop.playable.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_DashLoop.playable.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_DashStart.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_DashStart.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/Enemy_FatBall.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/Enemy_FatBall.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/FatBall/FatBallEnemyBehaviorBaseTemplate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/FatBall/FatBallEnemyBehaviorBaseTemplate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_普攻1_冲刺_阶段1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_普攻1_冲刺_阶段1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_WarriorDash.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_WarriorDash.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorDash.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorDash.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/肉球/肉球破防-1-sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/肉球/肉球破防-1-sheet.png.meta" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,6 +147,7 @@
       <workItem from="1745331075932" duration="1135000" />
       <workItem from="1745397743402" duration="5314000" />
       <workItem from="1745475523440" duration="2779000" />
+      <workItem from="1745590666876" duration="4006000" />
     </task>
     <servers />
   </component>
