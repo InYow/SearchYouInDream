@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &9117474669274388353
+--- !u!1 &8826278015195682146
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,66 +8,66 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9117474669274388354}
-  - component: {fileID: 9117474669274388365}
-  - component: {fileID: 6756567183208078987}
+  - component: {fileID: 8826278015195682147}
+  - component: {fileID: 8826278015195682173}
+  - component: {fileID: 8826278015195682172}
   m_Layer: 0
-  m_Name: STEnemy_WarriorShoot
+  m_Name: STEnemy_TieTouBreakStun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9117474669274388354
+--- !u!4 &8826278015195682147
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9117474669274388353}
+  m_GameObject: {fileID: 8826278015195682146}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.24348114, y: -0.5378514, z: -0.058306813}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!320 &9117474669274388365
+--- !u!320 &8826278015195682173
 PlayableDirector:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9117474669274388353}
+  m_GameObject: {fileID: 8826278015195682146}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 0faf38de877fa32469bed02db7f91efa, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 3ac74ca03c5fbb743aca4fd1307e2626, type: 2}
   m_InitialState: 0
   m_WrapMode: 0
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
-  - key: {fileID: -6275934815771256228, guid: 0faf38de877fa32469bed02db7f91efa, type: 2}
+  - key: {fileID: -5523146216799604358, guid: 3ac74ca03c5fbb743aca4fd1307e2626, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
---- !u!114 &6756567183208078987
+--- !u!114 &8826278015195682172
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9117474669274388353}
+  m_GameObject: {fileID: 8826278015195682146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fbf059044e227743ab25aa36fd71a43, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e80832dd73b149489ae385e23c2f80c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playableDirector: {fileID: 9117474669274388365}
+  playableDirector: {fileID: 8826278015195682173}
   wrapMode: 0
   rankABCD: 0
-  playableAsset_A: {fileID: 11400000, guid: 0faf38de877fa32469bed02db7f91efa, type: 2}
+  playableAsset_A: {fileID: 11400000, guid: 3ac74ca03c5fbb743aca4fd1307e2626, type: 2}
   playableAsset_B: {fileID: 0}
   playableAsset_C: {fileID: 0}
   playableAsset_D: {fileID: 0}
@@ -80,7 +80,3 @@ MonoBehaviour:
   inputWindTypeSectionClipList_C: []
   windTypeSectionClipList_D: []
   inputWindTypeSectionClipList_D: []
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  bulletPrefab: {fileID: 0}

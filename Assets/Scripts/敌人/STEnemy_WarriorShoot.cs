@@ -8,8 +8,7 @@ public class STEnemy_WarriorShoot : State
     //public SignalReceiver signalReceiver;
     public LayerMask obstacleLayer; 
     public GameObject bulletPrefab;
-    public Transform bulletSpawnPosition;
-    
+
     private Enemy_ShooterBase shootEnemy;
     private Vector3 targetDirection;
     private Vector3 targetPosition;
@@ -88,7 +87,8 @@ public class STEnemy_WarriorShoot : State
     {
         float angle = Mathf.Atan2(playerDirection.y, playerDirection.x) * Mathf.Rad2Deg;
         Quaternion q = Quaternion.Euler(0, 0, angle);  // 绕Z轴旋转angle度
-        
+
+        var bulletSpawnPosition = shootEnemy.GetProjectileSpawnTransform();
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPosition.position, q);
         var projectile = bullet.GetComponent<ProjectileBase>();
         projectile.EmmitProjectile(playerDirection);

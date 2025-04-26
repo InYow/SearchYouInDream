@@ -9,7 +9,7 @@ public class Enemy : Entity
     public BehaviorTree behaviourTree;
     public AIPath aiPath;
     public Transform target;
-    
+    public bool bFoundPlayer = false;
     public bool isGetHurt = false;
     
     public override void GetHurt(Entity entity, CheckBox attackBox)

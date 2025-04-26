@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9117474669274388354}
+  - component: {fileID: 9117474669274388364}
   - component: {fileID: 9117474669274388365}
-  - component: {fileID: 6756567183208078987}
   m_Layer: 0
-  m_Name: STEnemy_WarriorShoot
+  m_Name: STEnemy_TieTouAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,26 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!320 &9117474669274388365
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9117474669274388353}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 0faf38de877fa32469bed02db7f91efa, type: 2}
-  m_InitialState: 0
-  m_WrapMode: 0
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: -6275934815771256228, guid: 0faf38de877fa32469bed02db7f91efa, type: 2}
-    value: {fileID: 0}
-  m_ExposedReferences:
-    m_References: []
---- !u!114 &6756567183208078987
+--- !u!114 &9117474669274388364
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,13 +42,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 9117474669274388353}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fbf059044e227743ab25aa36fd71a43, type: 3}
+  m_Script: {fileID: 11500000, guid: 468567bbb3058404f924c4d598764b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playableDirector: {fileID: 9117474669274388365}
   wrapMode: 0
   rankABCD: 0
-  playableAsset_A: {fileID: 11400000, guid: 0faf38de877fa32469bed02db7f91efa, type: 2}
+  playableAsset_A: {fileID: 11400000, guid: 628d7d36b79dd0e4f87ebc7aee6e646f, type: 2}
   playableAsset_B: {fileID: 0}
   playableAsset_C: {fileID: 0}
   playableAsset_D: {fileID: 0}
@@ -80,7 +61,22 @@ MonoBehaviour:
   inputWindTypeSectionClipList_C: []
   windTypeSectionClipList_D: []
   inputWindTypeSectionClipList_D: []
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  bulletPrefab: {fileID: 0}
+--- !u!320 &9117474669274388365
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9117474669274388353}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 628d7d36b79dd0e4f87ebc7aee6e646f, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 0
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 7482569257932747696, guid: 628d7d36b79dd0e4f87ebc7aee6e646f, type: 2}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References: []

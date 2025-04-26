@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &163123304873969185
+--- !u!1 &6566181917785077876
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 228087695949805346}
-  m_Layer: 0
-  m_Name: BulletSpawnPosition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &228087695949805346
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 163123304873969185}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.607, y: 0.463, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 9117474669274388354}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &9117474669274388353
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9117474669274388354}
-  - component: {fileID: 9117474669274388365}
-  - component: {fileID: 6756567183208078987}
-  - component: {fileID: 602735500}
+  - component: {fileID: 6566181917785077879}
+  - component: {fileID: 6566181917785077880}
+  - component: {fileID: 8672845756613865854}
+  - component: {fileID: 2708921007782620281}
   m_Layer: 0
   m_Name: STEnemy_PencilShoot
   m_TagString: Untagged
@@ -50,29 +19,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9117474669274388354
+--- !u!4 &6566181917785077879
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9117474669274388353}
+  m_GameObject: {fileID: 6566181917785077876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 228087695949805346}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!320 &9117474669274388365
+--- !u!320 &6566181917785077880
 PlayableDirector:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9117474669274388353}
+  m_GameObject: {fileID: 6566181917785077876}
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: f342d87ebc138794ebd72cc2e7079d5a, type: 2}
@@ -84,22 +52,22 @@ PlayableDirector:
   - key: {fileID: 4042279457160757030, guid: f342d87ebc138794ebd72cc2e7079d5a, type: 2}
     value: {fileID: 0}
   - key: {fileID: -694897931781826876, guid: f342d87ebc138794ebd72cc2e7079d5a, type: 2}
-    value: {fileID: 602735500}
+    value: {fileID: 2708921007782620281}
   m_ExposedReferences:
     m_References: []
---- !u!114 &6756567183208078987
+--- !u!114 &8672845756613865854
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9117474669274388353}
+  m_GameObject: {fileID: 6566181917785077876}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fbf059044e227743ab25aa36fd71a43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playableDirector: {fileID: 9117474669274388365}
+  playableDirector: {fileID: 6566181917785077880}
   wrapMode: 0
   rankABCD: 0
   playableAsset_A: {fileID: 11400000, guid: f342d87ebc138794ebd72cc2e7079d5a, type: 2}
@@ -119,14 +87,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   bulletPrefab: {fileID: 3351506413869471290, guid: d65bbe095765b2943b5d1e0934c32861, type: 3}
-  bulletSpawnPosition: {fileID: 228087695949805346}
---- !u!114 &602735500
+--- !u!114 &2708921007782620281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9117474669274388353}
+  m_GameObject: {fileID: 6566181917785077876}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
@@ -138,7 +105,7 @@ MonoBehaviour:
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 6756567183208078987}
+        - m_Target: {fileID: 8672845756613865854}
           m_TargetAssemblyTypeName: STEnemy_WarriorShoot, Assembly-CSharp
           m_MethodName: FireBullet
           m_Mode: 1

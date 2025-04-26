@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7424791696869250422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7424791696869250423}
+  - component: {fileID: 6587535227966135877}
+  - component: {fileID: 6372749591943944066}
+  - component: {fileID: 5768918347566692763}
+  m_Layer: 6
+  m_Name: STEnemy_TieTouShoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7424791696869250423
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7424791696869250422}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &6587535227966135877
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7424791696869250422}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 5efd6b08cacc5e84ea45ad846e583a37, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 0
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 1300113087553911251, guid: eedcef8dd43335f4c8579e85ecf5881b, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 6614642039687236655, guid: eedcef8dd43335f4c8579e85ecf5881b, type: 2}
+    value: {fileID: 5768918347566692763}
+  - key: {fileID: 2558088610410176515, guid: eedcef8dd43335f4c8579e85ecf5881b, type: 2}
+    value: {fileID: 5768918347566692763}
+  - key: {fileID: 4954924411032780222, guid: 5efd6b08cacc5e84ea45ad846e583a37, type: 2}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References: []
+--- !u!114 &6372749591943944066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7424791696869250422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e4b13744087a84cb09a943aa138cd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playableDirector: {fileID: 6587535227966135877}
+  wrapMode: 0
+  rankABCD: 0
+  playableAsset_A: {fileID: 11400000, guid: eedcef8dd43335f4c8579e85ecf5881b, type: 2}
+  playableAsset_B: {fileID: 11400000, guid: 5efd6b08cacc5e84ea45ad846e583a37, type: 2}
+  playableAsset_C: {fileID: 0}
+  playableAsset_D: {fileID: 0}
+  hitVFX: {fileID: 0}
+  windTypeSectionClipList_A: []
+  inputWindTypeSectionClipList_A: []
+  windTypeSectionClipList_B: []
+  inputWindTypeSectionClipList_B: []
+  windTypeSectionClipList_C: []
+  inputWindTypeSectionClipList_C: []
+  windTypeSectionClipList_D: []
+  inputWindTypeSectionClipList_D: []
+  projectilePrefab: {fileID: 4160355931708892624, guid: cbf4fd9dd5580d345892236ff8e802d2, type: 3}
+  shootStartAsset: {fileID: 11400000, guid: eedcef8dd43335f4c8579e85ecf5881b, type: 2}
+  shootLoopAsset: {fileID: 11400000, guid: 5efd6b08cacc5e84ea45ad846e583a37, type: 2}
+  followSpeed: 1
+  laserDuration: 8
+--- !u!114 &5768918347566692763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7424791696869250422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: afe37bec1212e6d4eb0dd3cab3036031, type: 2}
+    - {fileID: 11400000, guid: c25d1cb102614014baa1145d82619e10, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6372749591943944066}
+          m_TargetAssemblyTypeName: STEnemy_TieTouShoot, Assembly-CSharp
+          m_MethodName: OnShootStartEnd
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6372749591943944066}
+          m_TargetAssemblyTypeName: STEnemy_TieTouShoot, Assembly-CSharp
+          m_MethodName: SpawnLaser
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
