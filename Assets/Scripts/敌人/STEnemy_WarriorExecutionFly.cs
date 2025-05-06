@@ -24,11 +24,14 @@ public class STEnemy_WarriorExecutionFly : State
         this.enemy = (Enemy)entity;
         hitFly.sourceEntity = entity.transExecution_DamageSourceEntity;
         hitFly.sourceAttackBox = entity.transExecution_AttackBox;
+        hitFly.checkBoxBehaviour = entity.transExecution_AttackBoxBehaviour;
         entity.transExecution = false;
         entity.transExecution_AttackBox = null;
+        entity.transExecution_AttackBoxBehaviour = null;
         entity.transExecution_DamageSourceEntity = null;
         entity.transExecution_Type = null;
 
+        //被击飞
         hitFly.FlyStart(enemy._rb);
 
     }

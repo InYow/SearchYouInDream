@@ -337,6 +337,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a93a25e0031b04aa0e0ad69a9b3cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitVFX_List:
+  - "\u53D7\u4F24\u7279\u6548x"
   "\u8840VFX_List":
   - "\u88401"
   - "\u88402"
@@ -344,6 +346,7 @@ MonoBehaviour:
   - "\u88404"
   - "\u88405"
   hitVFX_Pivot: {fileID: 6709398478158014290}
+  camera_Pivot: {fileID: 0}
   attackBox: {fileID: 1196935723869664481}
   _rb: {fileID: 6709398477595593926}
   health: 10
@@ -352,11 +355,22 @@ MonoBehaviour:
   resis_Max: 1
   resis_ResponSpeed: 1
   attackValue: 1
+  breakAttackTimes: 1
+  breakAttackTimes_Max: 1
   StartStateName: "Player_\u5F85\u673A"
   transExecution: 0
   transExecution_DamageSourceEntity: {fileID: 0}
   transExecution_Type: 
   transExecution_AttackBox: {fileID: 0}
+  transExecution_AttackBoxBehaviour:
+    boxSize: {x: 1, y: 0.5}
+    boxOffset: {x: 0, y: 0}
+    attackLayer:
+      serializedVersion: 2
+      m_Bits: 64
+    attacktype: 0
+    canBreakAttackType: 0
+    entity_master: {fileID: 0}
   transBreakStun: 0
   beingBreakStun: 0
   stateCurrentName: 

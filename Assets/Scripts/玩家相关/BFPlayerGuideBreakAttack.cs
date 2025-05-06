@@ -17,6 +17,7 @@ public class BFPlayerGuideBreakAttack : Buff
         //FIN 慢动作
         SlowMotion.StartSlow();
         //UI
+        击破Canvas.PlayAnimation();
         guideGO.transform.SetParent(null);      //无视scale
         guideGO.transform.localScale = Vector3.one;
         guideGO.SetActive(true);
@@ -32,6 +33,11 @@ public class BFPlayerGuideBreakAttack : Buff
         else
         {
             time = Mathf.Clamp(time - Time.unscaledDeltaTime, 0f, time);
+        }
+
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            击破Canvas.ContinueAnimation();
         }
     }
 

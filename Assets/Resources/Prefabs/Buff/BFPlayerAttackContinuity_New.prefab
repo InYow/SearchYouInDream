@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0
-  time_Max: 0.6
+  time_Max: 100
   layer: 0
   attackID: 0

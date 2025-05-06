@@ -14,6 +14,18 @@ public class Player_普攻3 : State_攻击
     {
         base.StateStart(entity);
         entity.BuffRemove("BFPlayerAttackContinuity_New");
+
+        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D))
+        {
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            entity.FlipX(true);
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            entity.FlipX(false);
+        }
     }
 
 }

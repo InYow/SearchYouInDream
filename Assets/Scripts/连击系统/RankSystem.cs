@@ -62,9 +62,9 @@ public class RankSystem : MonoBehaviour
         //配置各评级
         ranks = new float[10]
         {
-            0,  //F
-            0,  //E
-            0,  //D
+            -1,  //F
+            -1,  //E
+            -1,  //D
             8,  //C
             9,  //B
             10,  //A

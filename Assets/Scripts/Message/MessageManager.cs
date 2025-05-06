@@ -31,8 +31,8 @@ public class MessageManager : MonoBehaviour
         if (entity.breakAttackTimes > 0)
         {
             entity.breakAttackTimes--;
+            FightCamera.SetFollow(entity.camera_Pivot);
             Instance.OnBreakStun?.Invoke(entity);
         }
-
     }
 }

@@ -11,4 +11,13 @@ public class BFPlayerAttackContinuity_New : Buff
     {
         base.StartBuff(entity);
     }
+
+    public override void UpdateBuff(Entity entity)
+    {
+        base.UpdateBuff(entity);
+        if (entity.stateCurrentName != "Player_冲刺")
+        {
+            entity.BuffRemove("BFPlayerAttackContinuity_New");
+        }
+    }
 }

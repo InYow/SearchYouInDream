@@ -20,6 +20,14 @@ public class SkillManager : MonoBehaviour
                                 //Player_击破_气爆拳
                                 //Player_击破_浩克掌
 
+    [Header("冲刺")]
+    public float 冲刺恢复CDMax;
+    public float 冲刺恢复CD;
+    public int 冲刺次数Max;
+    public int 冲刺次数;
+
+    [Header("角色")]
+    public Player player;
 
 
     [Header("测试区域")]
@@ -34,6 +42,47 @@ public class SkillManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        冲刺恢复CD = 0f;
+        冲刺次数 = 冲刺次数Max;
+
+        player = GameObject.Find("Player").GetComponent<Player>();
+    }
+
+    private void Update()
+    {
+        if (player.stateCurrentName != "Player_冲刺" && 冲刺恢复CD > 0)
+        {
+            冲刺恢复CD -= Time.deltaTime;
+            if (冲刺恢复CD <= 0)
+            {
+                冲刺次数 = 冲刺次数Max;
+            }
+        }
+    }
+
+    public static bool IfCanDash()
+    {
+        if (instance.冲刺次数 > 0)
+            return true;
+        else
+            return false;
+    }
+
+    public static void Dash()
+    {
+        if (instance.冲刺次数 == instance.冲刺次数Max)
+        {
+            instance.冲刺次数--;
+            instance.冲刺恢复CD = instance.冲刺恢复CDMax;
+        }
+        else
+        {
+            instance.冲刺次数--;
         }
     }
 

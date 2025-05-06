@@ -6,6 +6,8 @@ public class Player_击破_气爆拳_攻击 : State
     public override void StateExit(Entity entity)
     {
         Destroy(gameObject);
+
+        entity.BuffRemove("BFPlayerGuideBreakAttack");
     }
 
     public override void StateStart(Entity entity)

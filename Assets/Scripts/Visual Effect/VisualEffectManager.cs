@@ -23,9 +23,9 @@ public class VisualEffectManager : MonoBehaviour
         if (effectPrefab != null)
         {
             GameObject effectInstance = Instantiate(effectPrefab, transform.position, Quaternion.Euler(0, 0, Random.Range(0f, 360f)));
-            Vector3 vector3 = transform.localScale;
-            vector3.x = transform.lossyScale.x;
-            transform.localScale = vector3;
+            //Vector3 vector3 = effectInstance.transform.localScale;
+            //vector3.x = transform.lossyScale.x;
+            //effectInstance.transform.localScale = vector3;
             //Debug.Log($"特效 {VFXName} 已生成，位置设置为 {transform.position}");
         }
         else

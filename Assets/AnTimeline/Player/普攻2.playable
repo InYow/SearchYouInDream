@@ -282,12 +282,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     boxSize: {x: 1.5, y: 0.5}
-    boxOffset: {x: 0.5, y: 0.3}
+    boxOffset: {x: 0.8, y: 0.3}
     attackLayer:
       serializedVersion: 2
       m_Bits: 64
     attacktype: 0
     canBreakAttackType: 0
+    entity_master: {fileID: 0}
 --- !u!114 &637783586938944309
 MonoBehaviour:
   m_ObjectHideFlags: 1

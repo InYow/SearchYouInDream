@@ -9,6 +9,8 @@ public class Entity : MonoBehaviour
     public List<string> hitVFX_List = new List<string> { "受伤特效x" };
     public List<string> 血VFX_List = new List<string> { "血1" };
     public Transform hitVFX_Pivot;
+    [Header("Camera")]
+    public Transform camera_Pivot;
     [Header("Component")]
     public CheckBox attackBox;
     public Rigidbody2D _rb;
@@ -31,6 +33,7 @@ public class Entity : MonoBehaviour
     public Entity transExecution_DamageSourceEntity;
     public string transExecution_Type;
     public CheckBox transExecution_AttackBox;
+    public CheckBoxBehaviour transExecution_AttackBoxBehaviour;
 
     public bool transBreakStun;
     public bool beingBreakStun;
@@ -162,7 +165,15 @@ public class Entity : MonoBehaviour
         }
         if (hitVFX_Pivot == null)
         {
-            Debug.LogWarning($"{gameObject.name}没有hitVFX_Pivot");
+            Debug.LogWarning($"{gameObject.name}没有HitVFX Pivot");
+        }
+        if (camera_Pivot == null)
+        {
+            camera_Pivot = transform.Find("Camera Pivot");
+        }
+        if (camera_Pivot == null)
+        {
+            Debug.LogWarning($"{gameObject.name}没有Camera Pivot");
         }
 
         attackBox = GetComponentInChildren<CheckBox>(true);
@@ -179,12 +190,12 @@ public class Entity : MonoBehaviour
     public virtual void Hurt(Entity entity, CheckBox attackBox)
     {
         entity.GetHurt(this, attackBox);
-        CameraShake.Shake(new Vector3(1, 0, 0), 0.3f);
+        //CameraShake.Shake(new Vector3(1, 0, 0), 0.3f);
     }
     public virtual void Hurt(Entity entity, CheckBoxBehaviour checkBoxBehaviour)
     {
         entity.GetHurt(this, checkBoxBehaviour);
-        CameraShake.Shake(new Vector3(1, 0, 0), 0.3f);
+        //CameraShake.Shake(new Vector3(1, 0, 0), 0.3f);
     }
 
     /// <summary>
@@ -197,6 +208,8 @@ public class Entity : MonoBehaviour
         {
             health -= entity.attackValue;
             FlowBlood();
+            if (beingBreakStun)
+                CameraShake.Shake(new Vector3(1, 0, 0), 0.3f);
 
             //死掉了
             if (health <= 0f)
@@ -211,6 +224,8 @@ public class Entity : MonoBehaviour
         {
             health -= entity.attackValue;
             FlowBlood();
+            if (beingBreakStun)
+                CameraShake.Shake(new Vector3(1, 0, 0), 0.3f);
 
             //死掉了
             if (health <= 0f)
@@ -281,7 +296,7 @@ public class Entity : MonoBehaviour
             }
             transExecution_Type = "fly";
             transExecution_DamageSourceEntity = entity;
-            transExecution_AttackBox = attackBox;
+            transExecution_AttackBoxBehaviour = checkBoxBehaviour;
         }
     }
 

@@ -6,6 +6,8 @@ public class Player_受击 : State
 {
     public HitFly hitFly;
     public float slowtime = 0.4f;
+    public float slowfactor = 0.5f;
+    public float time;
     public override void StateExit(Entity entity)
     {
         Destroy(gameObject);
@@ -32,18 +34,20 @@ public class Player_受击 : State
         hitFly.sourceAttackBox = player.transHitFly_SourceAttackBox;
         player.transHitFly_SourceEntity = null;
         player.transHitFly_SourceAttackBox = null;
+        time = slowtime;
 
         //被击飞
         hitFly.FlyStart(player._rb);
         //硬直时长初始化
         player.time_Stun = player.time_StunMax;
-        SlowMotion.StartSlow(slowtime);
+        SlowMotion.StartSlow(slowtime, slowfactor);
     }
 
     public override void UPStateBehaviour(Entity entity)
     {
         Player player = (Player)entity;
         player.time_Stun -= Time.deltaTime;
+        time -= Time.unscaledDeltaTime;
 
         hitFly.FlyBehaviour(player._rb);
     }

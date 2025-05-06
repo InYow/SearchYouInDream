@@ -11,7 +11,7 @@ public class CheckBoxBehaviour : PlayableBehaviour
     public LayerMask attackLayer = 1 << 6;   //目标层
     public AttackType attacktype = AttackType.none;       //攻击类型描述    
     public CanBreakAttackType canBreakAttackType = CanBreakAttackType.cannot; //打断眩晕类型
-    private Entity entity_master;
+    public Entity entity_master;
 
 
     public override void OnBehaviourPlay(Playable playable, FrameData info)

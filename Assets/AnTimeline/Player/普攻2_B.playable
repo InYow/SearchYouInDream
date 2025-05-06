@@ -25,7 +25,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -6686165199520712201}
-    m_Duration: 0.6666666666666666
+    m_Duration: 0.6166666666666667
     m_TimeScale: 1
     m_ParentTrack: {fileID: -8216917877877993980}
     m_EaseInDuration: 0
@@ -146,20 +146,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     sectionInputWindType: 0
---- !u!114 &-2558769634349434246
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29aaf6ebdd44115489e3f75610a88ec8, type: 3}
-  m_Name: WindTypeSectionClipAsset(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  template:
-    sectionWindType: 2
 --- !u!114 &-1068405496725533951
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -182,7 +168,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 0.31666666666666665
+    m_Start: 0.03333333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 335486317937925659}
     m_Duration: 0.1333333333333333
@@ -282,7 +268,6 @@ MonoBehaviour:
   m_Tracks:
   - {fileID: -8216917877877993980}
   - {fileID: 6065544000398175025}
-  - {fileID: 1875947422847692440}
   - {fileID: -1068405496725533951}
   m_FixedDuration: 0
   m_EditorSettings:
@@ -303,257 +288,14 @@ MonoBehaviour:
   m_Name: CheckBoxClipAsset(Clone)(Clone)
   m_EditorClassIdentifier: 
   template:
-    boxSize: {x: 1.5, y: 0.5}
+    boxSize: {x: 1.5, y: 0.6}
     boxOffset: {x: 0.5, y: 0.3}
     attackLayer:
       serializedVersion: 2
       m_Bits: 64
     attacktype: 0
     canBreakAttackType: 0
---- !u!114 &1875947422847692440
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d891be474476dd14f81f7521545f2064, type: 3}
-  m_Name: Wind Type Section Track Asset
-  m_EditorClassIdentifier: 
-  m_Version: 3
-  m_AnimClip: {fileID: 0}
-  m_Locked: 0
-  m_Muted: 0
-  m_CustomPlayableFullTypename: 
-  m_Curves: {fileID: 0}
-  m_Parent: {fileID: 11400000}
-  m_Children: []
-  m_Clips:
-  - m_Version: 1
-    m_Start: 0
-    m_ClipIn: 0
-    m_Asset: {fileID: 4564099580907602518}
-    m_Duration: 0.05
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: 1875947422847692440}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: 0
-    m_BlendOutDuration: 0
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: WindTypeSectionClipAsset
-  - m_Version: 1
-    m_Start: 0.1
-    m_ClipIn: 0
-    m_Asset: {fileID: -2558769634349434246}
-    m_Duration: 0.2333333333333333
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: 1875947422847692440}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: 0
-    m_BlendOutDuration: 0
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: WindTypeSectionClipAsset
-  - m_Version: 1
-    m_Start: 0.05
-    m_ClipIn: 0
-    m_Asset: {fileID: 4959402274514336844}
-    m_Duration: 0.05
-    m_TimeScale: 1
-    m_ParentTrack: {fileID: 1875947422847692440}
-    m_EaseInDuration: 0
-    m_EaseOutDuration: 0
-    m_BlendInDuration: 0
-    m_BlendOutDuration: 0
-    m_MixInCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_MixOutCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_BlendInCurveMode: 0
-    m_BlendOutCurveMode: 0
-    m_ExposedParameterNames: []
-    m_AnimationCurves: {fileID: 0}
-    m_Recordable: 0
-    m_PostExtrapolationMode: 0
-    m_PreExtrapolationMode: 0
-    m_PostExtrapolationTime: 0
-    m_PreExtrapolationTime: 0
-    m_DisplayName: WindTypeSectionClipAsset
-  m_Markers:
-    m_Objects: []
---- !u!114 &4564099580907602518
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29aaf6ebdd44115489e3f75610a88ec8, type: 3}
-  m_Name: WindTypeSectionClipAsset
-  m_EditorClassIdentifier: 
-  template:
-    sectionWindType: 0
+    entity_master: {fileID: 0}
 --- !u!114 &4827632839300273666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -568,20 +310,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     sectionInputWindType: 1
---- !u!114 &4959402274514336844
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29aaf6ebdd44115489e3f75610a88ec8, type: 3}
-  m_Name: WindTypeSectionClipAsset(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  template:
-    sectionWindType: 1
 --- !u!114 &6065544000398175025
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -607,7 +335,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -5266312175163419815}
-    m_Duration: 0.31666666666666665
+    m_Duration: 0.03333333333333333
     m_TimeScale: 1
     m_ParentTrack: {fileID: 6065544000398175025}
     m_EaseInDuration: 0
@@ -673,10 +401,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: InputWindTypeSectionClipAsset
   - m_Version: 1
-    m_Start: 0.31666666666666665
+    m_Start: 0.03333333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 4827632839300273666}
-    m_Duration: 0.31666666666666665
+    m_Duration: 0.33333333333333337
     m_TimeScale: 1
     m_ParentTrack: {fileID: 6065544000398175025}
     m_EaseInDuration: 0
@@ -742,10 +470,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: InputWindTypeSectionClipAsset
   - m_Version: 1
-    m_Start: 0.6333333333333333
+    m_Start: 0.3666666666666667
     m_ClipIn: 0
     m_Asset: {fileID: -897214248896014256}
-    m_Duration: 0.03333333403724764
+    m_Duration: 0.25
     m_TimeScale: 1
     m_ParentTrack: {fileID: 6065544000398175025}
     m_EaseInDuration: 0

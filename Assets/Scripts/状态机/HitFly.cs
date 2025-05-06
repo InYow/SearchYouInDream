@@ -15,10 +15,12 @@ public class HitFly : MonoBehaviour
     [HideInInspector]
     public CheckBox sourceAttackBox;    //来源
     [HideInInspector]
+    public CheckBoxBehaviour checkBoxBehaviour; //来源
+    [HideInInspector]
     public float flySpeed;              //速度
     [HideInInspector]
-    public AnimationCurve flyCurve;              //速度曲线
-    private Vector2 flyDirection;        //方向
+    public AnimationCurve flyCurve;     //速度曲线
+    private Vector2 flyDirection;       //方向
     public float timeMax_fly;           //时长
     private float time_fly;
 
@@ -27,14 +29,29 @@ public class HitFly : MonoBehaviour
         time_fly = timeMax_fly;
         flyDirection = Vector2.zero;
         //飞行方向
-        Vector3 scale = sourceAttackBox.transform.lossyScale;
-        if (scale.x >= 0f)  //向右
+        if (sourceAttackBox != null)
         {
-            flyDirection.x = 1f;
+            Vector3 scale = sourceAttackBox.transform.lossyScale;
+            if (scale.x >= 0f)  //向右
+            {
+                flyDirection.x = 1f;
+            }
+            else                //向左
+            {
+                flyDirection.x = -1f;
+            }
         }
-        else                //向左
+        else if (checkBoxBehaviour != null)
         {
-            flyDirection.x = -1f;
+            Vector3 scale = checkBoxBehaviour.entity_master.transform.lossyScale;
+            if (scale.x >= 0f)  //向右
+            {
+                flyDirection.x = 1f;
+            }
+            else                //向左
+            {
+                flyDirection.x = -1f;
+            }
         }
         //开始飞行
         {

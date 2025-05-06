@@ -82,7 +82,9 @@ MonoBehaviour:
   windTypeSectionClipList_D: []
   inputWindTypeSectionClipList_D: []
   hitFly: {fileID: 0}
-  slowtime: 0.6
+  slowtime: 0.35
+  slowfactor: 0
+  time: 0
 --- !u!114 &6540127058123034852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,6 +100,15 @@ MonoBehaviour:
   hitFlyType: 1
   sourceEntity: {fileID: 0}
   sourceAttackBox: {fileID: 0}
+  checkBoxBehaviour:
+    boxSize: {x: 1, y: 0.5}
+    boxOffset: {x: 0, y: 0}
+    attackLayer:
+      serializedVersion: 2
+      m_Bits: 64
+    attacktype: 0
+    canBreakAttackType: 0
+    entity_master: {fileID: 0}
   flySpeed: 10
   flyCurve:
     serializedVersion: 2

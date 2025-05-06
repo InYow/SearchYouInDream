@@ -40,7 +40,7 @@ public class 受伤Canvas : MonoBehaviour
         Color color = image.color;
         color.a = animationCurve.Evaluate(t);
         image.color = color;
-        t += Time.deltaTime;
+        t += Time.unscaledDeltaTime;
         if (t > animationCurve.keys[animationCurve.length - 1].time)
         {
             t = 0f;
