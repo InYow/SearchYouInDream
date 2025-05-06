@@ -83,3 +83,4 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
+  bulletPrefab: {fileID: 0}

@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PickableItem : ProjectileBase
 {
-    public Rigidbody2D _rb;
     public Animator _animator;
     public GameObject attack_throwitemGO;
 

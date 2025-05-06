@@ -8,11 +8,11 @@ public class STEnemy_WarriorShoot : State
     //public SignalReceiver signalReceiver;
     public LayerMask obstacleLayer; 
     public GameObject bulletPrefab;
-    public Transform bulletSpawnPosition;
-    
+
     private Enemy_ShooterBase shootEnemy;
     private Vector3 targetDirection;
     private Vector3 targetPosition;
+    private Vector3 playerDirection;
 
     private bool shouldBreak = false;
     public override void StateStart(Entity entity)
@@ -85,23 +85,23 @@ public class STEnemy_WarriorShoot : State
 
     public void FireBullet()
     {
-        Vector3 dir = (shootEnemy.target.position - shootEnemy.transform.position).normalized;
-        float angle = Mathf.Acos(Vector3.Dot(dir,Vector3.right))* Mathf.Rad2Deg;
-        Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward); 
-        
+        float angle = Mathf.Atan2(playerDirection.y, playerDirection.x) * Mathf.Rad2Deg;
+        Quaternion q = Quaternion.Euler(0, 0, angle);  // 绕Z轴旋转angle度
+
+        var bulletSpawnPosition = shootEnemy.GetProjectileSpawnTransform();
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPosition.position, q);
         var projectile = bullet.GetComponent<ProjectileBase>();
-        projectile.EmmitProjectile(dir);
+        projectile.EmmitProjectile(playerDirection);
     }
 
     private void UpdateFaceDirection()
     {
-        Vector3 dir = Vector3.Normalize(shootEnemy.target.position - shootEnemy.transform.position);
-        if (dir.x < 0)
+        playerDirection = Vector3.Normalize(shootEnemy.target.position - shootEnemy.transform.position);
+        if (playerDirection.x < 0)
         {
             shootEnemy.gameObject.transform.localScale = new Vector3(-1, 1, 1);
         }
-        else if(dir.x > 0)
+        else if(playerDirection.x > 0)
         {
             shootEnemy.gameObject.transform.localScale = new Vector3(1, 1, 1);
         }

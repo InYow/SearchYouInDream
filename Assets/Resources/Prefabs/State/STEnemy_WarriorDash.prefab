@@ -64,6 +64,10 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 512
+  dashStartAsset: {fileID: 0}
+  dashLoopAsset: {fileID: 0}
+  dashEndAsset: {fileID: 0}
+  stopDistance: 0
 --- !u!320 &407852731994976180
 PlayableDirector:
   m_ObjectHideFlags: 0

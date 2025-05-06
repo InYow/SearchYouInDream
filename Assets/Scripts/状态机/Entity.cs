@@ -278,6 +278,8 @@ public class Entity : MonoBehaviour
             if (enemy)
             {
                 enemy.behaviourTree.SetVariableValue("bCanExecute", transExecution);
+                enemy.isGetHurt = false;
+                enemy.behaviourTree.SetVariableValue("bIsGetHurt",enemy.isGetHurt);
             }
             transExecution_Type = "fly";
             transExecution_DamageSourceEntity = entity;
@@ -293,6 +295,8 @@ public class Entity : MonoBehaviour
             if (enemy)
             {
                 enemy.behaviourTree.SetVariableValue("bCanExecute", transExecution);
+                enemy.isGetHurt = false;
+                enemy.behaviourTree.SetVariableValue("bIsGetHurt",enemy.isGetHurt);
             }
             transExecution_Type = "fly";
             transExecution_DamageSourceEntity = entity;
