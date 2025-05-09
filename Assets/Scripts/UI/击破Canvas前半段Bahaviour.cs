@@ -19,7 +19,7 @@ public class 击破Canvas前半段Bahaviour : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Debug.Log("结束");
+        //Debug.Log("结束");
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

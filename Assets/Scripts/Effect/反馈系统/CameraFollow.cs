@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 
-public class FightCamera : MonoBehaviour
+public class CameraFollow : MonoBehaviour
 {
     public CinemachineVirtualCamera virtualCamera;
-    public static FightCamera Instance;
+    public static CameraFollow Instance;
 
     private void Awake()
     {

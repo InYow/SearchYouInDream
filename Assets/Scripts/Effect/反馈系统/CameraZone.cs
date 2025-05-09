@@ -21,6 +21,8 @@ public class CameraZone : MonoBehaviour
 
     public float speed;
 
+    public float originSpeed;
+
     public bool setting = false;
 
     public float t = 0f;
@@ -54,47 +56,45 @@ public class CameraZone : MonoBehaviour
             return;
         if (setting)
         {
-            _t += Time.deltaTime;
+            _t += Time.unscaledDeltaTime;
             virtualCamera.m_Lens.OrthographicSize = Mathf.Lerp(StartLenOrthoSize, EndLenOrthoSize, _t / t);
         }
         else
         {
-            _t += Time.deltaTime;
+            _t += Time.unscaledDeltaTime;
             virtualCamera.m_Lens.OrthographicSize = Mathf.Lerp(EndLenOrthoSize, StartLenOrthoSize, _t / t);
         }
     }
 
-    [ContextMenu("设置")]
-    public void Set()
+    void Set()
     {
-        SetLenOrthoSize(testcamera, testsize);
+        SetLenOrthoSize(Instance.testcamera, Instance.testsize);
     }
 
-    [ContextMenu("撤销")]
-    public void Back()
+    void Back()
     {
         OriginalLenOrthoSize();
     }
 
-    public void SetLenOrthoSize(CinemachineVirtualCamera camera, float targetSize)
+    public static void SetLenOrthoSize(CinemachineVirtualCamera camera, float targetSize)
     {
-        setting = true;
-        virtualCamera = camera;
-        StartLenOrthoSize = camera.m_Lens.OrthographicSize;
-        EndLenOrthoSize = targetSize;
-        t = Mathf.Abs(StartLenOrthoSize - EndLenOrthoSize) / speed;
-        _t = 0f;
+        Instance.setting = true;
+        Instance.virtualCamera = camera;
+        Instance.StartLenOrthoSize = camera.m_Lens.OrthographicSize;
+        Instance.EndLenOrthoSize = targetSize;
+        Instance.t = Mathf.Abs(Instance.StartLenOrthoSize - Instance.EndLenOrthoSize) / Instance.speed;
+        Instance._t = 0f;
     }
 
-    public void OriginalLenOrthoSize()
+    public static void OriginalLenOrthoSize()
     {
-        setting = false;
-        EndLenOrthoSize = virtualCamera.m_Lens.OrthographicSize;
-        t = Mathf.Abs(StartLenOrthoSize - EndLenOrthoSize) / speed;
-        _t = 0f;
+        Instance.setting = false;
+        Instance.EndLenOrthoSize = Instance.virtualCamera.m_Lens.OrthographicSize;
+        Instance.t = Mathf.Abs(Instance.StartLenOrthoSize - Instance.EndLenOrthoSize) / Instance.originSpeed;
+        Instance._t = 0f;
     }
 
-    public void SetSpeed(float speed)
+    public static void SetSpeed(float speed)
     {
 
     }

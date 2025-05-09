@@ -42,6 +42,7 @@ Transform:
   - {fileID: 521641263967452203}
   - {fileID: 521641263290975093}
   - {fileID: 521641264698783536}
+  - {fileID: 8094392340386220661}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -135,7 +136,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1.2484375, y: 1.2844849}
+    oldSize: {x: 1.2484375, y: 1.284375}
     newSize: {x: 3.125, y: 1.71875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -326,6 +327,7 @@ MonoBehaviour:
   - "\u88401"
   - "\u88402"
   hitVFX_Pivot: {fileID: 521641264698783536}
+  camera_Pivot: {fileID: 8094392340386220661}
   attackBox: {fileID: 521641263967452196}
   _rb: {fileID: 521641263145245553}
   health: 15
@@ -341,6 +343,15 @@ MonoBehaviour:
   transExecution_DamageSourceEntity: {fileID: 0}
   transExecution_Type: 
   transExecution_AttackBox: {fileID: 0}
+  transExecution_AttackBoxBehaviour:
+    boxSize: {x: 1, y: 0.5}
+    boxOffset: {x: 0, y: 0}
+    attackLayer:
+      serializedVersion: 2
+      m_Bits: 64
+    attacktype: 0
+    canBreakAttackType: 0
+    entity_master: {fileID: 0}
   transBreakStun: 0
   beingBreakStun: 0
   stateCurrentName: 
@@ -1129,4 +1140,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 521641263145245556}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7900728568052006604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8094392340386220661}
+  m_Layer: 6
+  m_Name: Camera Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8094392340386220661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7900728568052006604}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 521641263145245556}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

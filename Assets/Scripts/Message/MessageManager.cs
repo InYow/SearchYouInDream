@@ -21,7 +21,7 @@ public class MessageManager : MonoBehaviour
         }
     }
 
-    public static void BreakStun(Entity entity)
+    public static void CallBreakStun(Entity entity)
     {
         if (entity == null || entity.gameObject == null)
         {
@@ -31,7 +31,7 @@ public class MessageManager : MonoBehaviour
         if (entity.breakAttackTimes > 0)
         {
             entity.breakAttackTimes--;
-            FightCamera.SetFollow(entity.camera_Pivot);
+            CameraFollow.SetFollow(entity.camera_Pivot);
             Instance.OnBreakStun?.Invoke(entity);
         }
     }

@@ -189,6 +189,7 @@ Transform:
   - {fileID: 7008703672860874228}
   - {fileID: 3225463771914452990}
   - {fileID: 155575174}
+  - {fileID: 633753750758964682}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -204,6 +205,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459a8aba2b900aa479decbef93248e77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitVFX_List:
+  - "\u53D7\u4F24\u7279\u6548x"
   "\u8840VFX_List":
   - "\u88401"
   - "\u88402"
@@ -211,24 +214,39 @@ MonoBehaviour:
   - "\u88404"
   - "\u88405"
   hitVFX_Pivot: {fileID: 155575174}
+  camera_Pivot: {fileID: 633753750758964682}
+  attackBox: {fileID: 7008703672860874229}
+  _rb: {fileID: 3225463772063427288}
   health: 100
   health_Max: 100
   resis: 10
   resis_Max: 10
+  resis_ResponSpeed: 1
+  attackValue: 1
+  breakAttackTimes: 1
+  breakAttackTimes_Max: 1
+  StartStateName: STEmpty
   transExecution: 0
   transExecution_DamageSourceEntity: {fileID: 0}
   transExecution_Type: 
   transExecution_AttackBox: {fileID: 0}
-  resis_ResponSpeed: 1
-  attackValue: 1
+  transExecution_AttackBoxBehaviour:
+    boxSize: {x: 1, y: 0.5}
+    boxOffset: {x: 0, y: 0}
+    attackLayer:
+      serializedVersion: 2
+      m_Bits: 64
+    attacktype: 0
+    canBreakAttackType: 0
+    entity_master: {fileID: 0}
   transBreakStun: 0
   beingBreakStun: 0
-  StartStateName: STEmpty
   stateCurrentName: 
-  _rb: {fileID: 3225463772063427288}
   behaviourTree: {fileID: 3225463772063427281}
   aiPath: {fileID: 3225463772063427295}
   target: {fileID: 0}
+  bFoundPlayer: 0
+  isGetHurt: 0
 --- !u!95 &3225463772063427291
 Animator:
   serializedVersion: 5
@@ -1079,15 +1097,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkBoxType: 0
-  entity_master: {fileID: 0}
   boxSize: {x: 1, y: 1}
   attackLayer:
     serializedVersion: 2
     m_Bits: 64
-  descrition: 
+  attacktype: 0
   entities: []
   pickLayer:
     serializedVersion: 2
     m_Bits: 128
   picked: 0
   pickableItem_master: {fileID: 0}
+--- !u!1 &8583250163657952722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 633753750758964682}
+  m_Layer: 6
+  m_Name: Camera Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &633753750758964682
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8583250163657952722}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.157, y: 0.349, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3225463772063427290}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

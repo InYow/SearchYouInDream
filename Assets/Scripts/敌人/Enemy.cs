@@ -40,7 +40,7 @@ public class Enemy : Entity
             FlowBlood();
 
             isGetHurt = true;
-            behaviourTree.SetVariableValue("bIsGetHurt", isGetHurt);
+            //behaviourTree.SetVariableValue("bIsGetHurt", isGetHurt);
 
             //死掉了
             if (health <= 0f)

@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BFPlayerGuideBreakAttack : Buff
 {
-    public GameObject guideGO;  //引导UI
     public Entity e_target;     //破防的敌人
     public override void StartBuff(Entity entity)
     {
@@ -15,13 +12,11 @@ public class BFPlayerGuideBreakAttack : Buff
 
         //TODO 近镜头、UI提示
         //FIN 慢动作
-        SlowMotion.StartSlow();
+        SlowMotion.StartSlow(3f, 0f);
+        CameraShake.ShakeExplosion(new Vector3(1, 0, 0), 0.3f);
+
         //UI
         击破Canvas.PlayAnimation();
-        guideGO.transform.SetParent(null);      //无视scale
-        guideGO.transform.localScale = Vector3.one;
-        guideGO.SetActive(true);
-        guideGO.transform.position = e_target.transform.position;
     }
     public override void UpdateBuff(Entity entity)
     {
@@ -37,6 +32,9 @@ public class BFPlayerGuideBreakAttack : Buff
 
         if (Input.GetKeyDown(KeyCode.U))
         {
+            var currentVirtualCamera = Cinemachine.CinemachineCore.Instance.GetActiveBrain(0).ActiveVirtualCamera;
+            CameraZone.SetLenOrthoSize(currentVirtualCamera as Cinemachine.CinemachineVirtualCamera, 3f);
+
             击破Canvas.ContinueAnimation();
         }
     }
@@ -46,12 +44,8 @@ public class BFPlayerGuideBreakAttack : Buff
         base.FinishBuff(entity);
         e_target = null;
 
-
         //关闭慢动作、近镜头、UI
         SlowMotion.FinishSlow();
-        //UI
-        guideGO.SetActive(false);
-        guideGO.transform.localPosition = Vector3.zero;
     }
 
     public override void AddAgain(Entity entity)

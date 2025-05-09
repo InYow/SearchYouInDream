@@ -211,7 +211,7 @@ public class Entity : MonoBehaviour
             health -= entity.attackValue;
             FlowBlood();
             if (beingBreakStun)
-                CameraShake.Shake(new Vector3(1, 0, 0), 0.3f);
+                CameraShake.ShakeRecoil(new Vector3(1, 0, 0), 0.3f);
 
             //死掉了
             if (health <= 0f)
@@ -227,7 +227,7 @@ public class Entity : MonoBehaviour
             health -= entity.attackValue;
             FlowBlood();
             if (beingBreakStun)
-                CameraShake.Shake(new Vector3(1, 0, 0), 0.3f);
+                CameraShake.ShakeRecoil(new Vector3(1, 0, 0), 0.3f);
 
             //死掉了
             if (health <= 0f)
@@ -340,7 +340,7 @@ public class Entity : MonoBehaviour
                     //击破攻击
                     if (checkBoxBehaviour.canBreakAttackType == CanBreakAttackType.can && this is Enemy)
                     {
-                        MessageManager.BreakStun(this);
+                        MessageManager.CallBreakStun(this);
                     }
                 }
             }
@@ -349,7 +349,7 @@ public class Entity : MonoBehaviour
                 //击破攻击
                 if (checkBoxBehaviour.canBreakAttackType == CanBreakAttackType.can && this is Enemy)
                 {
-                    MessageManager.BreakStun(this);
+                    MessageManager.CallBreakStun(this);
                 }
             }
         }
