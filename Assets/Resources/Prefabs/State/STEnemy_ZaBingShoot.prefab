@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4026665763986083850
+--- !u!1 &6566181917785077876
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4026665763986083849}
-  - component: {fileID: 4026665763986083846}
-  - component: {fileID: 4026665763986083854}
-  - component: {fileID: -2224446171219041177}
+  - component: {fileID: 6566181917785077879}
+  - component: {fileID: 6566181917785077880}
+  - component: {fileID: 8672845756613865854}
+  - component: {fileID: 2708921007782620281}
   m_Layer: 0
-  m_Name: STEnemy_PencilExecution
+  m_Name: STEnemy_ZaBingShoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4026665763986083849
+--- !u!4 &6566181917785077879
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4026665763986083850}
+  m_GameObject: {fileID: 6566181917785077876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -34,41 +34,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!320 &4026665763986083846
+--- !u!320 &6566181917785077880
 PlayableDirector:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4026665763986083850}
+  m_GameObject: {fileID: 6566181917785077876}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: f287e68c116cc204aa9b7aaf4024ad73, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 66855c5fc0ca53f4aa7fd2c3741bcc61, type: 2}
   m_InitialState: 0
   m_WrapMode: 0
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
-  - key: {fileID: -2924569798581855094, guid: f287e68c116cc204aa9b7aaf4024ad73, type: 2}
+  - key: {fileID: 4042279457160757030, guid: 66855c5fc0ca53f4aa7fd2c3741bcc61, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -694897931781826876, guid: 66855c5fc0ca53f4aa7fd2c3741bcc61, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
---- !u!114 &4026665763986083854
+--- !u!114 &8672845756613865854
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4026665763986083850}
+  m_GameObject: {fileID: 6566181917785077876}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d0491e878d40564694c92f737a6b86c, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fbf059044e227743ab25aa36fd71a43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playableDirector: {fileID: 4026665763986083846}
+  playableDirector: {fileID: 6566181917785077880}
   wrapMode: 0
   rankABCD: 0
-  playableAsset_A: {fileID: 11400000, guid: f287e68c116cc204aa9b7aaf4024ad73, type: 2}
+  playableAsset_A: {fileID: 11400000, guid: 66855c5fc0ca53f4aa7fd2c3741bcc61, type: 2}
   playableAsset_B: {fileID: 0}
   playableAsset_C: {fileID: 0}
   playableAsset_D: {fileID: 0}
@@ -81,36 +83,37 @@ MonoBehaviour:
   inputWindTypeSectionClipList_C: []
   windTypeSectionClipList_D: []
   inputWindTypeSectionClipList_D: []
-  hitFly: {fileID: -2224446171219041177}
---- !u!114 &-2224446171219041177
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  bulletPrefab: {fileID: 0}
+--- !u!114 &2708921007782620281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4026665763986083850}
+  m_GameObject: {fileID: 6566181917785077876}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c5a922cc06db654f85a8f7c875e5e25, type: 3}
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitFlyType: 0
-  sourceEntity: {fileID: 0}
-  sourceAttackBox: {fileID: 0}
-  checkBoxBehaviour:
-    boxSize: {x: 1, y: 0.5}
-    boxOffset: {x: 0, y: 0}
-    attackLayer:
-      serializedVersion: 2
-      m_Bits: 64
-    attacktype: 0
-    canBreakAttackType: 0
-    entity_master: {fileID: 0}
-  flySpeed: 3
-  flyCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  timeMax_fly: 0
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: c25d1cb102614014baa1145d82619e10, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8672845756613865854}
+          m_TargetAssemblyTypeName: STEnemy_WarriorShoot, Assembly-CSharp
+          m_MethodName: FireBullet
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

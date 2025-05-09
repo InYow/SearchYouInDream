@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4026665763986083854}
   - component: {fileID: -2224446171219041177}
   m_Layer: 0
-  m_Name: STEnemy_PencilExecution
+  m_Name: STEnemy_ZaBingExecution
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,13 +43,13 @@ PlayableDirector:
   m_GameObject: {fileID: 4026665763986083850}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: f287e68c116cc204aa9b7aaf4024ad73, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: afaa6e7f5abf4af46be8e4767b5ffff3, type: 2}
   m_InitialState: 0
   m_WrapMode: 0
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
-  - key: {fileID: -2924569798581855094, guid: f287e68c116cc204aa9b7aaf4024ad73, type: 2}
+  - key: {fileID: -2924569798581855094, guid: afaa6e7f5abf4af46be8e4767b5ffff3, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
@@ -68,7 +68,7 @@ MonoBehaviour:
   playableDirector: {fileID: 4026665763986083846}
   wrapMode: 0
   rankABCD: 0
-  playableAsset_A: {fileID: 11400000, guid: f287e68c116cc204aa9b7aaf4024ad73, type: 2}
+  playableAsset_A: {fileID: 11400000, guid: afaa6e7f5abf4af46be8e4767b5ffff3, type: 2}
   playableAsset_B: {fileID: 0}
   playableAsset_C: {fileID: 0}
   playableAsset_D: {fileID: 0}
