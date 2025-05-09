@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using JetBrains.Annotations;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -38,6 +39,7 @@ public class Entity : MonoBehaviour
     public bool transBreakStun;
     public bool beingBreakStun;
 
+    [Header("Buff")]
     //buff集 <buff的名称，buff相关信息>
     public Dictionary<string, Buff> buffs = new();
 
@@ -114,14 +116,14 @@ public class Entity : MonoBehaviour
     {
         //字典遍历安全删除对象
         List<string> keysToRemove = new List<string>(); // 记录待删除的键
-        foreach (var buff in buffs)
+        foreach (var key in buffs.Keys.ToList())
         {
-            if (buff.Value == null) // 检查 Buff 是否被销毁
+            if (buffs[key] == null) // 检查 Buff 是否被销毁
             {
-                keysToRemove.Add(buff.Key); // 记录要删除的键
+                keysToRemove.Add(key); // 记录要删除的键
                 continue; // 跳过 Update 调用
             }
-            buff.Value.UpdateBuff(this);
+            buffs[key].UpdateBuff(this);
         }
         // 删除所有标记的 Buff
         foreach (string key in keysToRemove)
@@ -279,7 +281,7 @@ public class Entity : MonoBehaviour
             {
                 enemy.behaviourTree.SetVariableValue("bCanExecute", transExecution);
                 enemy.isGetHurt = false;
-                enemy.behaviourTree.SetVariableValue("bIsGetHurt",enemy.isGetHurt);
+                enemy.behaviourTree.SetVariableValue("bIsGetHurt", enemy.isGetHurt);
             }
             transExecution_Type = "fly";
             transExecution_DamageSourceEntity = entity;
@@ -296,7 +298,7 @@ public class Entity : MonoBehaviour
             {
                 enemy.behaviourTree.SetVariableValue("bCanExecute", transExecution);
                 enemy.isGetHurt = false;
-                enemy.behaviourTree.SetVariableValue("bIsGetHurt",enemy.isGetHurt);
+                enemy.behaviourTree.SetVariableValue("bIsGetHurt", enemy.isGetHurt);
             }
             transExecution_Type = "fly";
             transExecution_DamageSourceEntity = entity;

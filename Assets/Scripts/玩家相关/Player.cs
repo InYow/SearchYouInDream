@@ -840,6 +840,11 @@ public class Player : Entity
         Buff buff = BuffAdd("BFPlayerGuideBreakAttack");
     }
 
+    public void Log()
+    {
+
+    }
+
     //--------Gizmos--------
     private void OnDrawGizmosSelected()
     {

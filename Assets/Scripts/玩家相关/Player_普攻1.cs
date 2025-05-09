@@ -16,7 +16,8 @@ public class Player_普攻1 : State_攻击
     public override void StateStart(Entity entity)
     {
         base.StateStart(entity);
-        entity.BuffRemove("BFPlayerAttackContinuity_New");
+        if (entity.BuffContain("BFPlayerAttackContinuity_New"))
+            entity.BuffRemove("BFPlayerAttackContinuity_New");
 
         if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D))
         {

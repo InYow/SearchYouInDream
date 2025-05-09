@@ -9,16 +9,16 @@ using UnityEngine.UI;
 //你别说, AI比我还能编
 public enum Rank
 {
-    F = 0,  //  Fear（恐惧）	你的动作畏畏缩缩，像个猎物              //正常
-    E,      //	Erosion（侵蚀）	你开始适应暴力，但仍然犹豫
+    //F = 0,  //  Fear（恐惧）	你的动作畏畏缩缩，像个猎物             
+    E,      //	Erosion（侵蚀）	你开始适应暴力，但仍然犹豫                              //正常  
     D,      //	Daze（恍惚）	你在杀戮中摇摆不定，手感迟钝    
-    C,      //	Carnage（屠戮）	你变得越来越顺畅，攻击带着野性          //中等
-    B,      //	Brutal（暴虐）	你的战斗开始变得暴力，节奏加快
+    C,      //	Carnage（屠戮）	你变得越来越顺畅，攻击带着野性          
+    B,      //	Brutal（暴虐）	你的战斗开始变得暴力，节奏加快                          //高等
     A,      //	Anarchy（无序）	你放弃防守，全力进攻
-    S,      //	Savage（狂暴）	你的攻击已经无可阻挡，纯粹的碾碎敌人    //高等
-    SS,     //  SchiSm（精神裂变）	你已经超越了战斗本能，攻击带有扭曲的癫狂
-    O,      // Ø	Oblivion（湮灭）	你已经无法控制自己的动作，战斗节奏完全崩坏  //疯狂
-    X,      // ⛧   Xenosis（异变）       你已经不是人类了，敌人无法理解你的攻击方式 
+    S,      //	Savage（狂暴）	你的攻击已经无可阻挡，纯粹的碾碎敌人    
+    //SS,     //  SchiSm（精神裂变）	你已经超越了战斗本能，攻击带有扭曲的癫狂
+    O,      // Ø	Oblivion（湮灭）	你已经无法控制自己的动作，战斗节奏完全崩坏      //疯狂
+    //X,      // ⛧   Xenosis（异变）       你已经不是人类了，敌人无法理解你的攻击方式 
 }
 
 public class RankSystem : MonoBehaviour
@@ -60,18 +60,18 @@ public class RankSystem : MonoBehaviour
         }
 
         //配置各评级
-        ranks = new float[10]
+        ranks = new float[7]
         {
-            -1,  //F
-            -1,  //E
-            -1,  //D
+            //-1,  //F
+            8,  //E
+            8,  //D
             8,  //C
-            9,  //B
-            10,  //A
-            11,  //S
-            12,  //SS
-            13,  //O
-            15,  //X
+            12,  //B
+            12,  //A
+            12,  //S
+            //12,  //SS
+            20,  //O
+            //15,  //X
         };
     }
 
@@ -108,7 +108,7 @@ public class RankSystem : MonoBehaviour
     //获取评级
     public static Rank GetRank()
     {
-        Rank rk = Rank.F;
+        Rank rk = Rank.E;
         float value = rankSystem.ranks[(int)rk]; // 评级对应的阈值
         while ((int)rk < rankSystem.ranks.Length - 1 && value < rankSystem.rankValue)
         {
@@ -121,7 +121,7 @@ public class RankSystem : MonoBehaviour
     public static RankABCD GetRankABCD()
     {
         Rank rank = GetRank();
-        if (rank == Rank.F || rank == Rank.E || rank == Rank.D)
+        if (/*rank == Rank.F || */rank == Rank.E || rank == Rank.D)
         {
             return RankABCD.A;
         }
@@ -129,11 +129,11 @@ public class RankSystem : MonoBehaviour
         {
             return RankABCD.B;
         }
-        else if (rank == Rank.S || rank == Rank.SS)
+        else if (rank == Rank.S /*|| rank == Rank.SS*/)
         {
             return RankABCD.C;
         }
-        else if (rank == Rank.O || rank == Rank.X)
+        else if (rank == Rank.O /*|| rank == Rank.X*/)
         {
             return RankABCD.D;
         }
@@ -193,11 +193,11 @@ public class RankSystem : MonoBehaviour
             //退出旧的评级
             switch (rankBefore)
             {
-                case Rank.F:
-                    {
-                        rankSystem.ACOutofF?.Invoke();
-                        break;
-                    }
+                // case Rank.F:
+                //     {
+                //         rankSystem.ACOutofF?.Invoke();
+                //         break;
+                //     }
                 case Rank.E:
                     {
                         rankSystem.ACOutofE?.Invoke();
@@ -228,31 +228,31 @@ public class RankSystem : MonoBehaviour
                         rankSystem.ACOutofS?.Invoke();
                         break;
                     }
-                case Rank.SS:
-                    {
-                        rankSystem.ACOutofSS?.Invoke();
-                        break;
-                    }
+                // case Rank.SS:
+                //     {
+                //         rankSystem.ACOutofSS?.Invoke();
+                //         break;
+                //     }
                 case Rank.O:
                     {
                         rankSystem.ACOutofO?.Invoke();
                         break;
                     }
-                case Rank.X:
-                    {
-                        rankSystem.ACOutofX?.Invoke();
-                        break;
-                    }
+                    // case Rank.X:
+                    //     {
+                    //         rankSystem.ACOutofX?.Invoke();
+                    //         break;
+                    //     }
             }
 
             //进入新的评级
             switch (rankAfter)
             {
-                case Rank.F:
-                    {
-                        rankSystem.ACIntoF?.Invoke();
-                        break;
-                    }
+                // case Rank.F:
+                //     {
+                //         rankSystem.ACIntoF?.Invoke();
+                //         break;
+                //     }
                 case Rank.E:
                     {
                         rankSystem.ACIntoE?.Invoke();
@@ -283,21 +283,21 @@ public class RankSystem : MonoBehaviour
                         rankSystem.ACIntoS?.Invoke();
                         break;
                     }
-                case Rank.SS:
-                    {
-                        rankSystem.ACIntoSS?.Invoke();
-                        break;
-                    }
+                // case Rank.SS:
+                //     {
+                //         rankSystem.ACIntoSS?.Invoke();
+                //         break;
+                //     }
                 case Rank.O:
                     {
                         rankSystem.ACIntoO?.Invoke();
                         break;
                     }
-                case Rank.X:
-                    {
-                        rankSystem.ACIntoX?.Invoke();
-                        break;
-                    }
+                    // case Rank.X:
+                    //     {
+                    //         rankSystem.ACIntoX?.Invoke();
+                    //         break;
+                    //     }
             }
 
             //评级提升

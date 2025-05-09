@@ -33,9 +33,9 @@ AnimationClip:
       value: {fileID: -951778179, guid: 84494fbef5724e749b34416e3c95d4d5, type: 3}
     - time: 0.25
       value: {fileID: -318667810, guid: 84494fbef5724e749b34416e3c95d4d5, type: 3}
-    - time: 0.36666667
+    - time: 0.3
       value: {fileID: -318667810, guid: 84494fbef5724e749b34416e3c95d4d5, type: 3}
-    - time: 0.48333332
+    - time: 0.5
       value: {fileID: 333728625, guid: 84494fbef5724e749b34416e3c95d4d5, type: 3}
     - time: 0.6
       value: {fileID: 1087984302, guid: 84494fbef5724e749b34416e3c95d4d5, type: 3}
@@ -94,28 +94,28 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: 
+    functionName: Log
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.033333335
-    functionName: 
+    functionName: Log
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.36666667
-    functionName: 
+    functionName: Log
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.6
-    functionName: 
+    functionName: Log
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
