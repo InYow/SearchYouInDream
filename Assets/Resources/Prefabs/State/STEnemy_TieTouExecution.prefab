@@ -97,6 +97,15 @@ MonoBehaviour:
   hitFlyType: 0
   sourceEntity: {fileID: 0}
   sourceAttackBox: {fileID: 0}
+  checkBoxBehaviour:
+    boxSize: {x: 1, y: 0.5}
+    boxOffset: {x: 0, y: 0}
+    attackLayer:
+      serializedVersion: 2
+      m_Bits: 64
+    attacktype: 0
+    canBreakAttackType: 0
+    entity_master: {fileID: 0}
   flySpeed: 3
   flyCurve:
     serializedVersion: 2

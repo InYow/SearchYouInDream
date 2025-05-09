@@ -39,27 +39,27 @@ public class STEnemy_TieTouShoot : State
         if (laser)
         {
             //Update Rotation
-            if (enemy.bFoundPlayer)
-            {
-                Vector3 dir = (playerTransform.position - enemy.transform.position).normalized;
-                
-                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                Quaternion rotation = laser.transform.rotation;
-                Quaternion q = Quaternion.Euler(0, 0, angle);
-                Quaternion target = Quaternion.Slerp(rotation,q,followSpeed*0.01f);
-                laser.transform.rotation = target;
-                
-                if (dir.x > 0)
-                {
-                    entity.transform.localScale = new Vector3(1, 1, 1);
-                    laser.transform.parent.localScale = new Vector3(1, 1, 1);
-                }
-                else
-                {
-                    entity.transform.localScale = new Vector3(-1, 1, 1);
-                    laser.transform.parent.localScale = new Vector3(-1, 1, 1);
-                }
-            }
+            // if (enemy.bFoundPlayer)
+            // {
+            //     Vector3 dir = (playerTransform.position - enemy.transform.position).normalized;
+            //     
+            //     float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            //     Quaternion rotation = laser.transform.rotation;
+            //     Quaternion q = Quaternion.Euler(0, 0, angle);
+            //     Quaternion target = Quaternion.Slerp(rotation,q,followSpeed*0.01f);
+            //     laser.transform.rotation = target;
+            //     
+            //     if (dir.x > 0)
+            //     {
+            //         entity.transform.localScale = new Vector3(1, 1, 1);
+            //         laser.transform.parent.localScale = new Vector3(1, 1, 1);
+            //     }
+            //     else
+            //     {
+            //         entity.transform.localScale = new Vector3(-1, 1, 1);
+            //         laser.transform.parent.localScale = new Vector3(-1, 1, 1);
+            //     }
+            // }
 
             if (Time.time - startTime >= laserDuration)
             {
@@ -87,8 +87,8 @@ public class STEnemy_TieTouShoot : State
         Quaternion q = Quaternion.Euler(0, 0, angle);
 
         var projectileSpawnTransform = enemy.GetProjectileSpawnTransform();
-        laser = Instantiate(projectilePrefab, projectileSpawnTransform.position, q);
-        laser.transform.SetParent(projectileSpawnTransform);
+        laser = Instantiate(projectilePrefab,projectileSpawnTransform);
+        
         startTime = Time.time;
     }
 

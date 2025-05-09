@@ -32,6 +32,8 @@ public class STEnemy_WarriorExecutionFly : State
         enemy.isGetHurt = false;
         enemy.behaviourTree.SetVariableValue("bIsGetHurt",enemy.isGetHurt);
         
+        Debug.LogError("enemy._rb = "+ enemy._rb);
+        Debug.LogError("hitFly = "+ hitFly);
         hitFly.FlyStart(enemy._rb);
     }
 
