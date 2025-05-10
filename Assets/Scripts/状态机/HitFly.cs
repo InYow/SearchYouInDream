@@ -10,8 +10,8 @@ public class HitFly : MonoBehaviour
 {
     [Header("击飞参数")]
     public HitFlyType hitFlyType;       //击飞类型
-    [HideInInspector]
-    public Entity sourceEntity;         //来源 
+    //[HideInInspector]
+    //public Entity sourceEntity;         //来源 
     [HideInInspector]
     public CheckBox sourceAttackBox;    //来源
     [HideInInspector]

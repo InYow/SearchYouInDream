@@ -129,7 +129,6 @@ public class Player : Entity
         //击破攻击  拥有GuideBreakAttack的buff
         if (BuffContain("BFPlayerGuideBreakAttack") && 击破Canvas.IfFinish后半段())
         {
-            Debug.Log("击破攻击");
             if (Input.GetKeyDown(KeyCode.U) || InputManager.ReadPreInput(KeyCode.U))
             {
                 InputManager.ClearPreInput();

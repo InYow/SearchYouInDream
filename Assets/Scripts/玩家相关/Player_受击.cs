@@ -30,7 +30,7 @@ public class Player_受击 : State
         //值
         hitFly = GetComponent<HitFly>();
         Player player = (Player)entity;
-        hitFly.sourceEntity = player.transHitFly_SourceEntity;
+        //hitFly.sourceEntity = player.transHitFly_SourceEntity;
         hitFly.sourceAttackBox = player.transHitFly_SourceAttackBox;
         player.transHitFly_SourceEntity = null;
         player.transHitFly_SourceAttackBox = null;

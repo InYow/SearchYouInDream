@@ -48,7 +48,7 @@ public class CheckBoxBehaviour : PlayableBehaviour
                 var e = col.gameObject.GetComponent<Entity>();
                 if (e != null && e != entity_master)
                 {
-                    Debug.Log("伤害" + e.name + entity_master.stateCurrentName);
+                    //Debug.Log("伤害" + e.name + entity_master.stateCurrentName);
                     entity_master.Hurt(e, this);
 
                     RankSystem.Attack(); //增加评值

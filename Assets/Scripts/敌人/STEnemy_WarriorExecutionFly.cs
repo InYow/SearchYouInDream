@@ -22,18 +22,18 @@ public class STEnemy_WarriorExecutionFly : State
         //值
         hitFly = GetComponent<HitFly>();
         this.enemy = (Enemy)entity;
-        hitFly.sourceEntity = entity.transExecution_DamageSourceEntity;
+        //hitFly.sourceEntity = entity.transExecution_DamageSourceEntity;
         hitFly.sourceAttackBox = entity.transExecution_AttackBox;
-        entity.transExecution = false;
+        hitFly.checkBoxBehaviour = entity.transExecution_AttackBoxBehaviour;
         entity.transExecution_AttackBox = null;
+        entity.transExecution_AttackBoxBehaviour = null;
+        entity.transExecution = false;
         entity.transExecution_DamageSourceEntity = null;
         entity.transExecution_Type = null;
 
         enemy.isGetHurt = false;
-        enemy.behaviourTree.SetVariableValue("bIsGetHurt",enemy.isGetHurt);
-        
-        Debug.LogError("enemy._rb = "+ enemy._rb);
-        Debug.LogError("hitFly = "+ hitFly);
+        enemy.behaviourTree.SetVariableValue("bIsGetHurt", enemy.isGetHurt);
+
         hitFly.FlyStart(enemy._rb);
     }
 
