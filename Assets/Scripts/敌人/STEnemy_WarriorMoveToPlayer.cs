@@ -7,15 +7,13 @@ using UnityEngine;
 public class STEnemy_WarriorMoveToPlayer : State
 {
     private AIPath aiPath;
-    private BehaviorTree behaviorTree;
+
     public override void StateStart(Entity entity)
     {
         Enemy enemy = entity as Enemy;
         if (enemy != null)
         {
-            behaviorTree = enemy.behaviourTree;
             aiPath = enemy.aiPath;
-            
             aiPath.canMove = true;
         }
         
