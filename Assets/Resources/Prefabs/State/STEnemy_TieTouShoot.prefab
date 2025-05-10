@@ -91,7 +91,7 @@ MonoBehaviour:
   shootStartAsset: {fileID: 11400000, guid: eedcef8dd43335f4c8579e85ecf5881b, type: 2}
   shootLoopAsset: {fileID: 11400000, guid: 5efd6b08cacc5e84ea45ad846e583a37, type: 2}
   followSpeed: 1
-  laserDuration: 8
+  laserDuration: 1
 --- !u!114 &5768918347566692763
 MonoBehaviour:
   m_ObjectHideFlags: 0

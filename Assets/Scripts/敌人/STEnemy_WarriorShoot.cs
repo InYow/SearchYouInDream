@@ -85,13 +85,14 @@ public class STEnemy_WarriorShoot : State
 
     public void FireBullet()
     {
-        float angle = Mathf.Atan2(playerDirection.y, playerDirection.x) * Mathf.Rad2Deg;
-        Quaternion q = Quaternion.Euler(0, 0, angle);  // 绕Z轴旋转angle度
-
+        //float angle = Mathf.Atan2(playerDirection.y, playerDirection.x) * Mathf.Rad2Deg;
+        //Quaternion q = Quaternion.Euler(0, 0, angle);  // 绕Z轴旋转angle度
         var bulletSpawnPosition = shootEnemy.GetProjectileSpawnTransform();
-        GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPosition.position, q);
+        Vector3 dir = playerDirection.x > 0 ? Vector3.one : new Vector3(-1, 1, 1);
+        GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPosition.position, Quaternion.identity);
+        bullet.transform.localScale = dir; 
         var projectile = bullet.GetComponent<ProjectileBase>();
-        projectile.EmmitProjectile(playerDirection);
+        projectile.EmmitProjectile(playerDirection.x > 0 ? Vector3.right : Vector3.left);
     }
 
     private void UpdateFaceDirection()

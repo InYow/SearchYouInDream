@@ -10,6 +10,13 @@ public class STEnemy_WarriorAttack : State
 
     public override void StateStart(Entity entity)
     {
+        Enemy enemy = entity as Enemy;
+        if (enemy != null)
+        {
+            Vector3 targetDir = enemy.target.transform.position - enemy.transform.position;
+            enemy.transform.localScale = targetDir.x > 0 ? Vector3.one : new Vector3(-1,1,1);
+        }
+
         BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
         playableDirector.Play();
     }

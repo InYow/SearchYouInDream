@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7448405148639477066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7448405148639477067}
+  - component: {fileID: 7448405148639477064}
+  - component: {fileID: 7448405148639477065}
+  m_Layer: 6
+  m_Name: STEnemy_ZaBingGetHit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7448405148639477067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7448405148639477066}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &7448405148639477064
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7448405148639477066}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 026649f1d8173fe4088eaf3abb35e8ce, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 0
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -8242830367892380618, guid: c01a38d8a021eae439b4761d01b325dd, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -8242830367892380618, guid: 3806a9939a971d042a2f84b02b94ccf7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -8242830367892380618, guid: c01752578a7d9824ab48c18b5541bd8c, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -8242830367892380618, guid: 026649f1d8173fe4088eaf3abb35e8ce, type: 2}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References: []
+--- !u!114 &7448405148639477065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7448405148639477066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29930c35a59548b48af5ec9d75c5c41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playableDirector: {fileID: 7448405148639477064}
+  wrapMode: 0
+  rankABCD: 0
+  playableAsset_A: {fileID: 0}
+  playableAsset_B: {fileID: 0}
+  playableAsset_C: {fileID: 0}
+  playableAsset_D: {fileID: 0}
+  hitVFX: {fileID: 0}
+  windTypeSectionClipList_A: []
+  inputWindTypeSectionClipList_A: []
+  windTypeSectionClipList_B: []
+  inputWindTypeSectionClipList_B: []
+  windTypeSectionClipList_C: []
+  inputWindTypeSectionClipList_C: []
+  windTypeSectionClipList_D: []
+  inputWindTypeSectionClipList_D: []
+  asset:
+  - {fileID: 11400000, guid: 3806a9939a971d042a2f84b02b94ccf7, type: 2}
+  - {fileID: 11400000, guid: c01752578a7d9824ab48c18b5541bd8c, type: 2}
+  - {fileID: 11400000, guid: 026649f1d8173fe4088eaf3abb35e8ce, type: 2}

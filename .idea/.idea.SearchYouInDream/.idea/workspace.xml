@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="" />
+    <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_StunEnd.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_StunEnd.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_Die.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_Die.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/TieTou/TieTouEnemyBehavior.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/TieTou/TieTouEnemyBehavior.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_TieTou.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_TieTou.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_TieTouStunEnd.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_TieTouStunEnd.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_WarriorExecutionFly.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_WarriorExecutionFly.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorBreakStun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorBreakStun.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,6 +149,8 @@
       <workItem from="1745475523440" duration="2779000" />
       <workItem from="1745590666876" duration="4006000" />
       <workItem from="1745666375281" duration="6483000" />
+      <workItem from="1746799766829" duration="4005000" />
+      <workItem from="1746849449975" duration="3349000" />
     </task>
     <servers />
   </component>

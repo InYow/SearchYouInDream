@@ -54,15 +54,13 @@ public class HitFly : MonoBehaviour
             }
         }
         //开始飞行
+        if (hitFlyType == HitFlyType.Float)
         {
-            if (hitFlyType == HitFlyType.Float)
-            {
-                rb.velocity = flyDirection * flySpeed;
-            }
-            else if (hitFlyType == HitFlyType.Curve)
-            {
-                rb.velocity = flyDirection * flyCurve.Evaluate(timeMax_fly - time_fly);
-            }
+            rb.velocity = flyDirection * flySpeed;
+        }
+        else if (hitFlyType == HitFlyType.Curve)
+        {
+            rb.velocity = flyDirection * flyCurve.Evaluate(timeMax_fly - time_fly);
         }
     }
 
