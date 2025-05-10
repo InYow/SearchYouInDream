@@ -5,117 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_StunEnd.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_StunEnd.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_Attack.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_Attack.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_BreakRecover.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_BreakRecover.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_BreakStun.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_BreakStun.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_DashEnd.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_DashEnd.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_DashStart.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_DashStart.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_Excusion.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_Excusion.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_GetHurt1.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_GetHurt1.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_GetHurt2.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_GetHurt2.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_GetHurt3.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_GetHurt3.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_Idle.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_Idle.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_Run.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/FatBall/FatBall_Run.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_Attack.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_Attack.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_BreakRecover.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_BreakRecover.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_BreakStun.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_BreakStun.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_Excusion.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_Excusion.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_GetHurt1.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_GetHurt1.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_GetHurt2.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_GetHurt2.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_GetHurt3.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_GetHurt3.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_Idle.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_Idle.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_Run.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_Run.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_ShootLoop.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_ShootLoop.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_ShootStart.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_ShootStart.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/ZaBing/ZaBing_GetHit1.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/ZaBing/ZaBing_GetHit1.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/ZaBing/ZaBing_GetHit2.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/ZaBing/ZaBing_GetHit2.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/ZaBing/ZaBing_GetHit3.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/ZaBing/ZaBing_GetHit3.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/ZaBing/ZaBing_Run.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/ZaBing/ZaBing_Run.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/ZaBing/ZaBing_待机.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/ZaBing/ZaBing_待机.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/ZaBing/ZaBing_攻击.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/ZaBing/ZaBing_攻击.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/ZaBing/ZaBing_被击飞.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/ZaBing/ZaBing_被击飞.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/铅笔怪/GetHit1.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/铅笔怪/GetHit1.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/铅笔怪/GetHit2.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/铅笔怪/GetHit2.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/铅笔怪/GetHit3.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/铅笔怪/GetHit3.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/铅笔怪/击飞后起身.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/铅笔怪/击飞后起身.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/铅笔怪/待机.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/铅笔怪/待机.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/铅笔怪/攻击.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/铅笔怪/攻击.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/铅笔怪/破防恢复.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/铅笔怪/破防恢复.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/铅笔怪/跑步.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/铅笔怪/跑步.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_BreakStun.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_BreakStun.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_Dash_End.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_Dash_End.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_Dash_Loop.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_Dash_Loop.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_Dash_Start.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_Dash_Start.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_Excusion.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_Excusion.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_GetHurt1.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_GetHurt1.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_GetHurt2.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_GetHurt2.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_GetHurt3.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_GetHurt3.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_Idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_NormalAttack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_NormalAttack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_Run.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_Run.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_StunRecover.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/FatBall/FatBall_StunRecover.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/TieTou/Enemy_TieTou.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/TieTou/Enemy_TieTou.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/TieTou/Enemy_TieTouAttack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/TieTou/Enemy_TieTouAttack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/TieTou/Enemy_TieTouBreakStun.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/TieTou/Enemy_TieTouBreakStun.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/TieTou/Enemy_TieTouExcution.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/TieTou/Enemy_TieTouExcution.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/TieTou/Enemy_TieTouGetHit1.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/TieTou/Enemy_TieTouGetHit1.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/TieTou/Enemy_TieTouGetHit2.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/TieTou/Enemy_TieTouGetHit2.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/TieTou/Enemy_TieTouGetHit3.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/TieTou/Enemy_TieTouGetHit3.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/TieTou/Enemy_TieTouIdle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/TieTou/Enemy_TieTouIdle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/TieTou/Enemy_TieTouRun.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/TieTou/Enemy_TieTouRun.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/TieTou/Enemy_TieTouShoot.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/TieTou/Enemy_TieTouShoot.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/TieTou/Enemy_TieTouStunRecover.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/TieTou/Enemy_TieTouStunRecover.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/杂兵/ZaBing_Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/杂兵/ZaBing_Attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/杂兵/ZaBing_Excution.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/杂兵/ZaBing_Excution.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/杂兵/ZaBing_GetHit1.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/杂兵/ZaBing_GetHit1.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/杂兵/ZaBing_GetHit2.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/杂兵/ZaBing_GetHit2.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/杂兵/ZaBing_GetHit3.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/杂兵/ZaBing_GetHit3.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/杂兵/ZaBing_Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/杂兵/ZaBing_Idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/杂兵/ZaBing_Run.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/杂兵/ZaBing_Run.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/PencilGetHit1.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/PencilGetHit1.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/PencilGetHit2.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/PencilGetHit2.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/PencilGetHit3.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/PencilGetHit3.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/击飞后起身.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/击飞后起身.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/待机.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/待机.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/攻击.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/攻击.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/破防.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/破防.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/破防恢复.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/破防恢复.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/被击飞.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/被击飞.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/跑步.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/铅笔怪/跑步.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/PencilMonster/PencilShooterEnemyBehavior.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/PencilMonster/PencilShooterEnemyBehavior.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/TieTou/TieTouEnemyBehaviorBaseTemplate.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/TieTou/TieTouEnemyBehaviorBaseTemplate.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Derek/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_Die.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/TieTou/TieTou_Die.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/TieTou/TieTouEnemyBehavior.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/TieTou/TieTouEnemyBehavior.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Attribute Processors.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Editor Windows.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Sample - RPG Editor.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_FatBall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_FatBall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_PencilShooter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_PencilShooter.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_TieTou.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_TieTou.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_冲刺.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_冲刺.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_击破_浩克掌_起飞.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_击破_浩克掌_起飞.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_普攻1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_普攻1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_普攻2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_普攻2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_普攻3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_普攻3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_普攻4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_普攻4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_暴怒.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_暴怒.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_FatBallExecution.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_FatBallExecution.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_PencilExecution.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_PencilExecution.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_TieTouExecution.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_TieTouExecution.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_TieTouShoot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_TieTouShoot.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_ZaBingStun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_ZaBingStun.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_ZaBingStunEnd.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_ZaBingStunEnd.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_TieTouShoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_TieTouShoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorExecutionFly.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorExecutionFly.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorShoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorShoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/状态机/HitFly.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/状态机/HitFly.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/杂兵/杂兵_走路-1-sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/杂兵/杂兵_走路-1-sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/New Sprite Atlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/New Sprite Atlas.spriteatlas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_TieTouStunEnd.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_TieTouStunEnd.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_WarriorExecutionFly.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_WarriorExecutionFly.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorBreakStun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/STEnemy_WarriorBreakStun.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,6 +150,7 @@
       <workItem from="1745590666876" duration="4006000" />
       <workItem from="1745666375281" duration="6483000" />
       <workItem from="1746799766829" duration="4005000" />
+      <workItem from="1746849449975" duration="3349000" />
     </task>
     <servers />
   </component>

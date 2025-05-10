@@ -8,9 +8,6 @@ public class STEnemy_WarriorBreakStun : State
     {
         e.beingBreakStun = false;
 
-        entity.transBreakStun = false;
-        e.behaviourTree.SetVariableValue("bStun", entity.transBreakStun);
-
         e.isGetHurt = false;
         //e.behaviourTree.SetVariableValue("bIsGetHurt", e.isGetHurt);
 
@@ -29,10 +26,10 @@ public class STEnemy_WarriorBreakStun : State
         playableDirector.Play();
 
         //将信息传递出去
-        //MessageManager.CallBreakStun(e);
-        e.beingBreakStun = true;
-
-        e.isGetHurt = false;
+        MessageManager.CallBreakStun(e);
+        entity.beingBreakStun = true;
+        
+        //e.isGetHurt = false;
         //e.behaviourTree.SetVariableValue("bIsGetHurt",e.isGetHurt);
     }
 

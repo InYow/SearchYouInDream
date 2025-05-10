@@ -21,9 +21,12 @@ public class Enemy : Entity
 
             FlowBlood();
 
-            isGetHurt = true;
-            behaviourTree.SetVariableValue("bIsGetHurt", isGetHurt);
-
+            if (transBreakStun || beingBreakStun)
+            {
+                isGetHurt = true;
+                behaviourTree.SetVariableValue("bIsGetHurt", isGetHurt);
+            }
+            
             //死掉了
             if (health <= 0f)
             {
@@ -39,8 +42,11 @@ public class Enemy : Entity
             health -= entity.attackValue;
             FlowBlood();
 
-            isGetHurt = true;
-            //behaviourTree.SetVariableValue("bIsGetHurt", isGetHurt);
+            if (transBreakStun || beingBreakStun)
+            {
+                isGetHurt = true;
+                behaviourTree.SetVariableValue("bIsGetHurt", isGetHurt);
+            }
 
             //死掉了
             if (health <= 0f)
