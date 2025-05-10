@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3964707098931923990}
   - component: {fileID: 821045805030623012}
-  - component: {fileID: 3034713993189756742}
+  - component: {fileID: -4935321023913231950}
   m_Layer: 6
   m_Name: STEnemy_FatBallStunEnd
   m_TagString: Untagged
@@ -52,7 +52,7 @@ PlayableDirector:
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
---- !u!114 &3034713993189756742
+--- !u!114 &-4935321023913231950
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,7 +61,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3964707098931923991}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8296e41951ee6543a8afdd4c02132fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a8e4cc5469547f88cda9c17f68c12ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playableDirector: {fileID: 821045805030623012}
