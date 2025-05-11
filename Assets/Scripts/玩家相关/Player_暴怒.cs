@@ -16,6 +16,9 @@ public class Player_暴怒 : State
         BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
         playableDirector.Play();
 
+        //增加一个评级
+        RankSystem.UpLevelRank();
+
         //速度为0
         Player player = (Player)entity;
         player._rb.velocity = Vector2.zero;

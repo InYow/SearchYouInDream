@@ -52,6 +52,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -8216917877877993980, guid: 6fdff58248064054f87d84f02f0380d4, type: 2}
     value: {fileID: 0}
+  - key: {fileID: 7024914744706845792, guid: 6fdff58248064054f87d84f02f0380d4, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &8542597936995445756
@@ -639,7 +641,7 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 8
+      value: 8.5
       inSlope: -0.07830585
       outSlope: Infinity
       tangentMode: 97

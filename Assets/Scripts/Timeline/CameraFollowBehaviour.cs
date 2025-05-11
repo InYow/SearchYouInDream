@@ -12,6 +12,7 @@ public class CameraFollowBehaviour : PlayableBehaviour
         if (!Application.isPlaying)
             return;
         CameraFollow.SetFollow(cameraPivot);
+        CameraFollow.EnableConfiner();
     }
     public override void OnPlayableCreate(Playable playable)
     {

@@ -31,6 +31,7 @@ public class Player : Entity
     public bool transStun;      //进入stun布尔值
     public Entity transHitFly_SourceEntity;         //击飞源实体
     public CheckBox transHitFly_SourceAttackBox;    //击飞源攻击盒子
+    public CheckBoxBehaviour transHitFly_SourceCheckBoxBehaviour; //击飞源攻击盒子
 
     public bool transDefend_Achieve;//进入 弹反 布尔值
     public Entity transDefend_achieve_TgtEntity;//弹反目标
@@ -712,6 +713,28 @@ public class Player : Entity
             CameraShake.ShakeRecoil(new Vector3(1, 0, 0), 1f);  //镜头抖动
             受伤Canvas.Instance.PlayAnimation();        //播放受伤UI动画
             transHitFly_SourceAttackBox = attackBox;
+            transHitFly_SourceEntity = entity;
+            transStun = true;//进入硬直}
+        }
+    }
+
+    public override void GetHurt(Entity entity, CheckBoxBehaviour checkBoxBehaviour)
+    {
+        if (stateCurrentName == "Player_防御")
+        {
+            transDefend_Achieve = true;//进入弹反
+            transDefend_achieve_TgtEntity = entity;
+        }
+        else if (BuffContain("BFPlayerUnselected"))
+        {
+            //不操作
+        }
+        else
+        {
+            base.GetHurt(entity, checkBoxBehaviour);    //扣health
+            CameraShake.ShakeRecoil(new Vector3(1, 0, 0), 1f);  //镜头抖动
+            受伤Canvas.Instance.PlayAnimation();        //播放受伤UI动画
+            transHitFly_SourceCheckBoxBehaviour = checkBoxBehaviour;
             transHitFly_SourceEntity = entity;
             transStun = true;//进入硬直}
         }

@@ -46,5 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ranks: []
   rankValue: 0
-  time: 3
-  t: 3
+  time: 0
+  t: 0

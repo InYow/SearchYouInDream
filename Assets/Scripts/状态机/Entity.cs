@@ -13,7 +13,7 @@ public class Entity : MonoBehaviour
     [Header("Camera")]
     public Transform camera_Pivot;
     [Header("Component")]
-    public CheckBox attackBox;
+    //public CheckBox attackBox;
     public Rigidbody2D _rb;
     [Header("Entity")]
     public float health;
@@ -178,11 +178,11 @@ public class Entity : MonoBehaviour
             Debug.LogWarning($"{gameObject.name}没有Camera Pivot");
         }
 
-        attackBox = GetComponentInChildren<CheckBox>(true);
-        if (attackBox == null)
-        {
-            Debug.LogWarning($"{gameObject.name}没有找到子物体中的CheckBox组件");
-        }
+        // attackBox = GetComponentInChildren<CheckBox>(true);
+        // if (attackBox == null)
+        // {
+        //     Debug.LogWarning($"{gameObject.name}没有找到子物体中的CheckBox组件");
+        // }
     }
 
     /// <summary>

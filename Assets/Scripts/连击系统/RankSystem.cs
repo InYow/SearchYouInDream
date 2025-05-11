@@ -103,6 +103,12 @@ public class RankSystem : MonoBehaviour
         rankSystem.t = rankSystem.time; //重置评值降低时间
     }
 
+    public static void Angry()
+    {
+        UpLevelRank(); //提升一个评级
+        rankSystem.t = rankSystem.time; //重置评值降低时间
+    }
+
     //---------------方法---------------
 
     //获取评级
@@ -372,9 +378,6 @@ public class RankSystem : MonoBehaviour
         Debug.Log($"评值溢出了{overValue}");
     }
 
-    public Action ACIntoF;
-    public Action ACOutofF;
-
     public Action ACIntoE;
     public Action ACOutofE;
 
@@ -393,14 +396,8 @@ public class RankSystem : MonoBehaviour
     public Action ACIntoS;
     public Action ACOutofS;
 
-    public Action ACIntoSS;
-    public Action ACOutofSS;
-
     public Action ACIntoO;
     public Action ACOutofO;
-
-    public Action ACIntoX;
-    public Action ACOutofX;
 
     public Action ACRankUp;
     public Action ACRankDown;

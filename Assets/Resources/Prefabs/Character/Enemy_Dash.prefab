@@ -45,12 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkBoxType: 0
-  entity_master: {fileID: 0}
   boxSize: {x: 1, y: 1}
   attackLayer:
     serializedVersion: 2
     m_Bits: 64
-  descrition: 
+  attacktype: 0
   entities: []
   pickLayer:
     serializedVersion: 2
@@ -128,7 +127,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1056580707
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f86678f0733dfb14382074f856af2f5e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -186,7 +185,7 @@ SortingGroup:
   m_GameObject: {fileID: 8545397529506937810}
   m_Enabled: 1
   m_SortingLayerID: 1056580707
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
 --- !u!114 &8545397529506937808
 MonoBehaviour:
@@ -200,6 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d75596bfb3305442baebef57f67428e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  legacy: 1
   SR_Health: {fileID: 8545397531000527433}
   SR_HealthGray: {fileID: 8545397530472315660}
   entity: {fileID: 8545397529654295127}
@@ -291,24 +291,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32d676075a1576e4e8b57a79f1ad3e7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitVFX_List:
+  - "\u53D7\u4F24\u7279\u6548x"
+  "\u8840VFX_List":
+  - "\u88401"
+  hitVFX_Pivot: {fileID: 0}
+  camera_Pivot: {fileID: 0}
+  _rb: {fileID: 8545397529654295133}
   health: 10
   health_Max: 10
   resis: 10
   resis_Max: 10
+  resis_ResponSpeed: 0
+  attackValue: 0
+  breakAttackTimes: 1
+  breakAttackTimes_Max: 1
+  StartStateName: STEmpty
   transExecution: 0
   transExecution_DamageSourceEntity: {fileID: 0}
   transExecution_Type: 
   transExecution_AttackBox: {fileID: 0}
-  resis_ResponSpeed: 0
-  attackValue: 0
+  transExecution_AttackBoxBehaviour:
+    boxSize: {x: 1, y: 0.5}
+    boxOffset: {x: 0, y: 0}
+    attackLayer:
+      serializedVersion: 2
+      m_Bits: 64
+    attacktype: 0
+    canBreakAttackType: 0
+    entity_master: {fileID: 0}
   transBreakStun: 0
   beingBreakStun: 0
-  StartStateName: STEmpty
   stateCurrentName: 
-  _rb: {fileID: 8545397529654295133}
   behaviourTree: {fileID: 8545397529654295124}
   aiPath: {fileID: 8545397529654295130}
   target: {fileID: 0}
+  bFoundPlayer: 0
+  isGetHurt: 0
+  bloodVFXName: "\u8E29\u8840\u7279\u65481"
   dashEnable: 1
   dashCD: 15
   dashSpeed: 10
@@ -647,7 +667,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1056580707
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f86678f0733dfb14382074f856af2f5e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -815,7 +835,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1056580707
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f86678f0733dfb14382074f856af2f5e, type: 3}
   m_Color: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
@@ -899,7 +919,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1056580707
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f86678f0733dfb14382074f856af2f5e, type: 3}
   m_Color: {r: 1, g: 1, b: 0, a: 1}
@@ -956,7 +976,7 @@ SortingGroup:
   m_GameObject: {fileID: 8545397530839218277}
   m_Enabled: 1
   m_SortingLayerID: 1056580707
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
 --- !u!114 &8545397530839218299
 MonoBehaviour:
@@ -1043,7 +1063,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1056580707
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f86678f0733dfb14382074f856af2f5e, type: 3}
   m_Color: {r: 0, g: 1, b: 0, a: 1}

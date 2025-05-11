@@ -51,7 +51,7 @@ public class CheckBoxBehaviour : PlayableBehaviour
                     //Debug.Log("伤害" + e.name + entity_master.stateCurrentName);
                     entity_master.Hurt(e, this);
 
-                    RankSystem.Attack(); //增加评值
+                    //RankSystem.Attack(); //增加评值
                 }
             }
         }

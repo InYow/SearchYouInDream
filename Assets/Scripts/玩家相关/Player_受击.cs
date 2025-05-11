@@ -32,8 +32,10 @@ public class Player_受击 : State
         Player player = (Player)entity;
         //hitFly.sourceEntity = player.transHitFly_SourceEntity;
         hitFly.sourceAttackBox = player.transHitFly_SourceAttackBox;
+        hitFly.checkBoxBehaviour = player.transHitFly_SourceCheckBoxBehaviour;
         player.transHitFly_SourceEntity = null;
         player.transHitFly_SourceAttackBox = null;
+        player.transHitFly_SourceCheckBoxBehaviour = null;
         time = slowtime;
 
         //被击飞

@@ -723,6 +723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d75596bfb3305442baebef57f67428e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  legacy: 0
   SR_Health: {fileID: 6709398478250241162}
   SR_HealthGray: {fileID: 6709398478514220738}
   entity: {fileID: 6709398477595593923}
