@@ -209,7 +209,7 @@ public class Entity : MonoBehaviour
         if (!BuffContain("BFPlayerUnselected"))
         {
             health -= entity.attackValue;
-            FlowBlood();
+            GetHurtVFX();
             if (beingBreakStun)
                 CameraShake.ShakeRecoil(new Vector3(1, 0, 0), 0.3f);
 
@@ -225,7 +225,7 @@ public class Entity : MonoBehaviour
         if (!BuffContain("BFPlayerUnselected"))
         {
             health -= entity.attackValue;
-            FlowBlood();
+            GetHurtVFX();
             if (beingBreakStun)
                 CameraShake.ShakeRecoil(new Vector3(1, 0, 0), 0.3f);
 
@@ -237,7 +237,7 @@ public class Entity : MonoBehaviour
         }
     }
 
-    public virtual void FlowBlood()
+    public virtual void GetHurtVFX()
     {
         if (血VFX_List.Count > 0)
         {

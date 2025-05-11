@@ -5,6 +5,8 @@ public class SkillManager : MonoBehaviour
 {
     public static SkillManager instance;
 
+    public Vector2 mono;
+
     public string skill1;       //AD
                                 //Player_增幅_愤怒
 

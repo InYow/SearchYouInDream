@@ -11,7 +11,6 @@ public class STEnemy_WarriorBreakStun : State
         e.isGetHurt = false;
         //e.behaviourTree.SetVariableValue("bIsGetHurt", e.isGetHurt);
 
-        e.ExitBreakStun();
         //清空e的引用
         e = null;
         Destroy(gameObject);
@@ -28,9 +27,14 @@ public class STEnemy_WarriorBreakStun : State
         //将信息传递出去
         MessageManager.CallBreakStun(e);
         entity.beingBreakStun = true;
-        
+
         //e.isGetHurt = false;
         //e.behaviourTree.SetVariableValue("bIsGetHurt",e.isGetHurt);
+
+        //踩血特效
+        VisualEffectManager.PlayEffectWithoutRotation(e.bloodVFXName, e.transform);
+        //出血音效
+        SoundEffectManager.PlaySFX("出血", e.transform);
     }
 
     public override void UPStateBehaviour(Entity entity)

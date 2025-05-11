@@ -11,6 +11,7 @@ public class Enemy : Entity
     public Transform target;
     public bool bFoundPlayer = false;
     public bool isGetHurt = false;
+    public string bloodVFXName = "踩血特效1";
 
     public override void GetHurt(Entity entity, CheckBox attackBox)
     {
@@ -19,14 +20,15 @@ public class Enemy : Entity
         {
             health -= entity.attackValue;
 
-            FlowBlood();
+            GetHurtVFX();
+            SoundEffectManager.PlaySFX("命中", transform);
 
             if (transBreakStun || beingBreakStun)
             {
                 isGetHurt = true;
                 behaviourTree.SetVariableValue("bIsGetHurt", isGetHurt);
             }
-            
+
             //死掉了
             if (health <= 0f)
             {
@@ -40,7 +42,9 @@ public class Enemy : Entity
         if (!BuffContain("BFPlayerUnselected"))
         {
             health -= entity.attackValue;
-            FlowBlood();
+
+            GetHurtVFX();
+            SoundEffectManager.PlaySFX("命中", transform);
 
             if (transBreakStun || beingBreakStun)
             {

@@ -98,7 +98,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitFlyType: 1
-  sourceEntity: {fileID: 0}
   sourceAttackBox: {fileID: 0}
   checkBoxBehaviour:
     boxSize: {x: 1, y: 0.5}

@@ -41,6 +41,9 @@ public class Player_受击 : State
         //硬直时长初始化
         player.time_Stun = player.time_StunMax;
         SlowMotion.StartSlow(slowtime, slowfactor);
+
+        //红色闪光
+        VisualEffectManager.PlayEffect("红色闪光", entity.hitVFX_Pivot);
     }
 
     public override void UPStateBehaviour(Entity entity)

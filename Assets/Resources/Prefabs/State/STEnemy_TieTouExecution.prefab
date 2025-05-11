@@ -95,7 +95,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitFlyType: 0
-  sourceEntity: {fileID: 0}
   sourceAttackBox: {fileID: 0}
   checkBoxBehaviour:
     boxSize: {x: 1, y: 0.5}
@@ -106,11 +105,11 @@ MonoBehaviour:
     attacktype: 0
     canBreakAttackType: 0
     entity_master: {fileID: 0}
-  flySpeed: 3
+  flySpeed: 10
   flyCurve:
     serializedVersion: 2
     m_Curve: []
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  timeMax_fly: 0
+  timeMax_fly: 1

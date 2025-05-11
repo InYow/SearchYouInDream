@@ -32,6 +32,7 @@ public class MessageManager : MonoBehaviour
         {
             entity.breakAttackTimes--;
             CameraFollow.SetFollow(entity.camera_Pivot);
+            Debug.Log("BreakStun");
             Instance.OnBreakStun?.Invoke(entity);
         }
     }

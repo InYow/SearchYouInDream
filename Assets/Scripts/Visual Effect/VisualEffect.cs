@@ -6,6 +6,7 @@ public enum VisualEffectFinishType
 {
     Destroy,
     Disable,
+    Sustain,
 }
 public class VisualEffect : MonoBehaviour
 {
@@ -42,6 +43,11 @@ public class VisualEffect : MonoBehaviour
             case VisualEffectFinishType.Disable:
                 {
                     gameObject.SetActive(false);
+                    break;
+                }
+            case VisualEffectFinishType.Sustain:
+                {
+                    //不做任何操作
                     break;
                 }
             default:

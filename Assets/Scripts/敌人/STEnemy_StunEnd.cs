@@ -3,7 +3,7 @@
     public class STEnemy_StunEnd : STEnemy_PlayTimelineAsset
     {
         private Enemy enemy;
-        
+
         public override void StateStart(Entity entity)
         {
             if (!enemy)
@@ -12,7 +12,8 @@
             }
             entity.transBreakStun = false;
             enemy.behaviourTree.SetVariableValue("bStun", entity.transBreakStun);
-            
+            enemy.ExitBreakStun();
+
             base.StateStart(entity);
         }
 
@@ -20,6 +21,6 @@
         {
             base.StateStart(entity);
         }
-        
+
     }
 }
