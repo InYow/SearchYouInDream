@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
-using BehaviorDesigner.Runtime.Tasks.Unity.UnityGameObject;
 using Pathfinding;
 using UnityEngine;
 
@@ -11,10 +8,16 @@ public class BTAction_MoveToPlayer : Action
     private Enemy entity;
     private AIPath aiPath;
     private Animator animator;
+    private Vector3 destinationCache;
+    private string walkState = "STEmpty";
+
 
     public SharedTransform targetPosition;
-    public string walkState = "STEnemy_WarriorMoveToPlayer";
-
+    [UnityEngine.Tooltip("距离目标多远时会停下")]public float tolerance = 0.1f;
+    [UnityEngine.Tooltip("与TargetPosition的距离")]public float distanceWithTarget;
+    
+    
+    
     public override void OnAwake()
     {
         base.OnAwake();
@@ -28,7 +31,8 @@ public class BTAction_MoveToPlayer : Action
         base.OnStart();
         entity.StateCurrent = entity.InstantiateState(walkState);
         aiPath.canMove = true;
-        aiPath.destination = targetPosition.Value.position;
+        destinationCache = CalculateTargetPosition();
+        aiPath.destination = destinationCache; 
         animator.SetFloat("MoveSpeed", aiPath.maxSpeed);
     }
 
@@ -40,12 +44,19 @@ public class BTAction_MoveToPlayer : Action
             return TaskStatus.Success;
         }
         //更新位置
-        if (aiPath.destination != targetPosition.Value.position)
+        if (aiPath.destination != destinationCache)
         {
-            aiPath.destination = targetPosition.Value.position;
+            destinationCache = CalculateTargetPosition();
+            aiPath.destination = destinationCache; 
         }
 
-        Vector3 dir = Vector3.Normalize(aiPath.destination - entity.transform.position);
+        Vector3 distance = aiPath.destination - entity.transform.position;
+        if (distance.magnitude < tolerance)
+        {
+            return TaskStatus.Success;
+        }
+        
+        Vector3 dir = Vector3.Normalize(distance);
         if (dir.x < 0)
         {
             entity.gameObject.transform.localScale = new Vector3(-1, 1, 1);
@@ -60,8 +71,16 @@ public class BTAction_MoveToPlayer : Action
 
     public override void OnEnd()
     {
-        base.OnEnd();
         aiPath.canMove = false;
         animator.SetFloat("MoveSpeed", 0);
+        base.OnEnd();
+    }
+
+    private Vector3 CalculateTargetPosition()
+    {
+        Vector3 targetPos = targetPosition.Value.position; 
+        Vector3 targetDir = targetPosition.Value.position - entity.transform.position;
+        float offsetX = targetDir.x > 0 ?  -distanceWithTarget : distanceWithTarget;
+        return targetPos+new Vector3(offsetX,0,0);
     }
 }
