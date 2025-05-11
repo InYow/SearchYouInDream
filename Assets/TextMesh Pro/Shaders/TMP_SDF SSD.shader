@@ -158,6 +158,8 @@ SubShader {
         float4 _FaceTex_ST;
         float4 _OutlineTex_ST;
 
+        float _Sharpness; // Declare _Sharpness
+
         float4 SRGBToLinear(float4 rgba) {
             return float4(lerp(rgba.rgb / 12.92f, pow((rgba.rgb + 0.055f) / 1.055f, 2.4f), step(0.04045f, rgba.rgb)), rgba.a);
         }
