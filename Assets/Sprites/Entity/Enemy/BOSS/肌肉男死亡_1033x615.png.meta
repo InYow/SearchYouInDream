@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,9 +121,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2560
-        width: 1066.6666
-        height: 640
+        y: 2585
+        width: 1033
+        height: 615
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: "\u808C\u8089\u7537\u6B7B\u4EA1_1033x615_1"
       rect:
         serializedVersion: 2
-        x: 1066
-        y: 2560
-        width: 1066.6666
-        height: 640
+        x: 1033
+        y: 2585
+        width: 1033
+        height: 615
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,10 +162,10 @@ TextureImporter:
       name: "\u808C\u8089\u7537\u6B7B\u4EA1_1033x615_2"
       rect:
         serializedVersion: 2
-        x: 2132
-        y: 2560
-        width: 1066.6666
-        height: 640
+        x: 2066
+        y: 2585
+        width: 1033
+        height: 615
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,9 +184,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1920
-        width: 1066.6666
-        height: 640
+        y: 1970
+        width: 1033
+        height: 615
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,10 +204,10 @@ TextureImporter:
       name: "\u808C\u8089\u7537\u6B7B\u4EA1_1033x615_4"
       rect:
         serializedVersion: 2
-        x: 1066
-        y: 1920
-        width: 1066.6666
-        height: 640
+        x: 1033
+        y: 1970
+        width: 1033
+        height: 615
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,10 +225,10 @@ TextureImporter:
       name: "\u808C\u8089\u7537\u6B7B\u4EA1_1033x615_5"
       rect:
         serializedVersion: 2
-        x: 2132
-        y: 1920
-        width: 1066.6666
-        height: 640
+        x: 2066
+        y: 1970
+        width: 1033
+        height: 615
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,9 +247,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1280
-        width: 1066.6666
-        height: 640
+        y: 1355
+        width: 1033
+        height: 615
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,10 +267,10 @@ TextureImporter:
       name: "\u808C\u8089\u7537\u6B7B\u4EA1_1033x615_7"
       rect:
         serializedVersion: 2
-        x: 1066
-        y: 1280
-        width: 1066.6666
-        height: 640
+        x: 1033
+        y: 1355
+        width: 1033
+        height: 615
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -288,10 +288,10 @@ TextureImporter:
       name: "\u808C\u8089\u7537\u6B7B\u4EA1_1033x615_8"
       rect:
         serializedVersion: 2
-        x: 2132
-        y: 1280
-        width: 1066.6666
-        height: 640
+        x: 2066
+        y: 1355
+        width: 1033
+        height: 615
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,9 +310,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 640
-        width: 1066.6666
-        height: 640
+        y: 740
+        width: 1033
+        height: 615
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -330,10 +330,10 @@ TextureImporter:
       name: "\u808C\u8089\u7537\u6B7B\u4EA1_1033x615_10"
       rect:
         serializedVersion: 2
-        x: 1066
-        y: 640
-        width: 1066.6666
-        height: 640
+        x: 1033
+        y: 740
+        width: 1033
+        height: 615
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -351,10 +351,10 @@ TextureImporter:
       name: "\u808C\u8089\u7537\u6B7B\u4EA1_1033x615_11"
       rect:
         serializedVersion: 2
-        x: 2132
-        y: 640
-        width: 1066.6666
-        height: 640
+        x: 2066
+        y: 740
+        width: 1033
+        height: 615
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -373,9 +373,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1066.6666
-        height: 640
+        y: 125
+        width: 1033
+        height: 615
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

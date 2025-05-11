@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -124,8 +124,8 @@ TextureImporter:
         y: 2700
         width: 800
         height: 500
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -145,8 +145,8 @@ TextureImporter:
         y: 2700
         width: 800
         height: 500
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -159,15 +159,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_2"
+      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_10"
       rect:
         serializedVersion: 2
         x: 1600
-        y: 2700
+        y: 1700
         width: 800
         height: 500
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -180,15 +180,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_3"
+      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_11"
       rect:
         serializedVersion: 2
         x: 2400
-        y: 2700
+        y: 1700
         width: 800
         height: 500
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -201,15 +201,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_4"
+      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_12"
       rect:
         serializedVersion: 2
         x: 0
-        y: 2200
+        y: 1200
         width: 800
         height: 500
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -222,15 +222,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_5"
+      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_13"
       rect:
         serializedVersion: 2
         x: 800
-        y: 2200
+        y: 1200
         width: 800
         height: 500
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -243,15 +243,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_6"
+      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_14"
       rect:
         serializedVersion: 2
         x: 1600
-        y: 2200
+        y: 1200
         width: 800
         height: 500
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -264,15 +264,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_7"
+      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_15"
       rect:
         serializedVersion: 2
         x: 2400
-        y: 2200
+        y: 1200
         width: 800
         height: 500
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -285,15 +285,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_8"
+      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_16"
       rect:
         serializedVersion: 2
         x: 0
-        y: 1700
+        y: 700
         width: 800
         height: 500
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -306,15 +306,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_9"
+      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_17"
       rect:
         serializedVersion: 2
         x: 800
-        y: 1700
+        y: 700
         width: 800
         height: 500
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -327,15 +327,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_10"
+      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_2"
       rect:
         serializedVersion: 2
         x: 1600
-        y: 1700
+        y: 2700
         width: 800
         height: 500
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -348,15 +348,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_11"
+      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_3"
       rect:
         serializedVersion: 2
         x: 2400
-        y: 1700
+        y: 2700
         width: 800
         height: 500
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.025}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -369,15 +369,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_12"
+      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_4"
       rect:
         serializedVersion: 2
         x: 0
-        y: 1200
+        y: 2200
         width: 800
         height: 500
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.50000006, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -390,15 +390,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_13"
+      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_5"
       rect:
         serializedVersion: 2
         x: 800
-        y: 1200
+        y: 2200
         width: 800
         height: 500
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -411,15 +411,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_14"
+      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_6"
       rect:
         serializedVersion: 2
         x: 1600
-        y: 1200
+        y: 2200
         width: 800
         height: 500
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -432,15 +432,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_15"
+      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_7"
       rect:
         serializedVersion: 2
         x: 2400
-        y: 1200
+        y: 2200
         width: 800
         height: 500
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -453,15 +453,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_16"
+      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_8"
       rect:
         serializedVersion: 2
         x: 0
-        y: 700
+        y: 1700
         width: 800
         height: 500
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -474,15 +474,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_17"
+      name: "\u808C\u8089\u7537\u91CD\u62F3_800X500_9"
       rect:
         serializedVersion: 2
         x: 800
-        y: 700
+        y: 1700
         width: 800
         height: 500
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.015}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -507,22 +507,22 @@ TextureImporter:
     nameFileIdTable:
       "\u808C\u8089\u7537\u91CD\u62F3_800X500_0": -2025294345
       "\u808C\u8089\u7537\u91CD\u62F3_800X500_1": -436232145
-      "\u808C\u8089\u7537\u91CD\u62F3_800X500_10": 1797846768
-      "\u808C\u8089\u7537\u91CD\u62F3_800X500_11": 380059252
-      "\u808C\u8089\u7537\u91CD\u62F3_800X500_12": -1727849504
-      "\u808C\u8089\u7537\u91CD\u62F3_800X500_13": -1854106589
-      "\u808C\u8089\u7537\u91CD\u62F3_800X500_14": 56512577
-      "\u808C\u8089\u7537\u91CD\u62F3_800X500_15": -1467865438
-      "\u808C\u8089\u7537\u91CD\u62F3_800X500_16": -6010148
-      "\u808C\u8089\u7537\u91CD\u62F3_800X500_17": -1507240496
-      "\u808C\u8089\u7537\u91CD\u62F3_800X500_2": 529529978
-      "\u808C\u8089\u7537\u91CD\u62F3_800X500_3": -383127352
-      "\u808C\u8089\u7537\u91CD\u62F3_800X500_4": 187364890
-      "\u808C\u8089\u7537\u91CD\u62F3_800X500_5": -1356778294
-      "\u808C\u8089\u7537\u91CD\u62F3_800X500_6": -1267785737
-      "\u808C\u8089\u7537\u91CD\u62F3_800X500_7": -957164423
-      "\u808C\u8089\u7537\u91CD\u62F3_800X500_8": 823162686
-      "\u808C\u8089\u7537\u91CD\u62F3_800X500_9": -1988695870
+      "\u808C\u8089\u7537\u91CD\u62F3_800X500_10": 529529978
+      "\u808C\u8089\u7537\u91CD\u62F3_800X500_11": -383127352
+      "\u808C\u8089\u7537\u91CD\u62F3_800X500_12": 187364890
+      "\u808C\u8089\u7537\u91CD\u62F3_800X500_13": -1356778294
+      "\u808C\u8089\u7537\u91CD\u62F3_800X500_14": -1267785737
+      "\u808C\u8089\u7537\u91CD\u62F3_800X500_15": -957164423
+      "\u808C\u8089\u7537\u91CD\u62F3_800X500_16": 823162686
+      "\u808C\u8089\u7537\u91CD\u62F3_800X500_17": -1988695870
+      "\u808C\u8089\u7537\u91CD\u62F3_800X500_2": 1797846768
+      "\u808C\u8089\u7537\u91CD\u62F3_800X500_3": 380059252
+      "\u808C\u8089\u7537\u91CD\u62F3_800X500_4": -1727849504
+      "\u808C\u8089\u7537\u91CD\u62F3_800X500_5": -1854106589
+      "\u808C\u8089\u7537\u91CD\u62F3_800X500_6": 56512577
+      "\u808C\u8089\u7537\u91CD\u62F3_800X500_7": -1467865438
+      "\u808C\u8089\u7537\u91CD\u62F3_800X500_8": -6010148
+      "\u808C\u8089\u7537\u91CD\u62F3_800X500_9": -1507240496
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
