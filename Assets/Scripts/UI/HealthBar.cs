@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
@@ -31,7 +31,15 @@ public class HealthBar : MonoBehaviour
         }
         else
         {
+            //healthBar
+            Image_Health.fillAmount = entity.health / entity.health_Max;
 
+            //healthGrayBar
+            // Player player = entity as Player;
+            // if (player != null)
+            // {
+            //     SR_HealthGray.size = new Vector2(player.healthGray / entity.health_Max, 0.1f);
+            // }
         }
     }
 }

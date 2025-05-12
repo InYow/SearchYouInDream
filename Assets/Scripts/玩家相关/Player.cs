@@ -238,16 +238,21 @@ public class Player : Entity
             {
                 if (Input.GetKey(KeyCode.W))
                 {
-                    StateCurrent = InstantiateState(SkillManager.GetSkillName(2));
+                    string nameW = SkillManager.GetSkillName(2);
+                    if (nameW != "")
+                        StateCurrent = InstantiateState(nameW);
                 }
                 else if (Input.GetKey(KeyCode.S))
                 {
-
-                    StateCurrent = InstantiateState(SkillManager.GetSkillName(3));
+                    string nameS = SkillManager.GetSkillName(3);
+                    if (nameS != "")
+                        StateCurrent = InstantiateState(nameS);
                 }
                 else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
                 {
-                    StateCurrent = InstantiateState(SkillManager.GetSkillName(4));
+                    string nameA = SkillManager.GetSkillName(4);
+                    if (nameA != "")
+                        StateCurrent = InstantiateState(nameA);
                 }
             }
         }

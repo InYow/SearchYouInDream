@@ -7,6 +7,9 @@ public class SkillManager : MonoBehaviour
 
     public Vector2 mono;
 
+    public int energyBeans; // 能量豆
+    public int energyBeansMax; // 能量豆上限
+
     public string skill1;       //AD
                                 //Player_增幅_愤怒
 
@@ -57,6 +60,11 @@ public class SkillManager : MonoBehaviour
 
     private void Update()
     {
+        UpDataDashCD();
+    }
+
+    private void UpDataDashCD()
+    {
         if (player.stateCurrentName != "Player_冲刺" && 冲刺恢复CD > 0)
         {
             冲刺恢复CD -= Time.deltaTime;
@@ -64,6 +72,17 @@ public class SkillManager : MonoBehaviour
             {
                 冲刺次数 = 冲刺次数Max;
             }
+        }
+    }
+
+    public static void AddMono(float value)
+    {
+        instance.mono.x = Mathf.Clamp(instance.mono.x + value, 0f, instance.mono.y);
+
+        if (instance.mono.x == instance.mono.y && instance.energyBeans < instance.energyBeansMax)
+        {
+            instance.mono.x = 0f;
+            instance.energyBeans = Mathf.Clamp(instance.energyBeans + 1, 0, instance.energyBeansMax);
         }
     }
 
@@ -97,21 +116,53 @@ public class SkillManager : MonoBehaviour
     {
         switch (skillID)
         {
-            case 1://A
+            case 1://大招
                 {
-                    return instance.skill1;
+                    if (instance.energyBeans > 0)
+                    {
+                        instance.energyBeans--;
+                        return instance.skill1;
+                    }
+                    else
+                    {
+                        return "";
+                    }
                 }
             case 2://W
                 {
-                    return instance.skill2;
+                    if (instance.energyBeans > 0)
+                    {
+                        instance.energyBeans--;
+                        return instance.skill2;
+                    }
+                    else
+                    {
+                        return "";
+                    }
                 }
             case 3://S
                 {
-                    return instance.skill3;
+                    if (instance.energyBeans > 0)
+                    {
+                        instance.energyBeans--;
+                        return instance.skill3;
+                    }
+                    else
+                    {
+                        return "";
+                    }
                 }
-            case 4://D
+            case 4://AD
                 {
-                    return instance.skill4;
+                    if (instance.energyBeans > 0)
+                    {
+                        instance.energyBeans--;
+                        return instance.skill4;
+                    }
+                    else
+                    {
+                        return "";
+                    }
                 }
             case 5://击破   
                 {
