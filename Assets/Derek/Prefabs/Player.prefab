@@ -229,7 +229,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b01babcc93371649bab360953b7ad19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  legacy: 1
   SR_Resis: {fileID: 6709398479355363652}
+  Image_Resis: {fileID: 0}
   entity: {fileID: 6709398477595593923}
 --- !u!1 &6709398477595593922
 GameObject:

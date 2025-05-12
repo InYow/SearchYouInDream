@@ -331,6 +331,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 452090045}
     m_Modifications:
+    - target: {fileID: 8186457544752307605, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
+      propertyPath: mBehaviorSource.mTaskData.JSONSerialization
+      value: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"FoundPlayer","IsShared":true,"IsDynamic":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"PlayerTransform","IsShared":true,"TransformmValue":0},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanExecute","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bInCD","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bIsGetHurt","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanAttack","IsShared":true,"BooleanmValue":false}]}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186457544752307605, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
+      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186457544752307605, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
+      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 589571563}
     - target: {fileID: 8186457544752307610, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
       propertyPath: m_Name
       value: Enemy_ZaBing
@@ -345,11 +357,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186457544752307614, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.21000004
+      value: -3.29
       objectReference: {fileID: 0}
     - target: {fileID: 8186457544752307614, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.51
+      value: -7.26
       objectReference: {fileID: 0}
     - target: {fileID: 8186457544752307614, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1085,6 +1097,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9117474669274388365, guid: a37fd16693deaf84985a7d52563d77af, type: 3}
+      propertyPath: m_SceneBindings.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9117474669274388365, guid: a37fd16693deaf84985a7d52563d77af, type: 3}
+      propertyPath: m_SceneBindings.Array.data[1].key
+      value: 
+      objectReference: {fileID: -4609584992606067947, guid: 49df6b57bcc2f164b928b3ab97d5df08, type: 2}
+    - target: {fileID: 9117474669274388365, guid: a37fd16693deaf84985a7d52563d77af, type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value
       value: 
       objectReference: {fileID: 1131675643}
@@ -1279,7 +1299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &107039376
 Transform:
   m_ObjectHideFlags: 0
@@ -1833,7 +1853,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &170067359
 Transform:
   m_ObjectHideFlags: 0
@@ -2373,7 +2393,7 @@ Transform:
   - {fileID: 473963575}
   - {fileID: 241996251}
   - {fileID: 1072917657}
-  - {fileID: 1546399311}
+  - {fileID: 2027380312}
   - {fileID: 1725878047}
   - {fileID: 1096934682}
   - {fileID: 560562878}
@@ -2876,7 +2896,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &337124445
 Transform:
   m_ObjectHideFlags: 0
@@ -3178,7 +3198,6 @@ MonoBehaviour:
   - {fileID: 2138678826}
   - {fileID: 642247673}
   - {fileID: 1803187104}
-  - {fileID: 0}
   actived: 0
   onAllEnemiesDead:
     m_PersistentCalls:
@@ -3258,6 +3277,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 589571563}
+    - target: {fileID: 957254644338267118, guid: 259cee07f351cbc49acdc8d53f2e1214, type: 3}
+      propertyPath: mBehaviorSource.mTaskData.JSONSerialization
+      value: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"FoundPlayer","IsShared":true,"IsDynamic":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"PlayerTransform","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanExecute","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bInCD","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bIsGetHurt","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanAttack","IsShared":true,"BooleanmValue":false}]}'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 259cee07f351cbc49acdc8d53f2e1214, type: 3}
 --- !u!1 &455131682
@@ -4762,17 +4785,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 521641263145245554, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
+      propertyPath: mBehaviorSource.mTaskData.JSONSerialization
+      value: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"FoundPlayer","IsShared":true,"IsDynamic":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"PlayerTransform","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanExecute","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bInCD","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bIsGetHurt","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bBingStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanAttack","IsShared":true,"BooleanmValue":false}]}'
+      objectReference: {fileID: 0}
     - target: {fileID: 521641263145245556, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 521641263145245556, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.7498093
+      value: -6.97
       objectReference: {fileID: 0}
     - target: {fileID: 521641263145245556, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.307092
+      value: -8.85
       objectReference: {fileID: 0}
     - target: {fileID: 521641263145245556, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5576,7 +5603,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &719855652
 Transform:
   m_ObjectHideFlags: 0
@@ -8162,7 +8189,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b01babcc93371649bab360953b7ad19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  legacy: 1
   SR_Resis: {fileID: 1207969902}
+  Image_Resis: {fileID: 0}
   entity: {fileID: 589571561}
 --- !u!1 &1015374975
 GameObject:
@@ -9369,6 +9398,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1166472703 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 521641263453388755, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
+  m_PrefabInstance: {fileID: 636481237}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1166472704 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 521641263453388754, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
+  m_PrefabInstance: {fileID: 636481237}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1166472705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166472703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cba0ac4ddcf8ef4bb9139da19c504a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unscaleTransform: {fileID: 1166472704}
 --- !u!1 &1171849653
 GameObject:
   m_ObjectHideFlags: 0
@@ -9441,6 +9493,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 694647679}
     m_Modifications:
+    - target: {fileID: 8186457544752307557, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
+      propertyPath: resis
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186457544752307557, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
+      propertyPath: health
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186457544752307557, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
+      propertyPath: resis_Max
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186457544752307557, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
+      propertyPath: health_Max
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8186457544752307610, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
       propertyPath: m_Name
       value: Enemy_ZaBing
@@ -9603,7 +9671,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1207969901
 Transform:
   m_ObjectHideFlags: 0
@@ -10190,7 +10258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1309895935
 Transform:
   m_ObjectHideFlags: 0
@@ -11736,9 +11804,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2ed4ed1127830040837285f320ef905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mono: {x: 0, y: 0}
+  mono: {x: 0, y: 5}
   energyBeans: 0
-  energyBeansMax: 1
+  energyBeansMax: 4
   skill1: 
   skill2: "Player_\u589E\u5E45_\u6124\u6012"
   skill3: "Player_\u63A7\u5236_\u88C2\u5730"
@@ -12388,7 +12456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1073741824
   data:
-    dataString: UEsDBBQAAAgIAABAIeyrwNabwgIAAP0FAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1v4jAQ/SvI56UKYUvbve0CpXtoi0pXPSw9mGRCLIwd+aNAK/77zjgOCUiLkOK8+fCbNzP5YkLZCjKnzcyI/FHnwH70GJ3Zt15rfIA9X2u1EJ/Q+LyJ3JXkxIPPC3dCIz6gMKu34IzIfqq1JOcEQa9Eoc12mq9hrK2zCBdcWkCT0Y6iFUJfPbbHR/+OQg54Sm/o9Imnu6R3xGMGyoFpXQdXd+F3M4oR/WEMqP29yiTfVpAT+TYsTaP7dfBSWFV0oAoyLaWwkRJzhyqUPOaV9VgQOuSCY4mBB/mXINalo7Td4OeisOBi/YYfJsKgUnVW9kvX8m253dS0Prj0dM/1IA2c6qSP/7UXRm8fmosHCV3iSpFtXvgh49Z1BO7Ck3PmXu243PCVhLcS1JOeGe1V3on1FtIJvjvjoVvcuIRs0+I12QvQV63gTUObdvYHveMx1L9fOKhOhSRX31v0jwW7kDrIH3OSJSJhSMBg635jQWGEbLwBUSKJ8a983Z21aLgXxjo0RRUiSr5z7BHkoDKIyvfJQRG9lfaGcrFp4EpqeDfWRkGAI8EKFJfuMMeM7nIILmwdXheWe05rF9lFW7NNFyEBbv2T5MI017tTtw2Orw0z3Zz+vlMTbKl3j2DLZ++kUB21yfCEAo+1UvXsdsVswhbeFDzrhDnYO29gwh0PtyEdnLDuWFnUMkQoLyUNcyggMMIC6P9O+pYc75UBZk9ahd07ewb6ay/y8x1hnCerfHQ7KAookuz2us9vhukghXQ4Gg1vCwAWdkgolJvLea1X7BJOl2prUbgvzUexNzO8CmubG76bic+t7nReqEIvMgOgnusMp2LB4CX4ecmnucAyF+CcUGEu2deSSZ1tIF+eEi2DsNO9M3zZZlmySnxoR8iSjcNXcMkIPq0kju6HgB1dfhZnQWLvIH8VEra8IltyZMd/UEsDBBQAAAgIAABAIezasHeYbAAAAHcAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNUz1jPRUVBKL0osyCgGChiCOKWZKSB2tFJiokFSipmFYVpaappBsoWpbqK5sZGhUaqRsZmZsUVaaqpSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAEAh7KvA1pvCAgAA/QUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAEAh7Nqwd5hsAAAAdwAAAAkAJAAAAAAAAAAAAAAADwMAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAADGAwAAAAA=
+    dataString: UEsDBBQAAAgIAABAIeyfFO1B2AIAABMGAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1v4jAQ/SvI5w0KgULY2y5Quoe2aOmqh6UHN5kQC2NH/ijQiv++Y8chAWmlSrhvvt68mckXYUJXkBmplorljzIH8r1H3Jt867XGBzjSrRRr9gmNzyvLTemcqPf5TQ2TiA9cmJZ7MIplP8SWO+cYQStYIdV+kW9hJrXRCBeUa0CTksZFC4S+euSIP9HUhZzwlUzc6xNf07h3xmcGwoDquCb9yXgyiQchIEr7k+QuSUajaQiMRv1pOkzTJE0WUZz6LFZknO4ryF1LbbJkFLKMvJfAXoODS59JzpkORIk5VV6IGa20xTbRIWcUG/fsnH8JbFsal7Yb/FwUGkxQRdHTnCnUr85Kfspa1D3Vu5rWB+XW1bkbJJ5TnfTxv/ZCyf1DU3gQuyKmZNnuNz1lVJuO7F14fs3cigPlO/rO4bUE8SSXSlqRd2KthmSO/xtlodvcrIRs1+I12RvQVq3gzZibIUeD3vns+z+uDVSXRuL+qEX/aNBrLr38IaezBMSvDigc3S9syC+WDhUQdSQx/oVuuxsYDPdMaYOmoEJAne8KZwQ5iAyC8pFzEI7eu7TK5SILz9WpYc1MKgEeDgQrEJSb0wozmtsluLF1eN1Y7qk7xsAu2JobuwnxcOsfxzemlTxcpq1wfbXf6eb1980NQZfy8Ai6fLaGM9FR2xmeUOCZFKLe3a6YTdjaqoJmnTADR2MVzKmhvhrSwQ3rrpVGLX2EsJy7ZfYNeEbYgPt7c/qWFOtyD5MnKfztXf16+lvL8usbIZTG7/k4HRQFFHGW3kV0MkwGCSTD8XiYFgDE3xATKDflq1qvMCXcLtH2IvBemk9lb6lo5c82V/SwZJ972Zk8E4VcZwpAPNcZLs2CwiL4eckXOcM212AME34vydeGcJntIN9cEm28sIujUXTTZtmQin1I45ANmflv44Y4+HKSuLofDA6u+FWcBo6zg/yFcdjTytniMzn/A1BLAwQUAAAICAAAQCHs2rB3mGwAAAB3AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDVM9Yz0VFQSi9KLMgoBgoYgjilmSkgdrRSYqJBUoqZhWFaWmqaQbKFqW6iubGRoVGqkbGZmbFFWmqqUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAABAIeyfFO1B2AIAABMGAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAABAIezasHeYbAAAAHcAAAAJACQAAAAAAAAAAAAAACUDAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAA3AMAAAAA
     file_cachedStartup: {fileID: 0}
     cacheStartup: 0
   showNavGraphs: 1
@@ -12440,8 +12508,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 247337775}
-  m_RootOrder: 6
+  m_Father: {fileID: 2027380312}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1563367617
 GameObject:
@@ -12842,6 +12910,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 694647679}
     m_Modifications:
+    - target: {fileID: 8186457544752307557, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
+      propertyPath: resis
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186457544752307557, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
+      propertyPath: health
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186457544752307557, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
+      propertyPath: resis_Max
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186457544752307557, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
+      propertyPath: health_Max
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8186457544752307610, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
       propertyPath: m_Name
       value: Enemy_ZaBing (2)
@@ -14076,6 +14160,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 694647679}
     m_Modifications:
+    - target: {fileID: 8186457544752307557, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
+      propertyPath: resis
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186457544752307557, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
+      propertyPath: health
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186457544752307557, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
+      propertyPath: resis_Max
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186457544752307557, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
+      propertyPath: health_Max
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8186457544752307610, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
       propertyPath: m_Name
       value: Enemy_ZaBing (1)
@@ -14322,11 +14422,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5592159268507573283, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.3165183
+      value: 1.4334817
       objectReference: {fileID: 0}
     - target: {fileID: 5592159268507573283, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.307092
+      value: -7.8070917
       objectReference: {fileID: 0}
     - target: {fileID: 5592159268507573283, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14370,7 +14470,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5592159268507573287, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5592159268507573288, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
+      propertyPath: mBehaviorSource.mTaskData.JSONSerialization
+      value: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"FoundPlayer","IsShared":true,"IsDynamic":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"PlayerTransform","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanExecute","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bInCD","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bIsGetHurt","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanAttack","IsShared":true,"BooleanmValue":false}]}'
       objectReference: {fileID: 0}
     - target: {fileID: 5592159268507573294, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
       propertyPath: resis
@@ -14384,10 +14488,6 @@ PrefabInstance:
       propertyPath: bloodVFXName
       value: "\u8E29\u8840\u7279\u65481"
       objectReference: {fileID: 0}
-    - target: {fileID: 5592159268810645332, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 313e7bc6b38879640ada28f4b74513ef, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
 --- !u!1 &1766382622
@@ -14646,6 +14746,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 452090045}
     m_Modifications:
+    - target: {fileID: 8186457544752307557, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
+      propertyPath: resis
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186457544752307557, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
+      propertyPath: health
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186457544752307557, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
+      propertyPath: resis_Max
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186457544752307557, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
+      propertyPath: health_Max
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186457544752307605, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
+      propertyPath: mBehaviorSource.mTaskData.JSONSerialization
+      value: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"FoundPlayer","IsShared":true,"IsDynamic":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"PlayerTransform","IsShared":true,"TransformmValue":0},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanExecute","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bInCD","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bIsGetHurt","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanAttack","IsShared":true,"BooleanmValue":false}]}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186457544752307605, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
+      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186457544752307605, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
+      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 589571563}
     - target: {fileID: 8186457544752307610, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
       propertyPath: m_Name
       value: Enemy_ZaBing (1)
@@ -16159,7 +16287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1984226571
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16310,7 +16438,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1998809633
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16571,6 +16699,54 @@ RectTransform:
   m_AnchoredPosition: {x: 94.8999, y: -35.19995}
   m_SizeDelta: {x: 825, y: 328}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2027380311
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2027380312}
+  - component: {fileID: 2027380313}
+  m_Layer: 0
+  m_Name: EnemyController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2027380312
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027380311}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1546399311}
+  m_Father: {fileID: 247337775}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2027380313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027380311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68896613cd9dfde4ebefb6aa15fcfbfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tickInterval: 1
+  maxAttackAllowance: 2
+  EnemiesInCD: []
 --- !u!1 &2039667927
 GameObject:
   m_ObjectHideFlags: 0
@@ -17058,7 +17234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2061961191
 Transform:
   m_ObjectHideFlags: 0
@@ -18351,6 +18527,7 @@ GameObject:
   - component: {fileID: 2140697151402192335}
   - component: {fileID: 2140697151402192334}
   - component: {fileID: 2140697151402192337}
+  - component: {fileID: 2140697151402192338}
   m_Layer: 5
   m_Name: "\u5DE6\u4E0A\u89D2Canvas"
   m_TagString: Untagged
@@ -18491,6 +18668,24 @@ MonoBehaviour:
   SR_HealthGray: {fileID: 0}
   Image_Health: {fileID: 1776441895}
   entity: {fileID: 589571561}
+--- !u!114 &2140697151402192338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140697151402192329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 153763721bad9fa479c41175edcf98b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energyBeans:
+  - {fileID: 815285520}
+  - {fileID: 856481387}
+  - {fileID: 1015374977}
+  - {fileID: 1995289330}
+  energyBar: {fileID: 1029633997}
 --- !u!114 &2140697151834378364
 MonoBehaviour:
   m_ObjectHideFlags: 0

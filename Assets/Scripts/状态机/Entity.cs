@@ -192,11 +192,13 @@ public class Entity : MonoBehaviour
     public virtual void Hurt(Entity entity, CheckBox attackBox)
     {
         entity.GetHurt(this, attackBox);
+        SkillManager.AddMono(1f);
         //CameraShake.Shake(new Vector3(1, 0, 0), 0.3f);
     }
     public virtual void Hurt(Entity entity, CheckBoxBehaviour checkBoxBehaviour)
     {
         entity.GetHurt(this, checkBoxBehaviour);
+        SkillManager.AddMono(1f);
         //CameraShake.Shake(new Vector3(1, 0, 0), 0.3f);
     }
 
