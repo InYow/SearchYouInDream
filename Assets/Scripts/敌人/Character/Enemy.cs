@@ -1,7 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using BehaviorDesigner.Runtime;
+using BehaviorTreeExtension.Sensor;
 using Pathfinding;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemy : Entity
@@ -9,10 +12,41 @@ public class Enemy : Entity
     public BehaviorTree behaviourTree;
     public AIPath aiPath;
     public Transform target;
+    public SensorBase sensor;
     public bool bFoundPlayer = false;
     public bool isGetHurt = false;
     public string bloodVFXName = "踩血特效1";
 
+    public void OnEnable()
+    {
+        sensor = GetComponent<SensorBase>();
+        sensor.OnTargetDetect += DetectPlayer;
+        sensor.OnTargetLose += LosePlayer;
+    }
+
+    private void OnDisable()
+    {
+        sensor.OnTargetDetect -= DetectPlayer;
+        sensor.OnTargetLose -= LosePlayer;
+    }
+
+    public void AllowEnemyAttack(bool allow)
+    {
+        behaviourTree.SetVariableValue("bCanAttack",allow);
+    }
+
+    protected virtual void DetectPlayer()
+    {
+        Debug.Log("FindPlayer");
+        EnemyController.instance.RegisterEnemy(this);
+    }
+
+    protected virtual void LosePlayer()
+    {
+        Debug.Log("LosePlayer");
+        EnemyController.instance.UnregisterEnemy(this);
+    }
+    
     public override void GetHurt(Entity entity, CheckBox attackBox)
     {
         Debug.Log(entity.name);
@@ -58,5 +92,16 @@ public class Enemy : Entity
                 Execution(entity, checkBoxBehaviour);
             }
         }
+    }
+
+    public EnemyStateParem GetEnemyState()
+    {
+        EnemyStateParem stateParam;
+        var inCD = behaviourTree.GetVariable("bInCD") as SharedBool;
+        stateParam.isInCD = inCD.Value;
+        var disFromPlayer = behaviourTree.GetVariable("DistanceFromPlayer") as SharedFloat;
+        stateParam.distanceFromPlayer = disFromPlayer.Value;
+        
+        return stateParam;
     }
 }

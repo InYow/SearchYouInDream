@@ -137,6 +137,7 @@ MonoBehaviour:
   shadow: {fileID: 3569910826413905955}
   projectileVisual: {fileID: 3569910828149840244}
   initialSpeed: 9
+  lastDuration: 5
   emmitYawAngle: 18
   gravityScale: 9.8
 --- !u!50 &4238966071032595840

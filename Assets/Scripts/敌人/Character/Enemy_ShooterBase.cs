@@ -20,7 +20,8 @@ public class Enemy_ShooterBase : Enemy
             if (duration >= shootCD)
             {
                 shootEnable = true;
-                behaviourTree.SetVariableValue("bInShootCD",!shootEnable);
+                behaviourTree.SetVariableValue("bInCD",!shootEnable);
+                EnemyController.instance.EnemyEndCD(this);
             }
         }
     }
@@ -28,7 +29,9 @@ public class Enemy_ShooterBase : Enemy
     public virtual void StartShootCD()
     {
         shootEnable = false;
-        behaviourTree.SetVariableValue("bInShootCD",!shootEnable);
+        behaviourTree.SetVariableValue("bInCD",!shootEnable);
+        EnemyController.instance.EnemyStartCD(this);
+        
         dashCDStartTime = Time.time;
         
         var pTrans = behaviourTree.GetVariable("PlayerTransform") as SharedTransform;
