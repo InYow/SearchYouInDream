@@ -347,7 +347,6 @@ MonoBehaviour:
   - "\u88405"
   hitVFX_Pivot: {fileID: 6709398478158014290}
   camera_Pivot: {fileID: 0}
-  attackBox: {fileID: 1196935723869664481}
   _rb: {fileID: 6709398477595593926}
   health: 10
   health_Max: 10
@@ -398,6 +397,15 @@ MonoBehaviour:
   transStun: 0
   transHitFly_SourceEntity: {fileID: 0}
   transHitFly_SourceAttackBox: {fileID: 0}
+  transHitFly_SourceCheckBoxBehaviour:
+    boxSize: {x: 1, y: 0.5}
+    boxOffset: {x: 0, y: 0}
+    attackLayer:
+      serializedVersion: 2
+      m_Bits: 64
+    attacktype: 0
+    canBreakAttackType: 0
+    entity_master: {fileID: 0}
   transDefend_Achieve: 0
   transDefend_achieve_TgtEntity: {fileID: 0}
   "eTarget_\u51FB\u7834": {fileID: 0}

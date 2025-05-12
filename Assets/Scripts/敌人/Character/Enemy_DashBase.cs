@@ -19,7 +19,8 @@ public class Enemy_DashBase : Enemy
             if (duration >= dashCD)
             {
                 dashEnable = true;
-                behaviourTree.SetVariableValue("bInDashCD",!dashEnable);
+                behaviourTree.SetVariableValue("bInCD",!dashEnable);
+                EnemyController.instance.EnemyEndCD(this);
             }
         }
     }
@@ -27,8 +28,11 @@ public class Enemy_DashBase : Enemy
     public void StartDashCD()
     {
         dashEnable = false;
-        behaviourTree.SetVariableValue("bInDashCD",!dashEnable);
+        behaviourTree.SetVariableValue("bInCD",!dashEnable);
+        EnemyController.instance.EnemyStartCD(this);
+        
         dashCDStartTime = Time.time;
+        
         var pTrans = behaviourTree.GetVariable("PlayerTransform") as SharedTransform;
         target = pTrans?.Value;
     }

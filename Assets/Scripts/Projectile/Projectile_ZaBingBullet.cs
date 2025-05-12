@@ -10,6 +10,7 @@ public class Projectile_ZaBingBullet : ProjectileBase
     public GameObject shadow;
     public GameObject projectileVisual;
     public float initialSpeed = 30.0f;
+    public float lastDuration = 10.0f;
     public float emmitYawAngle = 30.0f;
     public float gravityScale = 9.8f;
     
@@ -20,6 +21,7 @@ public class Projectile_ZaBingBullet : ProjectileBase
     private Vector3 shadowMoveDirection;
     private float shadwOriginalY;
     private bool isHitGround = false;
+    private float hitLandTime;
 
     public override void EmmitProjectile(Vector3 direction)
     {
@@ -44,7 +46,10 @@ public class Projectile_ZaBingBullet : ProjectileBase
     {
         if (isHitGround)
         {
-            //Destroy(this.gameObject);
+            if (Time.time-hitLandTime>lastDuration)
+            {
+                Destroy(this.gameObject);
+            }
         }
         else
         {
@@ -76,6 +81,8 @@ public class Projectile_ZaBingBullet : ProjectileBase
         if (heightFromGround <= 0.1f)
         {
             isHitGround = true;
+            hitLandTime = Time.time;
+                
             velocity = Vector3.zero;
             _rb.velocity = Vector2.zero;
         }
