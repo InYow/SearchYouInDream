@@ -55,7 +55,7 @@ public class BTAction_MoveToPlayer : Action
         {
             return TaskStatus.Success;
         }
-        
+        animator.SetFloat("MoveSpeed", aiPath.maxSpeed);
         Vector3 dir = Vector3.Normalize(distance);
         if (dir.x < 0)
         {

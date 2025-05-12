@@ -24,9 +24,10 @@ public class EnemyController : MonoBehaviour
     
     private static EnemyController m_instance;
     [ShowInInspector]private Dictionary<Enemy,float> EnemiesNotInCD = new();
-    [SerializeField]private List<Enemy> EnemiesInCD= new();
+    [SerializeField]private HashSet<Enemy> EnemiesInCD= new();
 
     private List<KeyValuePair<Enemy,float>> AllowAttackEnemy= new();
+    private HashSet<Enemy> TrashEnemiesSet = new();
     
     protected virtual void Awake()
     {
@@ -66,14 +67,25 @@ public class EnemyController : MonoBehaviour
     /// </summary>
     private void UpdateEnemyState()
     {
-        //InvalidOperationException: Collection was modified; enumeration operation may not execute.
         foreach (var enemy in EnemiesNotInCD.Keys.ToList())
         {
             EnemyStateParem state = enemy.GetEnemyState();
-            EnemiesNotInCD[enemy] = state.distanceFromPlayer;
+            if (state.isInCD)
+            {
+                EnemiesNotInCD[enemy] = state.distanceFromPlayer;   
+            }
+            else
+            {
+                TrashEnemiesSet.Add(enemy);
+            }
         }
 
         AllowAttackEnemy = EnemiesNotInCD.OrderBy((e)=>e.Value).ToList();
+        foreach (var e in TrashEnemiesSet)
+        {
+            EnemiesNotInCD.Remove(e);
+        }
+        TrashEnemiesSet.Clear();
     }
 
     public void EnemyStartCD(Enemy enemy)
@@ -87,7 +99,7 @@ public class EnemyController : MonoBehaviour
 
     public void EnemyEndCD(Enemy enemy)
     {
-        if (EnemiesInCD.Find((e)=> e == enemy))
+        if (EnemiesInCD.Contains(enemy))
         {
             EnemiesInCD.Remove(enemy);
         }

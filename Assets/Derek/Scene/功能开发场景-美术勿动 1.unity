@@ -1099,6 +1099,7 @@ MonoBehaviour:
   legacy: 1
   SR_Health: {fileID: 170067360}
   SR_HealthGray: {fileID: 2061961192}
+  Image_Health: {fileID: 0}
   entity: {fileID: 589571561}
 --- !u!1 &107039375
 GameObject:
@@ -6015,7 +6016,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b01babcc93371649bab360953b7ad19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  legacy: 1
   SR_Resis: {fileID: 1207969902}
+  Image_Resis: {fileID: 0}
   entity: {fileID: 589571561}
 --- !u!1 &1019275516
 GameObject:
@@ -8651,6 +8654,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mono: {x: 0, y: 0}
+  energyBeans: 0
+  energyBeansMax: 0
   skill1: 
   skill2: "Player_\u589E\u5E45_\u6124\u6012"
   skill3: "Player_\u63A7\u5236_\u88C2\u5730"
@@ -12911,7 +12916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 521641263145245518, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 521641263145245554, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
       propertyPath: mBehaviorSource.mTaskData.JSONSerialization
@@ -13910,17 +13915,13 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 589571563}
-    - target: {fileID: 8186457544752307605, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
-      propertyPath: mBehaviorSource.mTaskData.JSONSerialization
-      value: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"FoundPlayer","IsShared":true,"IsDynamic":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"PlayerTransform","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanExecute","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bInCD","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bIsGetHurt","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanAttack","IsShared":true,"BooleanmValue":false}]}'
-      objectReference: {fileID: 0}
     - target: {fileID: 8186457544752307610, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
       propertyPath: m_Name
       value: Enemy_ZaBing
       objectReference: {fileID: 0}
     - target: {fileID: 8186457544752307610, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8186457544752307614, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
       propertyPath: m_RootOrder
@@ -14974,6 +14975,7 @@ MonoBehaviour:
   legacy: 1
   SR_Health: {fileID: 8038834083024833659}
   SR_HealthGray: {fileID: 8038834083469176126}
+  Image_Health: {fileID: 0}
   entity: {fileID: 8038834082752081002}
 --- !u!210 &8038834082906648035
 SortingGroup:
@@ -15099,7 +15101,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b01babcc93371649bab360953b7ad19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  legacy: 1
   SR_Resis: {fileID: 8038834083929607653}
+  Image_Resis: {fileID: 0}
   entity: {fileID: 8038834082752081002}
 --- !u!210 &8038834083160993354
 SortingGroup:
