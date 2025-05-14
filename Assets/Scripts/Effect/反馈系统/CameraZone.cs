@@ -7,11 +7,6 @@ public class CameraZone : MonoBehaviour
 {
     public static CameraZone Instance;
 
-    [Header("测试")]
-    public CinemachineVirtualCamera testcamera;
-
-    public float testsize;
-
     [Header("Debug")]
     public CinemachineVirtualCamera virtualCamera;
 
@@ -43,15 +38,6 @@ public class CameraZone : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            Set();
-        }
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            Back();
-        }
-
         if (virtualCamera == null)
             return;
         if (setting)
@@ -64,16 +50,6 @@ public class CameraZone : MonoBehaviour
             _t += Time.unscaledDeltaTime;
             virtualCamera.m_Lens.OrthographicSize = Mathf.Lerp(EndLenOrthoSize, StartLenOrthoSize, _t / t);
         }
-    }
-
-    void Set()
-    {
-        SetLenOrthoSize(Instance.testcamera, Instance.testsize);
-    }
-
-    void Back()
-    {
-        OriginalLenOrthoSize();
     }
 
     public static void SetLenOrthoSize(CinemachineVirtualCamera camera, float targetSize)

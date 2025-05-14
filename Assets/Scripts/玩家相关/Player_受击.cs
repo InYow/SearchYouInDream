@@ -46,6 +46,10 @@ public class Player_受击 : State
 
         //红色闪光
         VisualEffectManager.PlayEffect("红色闪光", entity.hitVFX_Pivot);
+
+        //镜头推近
+        var currentVirtualCamera = Cinemachine.CinemachineCore.Instance.GetActiveBrain(0).ActiveVirtualCamera;
+        CameraZone.SetLenOrthoSize(currentVirtualCamera as Cinemachine.CinemachineVirtualCamera, 3.5f);
     }
 
     public override void UPStateBehaviour(Entity entity)

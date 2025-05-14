@@ -57,6 +57,7 @@ public class Player_冲刺 : State_攻击
         }
 
         forward = forward.normalized;
+        forward.y /= 1.42f;
     }
     public override void UPStateBehaviour(Entity entity)
     {

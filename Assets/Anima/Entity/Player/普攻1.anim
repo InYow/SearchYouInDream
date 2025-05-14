@@ -21,21 +21,21 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: -1896856904, guid: 6363f808fe75db94f986d90e67f3d8df, type: 3}
-    - time: 0.033333335
+    - time: 0.025
       value: {fileID: 2144489368, guid: 6363f808fe75db94f986d90e67f3d8df, type: 3}
-    - time: 0.06666667
+    - time: 0.05
       value: {fileID: -808848282, guid: 6363f808fe75db94f986d90e67f3d8df, type: 3}
-    - time: 0.1
+    - time: 0.075
       value: {fileID: 2144489368, guid: 6363f808fe75db94f986d90e67f3d8df, type: 3}
-    - time: 0.5
+    - time: 0.375
       value: {fileID: -1436698529, guid: 6363f808fe75db94f986d90e67f3d8df, type: 3}
-    - time: 0.6
+    - time: 0.425
       value: {fileID: -728847106, guid: 6363f808fe75db94f986d90e67f3d8df, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 60
+  m_SampleRate: 40
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -61,7 +61,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.6166667
+    m_StopTime: 0.45000002
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -88,21 +88,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.033333335
-    functionName: Log
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.36666667
-    functionName: Log
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.6
+  - time: 0.05
     functionName: Log
     data: 
     objectReferenceParameter: {fileID: 0}

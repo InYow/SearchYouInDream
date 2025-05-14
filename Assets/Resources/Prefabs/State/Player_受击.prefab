@@ -82,8 +82,8 @@ MonoBehaviour:
   windTypeSectionClipList_D: []
   inputWindTypeSectionClipList_D: []
   hitFly: {fileID: 0}
-  slowtime: 0.4
-  slowfactor: 0
+  slowtime: 0.45
+  slowfactor: 0.2
   time: 0
 --- !u!114 &6540127058123034852
 MonoBehaviour:

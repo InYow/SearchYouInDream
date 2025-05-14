@@ -21,29 +21,25 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 560419511, guid: 3428e389cfa963947964281c28162654, type: 3}
-    - time: 0.033333335
+    - time: 0.025
       value: {fileID: -809239859, guid: 3428e389cfa963947964281c28162654, type: 3}
     - time: 0.05
       value: {fileID: -1721636998, guid: 3428e389cfa963947964281c28162654, type: 3}
-    - time: 0.06666667
+    - time: 0.075
       value: {fileID: 1962982932, guid: 3428e389cfa963947964281c28162654, type: 3}
     - time: 0.1
       value: {fileID: -1532446156, guid: 3428e389cfa963947964281c28162654, type: 3}
-    - time: 0.13333334
+    - time: 0.125
       value: {fileID: 1962982932, guid: 3428e389cfa963947964281c28162654, type: 3}
-    - time: 0.4
+    - time: 0.375
       value: {fileID: -2104287286, guid: 3428e389cfa963947964281c28162654, type: 3}
-    - time: 0.48333332
+    - time: 0.425
       value: {fileID: 1444015502, guid: 3428e389cfa963947964281c28162654, type: 3}
-    - time: 0.55
-      value: {fileID: -277964189, guid: 3428e389cfa963947964281c28162654, type: 3}
-    - time: 0.6333333
-      value: {fileID: 811138175, guid: 3428e389cfa963947964281c28162654, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 60
+  m_SampleRate: 40
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -66,14 +62,12 @@ AnimationClip:
     - {fileID: 1962982932, guid: 3428e389cfa963947964281c28162654, type: 3}
     - {fileID: -2104287286, guid: 3428e389cfa963947964281c28162654, type: 3}
     - {fileID: 1444015502, guid: 3428e389cfa963947964281c28162654, type: 3}
-    - {fileID: -277964189, guid: 3428e389cfa963947964281c28162654, type: 3}
-    - {fileID: 811138175, guid: 3428e389cfa963947964281c28162654, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.65
+    m_StopTime: 0.45000002
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -100,21 +94,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.06666667
-    functionName: Log
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.4
-    functionName: Log
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.6333333
+  - time: 0.1
     functionName: Log
     data: 
     objectReferenceParameter: {fileID: 0}

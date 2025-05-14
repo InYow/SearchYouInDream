@@ -641,7 +641,7 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 8.5
+      value: 14.3
       inSlope: -0.07830585
       outSlope: Infinity
       tangentMode: 97
