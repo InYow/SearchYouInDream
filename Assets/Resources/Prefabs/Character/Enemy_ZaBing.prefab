@@ -1177,13 +1177,14 @@ MonoBehaviour:
       parentIndex: 
       startIndex: 
       variableStartIndex: 
-      JSONSerialization: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"FoundPlayer","IsShared":true,"IsDynamic":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"PlayerTransform","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanExecute","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bInCD","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bIsGetHurt","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanAttack","IsShared":true,"BooleanmValue":false}]}'
+      JSONSerialization: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"FoundPlayer","IsShared":true,"IsDynamic":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"PlayerTransform","IsShared":true,"TransformmValue":0},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanExecute","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bInCD","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bIsGetHurt","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanAttack","IsShared":true,"BooleanmValue":false}]}'
       fieldSerializationData:
         typeName: []
         fieldNameHash: 
         startIndex: 
         dataPosition: 
-        unityObjects: []
+        unityObjects:
+        - {fileID: 0}
         byteData: 
         byteDataArray: 
       Version: 1.7.12
@@ -1238,7 +1239,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  endReachedDistance: 0.55
+  endReachedDistance: 0.8
   whenCloseToDestination: 0
   rvoDensityBehavior:
     enabled: 1
@@ -1258,9 +1259,9 @@ MonoBehaviour:
     visualizeSensitivity: 0
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.85
+  slowdownDistance: 0.1
   pickNextWaypointDist: 2
-  alwaysDrawGizmos: 0
+  alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
   preventMovingBackwards: 0
   constrainInsideGraph: 0

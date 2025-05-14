@@ -6,118 +6,112 @@ namespace BehaviorTreeExtension
 {
     public class BTAction_RandomPatrol : Action
     {
-        public float PatrolRange;
+        public float PatrolRange = 5.0f;
         
         private Enemy entity;
         private AIPath aiPath;
         private Animator animator;
-        
-        private static bool firstRun = true;
-        private static Vector3 lastMoveDirection; 
+        private float randomAngle = 20.0f;
+        private Vector3 lastMoveDirection;
+
         public override void OnAwake()
         {
             base.OnAwake();
             entity = GetComponent<Enemy>();
             aiPath = entity.aiPath;
             animator = entity.GetComponent<Animator>();
+            lastMoveDirection = Vector3.zero;
         }
-      
+
         public override void OnStart()
         {
             base.OnStart();
-            if (firstRun)
+
+            Vector3 reflected = GetReflectedDirectionFromBoundary(entity.transform.position);
+            if (reflected == Vector3.zero)
             {
-                float r = Random.Range(0,1);
-                aiPath.destination = Random.insideUnitCircle*(r*PatrolRange);
-                lastMoveDirection = (aiPath.destination - entity.transform.position).normalized;
-                firstRun = false;
+                // 非边界位置，使用随机方向
+                Vector2 random = Random.insideUnitCircle.normalized;
+                lastMoveDirection = new Vector3(random.x,random.y, 0.0f);
             }
             else
             {
-                int type = IsInBoundGraphNode(entity.transform.position);
-                switch (type)
-                {
-                    case 0:
-                        aiPath.destination = lastMoveDirection*PatrolRange;
-                        break;
-                    case 1: //left
-                        lastMoveDirection.x *= -1;
-                        break;
-                    case 2: //right
-                        lastMoveDirection.x *= -1;
-                        break;
-                    case 3: //bottom
-                        lastMoveDirection.y *= -1;
-                        break;
-                    case 4: //top
-                        lastMoveDirection.y *= -1;
-                        break;
-                }
-                aiPath.destination = lastMoveDirection*PatrolRange;
-                lastMoveDirection = (aiPath.destination - entity.transform.position).normalized;
+                lastMoveDirection = reflected; //Vector3.Reflect(lastMoveDirection,reflected).normalized;
             }
-            Debug.Log(lastMoveDirection);
+
+            Vector3 targetPos = entity.transform.position + lastMoveDirection * Random.Range(0.6f,1.0f)*PatrolRange;
+            aiPath.destination = targetPos;
             aiPath.canMove = true;
-            animator.SetFloat("MoveSpeed",aiPath.maxSpeed);
+            
+            animator.SetFloat("MoveSpeed", aiPath.maxSpeed);
         }
 
         public override TaskStatus OnUpdate()
         {
-            //达到位置后结束任务
             if (aiPath.reachedEndOfPath)
             {
                 return TaskStatus.Success;
             }
-        
+
             Vector3 dir = Vector3.Normalize(aiPath.destination - entity.transform.position);
-            animator.SetFloat("MoveSpeed",aiPath.maxSpeed);
+            animator.SetFloat("MoveSpeed", aiPath.maxSpeed);
+
             if (dir.x < 0)
             {
-                entity.gameObject.transform.localScale = new Vector3(-1, 1, 1);
+                entity.transform.localScale = new Vector3(-1, 1, 1);
             }
-            else if(dir.x > 0)
+            else if (dir.x > 0)
             {
-                entity.gameObject.transform.localScale = new Vector3(1, 1, 1);
+                entity.transform.localScale = new Vector3(1, 1, 1);
             }
-        
+
             return TaskStatus.Running;
         }
 
-        private int IsInBoundGraphNode(Vector3 position)
-        {
-            var nodeInfo = AstarPath.active.GetNearest(position);
-            var gridGraph = AstarPath.active.data.gridGraph;
-            uint nodeIndex = nodeInfo.node.NodeIndex;
-            uint nodeY = nodeIndex % (uint)gridGraph.width;
-            uint nodeX = (nodeIndex-nodeY) / (uint)gridGraph.width;
-            uint height = (uint)gridGraph.size.y;
-            
-            if ((nodeX <= 1 || nodeX >= gridGraph.width) || 
-                (nodeY <= 1 || nodeY >= height))
-            {
-                if (nodeX <= 1)
-                {
-                    return 1; //left
-                }
-                if (nodeX >= gridGraph.width)
-                {
-                    return 2;//right
-                }
-                if (nodeY <= 1)
-                {
-                    return 3;//bottom
-                }
-                return 4;//top
-            }
-            return 0;
-        }
-        
         public override void OnEnd()
         {
             aiPath.canMove = false;
-            animator.SetFloat("MoveSpeed",0);
-            
+            animator.SetFloat("MoveSpeed", 0);
+
             base.OnEnd();
+        }
+
+        /// <summary>
+        /// 如果敌人在边界上，返回一个反射方向（远离边界）；否则返回 Vector3.zero。
+        /// </summary>
+        private Vector3 GetReflectedDirectionFromBoundary(Vector3 position)
+        {
+            var gridGraph = AstarPath.active.data.gridGraph;
+            var nodeInfo = AstarPath.active.GetNearest(position);
+            var gridNode = nodeInfo.node as GridNode;
+
+            if (gridNode == null) return Vector3.zero;
+
+            int x = gridNode.XCoordinateInGrid;
+            int z = gridNode.ZCoordinateInGrid;
+
+            int width = gridGraph.width;
+            int depth = gridGraph.depth;
+
+            Vector3 reflectDir = Vector3.zero;
+
+            // 检查四周格子是否越界（不可访问）
+            if (x <= 0) reflectDir += Vector3.right;
+            else if (x >= width - 1) reflectDir += Vector3.left;
+
+            if (z <= 0) reflectDir += Vector3.up;
+            else if (z >= depth - 1) reflectDir += Vector3.down;
+
+            reflectDir = reflectDir.normalized;
+            
+            float t = Random.value; // [0, 1] 均匀分布
+            t = Mathf.Sqrt(t);      // 变成 [0, 1] 的「两头高中间低」分布
+            float angleOffset = Mathf.Lerp(-randomAngle, randomAngle, t); // 映射回角度区间
+            
+            Quaternion q = Quaternion.AngleAxis(angleOffset, Vector3.forward);
+            reflectDir = q * reflectDir;
+
+            return reflectDir.normalized;
         }
     }
 }

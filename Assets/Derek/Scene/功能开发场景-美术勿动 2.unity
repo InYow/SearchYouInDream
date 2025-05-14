@@ -1914,14 +1914,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 2.33633, y: -1.0140009}
+    - - {x: 2.0295882, y: -0.79489994}
       - {x: 7.6895638, y: -4.8525734}
       - {x: 8.361161, y: -4.8621964}
       - {x: 2.763237, y: -0.6059089}
       - {x: -0.5891066, y: -0.5253093}
       - {x: -0.5877852, y: -0.80901706}
       - {x: 0.7752644, y: -0.80901694}
-      - {x: 1.1579733, y: -1.0175476}
+      - {x: 1.654602, y: -0.7838397}
 --- !u!1 &191121208
 GameObject:
   m_ObjectHideFlags: 0
@@ -3089,7 +3089,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 957254644338267105, guid: 259cee07f351cbc49acdc8d53f2e1214, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 957254644338267109, guid: 259cee07f351cbc49acdc8d53f2e1214, type: 3}
       propertyPath: m_RootOrder
@@ -3500,7 +3500,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3
+  orthographic size: 5.29
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3524,7 +3524,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.49938, y: -7.72916, z: -10}
+  m_LocalPosition: {x: -11.862024, y: -7.2424283, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4054,8 +4054,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e2d151d94725924ea3767fd0755bf6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testcamera: {fileID: 681342328}
-  testsize: 3
   virtualCamera: {fileID: 0}
   StartLenOrthoSize: 0
   EndLenOrthoSize: 0
@@ -4502,7 +4500,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589571560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.47, y: -9.25, z: 0}
+  m_LocalPosition: {x: -12.03, y: -8.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12228,7 +12226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1073741824
   data:
-    dataString: UEsDBBQAAAgIAABAIezpfqXd0QIAABIGAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1v4jAQ/SvI5wUFaCnd2y5Q2kNbVLrqYenBTSbEwtiRPwq04r/vjOOQgLQIKc6brzfPM/lmQtkSUqfN3IjsUWfAfnbYg9VbcEakBLIfncbrHvZ8rdVSfEHt/CYyV5ATDz4v3AmNeJ/C6jy/1FqS8yjpJfQbjtHqlci12c6yNUy0dRbtOZcW0GS0ozQKoe8O2+OjezNA/ICnwU2Cpy883SadIx5TUA5My7Xfq327497VVfSunL1KJd+WkFELTcywibnujYKnwv6iU9IjvqmWUtjIirlDGdqf8NJ6bA4dMsGx3UCFui9ArAtHjNvBz3lugVDqwvDDVBhUrcrKfutKyi23m4rcJ5ee6lz3B4FVlfTxv/bc6O19XbifUBFXiHTzwg8pt66lcRuenjP3asflhn9IeCtAPem50V5lrVhvYTDFd2c8tJubFJBuGrwiewH6spE9iZrXN9rtd47H0P9+6aA8NZL0rhr0jwW7lDrIH3OSJSK3lAsMXt4DNhSmyMYKiBJJjH/l6/a4RcOdMNahKaoQUfJd4B1BBiqFqHyXHBTR+9DeUC42C1xJDe8m2igIcCRYguLSHRaY0V0OwYWtxevCcsdpBSO7aKs36yIkwI1/klyYFnp3um2D42vDTNenv+90CbbQu0ewxbN3UqiW2mR4QoEnWqlqdtti1mFLb3KetsIc7J03MOWOh2pIByesPVYWtQwRyktJwxwaCIywAfq/k74Fx7oywOxJq7B7Z89Af+1Fdr4jjPPkIxuN+3kOeZKOr7v8ZjjoD2AwHI2G4xyAhR0SCuXmclHpFW8Jp0s1vSjcF8pIH8jO3PAyrG1m+G4uvra6dfNC5XqZGgD1XGU4NQsGi+AHJptlAttcgnNChblk3ysmdbqBbHVKtArCzvbO8FWTZcVK8akdISs2CR/CFSP4tJI4up8CdlT8LM6CxLuD7FVI2PKSbMmRHf8BUEsDBBQAAAgIAABAIezasHeYbAAAAHcAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNUz1jPRUVBKL0osyCgGChiCOKWZKSB2tFJiokFSipmFYVpaappBsoWpbqK5sZGhUaqRsZmZsUVaaqpSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAEAh7Ol+pd3RAgAAEgYAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAEAh7Nqwd5hsAAAAdwAAAAkAJAAAAAAAAAAAAAAAHgMAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAADVAwAAAAA=
+    dataString: UEsDBBQAAAgIAABAIex/MS6T1AIAABcGAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1v4jAQ/SvI5wWFsAW6t12gtIe2aOmqh6UHN5kQC2NH/ijQiv++M44DAWkRUpyZeTNv3ozzxYSyFWROm7kR+aPOgf3osAert+CMyMjIvnXOUfew52utluITmuBXkbuSgniI+c2d0GjvE6zJ81OtJQUnaPRKFNpsZ/kaJto6i+aCSwvoMtoRWqHpq8P2+OjeEuSAp3REp0883SadIx4zUA5MKzTtjW7pN+pHSHfcG0RMDfEqk3xbQU78z8h00PseIYPeOOQYDwNAYY8xNukNb6iqllLYyJG5QxU0mPDKeuwQA3LBsedAjHiUINaloyJt8HNRWHBREMMPU2FQujor+6VrPbfcbmqSH1x6qnPTTwOtOunjf/2F0dv7pnA/oSKuFNnmNz9k3LqW4m3z9JK5VzsuN/xdwmsJ6knPjfYqb2G9hXSK7854aDc3KSHbnO012Sujr87yNxNu5tvtd47H0P9+6aA6NZKEKUXrHwt2KXWQP+YkT7SErQGD03vAhsJO2VgBrUQS8S983V6+6LgTxjp0RRWilWIXOCPIQWUQle9SgCJ679obysVmgSup4d1EGwXBHAlWoLh0hwVmdNdLcOVr8bry3HG6h5Fd9DXX6woSzOf4JLlyLfTuNG2D62vDTjenv280BFvq3SPY8tk7KVRLbXI8ocATrVS9u20xG9jSm4JnLZiDvfMGptzxUA3p4Ia118qilgGhvJS0zKGBwAgboP8b6VtyrCuDmT1pFe7exTPQX3uRX94Rxnnyng/H/aKAIsnGN10+GqT9FNLBcDgYFwAs3CGhUG4uF7VecUq4Xerci8L7QhnpK9mZG16Fa5sbvpuLz61uTV6oQi8zA6Ce6wynZsFgEfzC5LNcYJtLcE6osJfsa8WkzjaQr06JVkHY2d4ZvjpnWbFKfGhHlhWbhM/iipH5dCVxdT8E7Kj4Bc6CxNlB/iIkbHlFvuTIjv8AUEsDBBQAAAgIAABAIezasHeYbAAAAHcAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNUz1jPRUVBKL0osyCgGChiCOKWZKSB2tFJiokFSipmFYVpaappBsoWpbqK5sZGhUaqRsZmZsUVaaqpSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAEAh7H8xLpPUAgAAFwYAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAEAh7Nqwd5hsAAAAdwAAAAkAJAAAAAAAAAAAAAAAIQMAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAADYAwAAAAA=
     file_cachedStartup: {fileID: 0}
     cacheStartup: 0
   showNavGraphs: 1
@@ -14518,30 +14516,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 452090045}
     m_Modifications:
-    - target: {fileID: 8186457544752307557, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
-      propertyPath: resis
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8186457544752307557, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
-      propertyPath: health
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8186457544752307557, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
-      propertyPath: resis_Max
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8186457544752307557, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
-      propertyPath: health_Max
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8186457544752307605, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
-      propertyPath: mBehaviorSource.mTaskData.JSONSerialization
-      value: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"FoundPlayer","IsShared":true,"IsDynamic":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"PlayerTransform","IsShared":true,"TransformmValue":0},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanExecute","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bInCD","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bIsGetHurt","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanAttack","IsShared":true,"BooleanmValue":false}]}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8186457544752307605, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8186457544752307605, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
       propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[0]
       value: 
@@ -14549,10 +14523,6 @@ PrefabInstance:
     - target: {fileID: 8186457544752307610, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
       propertyPath: m_Name
       value: Enemy_ZaBing (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8186457544752307610, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8186457544752307614, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
       propertyPath: m_RootOrder
@@ -15958,7 +15928,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960592877}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.342461, y: -7.729165, z: -10}
+  m_LocalPosition: {x: -11.862024, y: -7.2424283, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16026,7 +15996,7 @@ MonoBehaviour:
   m_Follow: {fileID: 915952803}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 3
+    OrthographicSize: 5.29
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0

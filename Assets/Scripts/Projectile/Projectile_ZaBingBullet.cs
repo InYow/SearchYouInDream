@@ -30,7 +30,8 @@ public class Projectile_ZaBingBullet : ProjectileBase
         _rb = GetComponent<Rigidbody2D>();
         
         shadwOriginalY = shadowTransform.position.y;
-        Quaternion rotation = Quaternion.AngleAxis(emmitYawAngle, Vector3.forward);
+        Vector3 axis = direction.x > 0 ? Vector3.forward : Vector3.back;
+        Quaternion rotation = Quaternion.AngleAxis(emmitYawAngle, axis);
         Vector3 velocityDirection = (rotation * direction).normalized;
         velocity = velocityDirection * initialSpeed; // 初始速度
         
