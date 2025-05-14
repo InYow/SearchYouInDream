@@ -1,4 +1,6 @@
-﻿namespace 敌人
+﻿using UnityEngine;
+
+namespace 敌人
 {
     public class STEnemy_StunEnd : STEnemy_PlayTimelineAsset
     {
@@ -19,7 +21,8 @@
 
         public override void StateExit(Entity entity)
         {
-            base.StateStart(entity);
+            Debug.LogWarning("ExitBreakStun");
+            Destroy(this.gameObject);
         }
 
     }
