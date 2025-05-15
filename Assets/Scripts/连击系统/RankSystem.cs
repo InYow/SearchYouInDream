@@ -63,14 +63,14 @@ public class RankSystem : MonoBehaviour
         ranks = new float[7]
         {
             //-1,  //F
-            8,  //E
-            8,  //D
-            8,  //C
-            12,  //B
-            12,  //A
-            12,  //S
+            10,  //E
+            10,  //D
+            10,  //C
+            10,  //B
+            10,  //A
+            10,  //S
             //12,  //SS
-            20,  //O
+            15,  //O
             //15,  //X
         };
     }
@@ -105,7 +105,7 @@ public class RankSystem : MonoBehaviour
 
     public static void Angry()
     {
-        UpLevelRank(); //提升一个评级
+        AddRankValue(6f); //增加评值
         rankSystem.t = rankSystem.time; //重置评值降低时间
     }
 

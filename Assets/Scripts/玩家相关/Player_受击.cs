@@ -49,7 +49,7 @@ public class Player_受击 : State
 
         //镜头推近
         var currentVirtualCamera = Cinemachine.CinemachineCore.Instance.GetActiveBrain(0).ActiveVirtualCamera;
-        CameraZone.SetLenOrthoSize(currentVirtualCamera as Cinemachine.CinemachineVirtualCamera, 3.5f);
+        // CameraZone.SetLenOrthoSize(currentVirtualCamera as Cinemachine.CinemachineVirtualCamera, 3.5f);
     }
 
     public override void UPStateBehaviour(Entity entity)

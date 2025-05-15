@@ -33,7 +33,7 @@ public class BFPlayerGuideBreakAttack : Buff
         if (Input.GetKeyDown(KeyCode.U))
         {
             var currentVirtualCamera = Cinemachine.CinemachineCore.Instance.GetActiveBrain(0).ActiveVirtualCamera;
-            CameraZone.SetLenOrthoSize(currentVirtualCamera as Cinemachine.CinemachineVirtualCamera, 3.5f);
+            //CameraZone.SetLenOrthoSize(currentVirtualCamera as Cinemachine.CinemachineVirtualCamera, 3.5f);
 
             击破Canvas.ContinueAnimation();
         }

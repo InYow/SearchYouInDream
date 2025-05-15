@@ -10,6 +10,6 @@ public class CameraZoneBehaviour : PlayableBehaviour
         base.OnBehaviourPlay(playable, info);
         if (!Application.isPlaying)
             return;
-        CameraZone.OriginalLenOrthoSize();
+        //CameraZone.OriginalLenOrthoSize();
     }
 }

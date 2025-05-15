@@ -288,8 +288,8 @@ MonoBehaviour:
   m_Name: CheckBoxClipAsset(Clone)(Clone)
   m_EditorClassIdentifier: 
   template:
-    boxSize: {x: 1.5, y: 0.6}
-    boxOffset: {x: 0.5, y: 0.3}
+    boxSize: {x: 3.3, y: 0.18}
+    boxOffset: {x: 1.85, y: 0.05}
     attackLayer:
       serializedVersion: 2
       m_Bits: 64

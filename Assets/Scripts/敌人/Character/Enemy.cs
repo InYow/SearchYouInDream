@@ -32,7 +32,7 @@ public class Enemy : Entity
 
     public void AllowEnemyAttack(bool allow)
     {
-        behaviourTree.SetVariableValue("bCanAttack",allow);
+        behaviourTree.SetVariableValue("bCanAttack", allow);
     }
 
     protected virtual void DetectPlayer()
@@ -46,7 +46,7 @@ public class Enemy : Entity
         Debug.Log("LosePlayer");
         EnemyController.instance.UnregisterEnemy(this);
     }
-    
+
     public override void GetHurt(Entity entity, CheckBox attackBox)
     {
         Debug.Log(entity.name);
@@ -55,7 +55,7 @@ public class Enemy : Entity
             health -= entity.attackValue;
 
             GetHurtVFX();
-            SoundEffectManager.PlaySFX("命中", transform);
+            SoundEffectManager.PlaySFX01(transform);
 
             if (transBreakStun || beingBreakStun)
             {
@@ -78,7 +78,7 @@ public class Enemy : Entity
             health -= entity.attackValue;
 
             GetHurtVFX();
-            SoundEffectManager.PlaySFX("命中", transform);
+            SoundEffectManager.PlaySFX01(transform);
 
             if (transBreakStun || beingBreakStun)
             {
@@ -101,7 +101,7 @@ public class Enemy : Entity
         stateParam.isInCD = inCD.Value;
         var disFromPlayer = behaviourTree.GetVariable("DistanceFromPlayer") as SharedFloat;
         stateParam.distanceFromPlayer = disFromPlayer.Value;
-        
+
         return stateParam;
     }
 }

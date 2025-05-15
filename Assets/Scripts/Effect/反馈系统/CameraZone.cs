@@ -38,37 +38,9 @@ public class CameraZone : MonoBehaviour
 
     private void Update()
     {
-        if (virtualCamera == null)
-            return;
-        if (setting)
-        {
-            _t += Time.unscaledDeltaTime;
-            virtualCamera.m_Lens.OrthographicSize = Mathf.Lerp(StartLenOrthoSize, EndLenOrthoSize, _t / t);
-        }
-        else
-        {
-            _t += Time.unscaledDeltaTime;
-            virtualCamera.m_Lens.OrthographicSize = Mathf.Lerp(EndLenOrthoSize, StartLenOrthoSize, _t / t);
-        }
     }
 
-    public static void SetLenOrthoSize(CinemachineVirtualCamera camera, float targetSize)
-    {
-        Instance.setting = true;
-        Instance.virtualCamera = camera;
-        Instance.StartLenOrthoSize = camera.m_Lens.OrthographicSize;
-        Instance.EndLenOrthoSize = targetSize;
-        Instance.t = Mathf.Abs(Instance.StartLenOrthoSize - Instance.EndLenOrthoSize) / Instance.speed;
-        Instance._t = 0f;
-    }
 
-    public static void OriginalLenOrthoSize()
-    {
-        Instance.setting = false;
-        Instance.EndLenOrthoSize = Instance.virtualCamera.m_Lens.OrthographicSize;
-        Instance.t = Mathf.Abs(Instance.StartLenOrthoSize - Instance.EndLenOrthoSize) / Instance.originSpeed;
-        Instance._t = 0f;
-    }
 
     public static void SetSpeed(float speed)
     {
