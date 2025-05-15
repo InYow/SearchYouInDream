@@ -15,7 +15,8 @@ public class STEnemy_WarriorDash : State
     private Vector3 targetPosition;
 
     private bool shouldBreak = false;
-    
+    private float maxDashTime = 3.5f;
+    private float startDashTime;
     private bool isDashing = false;
     private bool isDashEnd = false;
     
@@ -52,7 +53,7 @@ public class STEnemy_WarriorDash : State
         {
             dashEnemy.transform.localScale = new Vector3(1, 1, 1);
         }
-        
+        startDashTime = Time.time;
         playableDirector.playableAsset = dashStartAsset;
         BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
         playableDirector.Play();
@@ -64,9 +65,20 @@ public class STEnemy_WarriorDash : State
     {
         if (isDashing)
         {
+            if (Time.time - startDashTime > maxDashTime)
+            {
+                dashEnemy._rb.velocity = Vector2.zero;
+                isDashing = false;
+                playableDirector.playableAsset = dashEndAsset;
+                playableDirector.extrapolationMode = DirectorWrapMode.Hold;
+                BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
+                playableDirector.Play();
+            }
+            
             float distance = (entity.transform.position - targetPosition).magnitude;
             if (distance <= stopDistance)
             {
+                dashEnemy._rb.velocity = Vector2.zero;
                 isDashing = false;
                 playableDirector.playableAsset = dashEndAsset;
                 playableDirector.extrapolationMode = DirectorWrapMode.Hold;

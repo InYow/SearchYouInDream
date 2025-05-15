@@ -6,52 +6,58 @@ using UnityEngine.Rendering.Universal;
 namespace PostProcessingScripts.Scripts
 {
     public class RenderFeatureRadialBlur : ScriptableRendererFeature
-    {class RadialBlurPass : ScriptableRenderPass
     {
-        private Material material;
-        private RenderTargetIdentifier source;
-        private RenderTargetIdentifier tempTexture;
-        private int tempTextureID = Shader.PropertyToID("_TempTex");
-
-        public RadialBlurPass(Material mat)
+        class RadialBlurPass : ScriptableRenderPass
         {
-            material = mat;
-            renderPassEvent = RenderPassEvent.AfterRenderingTransparents;
+            private Material material;
+            private RenderTargetIdentifier source;
+            private RenderTargetIdentifier tempTexture;
+            private int tempTextureID = Shader.PropertyToID("_TempTex");
+    
+            public RadialBlurPass(Material mat)
+            {
+                material = mat;
+                renderPassEvent = RenderPassEvent.AfterRenderingTransparents;
+            }
+    
+            public void Setup(RenderTargetIdentifier source)
+            {
+                this.source = source;
+            }
+    
+            public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
+            {
+                if (material == null) return;
+    
+                VolumeStack stack = VolumeManager.instance.stack;
+                PostProcessingRadialBlur blurEffect = stack.GetComponent<PostProcessingRadialBlur>();
+
+                if (!blurEffect.IsActive())
+                {
+                    material.SetFloat("_BlurStrength", 0);
+                    material.SetInt("_RadialLoopCount", 0);
+                    return;
+                }
+                
+                CommandBuffer cmd = CommandBufferPool.Get("Radial Blur Effect");
+                RenderTextureDescriptor opaqueDesc = renderingData.cameraData.cameraTargetDescriptor;
+    
+                cmd.GetTemporaryRT(tempTextureID, opaqueDesc);
+                tempTexture = new RenderTargetIdentifier(tempTextureID);
+    
+                material.SetInt("_RadialLoopCount", blurEffect.loop.value);
+                material.SetFloat("_BlurStrength", blurEffect.blur.value);
+                material.SetFloat("_CenterAffactor", blurEffect.radialSmoothness.value);
+                material.SetVector("_RadialCenter", blurEffect.radialCenter.value);
+    
+                cmd.Blit(source, tempTexture, material);
+                cmd.Blit(tempTexture, source);
+    
+                context.ExecuteCommandBuffer(cmd);
+                CommandBufferPool.Release(cmd);
+                cmd.ReleaseTemporaryRT(tempTextureID);
+            }
         }
-
-        public void Setup(RenderTargetIdentifier source)
-        {
-            this.source = source;
-        }
-
-        public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
-        {
-            if (material == null) return;
-
-            CommandBuffer cmd = CommandBufferPool.Get("Radial Blur Effect");
-            RenderTextureDescriptor opaqueDesc = renderingData.cameraData.cameraTargetDescriptor;
-
-            cmd.GetTemporaryRT(tempTextureID, opaqueDesc);
-            tempTexture = new RenderTargetIdentifier(tempTextureID);
-
-            VolumeStack stack = VolumeManager.instance.stack;
-            PostProcessingRadialBlur blurEffect = stack.GetComponent<PostProcessingRadialBlur>();
-
-            if (!blurEffect.IsActive()) return;
-
-            material.SetInt("_RadialLoopCount", blurEffect.loop.value);
-            material.SetFloat("_BlurStrength", blurEffect.blur.value);
-            material.SetFloat("_CenterAffactor", blurEffect.radialSmoothness.value);
-            material.SetVector("_RadialCenter", blurEffect.radialCenter.value);
-
-            cmd.Blit(source, tempTexture, material);
-            cmd.Blit(tempTexture, source);
-
-            context.ExecuteCommandBuffer(cmd);
-            CommandBufferPool.Release(cmd);
-            cmd.ReleaseTemporaryRT(tempTextureID);
-        }
-    }
 
     RadialBlurPass radialBlurPass;
     public Material material;

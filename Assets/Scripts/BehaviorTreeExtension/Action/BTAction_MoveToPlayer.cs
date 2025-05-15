@@ -15,6 +15,7 @@ public class BTAction_MoveToPlayer : Action
     public SharedTransform targetPosition;
     [UnityEngine.Tooltip("距离目标多远时会停下")]public float tolerance = 0.1f;
     [UnityEngine.Tooltip("与TargetPosition的距离")]public float distanceWithTarget;
+    [UnityEngine.Tooltip("Y轴上的偏移量，>0")]public float yOffset = 0.15f;
     
     
     
@@ -51,7 +52,7 @@ public class BTAction_MoveToPlayer : Action
         }
 
         Vector3 distance = aiPath.destination - entity.transform.position;
-        if (distance.magnitude < tolerance)
+        if (distance.magnitude <= tolerance)
         {
             return TaskStatus.Success;
         }
@@ -81,6 +82,6 @@ public class BTAction_MoveToPlayer : Action
         Vector3 targetPos = targetPosition.Value.position; 
         Vector3 targetDir = targetPosition.Value.position - entity.transform.position;
         float offsetX = targetDir.x > 0 ?  -distanceWithTarget : distanceWithTarget;
-        return targetPos+new Vector3(offsetX,0,0);
+        return targetPos+new Vector3(offsetX,-yOffset,0);
     }
 }
