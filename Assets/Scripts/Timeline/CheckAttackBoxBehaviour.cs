@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Playables;
 
 [Serializable]
-public class CheckBoxBehaviour : PlayableBehaviour
+public class CheckAttackBoxBehaviour : PlayableBehaviour
 {
     public Vector2 boxSize = new Vector2(1f, 0.5f); //矩形区域大小
     public Vector2 boxOffset = new Vector2(0f, 0f);
@@ -17,16 +17,15 @@ public class CheckBoxBehaviour : PlayableBehaviour
     public override void OnBehaviourPlay(Playable playable, FrameData info)
     {
         base.OnBehaviourPlay(playable, info);
-
-        if (Application.isPlaying)
-        {
-            // 运行时模式的逻辑
-            OnBehaviourPlay_Runtime(playable, info);
-        }
-        else
+        if (!Application.isPlaying)
         {
             // 编辑器模式的逻辑
             OnBehaviourPlay_Editor(playable, info);
+        }
+        else
+        {
+            // 运行时模式的逻辑 
+            OnBehaviourPlay_Runtime(playable, info);
         }
     }
 
@@ -37,21 +36,19 @@ public class CheckBoxBehaviour : PlayableBehaviour
     {
         Vector2 boxCenter = (Vector2)entity_master.transform.position + new Vector2(boxOffset.x * entity_master.GetFlipX().x, boxOffset.y);
         Collider2D[] hits = Physics2D.OverlapBoxAll(boxCenter, boxSize, 0f, attackLayer);
-        // 绘制检测区域的线框，仅用于可视化
-        DrawWireCube.SetWireCubePropty(boxCenter, boxSize);
+        DebugAfterBuild.A();
 
+        DebugAfterBuild.B();
         // 处理区域内的 List<Entity>
         if (hits.Length > 0)
         {
+            DebugAfterBuild.C();
             foreach (Collider2D col in hits)
             {
                 var e = col.gameObject.GetComponent<Entity>();
                 if (e != null && e != entity_master)
                 {
-                    //Debug.Log("伤害" + e.name + entity_master.stateCurrentName);
                     entity_master.Hurt(e, this);
-
-                    //RankSystem.Attack(); //增加评值
                 }
             }
         }

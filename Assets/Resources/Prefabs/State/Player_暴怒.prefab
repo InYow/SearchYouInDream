@@ -83,6 +83,7 @@ MonoBehaviour:
   inputWindTypeSectionClipList_C: []
   windTypeSectionClipList_D: []
   inputWindTypeSectionClipList_D: []
+  cameraZoneData: {fileID: 11400000, guid: dc4d85653ce782a41b5bde1e87a51014, type: 2}
 --- !u!1 &4091823273475701522
 GameObject:
   m_ObjectHideFlags: 0

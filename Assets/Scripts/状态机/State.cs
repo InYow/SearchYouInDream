@@ -386,7 +386,7 @@ public abstract class State : MonoBehaviour
         }
     }
 
-    public void PlayAttackVFX(CheckBoxBehaviour checkBoxBehaviour, List<Entity> entities)
+    public void PlayAttackVFX(CheckAttackBoxBehaviour checkBoxBehaviour, List<Entity> entities)
     {
         Debug.Log("播放特效");
         if (hitVFX != null)

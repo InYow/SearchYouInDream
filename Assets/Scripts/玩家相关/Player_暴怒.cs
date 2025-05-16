@@ -5,6 +5,7 @@ using UnityEngine.Playables;
 
 public class Player_暴怒 : State
 {
+    public CameraZoneData cameraZoneData;
     public override void StateExit(Entity entity)
     {
         Destroy(gameObject);
@@ -23,6 +24,9 @@ public class Player_暴怒 : State
         Player player = (Player)entity;
         player._rb.velocity = Vector2.zero;
         SlowMotion.StartSlow();
+
+        //镜头推近
+        CameraZone.CameraZoneUseData(cameraZoneData);
     }
 
     public override void UPStateBehaviour(Entity entity)

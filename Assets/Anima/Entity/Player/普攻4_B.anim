@@ -67,8 +67,6 @@ AnimationClip:
       value: {fileID: -1516676342, guid: 1a82c132f6a255347bfe7c3ac99e8c33, type: 3}
     - time: 1.0833334
       value: {fileID: -591317548, guid: 1a82c132f6a255347bfe7c3ac99e8c33, type: 3}
-    - time: 1.1666666
-      value: {fileID: -808487957, guid: 1a82c132f6a255347bfe7c3ac99e8c33, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -112,13 +110,12 @@ AnimationClip:
     - {fileID: -45748664, guid: 1a82c132f6a255347bfe7c3ac99e8c33, type: 3}
     - {fileID: -1516676342, guid: 1a82c132f6a255347bfe7c3ac99e8c33, type: 3}
     - {fileID: -591317548, guid: 1a82c132f6a255347bfe7c3ac99e8c33, type: 3}
-    - {fileID: -808487957, guid: 1a82c132f6a255347bfe7c3ac99e8c33, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.1833333
+    m_StopTime: 1.1
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -153,13 +150,6 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.93333334
-    functionName: Log
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 1.1666666
     functionName: Log
     data: 
     objectReferenceParameter: {fileID: 0}

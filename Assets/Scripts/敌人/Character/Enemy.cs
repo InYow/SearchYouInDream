@@ -71,7 +71,7 @@ public class Enemy : Entity
         }
     }
 
-    public override void GetHurt(Entity entity, CheckBoxBehaviour checkBoxBehaviour)
+    public override void GetHurt(Entity entity, CheckAttackBoxBehaviour checkBoxBehaviour)
     {
         if (!BuffContain("BFPlayerUnselected"))
         {

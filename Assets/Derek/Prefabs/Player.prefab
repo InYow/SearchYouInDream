@@ -379,6 +379,7 @@ MonoBehaviour:
   healthGray_LoseSpeed: 1
   speed_walk: 3
   speed_fly: 10
+  pickableItem_Pivot: {fileID: 0}
   attackResisValue: 1
   pickableItem: {fileID: 0}
   speed_throw: 10
@@ -470,8 +471,8 @@ BoxCollider2D:
   m_Offset: {x: -0.031964928, y: 0.24095231}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.9121094, y: 1.0664062}
+    pivot: {x: 0.4422875, y: 0.01020025}
+    oldSize: {x: 1.3682977, y: 1.5997657}
     newSize: {x: 0.9121094, y: 1.0664062}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

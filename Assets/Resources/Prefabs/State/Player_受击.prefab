@@ -85,6 +85,7 @@ MonoBehaviour:
   slowtime: 0.45
   slowfactor: 0.2
   time: 0
+  cameraZoneData: {fileID: 11400000, guid: 57723091811ddcc409fb8b6b2f5fce37, type: 2}
 --- !u!114 &6540127058123034852
 MonoBehaviour:
   m_ObjectHideFlags: 0

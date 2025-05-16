@@ -10,6 +10,7 @@ public class Player : Entity
     public float healthGray_LoseSpeed;
     public float speed_walk;
     public float speed_fly;
+    public Transform pickableItem_Pivot;
     public float attackResisValue;
     public PickableItem pickableItem;   //拾取的物品
     public float speed_throw;           //投掷的物品的速度
@@ -31,7 +32,7 @@ public class Player : Entity
     public bool transStun;      //进入stun布尔值
     public Entity transHitFly_SourceEntity;         //击飞源实体
     public CheckBox transHitFly_SourceAttackBox;    //击飞源攻击盒子
-    public CheckBoxBehaviour transHitFly_SourceCheckBoxBehaviour; //击飞源攻击盒子
+    public CheckAttackBoxBehaviour transHitFly_SourceCheckBoxBehaviour; //击飞源攻击盒子
 
     public bool transDefend_Achieve;//进入 弹反 布尔值
     public Entity transDefend_achieve_TgtEntity;//弹反目标
@@ -686,7 +687,7 @@ public class Player : Entity
         entity.DetectResis(this);
     }
 
-    public override void Hurt(Entity entity, CheckBoxBehaviour checkBoxBehaviour)
+    public override void Hurt(Entity entity, CheckAttackBoxBehaviour checkBoxBehaviour)
     {
         base.Hurt(entity, checkBoxBehaviour);
 
@@ -723,7 +724,7 @@ public class Player : Entity
         }
     }
 
-    public override void GetHurt(Entity entity, CheckBoxBehaviour checkBoxBehaviour)
+    public override void GetHurt(Entity entity, CheckAttackBoxBehaviour checkBoxBehaviour)
     {
         if (stateCurrentName == "Player_防御")
         {

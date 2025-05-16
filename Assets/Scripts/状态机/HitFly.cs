@@ -13,7 +13,7 @@ public class HitFly : MonoBehaviour
     [HideInInspector]
     public CheckBox sourceAttackBox;    //来源
     [HideInInspector]
-    public CheckBoxBehaviour checkBoxBehaviour; //来源
+    public CheckAttackBoxBehaviour checkBoxBehaviour; //来源
     [HideInInspector]
     public float flySpeed;              //速度
     [HideInInspector]

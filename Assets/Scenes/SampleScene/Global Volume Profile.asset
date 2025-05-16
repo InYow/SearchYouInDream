@@ -27,21 +27,18 @@ MonoBehaviour:
   m_Name: PostProcessingRadialBlur
   m_EditorClassIdentifier: 
   active: 1
+  enableEffect:
+    m_OverrideState: 1
+    m_Value: 1
   loop:
     m_OverrideState: 1
     m_Value: 5
   blur:
     m_OverrideState: 1
-    m_Value: 6.02
+    m_Value: 0
   radialSmoothness:
     m_OverrideState: 1
     m_Value: 20
-  downsample:
-    m_OverrideState: 1
-    m_Value: 1
   radialCenter:
     m_OverrideState: 1
     m_Value: {x: 0.5, y: 0.5}
-  enableEffect:
-    m_OverrideState: 1
-    m_Value: 1

@@ -34,7 +34,7 @@ public class Entity : MonoBehaviour
     public Entity transExecution_DamageSourceEntity;
     public string transExecution_Type;
     public CheckBox transExecution_AttackBox;
-    public CheckBoxBehaviour transExecution_AttackBoxBehaviour;
+    public CheckAttackBoxBehaviour transExecution_AttackBoxBehaviour;
 
     public bool transBreakStun;
     public bool beingBreakStun;
@@ -195,7 +195,7 @@ public class Entity : MonoBehaviour
         SkillManager.AddMono(1f);
         //CameraShake.Shake(new Vector3(1, 0, 0), 0.3f);
     }
-    public virtual void Hurt(Entity entity, CheckBoxBehaviour checkBoxBehaviour)
+    public virtual void Hurt(Entity entity, CheckAttackBoxBehaviour checkBoxBehaviour)
     {
         entity.GetHurt(this, checkBoxBehaviour);
         SkillManager.AddMono(1f);
@@ -222,7 +222,7 @@ public class Entity : MonoBehaviour
             }
         }
     }
-    public virtual void GetHurt(Entity entity, CheckBoxBehaviour checkBoxBehaviour)
+    public virtual void GetHurt(Entity entity, CheckAttackBoxBehaviour checkBoxBehaviour)
     {
         if (!BuffContain("BFPlayerUnselected"))
         {
@@ -290,7 +290,7 @@ public class Entity : MonoBehaviour
             transExecution_AttackBox = attackBox;
         }
     }
-    public virtual void Execution(Entity entity, CheckBoxBehaviour checkBoxBehaviour)
+    public virtual void Execution(Entity entity, CheckAttackBoxBehaviour checkBoxBehaviour)
     {
         if (checkBoxBehaviour.attacktype == AttackType.none)
         {
@@ -327,7 +327,7 @@ public class Entity : MonoBehaviour
             }
         }
     }
-    public virtual void DetectResis(Entity entity, CheckBoxBehaviour checkBoxBehaviour)
+    public virtual void DetectResis(Entity entity, CheckAttackBoxBehaviour checkBoxBehaviour)
     {
         if (entity is Player player)
         {

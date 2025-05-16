@@ -11,13 +11,16 @@ public class PickableItem : ProjectileBase
     /// <param name="entity"></param>
     public void Picked(Entity entity)
     {
-        Debug.Log(entity.name);
-        //处理
-        transform.SetParent(entity.transform, true);    //设置父对象
-        transform.localPosition = Vector3.zero;         //设置位置
-        _rb.simulated = false;                          //关闭物理模拟
-        _animator.Play("idle");                         //播放动画
-        ((Player)entity).pickableItem = this;
+        //手上没有东西
+        Player player = (Player)entity;
+        if (player.pickableItem == null)
+        {
+            transform.SetParent(player.pickableItem_Pivot, true);    //设置父对象
+            transform.localPosition = Vector3.zero;         //设置位置
+            transform.localRotation = Quaternion.identity; //设置旋转
+            _rb.simulated = false;                          //关闭物理模拟
+            _animator.Play("idle");                         //播放动画
+        }
     }
 
     /// <summary>

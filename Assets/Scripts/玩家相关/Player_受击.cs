@@ -8,6 +8,7 @@ public class Player_受击 : State
     public float slowtime = 0.4f;
     public float slowfactor = 0.5f;
     public float time;
+    public CameraZoneData cameraZoneData;
     public override void StateExit(Entity entity)
     {
         Destroy(gameObject);
@@ -48,8 +49,7 @@ public class Player_受击 : State
         VisualEffectManager.PlayEffect("红色闪光", entity.hitVFX_Pivot);
 
         //镜头推近
-        var currentVirtualCamera = Cinemachine.CinemachineCore.Instance.GetActiveBrain(0).ActiveVirtualCamera;
-        // CameraZone.SetLenOrthoSize(currentVirtualCamera as Cinemachine.CinemachineVirtualCamera, 3.5f);
+        CameraZone.CameraZoneUseData(cameraZoneData);
     }
 
     public override void UPStateBehaviour(Entity entity)
