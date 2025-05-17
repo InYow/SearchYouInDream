@@ -420,7 +420,7 @@ MonoBehaviour:
   legacy: 0
   SR_Resis: {fileID: 3011479895980352323}
   Image_Resis: {fileID: 5078220155495515369}
-  entity: {fileID: 3011479896958648880}
+  entity: {fileID: 0}
 --- !u!1 &3011479896958649039
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,7 +430,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3011479896958649035}
-  - component: {fileID: 3011479896958648880}
   - component: {fileID: 3011479896958649034}
   - component: {fileID: 3011479896958649037}
   - component: {fileID: 3011479896958649032}
@@ -439,6 +438,7 @@ GameObject:
   - component: {fileID: 3011479896958649025}
   - component: {fileID: 3011479896958649038}
   - component: {fileID: 3011479896958649029}
+  - component: {fileID: 358253564902718686}
   m_Layer: 6
   m_Name: Enemy_Boomer
   m_TagString: Untagged
@@ -467,62 +467,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3011479896958648880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3011479896958649039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f58fbda40a18064ba7b5d9f4029c74f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitVFX_List:
-  - "\u53D7\u4F24\u7279\u6548x"
-  "\u8840VFX_List":
-  - "\u88401"
-  - "\u88402"
-  hitVFX_Pivot: {fileID: 6951778664421804710}
-  camera_Pivot: {fileID: 1286714814809226640}
-  _rb: {fileID: 3011479896958649033}
-  health: 8
-  health_Max: 8
-  resis: 5
-  resis_Max: 5
-  resis_ResponSpeed: 5
-  attackValue: 1
-  breakAttackTimes: 1
-  breakAttackTimes_Max: 1
-  StartStateName: STEmpty
-  transExecution: 0
-  transExecution_DamageSourceEntity: {fileID: 0}
-  transExecution_Type: 
-  transExecution_AttackBox: {fileID: 0}
-  transExecution_AttackBoxBehaviour:
-    boxSize: {x: 1, y: 0.5}
-    boxOffset: {x: 0, y: 0}
-    attackLayer:
-      serializedVersion: 2
-      m_Bits: 64
-    attacktype: 0
-    canBreakAttackType: 0
-    entity_master: {fileID: 0}
-  transBreakStun: 0
-  beingBreakStun: 0
-  stateCurrentName: 
-  behaviourTree: {fileID: 3011479896958649024}
-  aiPath: {fileID: 3011479896958649038}
-  target: {fileID: 0}
-  sensor: {fileID: 0}
-  bFoundPlayer: 0
-  isGetHurt: 0
-  bloodVFXName: "\u8E29\u8840\u7279\u65481"
-  projectileSpawnTransform: {fileID: 8922256946697071599}
-  shootEnable: 1
-  shootCD: 5
-  shootDistance: 10
 --- !u!95 &3011479896958649034
 Animator:
   serializedVersion: 5
@@ -776,6 +720,58 @@ MonoBehaviour:
   player: {fileID: 0}
   behaviourTree: {fileID: 3011479896958649024}
   hasDetectedPlayer: 0
+--- !u!114 &358253564902718686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3011479896958649039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4303ec80b2320814e975ba8cef295d1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitVFX_List:
+  - "\u53D7\u4F24\u7279\u6548x"
+  "\u8840VFX_List":
+  - "\u88401"
+  - "\u88402"
+  hitVFX_Pivot: {fileID: 6951778664421804710}
+  camera_Pivot: {fileID: 1286714814809226640}
+  _rb: {fileID: 3011479896958649033}
+  health: 8
+  health_Max: 8
+  resis: 5
+  resis_Max: 5
+  resis_ResponSpeed: 5
+  attackValue: 1
+  breakAttackTimes: 1
+  breakAttackTimes_Max: 1
+  StartStateName: STEmpty
+  transExecution: 0
+  transExecution_DamageSourceEntity: {fileID: 0}
+  transExecution_Type: 
+  transExecution_AttackBox: {fileID: 7226625865521642980}
+  transExecution_AttackBoxBehaviour:
+    boxSize: {x: 1, y: 0.5}
+    boxOffset: {x: 0, y: 0}
+    attackLayer:
+      serializedVersion: 2
+      m_Bits: 64
+    attacktype: 0
+    canBreakAttackType: 0
+    entity_master: {fileID: 0}
+  transBreakStun: 0
+  beingBreakStun: 0
+  stateCurrentName: 
+  behaviourTree: {fileID: 3011479896958649024}
+  aiPath: {fileID: 3011479896958649038}
+  target: {fileID: 0}
+  sensor: {fileID: 3011479896958649029}
+  bFoundPlayer: 0
+  isGetHurt: 0
+  bloodVFXName: "\u8E29\u8840\u7279\u65481"
 --- !u!1 &3011479896967164343
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,7 +967,7 @@ MonoBehaviour:
   SR_Health: {fileID: 3011479896685896413}
   SR_HealthGray: {fileID: 3011479896207999896}
   Image_Health: {fileID: 2544166791580262509}
-  entity: {fileID: 3011479896958648880}
+  entity: {fileID: 0}
 --- !u!1 &3011479897393840574
 GameObject:
   m_ObjectHideFlags: 0

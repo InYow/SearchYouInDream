@@ -6,14 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/炸弹兵/Enemy_Boomer.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/炸弹兵/Enemy_Boomer.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/Boomer/BoomerEnemyBehavior.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/Boomer/BoomerEnemyBehavior.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RenderSettings/URP2D_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RenderSettings/URP2D_Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/炸弹兵/炸弹兵_待机-1-sheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/炸弹兵/炸弹兵_待机-1-sheet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/炸弹兵/炸弹兵_爆炸-1-sheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/炸弹兵/炸弹兵_爆炸-1-sheet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/炸弹兵/炸弹兵_爆炸-1-sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/炸弹兵/炸弹兵_爆炸-1-sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/炸弹兵/炸弹兵_跑步-1-sheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/炸弹兵/炸弹兵_跑步-1-sheet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_Boomer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_Boomer.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +23,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6dc3ec5737384bf59192241a1e5f1aa11d200/7f/1d760c15/Action.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6dc3ec5737384bf59192241a1e5f1aa11d200/84/6c48ac9d/Conditional.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6dc3ec5737384bf59192241a1e5f1aa11d200/88/a29849b6/Task.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Derek/Scripts/Enemy/Enemy_BossBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Derek/Scripts/Enemy/Enemy_FatBall.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Derek/Scripts/Enemy/Enemy_TieTou.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Derek/Scripts/UI/PlayerMenu.cs" root0="FORCE_HIGHLIGHTING" />
@@ -161,7 +157,8 @@
       <workItem from="1747219859262" duration="2582000" />
       <workItem from="1747278885113" duration="111000" />
       <workItem from="1747288546400" duration="4813000" />
-      <workItem from="1747406041872" duration="3968000" />
+      <workItem from="1747406041872" duration="4120000" />
+      <workItem from="1747496155658" duration="415000" />
     </task>
     <servers />
   </component>
