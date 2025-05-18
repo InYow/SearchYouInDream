@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7492383476934210789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127ba5eb4427f9b49bc1c9314daea46d, type: 3}
+  m_Name: BrokenGlassFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    material: {fileID: 2100000, guid: 9696afc60957c8e43af4fc4af88b108a, type: 2}
 --- !u!114 &-5149369809312689092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30,7 +45,8 @@ MonoBehaviour:
     debugReplacementPS: {fileID: 4800000, guid: cf852408f2e174538bcd9b7fda1c5ae7, type: 3}
   m_RendererFeatures:
   - {fileID: -5149369809312689092}
-  m_RendererFeatureMap: 3cd4cbe270c389b8
+  - {fileID: -7492383476934210789}
+  m_RendererFeatureMap: 3cd4cbe270c389b81b8b5490ecb40598
   m_UseNativeRenderPass: 0
   m_TransparencySortMode: 3
   m_TransparencySortAxis: {x: 0.75, y: 1, z: 0}
