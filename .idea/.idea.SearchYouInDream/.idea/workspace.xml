@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RenderSettings/URP2D_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RenderSettings/URP2D_Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PostProcessingScripts/Scripts/RadialBlur/PostProcessingRadialBlur.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PostProcessingScripts/Scripts/RadialBlur/PostProcessingRadialBlur.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PostProcessingScripts/Scripts/GlassCrack/BrokenGlassFeature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PostProcessingScripts/Scripts/GlassCrack/BrokenGlassFeature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PostProcessingScripts/Shader/GlassCrack/BrockenGlass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PostProcessingScripts/Shader/GlassCrack/BrockenGlass.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PostProcessingScripts/Shader/GlassCrack/GlassBreak.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PostProcessingScripts/Shader/GlassCrack/GlassBreak.shader" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +159,8 @@
       <workItem from="1747288546400" duration="4813000" />
       <workItem from="1747406041872" duration="4120000" />
       <workItem from="1747496155658" duration="1009000" />
-      <workItem from="1747547102721" duration="2074000" />
+      <workItem from="1747547102721" duration="2544000" />
+      <workItem from="1747550860974" duration="637000" />
     </task>
     <servers />
   </component>

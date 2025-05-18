@@ -25,37 +25,50 @@ public class BrokenGlassFeature : ScriptableRendererFeature
 
         public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
         {
+            var stack = VolumeManager.instance.stack;
+            var settings = stack.GetComponent<PostProcessingBrokenGlass>();
+            if (settings == null || !settings.IsActive()) return;
+
             CommandBuffer cmd = CommandBufferPool.Get(profilerTag);
             RenderTextureDescriptor desc = renderingData.cameraData.cameraTargetDescriptor;
             desc.depthBufferBits = 0;
 
             cmd.GetTemporaryRT(tempTexture.id, desc);
 
-            // 设置当前屏幕图像为 _MainTex
+            // 设置全局贴图
             cmd.SetGlobalTexture("_MainTex", source);
 
-            // 执行两次 Blit：先处理，再写回
+            // 设置材质参数
+            material.SetFloat("_DistortionStrength", settings.glassTint.value);
+            material.SetTexture("_CrackTex", settings.glassMask.value);
+            material.SetColor("_GlassColor", settings.glassColor.value);
+
+            // Blit 实际执行
             Blit(cmd, source, tempTexture.Identifier(), material);
             Blit(cmd, tempTexture.Identifier(), source);
 
             context.ExecuteCommandBuffer(cmd);
             CommandBufferPool.Release(cmd);
         }
-
     }
 
-    [System.Serializable]
-    public class BrokenGlassSettings
-    {
-        public Material material;
-    }
 
-    public BrokenGlassSettings settings = new BrokenGlassSettings();
+    public Material material;
     private BrokenGlassPass _pass;
 
     public override void Create()
     {
-        _pass = new BrokenGlassPass(settings.material, "BrokenGlassPass");
+        if (material == null)
+        {
+            Shader shader = Shader.Find("PostProcessing/RadialBlur");
+            if (shader == null)
+            {
+                Debug.LogError("未找到玻璃破碎Shader");
+                return;
+            }
+            material = new Material(shader);
+        }
+        _pass = new BrokenGlassPass(material, "BrokenGlassPass");
         _pass.renderPassEvent = RenderPassEvent.AfterRenderingTransparents;
     }
 

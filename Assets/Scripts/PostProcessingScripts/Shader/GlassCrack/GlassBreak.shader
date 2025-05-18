@@ -1,9 +1,10 @@
-Shader "Hidden/Custom/GlassBreak"
+Shader "PostProcessing/GlassBreak"
 {
     Properties
     {
          _MainTex("MainTexture",2D) = "white"{}
         _CrackTex ("Crack Texture", 2D) = "white" {}
+        _GlassColor("Glass Color",COLOR) = (1,1,1,1)
         _DistortionStrength ("Distortion Strength", Float) = 0.05
     }
     SubShader
@@ -27,6 +28,7 @@ Shader "Hidden/Custom/GlassBreak"
             TEXTURE2D(_CrackTex);
             SAMPLER(sampler_CrackTex);
             float _DistortionStrength;
+            float4 _GlassColor;
 
             struct appdata
             {
@@ -57,8 +59,8 @@ Shader "Hidden/Custom/GlassBreak"
                 float4 col = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex,distortedUV);
 
                 // 可选：叠加裂缝颜色
-                float crackAmount = 1-SAMPLE_TEXTURE2D(_CrackTex, sampler_CrackTex,i.uv).a;
-                col.rgb = lerp(col.rgb, float3(0.8, 0.8, 1), crackAmount);
+                float crackAmount = SAMPLE_TEXTURE2D(_CrackTex, sampler_CrackTex,i.uv).b;
+                col.rgb = lerp(col.rgb, _GlassColor.rgb, crackAmount);
 
                 return col;
             }

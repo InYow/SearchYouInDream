@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: BrokenGlassFeature
   m_EditorClassIdentifier: 
   m_Active: 1
-  settings:
-    material: {fileID: 2100000, guid: 9696afc60957c8e43af4fc4af88b108a, type: 2}
+  material: {fileID: 2100000, guid: 9696afc60957c8e43af4fc4af88b108a, type: 2}
 --- !u!114 &-5149369809312689092
 MonoBehaviour:
   m_ObjectHideFlags: 0
