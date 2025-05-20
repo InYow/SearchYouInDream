@@ -16,10 +16,5 @@ public class PostProcessingRadialBlur : VolumeComponent, IPostProcessComponent
 
     public bool IsActive() => enableEffect.value;
     public bool IsTileCompatible() => false;
-
-    protected override void OnDisable()
-    {
-        base.OnDisable();
-        Debug.Log("Removing PostProcessing Radial Blur");
-    }
+    
 }

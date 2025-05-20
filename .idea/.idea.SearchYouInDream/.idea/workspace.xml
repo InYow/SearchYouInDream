@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="" />
+    <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PostProcessingScripts/Scripts/GlassCrack/BrokenGlassFeature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PostProcessingScripts/Scripts/GlassCrack/BrokenGlassFeature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PostProcessingScripts/Shader/GlassCrack/BrockenGlass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PostProcessingScripts/Shader/GlassCrack/BrockenGlass.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PostProcessingScripts/Shader/GlassCrack/GlassBreak.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PostProcessingScripts/Shader/GlassCrack/GlassBreak.shader" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +23,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6dc3ec5737384bf59192241a1e5f1aa11d200/7f/1d760c15/Action.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6dc3ec5737384bf59192241a1e5f1aa11d200/84/6c48ac9d/Conditional.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6dc3ec5737384bf59192241a1e5f1aa11d200/88/a29849b6/Task.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Derek/Scripts/Enemy/Enemy_BossBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Derek/Scripts/Enemy/Enemy_FatBall.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Derek/Scripts/Enemy/Enemy_TieTou.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Derek/Scripts/UI/PlayerMenu.cs" root0="FORCE_HIGHLIGHTING" />
@@ -151,6 +157,10 @@
       <workItem from="1747219859262" duration="2582000" />
       <workItem from="1747278885113" duration="111000" />
       <workItem from="1747288546400" duration="4813000" />
+      <workItem from="1747406041872" duration="4120000" />
+      <workItem from="1747496155658" duration="1009000" />
+      <workItem from="1747547102721" duration="2544000" />
+      <workItem from="1747550860974" duration="637000" />
     </task>
     <servers />
   </component>

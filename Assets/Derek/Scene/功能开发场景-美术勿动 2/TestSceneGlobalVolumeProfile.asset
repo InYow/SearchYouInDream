@@ -14,6 +14,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   components:
   - {fileID: 7856611462055917644}
+  - {fileID: 5238434164463866904}
+--- !u!114 &5238434164463866904
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd172ab2ebdb8f24e9a243d2cc52f7d7, type: 3}
+  m_Name: PostProcessingBrokenGlass
+  m_EditorClassIdentifier: 
+  active: 1
+  enableEffect:
+    m_OverrideState: 1
+    m_Value: 1
+  glassTint:
+    m_OverrideState: 1
+    m_Value: 0.05
+  glassMask:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: a88bb7d683a86504681d84fdfa46d681, type: 3}
+    dimension: 1
+  glassColor:
+    m_OverrideState: 1
+    m_Value: {r: 0.9811321, g: 0.9493973, b: 0.9493973, a: 1}
 --- !u!114 &7856611462055917644
 MonoBehaviour:
   m_ObjectHideFlags: 3
