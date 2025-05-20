@@ -83,7 +83,7 @@ MonoBehaviour:
   inputWindTypeSectionClipList_C: []
   windTypeSectionClipList_D: []
   inputWindTypeSectionClipList_D: []
-  ExplosionRange: 2
+  ExplosionRange: 1.2
   boomerExplosionAsset: {fileID: 11400000, guid: bbea9f9e7daf600448ce3cdd30976163, type: 2}
 --- !u!114 &2708921007782620281
 MonoBehaviour:

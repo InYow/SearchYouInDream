@@ -42,7 +42,14 @@ public class STEnemy_BoomerExplosion : State
         Vector3 dir = (aiPath.destination - entity.transform.position);
         if (dir.magnitude <= ExplosionRange)
         {
-            if (!isExploing)
+            Vector3 playerDir = (targetTransform.position - entity.transform.position);
+            if (playerDir.magnitude > ExplosionRange && !isExploing)
+            {
+                aiPath.destination = targetTransform.position;
+                aiPath.canMove = true;
+                animator.SetFloat("MoveSpeed", aiPath.maxSpeed);
+            }
+            else if (!isExploing)
             {
                 aiPath.canMove = false;
                 animator.SetFloat("MoveSpeed", 0.0f); 

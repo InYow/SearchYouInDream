@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PostProcessingScripts/Scripts/GlassCrack/BrokenGlassFeature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PostProcessingScripts/Scripts/GlassCrack/BrokenGlassFeature.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PostProcessingScripts/Shader/GlassCrack/BrockenGlass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PostProcessingScripts/Shader/GlassCrack/BrockenGlass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PostProcessingScripts/Shader/GlassCrack/GlassBreak.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PostProcessingScripts/Shader/GlassCrack/GlassBreak.shader" afterDir="false" />
-    </list>
+    <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -160,7 +155,7 @@
       <workItem from="1747406041872" duration="4120000" />
       <workItem from="1747496155658" duration="1009000" />
       <workItem from="1747547102721" duration="2544000" />
-      <workItem from="1747550860974" duration="637000" />
+      <workItem from="1747550860974" duration="949000" />
     </task>
     <servers />
   </component>

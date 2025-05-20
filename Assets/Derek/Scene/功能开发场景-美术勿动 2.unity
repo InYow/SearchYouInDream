@@ -3526,7 +3526,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.651674, y: -5.7128696, z: -10}
+  m_LocalPosition: {x: -9.592766, y: -5.7128696, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4057,13 +4057,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   virtualCamera: {fileID: 0}
-  StartLenOrthoSize: 0
-  EndLenOrthoSize: 0
-  speed: 10
-  originSpeed: 15
-  setting: 0
   t: 0
-  _t: 0
+  cameraZoneData: {fileID: 0}
 --- !u!1 &572107831
 GameObject:
   m_ObjectHideFlags: 0
@@ -4409,6 +4404,7 @@ MonoBehaviour:
   healthGray_LoseSpeed: 1
   speed_walk: 3
   speed_fly: 6
+  pickableItem_Pivot: {fileID: 0}
   attackResisValue: 1
   pickableItem: {fileID: 0}
   speed_throw: 10
@@ -4584,7 +4580,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.2201357, y: 0.1364983}
-    oldSize: {x: 3.1467917, y: 1.6290654}
+    oldSize: {x: 3.5961828, y: 1.861711}
     newSize: {x: 3.4459975, y: 1.0585938}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -15999,7 +15995,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960592877}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.965553, y: -5.2740264, z: -10}
+  m_LocalPosition: {x: -9.98467, y: -5.2740264, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19109,11 +19105,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3011479896958649035, guid: 661d04d68d0cbb24c9084c878768dcc8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.97
+      value: 1.23
       objectReference: {fileID: 0}
     - target: {fileID: 3011479896958649035, guid: 661d04d68d0cbb24c9084c878768dcc8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.39
+      value: -8.29
       objectReference: {fileID: 0}
     - target: {fileID: 3011479896958649035, guid: 661d04d68d0cbb24c9084c878768dcc8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19831,7 +19827,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &8038834082752081003
 SpriteRenderer:
   m_ObjectHideFlags: 0

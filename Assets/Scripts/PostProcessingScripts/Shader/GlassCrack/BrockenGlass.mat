@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _CrackTex:
-        m_Texture: {fileID: 2800000, guid: e489c08f258f19145b3a42fb16f9ab31, type: 3}
+        m_Texture: {fileID: 2800000, guid: a88bb7d683a86504681d84fdfa46d681, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -30,7 +30,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DistortionStrength: 0.251
+    - _DistortionStrength: 0.05
     m_Colors:
-    - _GlassColor: {r: 1, g: 1, b: 1, a: 1}
+    - _GlassColor: {r: 0.9811321, g: 0.9493973, b: 0.9493973, a: 1}
   m_BuildTextureStacks: []
