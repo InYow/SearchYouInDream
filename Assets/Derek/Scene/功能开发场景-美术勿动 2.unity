@@ -3526,7 +3526,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.592766, y: -5.7128696, z: -10}
+  m_LocalPosition: {x: -7.4147725, y: -5.7128696, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4641,7 +4641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 521641263145245518, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 521641263145245554, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
       propertyPath: mBehaviorSource.mTaskData.JSONSerialization
@@ -4653,7 +4653,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 521641263145245556, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.97
+      value: 2.96
       objectReference: {fileID: 0}
     - target: {fileID: 521641263145245556, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8626,7 +8626,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1090894986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15995,7 +15995,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960592877}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.98467, y: -5.2740264, z: -10}
+  m_LocalPosition: {x: -9.940429, y: -5.2740264, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19146,6 +19146,10 @@ PrefabInstance:
     - target: {fileID: 3011479896958649039, guid: 661d04d68d0cbb24c9084c878768dcc8, type: 3}
       propertyPath: m_Name
       value: Enemy_Boomer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3011479896958649039, guid: 661d04d68d0cbb24c9084c878768dcc8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d04d68d0cbb24c9084c878768dcc8, type: 3}
