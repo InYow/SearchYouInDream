@@ -332,24 +332,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 452090045}
     m_Modifications:
     - target: {fileID: 8186457544752307605, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
-      propertyPath: mBehaviorSource.mTaskData.JSONSerialization
-      value: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"FoundPlayer","IsShared":true,"IsDynamic":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"PlayerTransform","IsShared":true,"TransformmValue":0},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanExecute","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bInCD","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bIsGetHurt","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanAttack","IsShared":true,"BooleanmValue":false}]}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8186457544752307605, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
-      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8186457544752307605, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
       propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[0]
       value: 
       objectReference: {fileID: 589571563}
     - target: {fileID: 8186457544752307610, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
       propertyPath: m_Name
       value: Enemy_ZaBing
-      objectReference: {fileID: 0}
-    - target: {fileID: 8186457544752307610, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8186457544752307614, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
       propertyPath: m_RootOrder
@@ -3089,10 +3077,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_PencilShooter
       objectReference: {fileID: 0}
-    - target: {fileID: 957254644338267105, guid: 259cee07f351cbc49acdc8d53f2e1214, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 957254644338267109, guid: 259cee07f351cbc49acdc8d53f2e1214, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3141,10 +3125,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 589571563}
-    - target: {fileID: 957254644338267118, guid: 259cee07f351cbc49acdc8d53f2e1214, type: 3}
-      propertyPath: mBehaviorSource.mTaskData.JSONSerialization
-      value: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"FoundPlayer","IsShared":true,"IsDynamic":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"PlayerTransform","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanExecute","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bInCD","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bIsGetHurt","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanAttack","IsShared":true,"BooleanmValue":false}]}'
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 259cee07f351cbc49acdc8d53f2e1214, type: 3}
 --- !u!1 &455131682
@@ -3526,7 +3506,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.4147725, y: -5.7128696, z: -10}
+  m_LocalPosition: {x: -8.799827, y: -5.7128696, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4639,25 +4619,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_TieTou
       objectReference: {fileID: 0}
-    - target: {fileID: 521641263145245518, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 521641263145245554, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
-      propertyPath: mBehaviorSource.mTaskData.JSONSerialization
-      value: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"FoundPlayer","IsShared":true,"IsDynamic":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"PlayerTransform","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanExecute","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bInCD","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bIsGetHurt","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bBingStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanAttack","IsShared":true,"BooleanmValue":false}]}'
-      objectReference: {fileID: 0}
     - target: {fileID: 521641263145245556, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 521641263145245556, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.96
+      value: 4.93
       objectReference: {fileID: 0}
     - target: {fileID: 521641263145245556, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.85
+      value: -9.22
       objectReference: {fileID: 0}
     - target: {fileID: 521641263145245556, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4690,30 +4662,6 @@ PrefabInstance:
     - target: {fileID: 521641263145245556, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 521641263145245556, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 521641263145245563, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
-      propertyPath: resis
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 521641263145245563, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
-      propertyPath: resis_Max
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 521641263145245563, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
-      propertyPath: bloodVFXName
-      value: "\u8E29\u8840\u7279\u65481"
-      objectReference: {fileID: 0}
-    - target: {fileID: 521641263145245563, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
-      propertyPath: breakAttackTimes
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8094392340386220661, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
@@ -9230,29 +9178,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &1166472703 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 521641263453388755, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
-  m_PrefabInstance: {fileID: 636481237}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1166472704 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 521641263453388754, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
-  m_PrefabInstance: {fileID: 636481237}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1166472705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1166472703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cba0ac4ddcf8ef4bb9139da19c504a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unscaleTransform: {fileID: 1166472704}
 --- !u!1 &1171849653
 GameObject:
   m_ObjectHideFlags: 0
@@ -14255,11 +14180,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5592159268507573283, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.38
+      value: 7.23
       objectReference: {fileID: 0}
     - target: {fileID: 5592159268507573283, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.96
+      value: -8.27
       objectReference: {fileID: 0}
     - target: {fileID: 5592159268507573283, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14293,33 +14218,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5592159268507573283, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5592159268507573287, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
       propertyPath: m_Name
       value: Enemy_FatBall
-      objectReference: {fileID: 0}
-    - target: {fileID: 5592159268507573287, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5592159268507573288, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
-      propertyPath: mBehaviorSource.mTaskData.JSONSerialization
-      value: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"FoundPlayer","IsShared":true,"IsDynamic":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"PlayerTransform","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanExecute","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bInCD","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bIsGetHurt","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanAttack","IsShared":true,"BooleanmValue":false}]}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5592159268507573294, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
-      propertyPath: resis
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5592159268507573294, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
-      propertyPath: resis_Max
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5592159268507573294, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
-      propertyPath: bloodVFXName
-      value: "\u8E29\u8840\u7279\u65481"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
@@ -14587,21 +14488,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_ZaBing (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 8186457544752307610, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8186457544752307614, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8186457544752307614, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.03999996
+      value: 0.39
       objectReference: {fileID: 0}
     - target: {fileID: 8186457544752307614, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.26
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 8186457544752307614, guid: 09f6a429dc5b49a48b6318bcca6d43e1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15995,7 +15892,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960592877}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.940429, y: -5.2740264, z: -10}
+  m_LocalPosition: {x: -9.968563, y: -5.2740264, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19147,10 +19044,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_Boomer
       objectReference: {fileID: 0}
-    - target: {fileID: 3011479896958649039, guid: 661d04d68d0cbb24c9084c878768dcc8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d04d68d0cbb24c9084c878768dcc8, type: 3}
 --- !u!1001 &4272894834391319656
@@ -20017,6 +19910,7 @@ MonoBehaviour:
   transBreakStun: 0
   beingBreakStun: 0
   stateCurrentName: 
+  enemyType: 0
   behaviourTree: {fileID: 8038834082752080998}
   aiPath: {fileID: 8038834082752081000}
   target: {fileID: 0}

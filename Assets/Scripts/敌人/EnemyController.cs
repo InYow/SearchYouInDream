@@ -6,6 +6,7 @@ using UnityEngine;
 
 public struct EnemyStateParem
 {
+    public EnemyType enemyType;
     public bool isInCD;
     public float distanceFromPlayer;
 }
@@ -13,7 +14,6 @@ public struct EnemyStateParem
 /// <summary>
 /// 敌人集群管理器
 /// 只管理发现玩家的敌人
-/// 
 /// </summary>
 public class EnemyController : MonoBehaviour
 {
@@ -24,7 +24,7 @@ public class EnemyController : MonoBehaviour
     
     private static EnemyController m_instance;
     [ShowInInspector]private Dictionary<Enemy,float> EnemiesNotInCD = new();
-    [SerializeField]private HashSet<Enemy> EnemiesInCD= new();
+    [ShowInInspector]private HashSet<Enemy> EnemiesInCD= new();
 
     private List<KeyValuePair<Enemy,float>> AllowAttackEnemy= new();
     private HashSet<Enemy> TrashEnemiesSet = new();
@@ -118,15 +118,16 @@ public class EnemyController : MonoBehaviour
         UnregisterEnemy(enemy);
         
         EnemyStateParem state = enemy.GetEnemyState();
-        if (state.isInCD)
+        if (state.isInCD && 
+            (state.enemyType == EnemyType.Combat ||
+             state.enemyType == EnemyType.DashEnemy ))
         {
             EnemiesInCD.Add(enemy);
         }
-        else
+        else if(!state.isInCD)
         {
             EnemiesNotInCD.Add(enemy,state.distanceFromPlayer);
         }
-
     }
 
     /// <summary>

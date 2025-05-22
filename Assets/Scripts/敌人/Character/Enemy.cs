@@ -7,8 +7,18 @@ using Pathfinding;
 using Unity.VisualScripting;
 using UnityEngine;
 
+public enum EnemyType
+{
+    Shooter,
+    DashEnemy,
+    Combat,
+    Boomer,
+    Boss
+}
+
 public class Enemy : Entity
 {
+    public EnemyType enemyType;
     public BehaviorTree behaviourTree;
     public AIPath aiPath;
     public Transform target;
@@ -101,7 +111,8 @@ public class Enemy : Entity
         stateParam.isInCD = inCD.Value;
         var disFromPlayer = behaviourTree.GetVariable("DistanceFromPlayer") as SharedFloat;
         stateParam.distanceFromPlayer = disFromPlayer.Value;
-
+        stateParam.enemyType = enemyType;
+        
         return stateParam;
     }
 }

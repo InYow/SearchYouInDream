@@ -1018,6 +1018,7 @@ MonoBehaviour:
   transBreakStun: 0
   beingBreakStun: 0
   stateCurrentName: 
+  enemyType: 0
   behaviourTree: {fileID: 8186457544752307605}
   aiPath: {fileID: 8186457544752307611}
   target: {fileID: 0}
@@ -1119,7 +1120,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.36, y: 0}
-    oldSize: {x: 1.7122159, y: 2.0332565}
+    oldSize: {x: 1.9567262, y: 2.3236125}
     newSize: {x: 3.125, y: 1.71875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

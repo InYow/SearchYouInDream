@@ -58,7 +58,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b01babcc93371649bab360953b7ad19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  legacy: 1
   SR_Resis: {fileID: 957254643093664365}
+  Image_Resis: {fileID: 0}
   entity: {fileID: 957254644338266904}
 --- !u!1 &957254642455163889
 GameObject:
@@ -539,8 +541,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d75596bfb3305442baebef57f67428e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  legacy: 1
   SR_Health: {fileID: 957254642455163891}
   SR_HealthGray: {fileID: 957254643017454262}
+  Image_Health: {fileID: 0}
   entity: {fileID: 957254644338266904}
 --- !u!1 &957254644338267105
 GameObject:
@@ -566,7 +570,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &957254644338267109
 Transform:
   m_ObjectHideFlags: 0
@@ -606,7 +610,6 @@ MonoBehaviour:
   - "\u88402"
   hitVFX_Pivot: {fileID: 4970736869509897096}
   camera_Pivot: {fileID: 0}
-  attackBox: {fileID: 4668006214725168330}
   _rb: {fileID: 957254644338267111}
   health: 15
   health_Max: 15
@@ -633,9 +636,11 @@ MonoBehaviour:
   transBreakStun: 0
   beingBreakStun: 0
   stateCurrentName: 
+  enemyType: 0
   behaviourTree: {fileID: 957254644338267118}
   aiPath: {fileID: 957254644338267104}
   target: {fileID: 0}
+  sensor: {fileID: 0}
   bFoundPlayer: 0
   isGetHurt: 0
   bloodVFXName: "\u8E29\u8840\u7279\u65481"
@@ -791,7 +796,7 @@ MonoBehaviour:
       parentIndex: 
       startIndex: 
       variableStartIndex: 
-      JSONSerialization: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"FoundPlayer","IsShared":true,"IsDynamic":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"PlayerTransform","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanExecute","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bInDashCD","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bIsGetHurt","IsShared":true,"BooleanmValue":false}]}'
+      JSONSerialization: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"FoundPlayer","IsShared":true,"IsDynamic":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"PlayerTransform","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanExecute","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bInCD","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bIsGetHurt","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanAttack","IsShared":true,"BooleanmValue":false}]}'
       fieldSerializationData:
         typeName: []
         fieldNameHash: 
@@ -894,6 +899,7 @@ MonoBehaviour:
   runRange: 7
   player: {fileID: 0}
   behaviourTree: {fileID: 957254644338267118}
+  hasDetectedPlayer: 0
 --- !u!1 &957254644347068569
 GameObject:
   m_ObjectHideFlags: 0

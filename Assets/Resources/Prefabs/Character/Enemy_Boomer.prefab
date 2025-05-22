@@ -764,6 +764,7 @@ MonoBehaviour:
   transBreakStun: 0
   beingBreakStun: 0
   stateCurrentName: 
+  enemyType: 3
   behaviourTree: {fileID: 3011479896958649024}
   aiPath: {fileID: 3011479896958649038}
   target: {fileID: 0}
