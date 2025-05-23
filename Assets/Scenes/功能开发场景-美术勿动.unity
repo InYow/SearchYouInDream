@@ -944,7 +944,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 23829e0b1e0764c4f8deb6b959e54758, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4024,7 +4024,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.848743, y: 5.9769797, z: -10}
+  m_LocalPosition: {x: 46.846725, y: 5.9769797, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4204,7 +4204,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 23829e0b1e0764c4f8deb6b959e54758, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16553,7 +16553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5592159268507573287, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5592159268507573288, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
       propertyPath: mBehaviorSource.mTaskData.JSONSerialization
@@ -18369,7 +18369,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960592877}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.994442, y: 4.351113, z: -10}
+  m_LocalPosition: {x: 47.083076, y: 4.351113, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
