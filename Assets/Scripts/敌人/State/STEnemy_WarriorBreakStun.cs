@@ -55,15 +55,15 @@ public class STEnemy_WarriorBreakStun : State
     /// <returns></returns>
     public override bool Finished(Entity entity)
     {
-        if (e.resis == e.resis_Max)
+        if (e.resis >= e.resis_Max)
         {
             return true;
         }
-        else if (entity.transExecution)
-        {
-            e.behaviourTree.SetVariableValue("bCanExecute", entity.transExecution);
-            return true;
-        }
+        //if (entity.transExecution)
+        //{
+        //    e.behaviourTree.SetVariableValue("bCanExecute", entity.transExecution);
+        //    return true;
+        //}
 
         return false;
     }

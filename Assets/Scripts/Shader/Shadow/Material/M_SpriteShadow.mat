@@ -41,8 +41,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats: []
+    m_Floats:
+    - _PlayerFront: 1
+    - _ShadowOffset: 0.2
     m_Colors:
-    - _MainLightPos: {r: -1, g: 0, b: 0, a: 0}
-    - _PlayerPosition: {r: -8.13, g: -7.97, b: 0, a: 0}
+    - _MainLightPos: {r: 47.68, g: 4.03, b: 0, a: 0}
+    - _PlayerPosition: {r: 44.23, g: 3.37, b: 0, a: 0}
+    - _ShadowColor: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
