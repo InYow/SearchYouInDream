@@ -5,6 +5,8 @@ using UnityEngine.Playables;
 public class VFXInitBehaviour : PlayableBehaviour
 {
     public string visualEffectName; //特效预制体名字
+    public Vector2 offset;
+    public bool filp;
 
     // 当 Clip 开始播放时调用
     public override void OnBehaviourPlay(Playable playable, FrameData info)
@@ -29,7 +31,13 @@ public class VFXInitBehaviour : PlayableBehaviour
                     GameObject vfxInstance = GameObject.Instantiate(vfxPrefab, director.transform.position, Quaternion.identity);
                     Vector3 vector3 = vfxInstance.transform.localScale;
                     vector3.x = director.transform.lossyScale.x;
+                    if (filp)
+                        vector3.x = -vector3.x;
                     vfxInstance.transform.localScale = vector3;
+                    if (vector3.x < 0f)
+                        vfxInstance.transform.position += new Vector3(-offset.x, offset.y, 0f);
+                    else
+                        vfxInstance.transform.position += new Vector3(offset.x, offset.y, 0f);
                     Debug.Log($"特效 {visualEffectName} 已生成，位置设置为 {director.transform.position}");
                 }
                 else

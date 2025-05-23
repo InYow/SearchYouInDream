@@ -77,6 +77,9 @@ public class SkillManager : MonoBehaviour
 
     public static void AddMono(float value)
     {
+        if (instance.energyBeans == instance.energyBeansMax)
+            return;
+
         instance.mono.x = Mathf.Clamp(instance.mono.x + value, 0f, instance.mono.y);
 
         if (instance.mono.x == instance.mono.y && instance.energyBeans < instance.energyBeansMax)

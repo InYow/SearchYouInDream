@@ -318,6 +318,7 @@ MonoBehaviour:
   - {fileID: 3378653506218653326}
   - {fileID: 7247066627187827849}
   - {fileID: -818346159510835416}
+  - {fileID: 8157561502803804180}
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 60
@@ -718,5 +719,28 @@ MonoBehaviour:
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
     m_DisplayName: InputWindTypeSectionClipAsset
+  m_Markers:
+    m_Objects: []
+--- !u!114 &8157561502803804180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746684ac85763f043bfd5542cce70cd6, type: 3}
+  m_Name: VFX Init Track Asset
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips: []
   m_Markers:
     m_Objects: []
