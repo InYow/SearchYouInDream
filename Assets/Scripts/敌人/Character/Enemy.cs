@@ -26,6 +26,7 @@ public class Enemy : Entity
     public bool bFoundPlayer = false;
     public bool isGetHurt = false;
     public string bloodVFXName = "踩血特效1";
+    public List<string> bloodVFXNameList = new List<string> { "爆血1", "爆血2", "爆血3", "爆血4" };
 
     public void OnEnable()
     {
@@ -112,7 +113,7 @@ public class Enemy : Entity
         var disFromPlayer = behaviourTree.GetVariable("DistanceFromPlayer") as SharedFloat;
         stateParam.distanceFromPlayer = disFromPlayer.Value;
         stateParam.enemyType = enemyType;
-        
+
         return stateParam;
     }
 }

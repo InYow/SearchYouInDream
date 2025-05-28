@@ -298,3 +298,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finishType: 0
   _animator: {fileID: 570367276908809688}
+  finishEvent:
+    m_PersistentCalls:
+      m_Calls: []

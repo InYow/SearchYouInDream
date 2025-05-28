@@ -31,6 +31,9 @@ public class STEnemy_WarriorBreakStun : State
         //e.isGetHurt = false;
         //e.behaviourTree.SetVariableValue("bIsGetHurt",e.isGetHurt);
 
+        //爆血特效
+        string randomBloodVFXName = e.bloodVFXNameList[Random.Range(0, e.bloodVFXNameList.Count)];
+        VisualEffectManager.PlayEffectWithoutRotation(randomBloodVFXName, e.transform);
         //踩血特效
         VisualEffectManager.PlayEffectWithoutRotation(e.bloodVFXName, e.transform);
         //出血音效

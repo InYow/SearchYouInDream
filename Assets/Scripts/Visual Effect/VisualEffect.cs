@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum VisualEffectFinishType
 {
@@ -12,6 +13,7 @@ public class VisualEffect : MonoBehaviour
 {
     public VisualEffectFinishType finishType = VisualEffectFinishType.Destroy;
     public Animator _animator;
+    public UnityEvent finishEvent;
     private void OnValidate()
     {
         //
@@ -28,6 +30,7 @@ public class VisualEffect : MonoBehaviour
         if (_animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f)
         {
             Finish();
+            finishEvent?.Invoke();
         }
     }
     private void Finish()

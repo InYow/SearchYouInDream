@@ -166,6 +166,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finishType: 1
   _animator: {fileID: 1637473611919965381}
+  finishEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1637473611936372979 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6564676393729956183, guid: e01533e7aad1614468f7e293046995f4, type: 3}
