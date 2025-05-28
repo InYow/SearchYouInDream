@@ -10,6 +10,9 @@ public class CameraZone : MonoBehaviour
     public float t;
     public CameraZoneData cameraZoneData;
 
+    [Header("预先设置好的camerazonedata")]
+    public CameraZoneData 击破敌人时;
+
     private void Awake()
     {
         if (Instance == null)

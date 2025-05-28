@@ -32,6 +32,8 @@ public class MessageManager : MonoBehaviour
         {
             entity.breakAttackTimes--;
             CameraFollow.SetFollow(entity.camera_Pivot);
+            CameraZone.CameraZoneUseData(CameraZone.Instance.击破敌人时);
+            RadialBlur.RadialBlurUseData(RadialBlur.Instance.击破敌人时);
             //CameraFollow.DisableConfiner();
             Debug.Log("BreakStun");
             Instance.OnBreakStun?.Invoke(entity);

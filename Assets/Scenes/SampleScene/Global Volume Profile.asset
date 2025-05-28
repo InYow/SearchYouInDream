@@ -45,17 +45,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   enableEffect:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   loop:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 6
   blur:
-    m_OverrideState: 0
-    m_Value: 6.5
+    m_OverrideState: 1
+    m_Value: 0
   radialSmoothness:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 20
   radialCenter:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {x: 0.5, y: 0.3}

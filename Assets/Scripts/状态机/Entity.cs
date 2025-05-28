@@ -222,6 +222,7 @@ public class Entity : MonoBehaviour
             }
         }
     }
+
     public virtual void GetHurt(Entity entity, CheckAttackBoxBehaviour checkBoxBehaviour)
     {
         if (!BuffContain("BFPlayerUnselected"))

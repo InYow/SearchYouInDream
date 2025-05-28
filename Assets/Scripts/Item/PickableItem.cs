@@ -11,15 +11,18 @@ public class PickableItem : ProjectileBase
     /// <param name="entity"></param>
     public void Picked(Entity entity)
     {
+        transform.Find("Render阴影").gameObject.SetActive(false); //关闭阴影 
         //手上没有东西
         Player player = (Player)entity;
         if (player.pickableItem == null)
         {
             transform.SetParent(player.pickableItem_Pivot, true);    //设置父对象
             transform.localPosition = Vector3.zero;         //设置位置
-            transform.localRotation = Quaternion.identity; //设置旋转
+            transform.localRotation = Quaternion.identity;  //设置旋转
             _rb.simulated = false;                          //关闭物理模拟
             _animator.Play("idle");                         //播放动画
+            player.pickableItem = this;                     //设置引用
+            entity_master = player;                         //entity_master
         }
     }
 
@@ -33,6 +36,7 @@ public class PickableItem : ProjectileBase
         entity_master = player;         //entity_master
         transform.SetParent(null);      //解除父对象 
         _rb.simulated = true;           //开启物理模拟
+        GetComponent<BoxCollider2D>().enabled = false; //禁用碰撞器
 
         //计算投掷方向
         Vector3 scale = player.transform.lossyScale;
@@ -61,6 +65,7 @@ public class PickableItem : ProjectileBase
     /// <param name="entity">扔出的entity</param>
     public override void Stop()
     {
+        transform.rotation = Quaternion.Euler(0, 0, 0); //无旋转
         _animator.Play("stop");         //播放动画
         _rb.velocity = Vector2.zero;    //速度为0
     }

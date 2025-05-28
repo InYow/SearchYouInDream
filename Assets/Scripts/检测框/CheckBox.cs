@@ -73,11 +73,11 @@ public class CheckBox : MonoBehaviour
 
     void Update()
     {
-        // bool flowControl = OverlapBox();
-        // if (!flowControl)
-        // {
-        //     return;
-        // }
+        bool flowControl = OverlapBox();
+        if (!flowControl)
+        {
+            return;
+        }
     }
 
     private bool OverlapBox()
