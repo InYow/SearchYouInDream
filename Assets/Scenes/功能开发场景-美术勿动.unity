@@ -3222,7 +3222,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.227947, y: 5.97647, z: -10}
+  m_LocalPosition: {x: 44.228207, y: 5.97647, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4361,6 +4361,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_TieTou
       objectReference: {fileID: 0}
+    - target: {fileID: 521641263145245518, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 521641263145245556, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4634,7 +4638,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 1131675645}
+  - {fileID: 5592159267048619578}
   - {fileID: 2138678825}
   - {fileID: 880227066}
   - {fileID: 642247672}
@@ -7507,8 +7511,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 1096934683}
-  center: {x: 47.25, y: 3.57}
-  size: {x: 1.2, y: 0.18}
+  center: {x: 64.2892, y: 4.3045}
+  size: {x: 2.02, y: 0.5}
 --- !u!1 &1114991805
 GameObject:
   m_ObjectHideFlags: 0
@@ -7827,11 +7831,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1131675645 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5592159268507573283, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
-  m_PrefabInstance: {fileID: 1763320345}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1135922517
 GameObject:
   m_ObjectHideFlags: 0
@@ -14444,7 +14443,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960592877}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.408516, y: 4.2011127, z: -10}
+  m_LocalPosition: {x: 44.396343, y: 4.2011127, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16496,6 +16495,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e3dbdd4b3dea7f4a9a46056eb9e3811, type: 3}
+--- !u!4 &5592159267048619578 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5592159268507573283, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
+  m_PrefabInstance: {fileID: 1763320345}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6065582948227664989
 PrefabInstance:
   m_ObjectHideFlags: 0
