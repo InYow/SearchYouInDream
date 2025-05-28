@@ -15,7 +15,7 @@ public class AttackRangeCondition : Conditional
 			return false;
 		}
 		
-		float cosAngle = Mathf.Cos(attackAngle);
+		float cosAngle = Mathf.Cos(attackAngle * Mathf.Deg2Rad);;
 		Vector3 targetDir = (target.Value.position - transform.position);
 		float distance = targetDir.magnitude;
 		float angle = Vector3.Dot(Vector3.Normalize(targetDir), transform.right*transform.localScale.x); 
