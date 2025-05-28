@@ -18,9 +18,9 @@ public class AttackRangeCondition : Conditional
 		float cosAngle = Mathf.Cos(attackAngle);
 		Vector3 targetDir = (target.Value.position - transform.position);
 		float distance = targetDir.magnitude;
-		float angle = Vector3.Dot(Vector3.Normalize(targetDir), transform.right); 
+		float angle = Vector3.Dot(Vector3.Normalize(targetDir), transform.right*transform.localScale.x); 
 		
-		return ((0 <= angle && angle <= cosAngle) || (angle <= -cosAngle)) && 
+		return ((angle >= cosAngle) || (angle <= -cosAngle)) && 
 		       distance <= attackRange;
 	}
 	
