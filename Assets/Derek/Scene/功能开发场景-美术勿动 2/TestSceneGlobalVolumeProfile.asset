@@ -33,7 +33,7 @@ MonoBehaviour:
     m_Value: 1
   glassTint:
     m_OverrideState: 1
-    m_Value: 0.05
+    m_Value: 0.342
   glassMask:
     m_OverrideState: 1
     m_Value: {fileID: 2800000, guid: a88bb7d683a86504681d84fdfa46d681, type: 3}

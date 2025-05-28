@@ -711,7 +711,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 1753505050, guid: 2df23baeb966ecf4e8c2c48885d2aa7a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9811321, g: 0.9389249, b: 0.78120327, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -895,8 +895,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f329824ac6af87a49b8dafbd19e78468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sightRange: 6
-  runRange: 7
+  sightRange: 8
+  runRange: 12
   player: {fileID: 0}
   behaviourTree: {fileID: 957254644338267118}
   hasDetectedPlayer: 0

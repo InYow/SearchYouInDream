@@ -30,7 +30,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DistortionStrength: 0.05
+    - _DistortionStrength: 0.342
     m_Colors:
     - _GlassColor: {r: 0.9811321, g: 0.9493973, b: 0.9493973, a: 1}
   m_BuildTextureStacks: []
