@@ -376,7 +376,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3011479896847532270
 Transform:
   m_ObjectHideFlags: 0
@@ -714,8 +714,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f329824ac6af87a49b8dafbd19e78468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sightRange: 6
-  runRange: 7
+  sightRange: 8
+  runRange: 12
   player: {fileID: 0}
   behaviourTree: {fileID: 3011479896958649024}
   hasDetectedPlayer: 0
@@ -921,7 +921,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3011479897105941319
 Transform:
   m_ObjectHideFlags: 0
