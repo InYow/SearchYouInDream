@@ -62,6 +62,7 @@ MonoBehaviour:
   inputWindTypeSectionClipList_C: []
   windTypeSectionClipList_D: []
   inputWindTypeSectionClipList_D: []
+  cameraZoneData: {fileID: 0}
 --- !u!320 &3742095662500285873
 PlayableDirector:
   m_ObjectHideFlags: 0

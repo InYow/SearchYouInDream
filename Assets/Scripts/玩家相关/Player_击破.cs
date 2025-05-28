@@ -6,6 +6,7 @@ using UnityEngine.Playables;
 
 public class Player_击破 : State_攻击
 {
+    public CameraZoneData cameraZoneData;
     public override void StateExit(Entity entity)
     {
         base.StateExit(entity);
@@ -16,6 +17,8 @@ public class Player_击破 : State_攻击
     public override void StateStart(Entity entity)
     {
         base.StateStart(entity);
+        //推近镜头
+        CameraZone.CameraZoneUseData(cameraZoneData);
     }
 
     public override void UPStateBehaviour(Entity entity)

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   components:
   - {fileID: 9008345983428488891}
-  - {fileID: 8650928945727876974}
---- !u!114 &8650928945727876974
+  - {fileID: 1407610510721831047}
+--- !u!114 &1407610510721831047
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24,23 +24,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd172ab2ebdb8f24e9a243d2cc52f7d7, type: 3}
-  m_Name: PostProcessingBrokenGlass
+  m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
+  m_Name: ChromaticAberration
   m_EditorClassIdentifier: 
   active: 1
-  enableEffect:
-    m_OverrideState: 1
-    m_Value: 0
-  glassTint:
-    m_OverrideState: 1
-    m_Value: 0.251
-  glassMask:
-    m_OverrideState: 1
-    m_Value: {fileID: 2800000, guid: e489c08f258f19145b3a42fb16f9ab31, type: 3}
-    dimension: 1
-  glassColor:
-    m_OverrideState: 1
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  intensity:
+    m_OverrideState: 0
+    m_Value: 1
 --- !u!114 &9008345983428488891
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -55,17 +45,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   enableEffect:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
   loop:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 6
   blur:
-    m_OverrideState: 1
-    m_Value: 0
+    m_OverrideState: 0
+    m_Value: 6.5
   radialSmoothness:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 20
   radialCenter:
-    m_OverrideState: 1
-    m_Value: {x: 0.5, y: 0.5}
+    m_OverrideState: 0
+    m_Value: {x: 0.5, y: 0.3}

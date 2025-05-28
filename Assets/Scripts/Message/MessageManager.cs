@@ -32,7 +32,7 @@ public class MessageManager : MonoBehaviour
         {
             entity.breakAttackTimes--;
             CameraFollow.SetFollow(entity.camera_Pivot);
-            CameraFollow.DisableConfiner();
+            //CameraFollow.DisableConfiner();
             Debug.Log("BreakStun");
             Instance.OnBreakStun?.Invoke(entity);
         }

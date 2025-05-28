@@ -3322,7 +3322,7 @@ GameObject:
   - component: {fileID: 519420033}
   - component: {fileID: 519420029}
   - component: {fileID: 519420034}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -3388,7 +3388,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.2284, y: 5.97646, z: -10}
+  m_LocalPosition: {x: 44.228928, y: 5.97646, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4477,8 +4477,8 @@ BoxCollider2D:
   m_Offset: {x: -0.048124313, y: 0.049111724}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.2201357, y: 0.1364983}
-    oldSize: {x: 3.5961828, y: 1.861711}
+    pivot: {x: 0.3983238, y: 0.23926792}
+    oldSize: {x: 12.116565, y: 8.940816}
     newSize: {x: 2.0976562, y: 1.0859375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6052,7 +6052,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871765571}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.77000046, y: 1.6699996, z: -10}
+  m_LocalPosition: {x: -0.77000046, y: 2.1099997, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6678,7 +6678,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915952802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4699998, z: 0}
+  m_LocalPosition: {x: 0, y: 0.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9259,7 +9259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaultSlowTime: 5
-  DefaultSlowFactor: 0.1
+  DefaultSlowFactor: 0.2
   slowTime: 0
 --- !u!1 &1237270046
 GameObject:
@@ -15375,7 +15375,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960592877}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.387226, y: 4.2011127, z: -10}
+  m_LocalPosition: {x: 44.374443, y: 4.641113, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17224,6 +17224,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5086822071211103569, guid: fa002d27cfd5aa04aa74e57932e1759d, type: 3}
+      propertyPath: cameraZoneData
+      value: 
+      objectReference: {fileID: 11400000, guid: dc4d85653ce782a41b5bde1e87a51014, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa002d27cfd5aa04aa74e57932e1759d, type: 3}
 --- !u!4 &138697162067938947 stripped
