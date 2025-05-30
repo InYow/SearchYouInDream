@@ -1,4 +1,4 @@
-    using BehaviorDesigner.Runtime.Tasks;
+using BehaviorDesigner.Runtime.Tasks;
 
 namespace BehaviorTreeExtension
 {
@@ -6,20 +6,20 @@ namespace BehaviorTreeExtension
     {
         [Tooltip("角色默认状态标签")]
         public string emptyStateName = "STEmpty";
-		
-        private Entity m_Entity;
+
+        private Enemy m_Entity;
 
         public override void OnAwake()
         {
             base.OnAwake();
-            m_Entity = gameObject.GetComponent<Entity>();
+            m_Entity = gameObject.GetComponent<Enemy>();
         }
 
         public override void OnStart()
         {
             if (m_Entity != null)
             {
-                m_Entity.StateCurrent = m_Entity.InstantiateState(emptyStateName);;
+                m_Entity.StateCurrent = m_Entity.InstantiateState(emptyStateName); ;
             }
         }
 

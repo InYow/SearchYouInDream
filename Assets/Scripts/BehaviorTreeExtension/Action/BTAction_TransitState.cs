@@ -9,12 +9,12 @@ namespace BehaviorTreeExtension
 
         public string defaultStateName = "STEmpty";
 
-        private Entity m_Entity;
+        private Enemy m_Entity;
 
         public override void OnAwake()
         {
             base.OnAwake();
-            m_Entity = gameObject.GetComponent<Entity>();
+            m_Entity = gameObject.GetComponent<Enemy>();
         }
 
         public override void OnStart()

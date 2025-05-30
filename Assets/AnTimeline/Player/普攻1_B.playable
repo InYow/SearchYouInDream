@@ -36,29 +36,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   template:
     sectionInputWindType: 2
---- !u!114 &-2289680274273236833
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d891be474476dd14f81f7521545f2064, type: 3}
-  m_Name: Wind Type Section Track
-  m_EditorClassIdentifier: 
-  m_Version: 3
-  m_AnimClip: {fileID: 0}
-  m_Locked: 0
-  m_Muted: 0
-  m_CustomPlayableFullTypename: 
-  m_Curves: {fileID: 0}
-  m_Parent: {fileID: 11400000}
-  m_Children: []
-  m_Clips: []
-  m_Markers:
-    m_Objects: []
 --- !u!114 &-1907637378501032101
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,7 +66,6 @@ MonoBehaviour:
   m_Tracks:
   - {fileID: 1088360652674316647}
   - {fileID: 8988483571038379523}
-  - {fileID: -2289680274273236833}
   - {fileID: 8520748032275836528}
   m_FixedDuration: 0
   m_EditorSettings:

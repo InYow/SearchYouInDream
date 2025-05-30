@@ -68,7 +68,7 @@ MonoBehaviour:
   dashStartAsset: {fileID: 11400000, guid: fa396bc7514668f49abe9f8f33304ed5, type: 2}
   dashLoopAsset: {fileID: 11400000, guid: 3285e530aa0d8454bab29adbc55b3959, type: 2}
   dashEndAsset: {fileID: 11400000, guid: a0aed19b00f012a41a780ad93dc64ce8, type: 2}
-  stopDistance: 2.5
+  stopDistance: 3.5
 --- !u!320 &407852731994976180
 PlayableDirector:
   m_ObjectHideFlags: 0

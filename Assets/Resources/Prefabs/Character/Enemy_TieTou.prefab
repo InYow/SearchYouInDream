@@ -458,6 +458,7 @@ MonoBehaviour:
   - "\u7206\u88402"
   - "\u7206\u88403"
   - "\u7206\u88404"
+  photo: {fileID: 0}
   projectileSpawnTransform: {fileID: 8029895497708539560}
   shootEnable: 1
   shootCD: 10
