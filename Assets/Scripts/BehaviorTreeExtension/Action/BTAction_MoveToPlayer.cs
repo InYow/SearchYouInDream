@@ -14,10 +14,10 @@ public class BTAction_MoveToPlayer : Action
     public bool tooCloseToPlayer = false;
 
     public SharedTransform targetPosition;
-    [UnityEngine.Tooltip("距离目标多远时会停下")]public float tolerance = 0.1f;
-    [UnityEngine.Tooltip("与TargetPosition的距离")]public float distanceWithTarget;
-    [UnityEngine.Tooltip("Y轴上的偏移量，>0")]public float yOffset = 0.15f;
-    
+    [UnityEngine.Tooltip("距离目标多远时会停下")] public float tolerance = 0.1f;
+    [UnityEngine.Tooltip("与TargetPosition的距离")] public float distanceWithTarget;
+    [UnityEngine.Tooltip("Y轴上的偏移量，>0")] public float yOffset = 0.15f;
+
     public override void OnAwake()
     {
         base.OnAwake();
@@ -30,10 +30,10 @@ public class BTAction_MoveToPlayer : Action
     {
         base.OnStart();
         entity.StateCurrent = entity.InstantiateState(walkState);
-        tolerance = Mathf.Clamp(tolerance,0.1f,tolerance);
+        tolerance = Mathf.Clamp(tolerance, 0.1f, tolerance);
         aiPath.canMove = true;
         destinationCache = CalculateTargetPosition();
-        aiPath.destination = destinationCache; 
+        aiPath.destination = destinationCache;
         animator.SetFloat("MoveSpeed", aiPath.maxSpeed);
     }
 
@@ -48,19 +48,19 @@ public class BTAction_MoveToPlayer : Action
         if (aiPath.destination != destinationCache)
         {
             destinationCache = CalculateTargetPosition();
-            aiPath.destination = destinationCache; 
+            aiPath.destination = destinationCache;
         }
-        
+
         Vector3 distance = aiPath.destination - entity.transform.position;
-        Debug.LogError("Distance from destination = " + distance.magnitude);
+        //        Debug.LogError("Distance from destination = " + distance.magnitude);
         if (!tooCloseToPlayer && distance.magnitude <= tolerance)
         {
             return TaskStatus.Success;
         }
-        
+
         Vector3 distanceWithPlayer = targetPosition.Value.position - entity.transform.position;
-        Debug.LogError("Distance from player = " + distanceWithPlayer.magnitude);
-        if(tooCloseToPlayer && distanceWithPlayer.magnitude > (distanceWithTarget))
+        //        Debug.LogError("Distance from player = " + distanceWithPlayer.magnitude);
+        if (tooCloseToPlayer && distanceWithPlayer.magnitude > (distanceWithTarget))
         {
             tooCloseToPlayer = false;
             return TaskStatus.Success;
@@ -88,18 +88,18 @@ public class BTAction_MoveToPlayer : Action
 
     private Vector3 CalculateTargetPosition()
     {
-        Vector3 targetPos = targetPosition.Value.position; 
+        Vector3 targetPos = targetPosition.Value.position;
         Vector3 targetDir = targetPosition.Value.position - entity.transform.position;
-        
+
         float offsetX = distanceWithTarget;
-        offsetX *= targetDir.x*10.0f > 0 ?  -1 : 1;
-        
-        if (targetDir.magnitude < (distanceWithTarget+tolerance))
+        offsetX *= targetDir.x * 10.0f > 0 ? -1 : 1;
+
+        if (targetDir.magnitude < (distanceWithTarget + tolerance))
         {
             tooCloseToPlayer = true;
-            return targetPos+new Vector3(offsetX*2.0f,-yOffset,0);
+            return targetPos + new Vector3(offsetX * 2.0f, -yOffset, 0);
         }
-        
-        return targetPos+new Vector3(offsetX,-yOffset,0);
+
+        return targetPos + new Vector3(offsetX, -yOffset, 0);
     }
 }

@@ -7,18 +7,34 @@ using UnityEngine;
 using UnityEngine.UI;
 
 //你别说, AI比我还能编
+//唉，体量不够支撑玩法了。
+// public enum Rank
+// {
+//     //F = 0,  //  Fear（恐惧）	你的动作畏畏缩缩，像个猎物             
+//     E,      //	Erosion（侵蚀）	你开始适应暴力，但仍然犹豫                              //正常  
+//     D,      //	Daze（恍惚）	你在杀戮中摇摆不定，手感迟钝    
+//     C,      //	Carnage（屠戮）	你变得越来越顺畅，攻击带着野性          
+//     B,      //	Brutal（暴虐）	你的战斗开始变得暴力，节奏加快                          //高等
+//     A,      //	Anarchy（无序）	你放弃防守，全力进攻
+//     S,      //	Savage（狂暴）	你的攻击已经无可阻挡，纯粹的碾碎敌人    
+//     //SS,     //  SchiSm（精神裂变）	你已经超越了战斗本能，攻击带有扭曲的癫狂
+//     O,      // Ø	Oblivion（湮灭）	你已经无法控制自己的动作，战斗节奏完全崩坏      //疯狂
+//     //X,      // ⛧   Xenosis（异变）       你已经不是人类了，敌人无法理解你的攻击方式 
+// }
+
+//做成小甜品吧。
 public enum Rank
 {
-    //F = 0,  //  Fear（恐惧）	你的动作畏畏缩缩，像个猎物             
-    E,      //	Erosion（侵蚀）	你开始适应暴力，但仍然犹豫                              //正常  
-    D,      //	Daze（恍惚）	你在杀戮中摇摆不定，手感迟钝    
+    // F = 0,  //  Fear（恐惧）	你的动作畏畏缩缩，像个猎物             
+    //E,      //	Erosion（侵蚀）	你开始适应暴力，但仍然犹豫                              //正常  
+    //D,      //	Daze（恍惚）	你在杀戮中摇摆不定，手感迟钝    
     C,      //	Carnage（屠戮）	你变得越来越顺畅，攻击带着野性          
     B,      //	Brutal（暴虐）	你的战斗开始变得暴力，节奏加快                          //高等
     A,      //	Anarchy（无序）	你放弃防守，全力进攻
-    S,      //	Savage（狂暴）	你的攻击已经无可阻挡，纯粹的碾碎敌人    
-    //SS,     //  SchiSm（精神裂变）	你已经超越了战斗本能，攻击带有扭曲的癫狂
-    O,      // Ø	Oblivion（湮灭）	你已经无法控制自己的动作，战斗节奏完全崩坏      //疯狂
-    //X,      // ⛧   Xenosis（异变）       你已经不是人类了，敌人无法理解你的攻击方式 
+    //S,      //	Savage（狂暴）	你的攻击已经无可阻挡，纯粹的碾碎敌人    
+    // SS,     //  SchiSm（精神裂变）	你已经超越了战斗本能，攻击带有扭曲的癫狂
+    //O,      // Ø	Oblivion（湮灭）	你已经无法控制自己的动作，战斗节奏完全崩坏      //疯狂
+    // X,      // ⛧   Xenosis（异变）       你已经不是人类了，敌人无法理解你的攻击方式 
 }
 
 public class RankSystem : MonoBehaviour
@@ -60,17 +76,17 @@ public class RankSystem : MonoBehaviour
         }
 
         //配置各评级
-        ranks = new float[7]
+        ranks = new float[3]
         {
             //-1,  //F
-            10,  //E
-            10,  //D
-            10,  //C
+            //10,  //E
+            //10,  //D
+            //10,  //C
             10,  //B
             10,  //A
             10,  //S
             //12,  //SS
-            15,  //O
+            //15,  //O
             //15,  //X
         };
     }
@@ -114,7 +130,7 @@ public class RankSystem : MonoBehaviour
     //获取评级
     public static Rank GetRank()
     {
-        Rank rk = Rank.E;
+        Rank rk = Rank.C;
         float value = rankSystem.ranks[(int)rk]; // 评级对应的阈值
         while ((int)rk < rankSystem.ranks.Length - 1 && value < rankSystem.rankValue)
         {
@@ -127,21 +143,35 @@ public class RankSystem : MonoBehaviour
     public static RankABCD GetRankABCD()
     {
         Rank rank = GetRank();
-        if (/*rank == Rank.F || */rank == Rank.E || rank == Rank.D)
+        // if (/*rank == Rank.F || */rank == Rank.E || rank == Rank.D)
+        // {
+        //     return RankABCD.A;
+        // }
+        // else if (rank == Rank.C || rank == Rank.B || rank == Rank.A)
+        // {
+        //     return RankABCD.B;
+        // }
+        // else if (rank == Rank.S /*|| rank == Rank.SS*/)
+        // {
+        //     return RankABCD.C;
+        // }
+        // else if (rank == Rank.O /*|| rank == Rank.X*/)
+        // {
+        //     return RankABCD.D;
+        // }
+        // return RankABCD.A;
+
+        if (rank == Rank.C)
         {
             return RankABCD.A;
         }
-        else if (rank == Rank.C || rank == Rank.B || rank == Rank.A)
+        else if (rank == Rank.B)
         {
             return RankABCD.B;
         }
-        else if (rank == Rank.S /*|| rank == Rank.SS*/)
+        else if (rank == Rank.A)
         {
             return RankABCD.C;
-        }
-        else if (rank == Rank.O /*|| rank == Rank.X*/)
-        {
-            return RankABCD.D;
         }
         return RankABCD.A;
     }
@@ -204,16 +234,16 @@ public class RankSystem : MonoBehaviour
                 //         rankSystem.ACOutofF?.Invoke();
                 //         break;
                 //     }
-                case Rank.E:
-                    {
-                        rankSystem.ACOutofE?.Invoke();
-                        break;
-                    }
-                case Rank.D:
-                    {
-                        rankSystem.ACOutofD?.Invoke();
-                        break;
-                    }
+                //case Rank.E:
+                //    {
+                //        rankSystem.ACOutofE?.Invoke();
+                //        break;
+                //    }
+                // case Rank.D:
+                //     {
+                //         rankSystem.ACOutofD?.Invoke();
+                //         break;
+                //     }
                 case Rank.C:
                     {
                         rankSystem.ACOutofC?.Invoke();
@@ -229,21 +259,21 @@ public class RankSystem : MonoBehaviour
                         rankSystem.ACOutofA?.Invoke();
                         break;
                     }
-                case Rank.S:
-                    {
-                        rankSystem.ACOutofS?.Invoke();
-                        break;
-                    }
-                // case Rank.SS:
-                //     {
-                //         rankSystem.ACOutofSS?.Invoke();
-                //         break;
-                //     }
-                case Rank.O:
-                    {
-                        rankSystem.ACOutofO?.Invoke();
-                        break;
-                    }
+                    // case Rank.S:
+                    //     {
+                    //         rankSystem.ACOutofS?.Invoke();
+                    //         break;
+                    //     }
+                    // case Rank.SS:
+                    //     {
+                    //         rankSystem.ACOutofSS?.Invoke();
+                    //         break;
+                    //     }
+                    // case Rank.O:
+                    //     {
+                    //         rankSystem.ACOutofO?.Invoke();
+                    //         break;
+                    //     }
                     // case Rank.X:
                     //     {
                     //         rankSystem.ACOutofX?.Invoke();
@@ -259,16 +289,16 @@ public class RankSystem : MonoBehaviour
                 //         rankSystem.ACIntoF?.Invoke();
                 //         break;
                 //     }
-                case Rank.E:
-                    {
-                        rankSystem.ACIntoE?.Invoke();
-                        break;
-                    }
-                case Rank.D:
-                    {
-                        rankSystem.ACIntoD?.Invoke();
-                        break;
-                    }
+                // case Rank.E:
+                //     {
+                //         rankSystem.ACIntoE?.Invoke();
+                //         break;
+                //     }
+                // case Rank.D:
+                //     {
+                //         rankSystem.ACIntoD?.Invoke();
+                //         break;
+                //     }
                 case Rank.C:
                     {
                         rankSystem.ACIntoC?.Invoke();
@@ -284,21 +314,21 @@ public class RankSystem : MonoBehaviour
                         rankSystem.ACIntoA?.Invoke();
                         break;
                     }
-                case Rank.S:
-                    {
-                        rankSystem.ACIntoS?.Invoke();
-                        break;
-                    }
-                // case Rank.SS:
-                //     {
-                //         rankSystem.ACIntoSS?.Invoke();
-                //         break;
-                //     }
-                case Rank.O:
-                    {
-                        rankSystem.ACIntoO?.Invoke();
-                        break;
-                    }
+                    // case Rank.S:
+                    //     {
+                    //         rankSystem.ACIntoS?.Invoke();
+                    //         break;
+                    //     }
+                    // case Rank.SS:
+                    //     {
+                    //         rankSystem.ACIntoSS?.Invoke();
+                    //         break;
+                    //     }
+                    // case Rank.O:
+                    //     {
+                    //         rankSystem.ACIntoO?.Invoke();
+                    //         break;
+                    //     }
                     // case Rank.X:
                     //     {
                     //         rankSystem.ACIntoX?.Invoke();
