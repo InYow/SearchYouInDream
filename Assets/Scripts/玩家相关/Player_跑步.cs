@@ -19,7 +19,7 @@ public class Player_跑步 : State
         {
             player.FlipX(true);
         }
-
+        dic_input.y *= 0.8f;
         //移动
         player._rb.velocity = player.speed_walk * dic_input;
 

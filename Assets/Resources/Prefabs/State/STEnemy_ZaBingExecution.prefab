@@ -112,4 +112,4 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  timeMax_fly: 0
+  timeMax_fly: 1

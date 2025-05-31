@@ -359,26 +359,16 @@ public class Player : Entity
         //ST暴怒
         else if (stateCurrentName == "Player_暴怒")
         {
-            if (Input.GetKeyDown(KeyCode.J))            //攻击
+            if (StateCurrent.Finished(this))             //待机 or 移动
             {
-                //BFPlayerAngryEnhanceAttack01 buff_atk01_enhance = BuffGet("BFPlayerAngryEnhanceAttack01") as BFPlayerAngryEnhanceAttack01;
-                //if (buff_atk01_enhance == null)         //攻击01
-                //{
-                StateCurrent = InstantiateState("Player_普攻1");
-                //}
-                //else if (buff_atk01_enhance != null)    //强化攻击01
-                //{
-                //    StateCurrent = InstantiateState("Player_普攻1_强化");
-                //    BuffRemove("BFPlayerAngryEnhanceAttack01");
-                //}
-            }
-            else if (dic_Input != Vector2.zero) //移动
-            {
-                StateCurrent = InstantiateState("Player_跑步");
-            }
-            else if (dic_Input == Vector2.zero && StateCurrent.Finished(this))//待机
-            {
-                StateCurrent = InstantiateState("Player_待机");
+                if (dic_Input == Vector2.zero)      //待机
+                {
+                    StateCurrent = InstantiateState("Player_待机");
+                }
+                else if (dic_Input != Vector2.zero) //移动
+                {
+                    StateCurrent = InstantiateState("Player_跑步");
+                }
             }
         }
         //ST拾取
