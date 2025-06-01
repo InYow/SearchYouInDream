@@ -1152,6 +1152,7 @@ MonoBehaviour:
   - "\u7206\u88402"
   - "\u7206\u88403"
   - "\u7206\u88404"
+  photo: {fileID: 21300000, guid: 09f838bf4fd507d49a012341e5e7fcc8, type: 3}
   dashEnable: 1
   dashCD: 8
   dashSpeed: 6
@@ -1365,7 +1366,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  endReachedDistance: 0.55
+  endReachedDistance: 0.01
   whenCloseToDestination: 0
   rvoDensityBehavior:
     enabled: 1
@@ -1385,7 +1386,7 @@ MonoBehaviour:
     visualizeSensitivity: 0
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.85
+  slowdownDistance: 0.5
   pickNextWaypointDist: 2
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1

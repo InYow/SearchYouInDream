@@ -1126,6 +1126,12 @@ MonoBehaviour:
   bFoundPlayer: 0
   isGetHurt: 0
   bloodVFXName: "\u8E29\u8840\u7279\u65481"
+  bloodVFXNameList:
+  - "\u7206\u88401"
+  - "\u7206\u88402"
+  - "\u7206\u88403"
+  - "\u7206\u88404"
+  photo: {fileID: 0}
   projectileSpawnTransform: {fileID: 2559442798291432634}
   shootEnable: 1
   shootCD: 5
@@ -1340,7 +1346,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  endReachedDistance: 0.8
+  endReachedDistance: 0.01
   whenCloseToDestination: 0
   rvoDensityBehavior:
     enabled: 1
@@ -1360,7 +1366,7 @@ MonoBehaviour:
     visualizeSensitivity: 0
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.1
+  slowdownDistance: 0.5
   pickNextWaypointDist: 2
   alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
