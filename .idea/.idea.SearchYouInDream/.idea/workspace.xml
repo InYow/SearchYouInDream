@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/FatBall/FatBallEnemyBehaviorBaseTemplate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/FatBall/FatBallEnemyBehaviorBaseTemplate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Derek/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Derek/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 1.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 1.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 2.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 2.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Fungus/Integrations/Playmaker/Fungus-PlayMaker.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Fungus/Integrations/Spine/Fungus-Spine.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Attribute Processors.unitypackage.meta" beforeDir="false" />
@@ -13,9 +20,12 @@
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Editor Windows.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Sample - RPG Editor.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_TieTou.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_TieTou.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_暴怒.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_暴怒.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/功能开发场景-美术勿动.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/功能开发场景-美术勿动.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Condition/AttackRangeCondition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Condition/AttackRangeCondition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_击破.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_击破.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_普攻1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_普攻1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_普攻2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_普攻2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_普攻3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_普攻3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_普攻4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_普攻4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Action/BTAction_MoveToPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Action/BTAction_MoveToPlayer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +183,8 @@
       <workItem from="1747917545212" duration="7394000" />
       <workItem from="1747979759273" duration="2137000" />
       <workItem from="1748002414219" duration="974000" />
-      <workItem from="1748418013215" duration="329000" />
+      <workItem from="1748418013215" duration="7335000" />
+      <workItem from="1748763956811" duration="1120000" />
     </task>
     <servers />
   </component>
