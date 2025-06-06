@@ -42,7 +42,7 @@ public class RadialBlur : MonoBehaviour
         Vector2 screenPosition = Camera.main.WorldToScreenPoint(virtualCamera.Follow.position);
         screenPosition.x /= Screen.width;
         screenPosition.y /= Screen.height;
-        Debug.Log("RadialBlur center: " + screenPosition);
+        // Debug.Log("RadialBlur center: " + screenPosition);
         radialBlur.radialCenter.value = screenPosition;
 
         //执行

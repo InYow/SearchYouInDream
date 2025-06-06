@@ -49,7 +49,7 @@ public class Enemy : Entity
 
     protected virtual void DetectPlayer()
     {
-        Debug.Log("FindPlayer");
+        //  Debug.Log("FindPlayer");
         EnemyController.instance.RegisterEnemy(this);
     }
 
@@ -59,6 +59,7 @@ public class Enemy : Entity
         EnemyController.instance.UnregisterEnemy(this);
     }
 
+    // old version
     public override void GetHurt(Entity entity, CheckBox attackBox)
     {
         Debug.Log(entity.name);
@@ -84,6 +85,7 @@ public class Enemy : Entity
         }
     }
 
+    // new version
     public override void GetHurt(Entity entity, CheckAttackBoxBehaviour checkBoxBehaviour)
     {
         if (!BuffContain("BFPlayerUnselected"))
@@ -91,6 +93,8 @@ public class Enemy : Entity
             health -= entity.attackValue;
             EnemyInfoUIList.instance.AddEnemyInfoUI(this); //添加敌人信息UI
 
+
+            //播放受伤特效
             GetHurtVFX();
             SoundEffectManager.PlaySFX01(transform);
 

@@ -204,9 +204,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   legacy: 1
+  isPlayer: 0
   SR_Health: {fileID: 5413978616570713746}
   SR_HealthGray: {fileID: 5413978618454217946}
-  Image_Health: {fileID: 0}
+  Image_Health_Color: {fileID: 0}
+  Image_Health_Cover: {fileID: 0}
+  colorHealthAdd: {r: 0, g: 1, b: 0, a: 1}
+  colorHealthAddEnd: {r: 1, g: 1, b: 1, a: 1}
+  colorHealthLose: {r: 1, g: 0, b: 0, a: 1}
+  colorHealthLoseEnd: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  timeAdd: 0
+  timeLose: 0
   entity: {fileID: 5413978617258784475}
 --- !u!1 &5413978616696626501
 GameObject:
@@ -721,8 +729,6 @@ MonoBehaviour:
   transBreakStun: 0
   beingBreakStun: 0
   stateCurrentName: 
-  healthGray: 10
-  healthGray_LoseSpeed: 1
   speed_walk: 5
   speed_fly: 6
   pickableItem_Pivot: {fileID: 5413978617140090465}

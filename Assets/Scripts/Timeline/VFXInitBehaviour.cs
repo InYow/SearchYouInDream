@@ -16,7 +16,7 @@ public class VFXInitBehaviour : PlayableBehaviour
         {
             return;
         }
-        Debug.Log($"播放特效: {visualEffectName}");
+        //Debug.Log($"播放特效: {visualEffectName}");
         // 在这里添加逻辑，例如实例化特效
         if (!string.IsNullOrEmpty(visualEffectName))
         {
@@ -38,7 +38,7 @@ public class VFXInitBehaviour : PlayableBehaviour
                         vfxInstance.transform.position += new Vector3(-offset.x, offset.y, 0f);
                     else
                         vfxInstance.transform.position += new Vector3(offset.x, offset.y, 0f);
-                    Debug.Log($"特效 {visualEffectName} 已生成，位置设置为 {director.transform.position}");
+                    //Debug.Log($"特效 {visualEffectName} 已生成，位置设置为 {director.transform.position}");
                 }
                 else
                 {

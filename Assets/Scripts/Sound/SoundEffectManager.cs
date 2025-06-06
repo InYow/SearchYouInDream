@@ -25,7 +25,7 @@ public class SoundEffectManager : MonoBehaviour
         GameObject sfxPrefab = Resources.Load<GameObject>("Prefabs/SFX/" + sfxName);
         if (sfxPrefab != null)
         {
-            Debug.Log("Loading SFX: " + sfxName);
+            // Debug.Log("Loading SFX: " + sfxName);
             GameObject sfxInstance = Instantiate(sfxPrefab, transform.position, Quaternion.identity);
         }
     }
@@ -36,7 +36,7 @@ public class SoundEffectManager : MonoBehaviour
         GameObject sfxPrefab = Resources.Load<GameObject>("Prefabs/SFX/" + sfxName);
         if (sfxPrefab != null)
         {
-            Debug.Log("Loading SFX: " + sfxName);
+            //Debug.Log("Loading SFX: " + sfxName);
             GameObject sfxInstance = Instantiate(sfxPrefab, transform.position, Quaternion.identity);
         }
     }

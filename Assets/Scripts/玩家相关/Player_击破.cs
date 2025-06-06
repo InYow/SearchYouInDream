@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Playables;
 
@@ -7,7 +8,7 @@ using UnityEngine.Playables;
 public class Player_击破 : State_攻击
 {
     public CameraZoneData cameraZoneData;
-    public RadialBlurData radialBlurData;
+    public Vector2 offset;
 
     public override void StateExit(Entity entity)
     {
@@ -21,8 +22,13 @@ public class Player_击破 : State_攻击
         base.StateStart(entity);
         //推近镜头
         CameraZone.CameraZoneUseData(cameraZoneData);
-        //开启径向模糊
-        RadialBlur.RadialBlurUseData(radialBlurData);
+
+        //调整位置点
+        Player player = entity as Player;
+        Vector2 pos = (Vector2)player.eTarget_击破.transform.position + offset * player.GetFlipX().x;
+        Debug.Log("击破位置: " + pos);
+        //player._rb.MovePosition(pos);
+        player._rb.position = pos;
     }
 
     public override void UPStateBehaviour(Entity entity)

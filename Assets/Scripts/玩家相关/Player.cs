@@ -6,8 +6,8 @@ using UnityEngine.VFX;
 public class Player : Entity
 {
     [Header("玩家")]
-    public float healthGray;
-    public float healthGray_LoseSpeed;
+    // public float healthGray;
+    // public float healthGray_LoseSpeed;
     public float speed_walk;
     public float speed_fly;
     public Transform pickableItem_Pivot;
@@ -186,6 +186,12 @@ public class Player : Entity
                     StateCurrent = InstantiateState("Player_投掷");
                 }
             }
+            else if (Input.GetKeyDown(KeyCode.R))
+            {
+                string nameR = SkillManager.GetSkillName(1);
+                if (nameR != "")
+                    StateCurrent = InstantiateState(nameR);
+            }
         }
         //ST移动
         else if (stateCurrentName == "Player_跑步")
@@ -234,8 +240,7 @@ public class Player : Entity
                     StateCurrent = InstantiateState("Player_投掷");
                 }
             }
-            else if (Input.GetKey(KeyCode.I) && //技能
-            (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)))        //技能
+            else if (Input.GetKey(KeyCode.I))        //技能
             {
                 if (Input.GetKey(KeyCode.W))
                 {
@@ -255,6 +260,18 @@ public class Player : Entity
                     if (nameA != "")
                         StateCurrent = InstantiateState(nameA);
                 }
+                else
+                {
+                    string name = SkillManager.GetSkillName(6);
+                    if (name != "")
+                        StateCurrent = InstantiateState(name);
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.R))
+            {
+                string nameR = SkillManager.GetSkillName(1);
+                if (nameR != "")
+                    StateCurrent = InstantiateState(nameR);
             }
         }
         //ST攻击01
@@ -585,6 +602,37 @@ public class Player : Entity
                 }
             }
         }
+        //ST Player_进攻_幻影连斩
+        else if (stateCurrentName == "Player_进攻_幻影连斩")
+        {
+            if (StateCurrent.Finished(this))                //待机 or 移动
+            {
+                if (dic_Input == Vector2.zero)              //待机
+                {
+                    StateCurrent = InstantiateState("Player_待机");
+                }
+                else if (dic_Input != Vector2.zero)         //移动
+                {
+                    StateCurrent = InstantiateState("Player_跑步");
+                }
+            }
+        }
+        //ST Player_终结技
+        else if (stateCurrentName == "Player_终结技")
+        {
+            if (StateCurrent.Finished(this))                //待机 or 移动
+            {
+                if (dic_Input == Vector2.zero)              //待机
+                {
+                    StateCurrent = InstantiateState("Player_待机");
+                }
+                else if (dic_Input != Vector2.zero)         //移动
+                {
+                    StateCurrent = InstantiateState("Player_跑步");
+                }
+            }
+        }
+
 
         //-------------default/测试区域-------------
         //测试区域-0
@@ -652,10 +700,10 @@ public class Player : Entity
 
         //通用行为
 
-        if (time_Stun <= 0f && time_Angry <= 0f)    //流失灰色生命
-        {
-            healthGray = Mathf.Clamp(healthGray - healthGray_LoseSpeed * Time.deltaTime, health, health_Max);
-        }
+        // if (time_Stun <= 0f && time_Angry <= 0f)    //流失灰色生命
+        // {
+        //     healthGray = Mathf.Clamp(healthGray - healthGray_LoseSpeed * Time.deltaTime, health, health_Max);
+        // }
         //流失 解除硬直获得的angry时间
         time_Angry = Mathf.Clamp(time_Angry - Time.deltaTime, 0f, time_Angry);
         //流逝CD
@@ -666,12 +714,12 @@ public class Player : Entity
     {
         base.Hurt(entity, attackBox);
 
-        //治疗灰色生命
-        float h = healthGray - health;
-        if (h > 0f)
-        {
-            health = Mathf.Clamp(health + attackValue, health, healthGray);
-        }
+        // //治疗灰色生命
+        // float h = healthGray - health;
+        // if (h > 0f)
+        // {
+        //     health = Mathf.Clamp(health + attackValue, health, healthGray);
+        // }
 
         //降低目标耐性
         entity.DetectResis(this);
@@ -681,12 +729,12 @@ public class Player : Entity
     {
         base.Hurt(entity, checkBoxBehaviour);
 
-        //治疗灰色生命
-        float h = healthGray - health;
-        if (h > 0f)
-        {
-            health = Mathf.Clamp(health + attackValue, health, healthGray);
-        }
+        // //治疗灰色生命
+        // float h = healthGray - health;
+        // if (h > 0f)
+        // {
+        //     health = Mathf.Clamp(health + attackValue, health, healthGray);
+        // }
 
         //降低目标耐性
         entity.DetectResis(this, checkBoxBehaviour);
@@ -734,6 +782,11 @@ public class Player : Entity
             transHitFly_SourceEntity = entity;
             transStun = true;//进入硬直}
         }
+    }
+
+    public void AddHealth(float value)
+    {
+        health = Mathf.Clamp(health + value, health, health_Max);
     }
 
     /// <summary>

@@ -6,6 +6,8 @@ public class 击破Canvas : MonoBehaviour
 {
     public static 击破Canvas Instance;
     private Animator _animator;
+    public RadialBlurData radialBlurData;
+
     private void Awake()
     {
         if (Instance == null)
@@ -38,6 +40,10 @@ public class 击破Canvas : MonoBehaviour
         //Instance._animator.SetBool("continue", true);
 
         Instance._animator.Play("后半段");
+
+        //开启径向模糊
+        RadialBlur.RadialBlurUseData(Instance.radialBlurData);
+        //        Debug.LogError("测试");
     }
 
     public static bool IfFinish前半段()

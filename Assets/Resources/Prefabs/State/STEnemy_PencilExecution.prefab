@@ -105,7 +105,7 @@ MonoBehaviour:
     attacktype: 0
     canBreakAttackType: 0
     entity_master: {fileID: 0}
-  flySpeed: 3
+  flySpeed: 10
   flyCurve:
     serializedVersion: 2
     m_Curve: []

@@ -8,8 +8,6 @@ public class State_攻击 : State
 {
     public override void StateExit(Entity entity)
     {
-        //解绑Entity.AttackBox.OnHurtEntity
-        //entity.attackBox.OnHurtEntity -= PlayAttackVFX;
         //销毁
         Destroy(gameObject);
     }

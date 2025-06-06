@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using DG.Tweening;
 using JetBrains.Annotations;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -42,7 +43,6 @@ public class Entity : MonoBehaviour
     [Header("Buff")]
     //buff集 <buff的名称，buff相关信息>
     public Dictionary<string, Buff> buffs = new();
-
     /// <summary>
     /// 当前状态
     /// </summary>
@@ -199,6 +199,7 @@ public class Entity : MonoBehaviour
     {
         entity.GetHurt(this, checkBoxBehaviour);
         SkillManager.AddMono(1f);
+        SkillManager.AddWonderMono(1f);
         //CameraShake.Shake(new Vector3(1, 0, 0), 0.3f);
     }
 
@@ -306,6 +307,22 @@ public class Entity : MonoBehaviour
             transExecution_Type = "fly";
             transExecution_DamageSourceEntity = entity;
             transExecution_AttackBoxBehaviour = checkBoxBehaviour;
+
+            // kill vfx
+            Sequence sequence = DOTween.Sequence();
+
+            //camera zone
+            sequence.AppendCallback(() => CameraZone.CameraZoneUseData(CameraZone.Instance.击杀敌人时));
+
+            //camera follow 
+            //sequence.AppendCallback(() => CameraFollow.SetFollow(camera_Pivot));
+
+            //slow motion
+            sequence.AppendInterval(KillMotion.Instance.slowMotionDelay);
+            sequence.AppendCallback(() => SlowMotion.StartSlow(0.6f, 0.1f));
+
+
+            ;
         }
     }
 

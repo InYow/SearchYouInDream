@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using BehaviorDesigner.Runtime.Tasks.Unity.Timeline;
 using UnityEngine;
 
 public class SkillManager : MonoBehaviour
@@ -7,23 +8,30 @@ public class SkillManager : MonoBehaviour
 
     public Vector2 mono;
 
+    public Vector2 wonderMono;
+
+    public float healthRestore;
+
     public int energyBeans; // 能量豆
     public int energyBeansMax; // 能量豆上限
 
     public string skill1;       //AD
-                                //Player_增幅_愤怒
+                                //Player_进攻_烈焰冲撞
 
     public string skill2;       //W
-                                //Player_控制_裂地
+                                //Player_进攻_幻影连斩
 
     public string skill3;       //S
-                                //Player_进攻_烈焰冲撞
+                                //Player_控制_裂地拳
 
     public string skill4;
 
     public string skill5;       //击破
                                 //Player_击破_气爆拳
                                 //Player_击破_浩克掌
+
+    public string skill6;       //无方向
+                                //Player_增幅_愤怒
 
     [Header("冲刺")]
     public float 冲刺恢复CDMax;
@@ -89,6 +97,11 @@ public class SkillManager : MonoBehaviour
         }
     }
 
+    public static void AddWonderMono(float value)
+    {
+        instance.wonderMono.x = Mathf.Clamp(instance.wonderMono.x + value, 0f, instance.wonderMono.y);
+    }
+
     public static bool IfCanDash()
     {
         if (instance.冲刺次数 > 0)
@@ -121,10 +134,10 @@ public class SkillManager : MonoBehaviour
         {
             case 1://大招
                 {
-                    if (instance.energyBeans > 0)
+                    if (instance.wonderMono.x == instance.wonderMono.y)
                     {
-                        instance.energyBeans--;
-                        return instance.skill1;
+                        instance.wonderMono.x = 0f;
+                        return instance.skill1; //返回大招
                     }
                     else
                     {
@@ -136,6 +149,7 @@ public class SkillManager : MonoBehaviour
                     if (instance.energyBeans > 0)
                     {
                         instance.energyBeans--;
+                        RestoreHealth();
                         return instance.skill2;
                     }
                     else
@@ -148,6 +162,7 @@ public class SkillManager : MonoBehaviour
                     if (instance.energyBeans > 0)
                     {
                         instance.energyBeans--;
+                        RestoreHealth();
                         return instance.skill3;
                     }
                     else
@@ -160,6 +175,7 @@ public class SkillManager : MonoBehaviour
                     if (instance.energyBeans > 0)
                     {
                         instance.energyBeans--;
+                        RestoreHealth();
                         return instance.skill4;
                     }
                     else
@@ -171,10 +187,19 @@ public class SkillManager : MonoBehaviour
                 {
                     return instance.skill5;
                 }
+            case 6://无方向
+                {
+                    return instance.skill6;
+                }
             default:
                 {
                     return null;
                 }
+        }
+
+        void RestoreHealth()
+        {
+            instance.player.AddHealth(instance.healthRestore);
         }
     }
 

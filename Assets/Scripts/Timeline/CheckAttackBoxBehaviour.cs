@@ -49,6 +49,13 @@ public class CheckAttackBoxBehaviour : PlayableBehaviour
                 if (e != null && e != entity_master)
                 {
                     entity_master.Hurt(e, this);
+                    if (e.beingBreakStun)
+                    {
+                        //顿帧
+                        SlowMotion.StartSlow(0.1f, 0f);
+                        //震屏
+                        CameraShake.ShakeExplosion(new Vector3(entity_master.transform.lossyScale.x, 0f, 0f), 0.1f);
+                    }
                 }
             }
         }

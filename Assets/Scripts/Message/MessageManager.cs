@@ -35,7 +35,7 @@ public class MessageManager : MonoBehaviour
             CameraZone.CameraZoneUseData(CameraZone.Instance.击破敌人时);
             RadialBlur.RadialBlurUseData(RadialBlur.Instance.击破敌人时);
             //CameraFollow.DisableConfiner();
-            Debug.Log("BreakStun");
+            //  Debug.Log("BreakStun");
             Instance.OnBreakStun?.Invoke(entity);
         }
     }

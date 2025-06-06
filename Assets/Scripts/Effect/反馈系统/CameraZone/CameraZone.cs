@@ -6,12 +6,13 @@ using UnityEngine;
 public class CameraZone : MonoBehaviour
 {
     public static CameraZone Instance;
-    public CinemachineVirtualCamera virtualCamera;
-    public float t;
-    public CameraZoneData cameraZoneData;
+    private CinemachineVirtualCamera virtualCamera;
+    private float t;
+    private CameraZoneData cameraZoneData;
 
     [Header("预先设置好的camerazonedata")]
     public CameraZoneData 击破敌人时;
+    public CameraZoneData 击杀敌人时;
 
     private void Awake()
     {

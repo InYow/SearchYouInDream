@@ -2088,7 +2088,7 @@ public class AstarPath : VersionedMonoBehaviour
 
         if (logPathResults != PathLog.None && logPathResults != PathLog.OnlyErrors)
         {
-            Debug.Log("Scanned graphs in " + (lastScanTime * 1000).ToString("0") + " ms");
+            // Debug.Log("Scanned graphs in " + (lastScanTime * 1000).ToString("0") + " ms");
         }
     }
 

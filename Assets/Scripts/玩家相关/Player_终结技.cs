@@ -9,11 +9,15 @@ public class Player_终结技 : State_攻击
     public override void StateExit(Entity entity)
     {
         base.StateExit(entity);
+
+        entity.BuffRemove("BFPlayerUnselected");
     }
 
     public override void StateStart(Entity entity)
     {
         base.StateStart(entity);
+
+        entity.BuffAdd("BFPlayerUnselected");
 
         if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D))
         {
