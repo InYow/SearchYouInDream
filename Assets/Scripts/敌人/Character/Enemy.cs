@@ -81,6 +81,7 @@ public class Enemy : Entity
             if (health <= 0f)
             {
                 Execution(entity, attackBox);
+                //behaviourTree.DisableBehavior();
             }
         }
     }
@@ -108,6 +109,7 @@ public class Enemy : Entity
             if (health <= 0f)
             {
                 Execution(entity, checkBoxBehaviour);
+                //behaviourTree.DisableBehavior();
             }
         }
     }
