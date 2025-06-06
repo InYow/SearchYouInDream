@@ -13,12 +13,12 @@ public class 环绕闪电 : MonoBehaviour
 
     public void Open()
     {
-        gameObject.SetActive(true);
+        animator.gameObject.SetActive(true);
         animator.Play("环绕闪电");
     }
 
     public void Close()
     {
-        gameObject.SetActive(false);
+        animator.gameObject.SetActive(false);
     }
 }

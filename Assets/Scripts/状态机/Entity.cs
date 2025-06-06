@@ -296,6 +296,8 @@ public class Entity : MonoBehaviour
     {
         if (checkBoxBehaviour.attacktype == AttackType.none)
         {
+            gameObject.layer = 2;
+
             transExecution = true;
             var enemy = this as Enemy;
             if (enemy)
@@ -310,16 +312,30 @@ public class Entity : MonoBehaviour
 
             // kill vfx
             Sequence sequence = DOTween.Sequence();
+            sequence.SetUpdate(true);   //unscale
+
+            //zone 
+            //follow  0.1 back
+            //slowmotion 0.6
 
             //camera zone
             sequence.AppendCallback(() => CameraZone.CameraZoneUseData(CameraZone.Instance.击杀敌人时));
 
             //camera follow 
-            //sequence.AppendCallback(() => CameraFollow.SetFollow(camera_Pivot));
+            sequence.AppendCallback(() => CameraFollow.SetFollow(camera_Pivot));
 
-            //slow motion
+            //slow motion 
             sequence.AppendInterval(KillMotion.Instance.slowMotionDelay);
             sequence.AppendCallback(() => SlowMotion.StartSlow(0.6f, 0.1f));
+
+            //camera follow back
+            sequence.AppendInterval(KillMotion.Instance.executeDuration);
+            sequence.AppendCallback(() =>
+            {
+                GameManager.Instance.player.camera_Pivot.DOLocalMove(camera_Pivot.position - GameManager.Instance.player.transform.position, KillMotion.Instance.executeBackTime).From();
+            });
+
+            sequence.AppendCallback(() => CameraFollow.SetFollow(GameManager.Instance.player.camera_Pivot));
 
 
             ;
