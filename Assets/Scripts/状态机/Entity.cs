@@ -310,6 +310,7 @@ public class Entity : MonoBehaviour
             transExecution_DamageSourceEntity = entity;
             transExecution_AttackBoxBehaviour = checkBoxBehaviour;
 
+
             // kill vfx
             Sequence sequence = DOTween.Sequence();
             sequence.SetUpdate(true);   //unscale
@@ -321,19 +322,42 @@ public class Entity : MonoBehaviour
             //camera zone
             sequence.AppendCallback(() => CameraZone.CameraZoneUseData(CameraZone.Instance.击杀敌人时));
 
+            //击杀 VFX  
+            VisualEffectManager.PlayEffectWithoutRotation("击杀特效", this.hitVFX_Pivot);
+
+            //pure color
+            //PureColor.instance.Play(); 
+            sequence.AppendCallback
+            (() =>
+                {
+                    GetComponent<SpriteRenderer>().material.SetFloat("_PureColor", 1f);
+                    GetComponent<SpriteRenderer>().material.SetColor("_Color", Color.white);
+                }
+            );
+
             //camera follow 
             sequence.AppendCallback(() => CameraFollow.SetFollow(camera_Pivot));
 
             //slow motion 
-            sequence.AppendInterval(KillMotion.Instance.slowMotionDelay);
+            sequence.AppendInterval(KillMotion.Instance.slowMotionDelay);   //interval
             sequence.AppendCallback(() => SlowMotion.StartSlow(0.6f, 0.1f));
 
             //camera follow back
-            sequence.AppendInterval(KillMotion.Instance.executeDuration);
+            sequence.AppendInterval(KillMotion.Instance.executeDuration); //interval
             sequence.AppendCallback(() =>
             {
                 GameManager.Instance.player.camera_Pivot.DOLocalMove(camera_Pivot.position - GameManager.Instance.player.transform.position, KillMotion.Instance.executeBackTime).From();
             });
+
+            //pure back 
+            sequence.AppendInterval(PureColor.instance.sustainTime); //interval
+            sequence.AppendCallback
+            (() =>
+                {
+                    GetComponent<SpriteRenderer>().material.SetFloat("_PureColor", 0f);
+                    GetComponent<SpriteRenderer>().material.SetColor("_Color", Color.black);
+                }
+            );
 
             sequence.AppendCallback(() => CameraFollow.SetFollow(GameManager.Instance.player.camera_Pivot));
 

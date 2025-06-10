@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2292627532759070271}
   - component: {fileID: 5856652160223467658}
   - component: {fileID: 578327974434762379}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: "\u7D2B\u8272\u5C4F\u5E55\u95EA\u70C1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,6 +138,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finishType: 0
   _animator: {fileID: 5856652160223467658}
+  finishEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7954565916572593728
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +152,7 @@ GameObject:
   - component: {fileID: 7644651459093021824}
   - component: {fileID: 8547076076649361365}
   - component: {fileID: 1775552463459945822}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}

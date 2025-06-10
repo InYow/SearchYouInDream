@@ -80,20 +80,21 @@ public class RankUpVisualEffect : VisualSequence
 
     public void SetMaterial1()
     {
-        // GameManager.Instance.player.GetComponent<SpriteRenderer>().material.SetFloat("_PureColor", 1f);
-        GetVisibleEntities();
-        foreach (var e in entities)
-        {
-            Debug.Log(e.name);
-            e.GetComponent<SpriteRenderer>().material.SetFloat("_PureColor", 1);
-        }
+        GameManager.Instance.player.GetComponent<SpriteRenderer>().sharedMaterial.SetFloat("_PureColor", 1f);
+        // GetVisibleEntities();
+        // foreach (var e in entities)
+        // {
+        //     Debug.Log(e.name);
+        //     e.GetComponent<SpriteRenderer>().material.SetFloat("_PureColor", 1);
+        // }
     }
 
     public void SetMaterial2()
     {
-        foreach (var e in entities)
-        {
-            e.GetComponent<SpriteRenderer>().material.SetFloat("_PureColor", 0);
-        }
+        GameManager.Instance.player.GetComponent<SpriteRenderer>().sharedMaterial.SetFloat("_PureColor", 0f);
+        // foreach (var e in entities)
+        // {
+        //     e.GetComponent<SpriteRenderer>().material.SetFloat("_PureColor", 0);
+        // }
     }
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6674710284383638500}
   - component: {fileID: 8912950568573776235}
   - component: {fileID: 210311282269235138}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: "\u53D7\u51FB\u7279\u65483"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3273798944483756173}
   - component: {fileID: 1236446071310677498}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: "\u53D7\u51FB\u7279\u65483"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,3 +153,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finishType: 1
   _animator: {fileID: 210311282269235138}
+  finishEvent:
+    m_PersistentCalls:
+      m_Calls: []

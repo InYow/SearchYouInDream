@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6564676393729956183}
   - component: {fileID: 8916123598016991195}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: "\u53D7\u51FB\u7279\u65485"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,6 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finishType: 0
   _animator: {fileID: 6564676393948495201}
+  finishEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6564676393948495006
 GameObject:
   m_ObjectHideFlags: 0
@@ -58,7 +61,7 @@ GameObject:
   - component: {fileID: 6564676393948495203}
   - component: {fileID: 6564676393948495202}
   - component: {fileID: 6564676393948495201}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: "\u53D7\u51FB\u7279\u65485"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

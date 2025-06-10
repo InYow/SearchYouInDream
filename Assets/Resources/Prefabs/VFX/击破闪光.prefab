@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 718825254039016421}
   - component: {fileID: 718825254039016422}
   - component: {fileID: 6768160362208320508}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: "\u51FB\u7834\u95EA\u5149"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: c52777cee25b84c439f209f75454bcec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &718825254039016422
@@ -121,3 +121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finishType: 0
   _animator: {fileID: 718825254039016422}
+  finishEvent:
+    m_PersistentCalls:
+      m_Calls: []

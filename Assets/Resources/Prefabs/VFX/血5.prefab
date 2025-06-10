@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5204099190525734339}
   - component: {fileID: 106030902248321705}
   - component: {fileID: -3301242345717060447}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: "\u88405"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: c52777cee25b84c439f209f75454bcec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -121,3 +121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finishType: 0
   _animator: {fileID: 106030902248321705}
+  finishEvent:
+    m_PersistentCalls:
+      m_Calls: []

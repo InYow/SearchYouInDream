@@ -45,12 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkBoxType: 0
-  entity_master: {fileID: 0}
   boxSize: {x: 1, y: 1}
   attackLayer:
     serializedVersion: 2
     m_Bits: 64
-  descrition: 
+  attacktype: 0
   entities: []
   pickLayer:
     serializedVersion: 2
@@ -145,24 +144,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9485db3a656f443985774ec19f618945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitVFX_List:
+  - "\u53D7\u4F24\u7279\u6548x"
+  "\u8840VFX_List":
+  - "\u88401"
+  hitVFX_Pivot: {fileID: 0}
+  camera_Pivot: {fileID: 0}
+  _rb: {fileID: 5803552295788461166}
   health: 10
   health_Max: 10
   resis: 10
   resis_Max: 10
+  resis_ResponSpeed: 0
+  attackValue: 0
+  breakAttackTimes: 1
+  breakAttackTimes_Max: 1
+  StartStateName: STEmpty
   transExecution: 0
   transExecution_DamageSourceEntity: {fileID: 0}
   transExecution_Type: 
   transExecution_AttackBox: {fileID: 0}
-  resis_ResponSpeed: 0
-  attackValue: 0
+  transExecution_AttackBoxBehaviour:
+    boxSize: {x: 1, y: 0.5}
+    boxOffset: {x: 0, y: 0}
+    attackLayer:
+      serializedVersion: 2
+      m_Bits: 64
+    attacktype: 0
+    canBreakAttackType: 0
+    entity_master: {fileID: 0}
   transBreakStun: 0
   beingBreakStun: 0
-  StartStateName: STEmpty
   stateCurrentName: 
-  _rb: {fileID: 5803552295788461166}
+  enemyType: 0
   behaviourTree: {fileID: 5803552295788461159}
   aiPath: {fileID: 5803552295788461161}
   target: {fileID: 0}
+  sensor: {fileID: 0}
+  bFoundPlayer: 0
+  isGetHurt: 0
+  bloodVFXName: "\u8E29\u8840\u7279\u65481"
+  bloodVFXNameList:
+  - "\u7206\u88401"
+  - "\u7206\u88402"
+  - "\u7206\u88403"
+  - "\u7206\u88404"
+  photo: {fileID: 0}
+  projectileSpawnTransform: {fileID: 0}
   shootEnable: 1
   shootCD: 5
   shootDistance: 10
@@ -207,7 +235,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c52777cee25b84c439f209f75454bcec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -429,6 +457,7 @@ MonoBehaviour:
   runRange: 7
   player: {fileID: 0}
   behaviourTree: {fileID: 5803552295788461159}
+  hasDetectedPlayer: 0
 --- !u!1 &5803552295881475832
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,7 +529,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1056580707
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f86678f0733dfb14382074f856af2f5e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -558,7 +587,7 @@ SortingGroup:
   m_GameObject: {fileID: 5803552295901085153}
   m_Enabled: 1
   m_SortingLayerID: 1056580707
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
 --- !u!114 &5803552295901085155
 MonoBehaviour:
@@ -572,8 +601,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d75596bfb3305442baebef57f67428e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  legacy: 1
+  isPlayer: 0
   SR_Health: {fileID: 5803552297663175802}
   SR_HealthGray: {fileID: 5803552297201548607}
+  Image_Health_Color: {fileID: 0}
+  Image_Health_Cover: {fileID: 0}
+  colorHealthAdd: {r: 0, g: 1, b: 0, a: 1}
+  colorHealthAddEnd: {r: 1, g: 1, b: 1, a: 1}
+  colorHealthLose: {r: 1, g: 0, b: 0, a: 1}
+  colorHealthLoseEnd: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  timeAdd: 0
+  timeLose: 0
   entity: {fileID: 5803552295788461153}
 --- !u!1 &5803552296290696985
 GameObject:
@@ -646,7 +685,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1056580707
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f86678f0733dfb14382074f856af2f5e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -814,7 +853,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1056580707
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f86678f0733dfb14382074f856af2f5e, type: 3}
   m_Color: {r: 1, g: 1, b: 0, a: 1}
@@ -898,7 +937,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1056580707
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f86678f0733dfb14382074f856af2f5e, type: 3}
   m_Color: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
@@ -982,7 +1021,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1056580707
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f86678f0733dfb14382074f856af2f5e, type: 3}
   m_Color: {r: 0, g: 1, b: 0, a: 1}
@@ -1039,7 +1078,7 @@ SortingGroup:
   m_GameObject: {fileID: 5803552297778626134}
   m_Enabled: 1
   m_SortingLayerID: 1056580707
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
 --- !u!114 &5803552297778626120
 MonoBehaviour:
@@ -1053,5 +1092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b01babcc93371649bab360953b7ad19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  legacy: 1
   SR_Resis: {fileID: 5803552297024708068}
+  Image_Resis: {fileID: 0}
   entity: {fileID: 5803552295788461153}

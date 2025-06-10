@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6335153300768922171}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: "\u53D7\u4F24\u7279\u6548_\u88AB\u62533"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 6335153302108893598}
   - component: {fileID: 6335153302108893599}
   - component: {fileID: 6335153302108893596}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: "\u53D7\u51FB\u7279\u65486"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: c52777cee25b84c439f209f75454bcec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

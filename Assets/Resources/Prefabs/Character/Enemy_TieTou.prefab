@@ -188,7 +188,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c52777cee25b84c439f209f75454bcec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -905,9 +905,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   legacy: 0
+  isPlayer: 0
   SR_Health: {fileID: 521641263205894035}
   SR_HealthGray: {fileID: 521641265017904382}
-  Image_Health: {fileID: 1582108396439585411}
+  Image_Health_Color: {fileID: 0}
+  Image_Health_Cover: {fileID: 0}
+  colorHealthAdd: {r: 0, g: 1, b: 0, a: 1}
+  colorHealthAddEnd: {r: 1, g: 1, b: 1, a: 1}
+  colorHealthLose: {r: 1, g: 0, b: 0, a: 1}
+  colorHealthLoseEnd: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  timeAdd: 0
+  timeLose: 0
   entity: {fileID: 521641263145245563}
 --- !u!1 &521641264671908377
 GameObject:

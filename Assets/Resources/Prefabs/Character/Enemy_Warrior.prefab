@@ -215,7 +215,6 @@ MonoBehaviour:
   - "\u88405"
   hitVFX_Pivot: {fileID: 155575174}
   camera_Pivot: {fileID: 633753750758964682}
-  attackBox: {fileID: 7008703672860874229}
   _rb: {fileID: 3225463772063427288}
   health: 100
   health_Max: 100
@@ -242,11 +241,20 @@ MonoBehaviour:
   transBreakStun: 0
   beingBreakStun: 0
   stateCurrentName: 
+  enemyType: 0
   behaviourTree: {fileID: 3225463772063427281}
   aiPath: {fileID: 3225463772063427295}
   target: {fileID: 0}
+  sensor: {fileID: 0}
   bFoundPlayer: 0
   isGetHurt: 0
+  bloodVFXName: "\u8E29\u8840\u7279\u65481"
+  bloodVFXNameList:
+  - "\u7206\u88401"
+  - "\u7206\u88402"
+  - "\u7206\u88403"
+  - "\u7206\u88404"
+  photo: {fileID: 0}
 --- !u!95 &3225463772063427291
 Animator:
   serializedVersion: 5
@@ -288,7 +296,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c52777cee25b84c439f209f75454bcec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -510,6 +518,7 @@ MonoBehaviour:
   runRange: 7
   player: {fileID: 0}
   behaviourTree: {fileID: 3225463772063427281}
+  hasDetectedPlayer: 0
 --- !u!1 &3225463772152844366
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,8 +662,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d75596bfb3305442baebef57f67428e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  legacy: 1
+  isPlayer: 0
   SR_Health: {fileID: 3225463772872788684}
   SR_HealthGray: {fileID: 3225463773485427593}
+  Image_Health_Color: {fileID: 0}
+  Image_Health_Cover: {fileID: 0}
+  colorHealthAdd: {r: 0, g: 1, b: 0, a: 1}
+  colorHealthAddEnd: {r: 1, g: 1, b: 1, a: 1}
+  colorHealthLose: {r: 1, g: 0, b: 0, a: 1}
+  colorHealthLoseEnd: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  timeAdd: 0
+  timeLose: 0
   entity: {fileID: 3225463772063427293}
 --- !u!1 &3225463772565727663
 GameObject:
@@ -882,7 +901,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b01babcc93371649bab360953b7ad19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  legacy: 1
   SR_Resis: {fileID: 3225463773308095314}
+  Image_Resis: {fileID: 0}
   entity: {fileID: 3225463772063427293}
 --- !u!1 &3225463773308095316
 GameObject:

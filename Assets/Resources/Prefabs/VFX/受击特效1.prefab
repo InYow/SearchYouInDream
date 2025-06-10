@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5900061495064162774}
   - component: {fileID: 5900061495064162775}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: "\u53D7\u51FB\u7279\u65481"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e445c53af1c1f9f45bd6f92988961fc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  finishType: 0
   _animator: {fileID: 5900061495080561685}
+  finishEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5900061495080561686
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,7 +61,7 @@ GameObject:
   - component: {fileID: 5900061495080561683}
   - component: {fileID: 5900061495080561684}
   - component: {fileID: 5900061495080561685}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: "\u53D7\u51FB\u7279\u65481"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +103,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: c52777cee25b84c439f209f75454bcec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

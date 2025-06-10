@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 424348331684125386}
   - component: {fileID: 424348331684125387}
   - component: {fileID: 424348331684125388}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: "\u6280\u80FD\u88C2\u5730\u5730\u9762"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7924356338135889763}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: "\u6280\u80FD\u88C2\u5730\u5730\u9762"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
