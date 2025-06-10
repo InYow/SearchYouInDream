@@ -92,6 +92,7 @@ public class STEnemy_WarriorShoot : State
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPosition.position, Quaternion.identity);
         bullet.transform.localScale = dir; 
         var projectile = bullet.GetComponent<ProjectileBase>();
+        projectile.entity_master = shootEnemy;
         projectile.EmmitProjectile(playerDirection.x > 0 ? Vector3.right : Vector3.left);
     }
 
