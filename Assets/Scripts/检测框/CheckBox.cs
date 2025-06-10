@@ -141,6 +141,9 @@ public class CheckBox : MonoBehaviour
                     var e = col.gameObject.GetComponent<Entity>();
                     if (e != null && e != entity_master)
                     {
+                        if (entity_master == null)
+                            Debug.Log("entity_master是空的");
+                        Debug.Log(entity_master.name + e.name + this.name);
                         entity_master.Hurt(e, this);
                         b = true;
                     }

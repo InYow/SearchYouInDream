@@ -4,6 +4,7 @@ using OfficeOpenXml.FormulaParsing.Excel.Functions.Text;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
+using UnityEngine.U2D;
 using UnityEngine.UI;
 
 //你别说, AI比我还能编
@@ -40,6 +41,10 @@ public enum Rank
 public class RankSystem : MonoBehaviour
 {
     public static RankSystem rankSystem;
+
+    public float angryUpValue;
+
+    public float angrySkillUpValue;
 
     [SerializeField]
     //配置各评级
@@ -121,7 +126,13 @@ public class RankSystem : MonoBehaviour
 
     public static void Angry()
     {
-        AddRankValue(6f); //增加评值
+        AddRankValue(rankSystem.angryUpValue); //增加评值
+        rankSystem.t = rankSystem.time; //重置评值降低时间
+    }
+
+    public static void AngrySkill()
+    {
+        AddRankValue(rankSystem.angrySkillUpValue); //增加评值
         rankSystem.t = rankSystem.time; //重置评值降低时间
     }
 
@@ -313,6 +324,10 @@ public class RankSystem : MonoBehaviour
                     {
                         rankSystem.ACIntoA?.Invoke();
                         break;
+                    }
+                    if (rankBefore < rankAfter)
+                    {
+                        RankUpVisualEffect.instance.Play();
                     }
                     // case Rank.S:
                     //     {

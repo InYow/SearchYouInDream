@@ -13,5 +13,8 @@ public class AngryVFXBehaviour : PlayableBehaviour
             return;
         }
         受伤Canvas.Instance.StopAniamtion();
+
+        //rank value up
+        RankSystem.Angry();
     }
 }
