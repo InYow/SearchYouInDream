@@ -45,6 +45,7 @@ public class STEnemy_ZaBingShoot : State
         bullet.transform.localScale = dir; 
         
         var projectile = bullet.GetComponent<ProjectileBase>();
+        projectile.entity_master = shootEnemy;
         projectile.EmmitProjectile(playerDirection.x > 0 ? Vector3.right : Vector3.left);
         
     }

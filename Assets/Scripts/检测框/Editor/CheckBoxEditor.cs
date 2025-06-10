@@ -34,6 +34,11 @@ public class CheckBoxEditor : Editor
                 DrawProperty("attackLayer");
                 DrawProperty("pickableItem_master");
                 break;
+            case CheckBoxType.flash:
+                DrawProperty("boxSize");
+                DrawProperty("attackLayer");
+                DrawProperty("OnHitEntity");
+                break;
         }
 
         // 应用修改

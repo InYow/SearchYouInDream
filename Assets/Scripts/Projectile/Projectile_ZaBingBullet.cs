@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UI.UISystem.UIFramework;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -13,6 +14,7 @@ public class Projectile_ZaBingBullet : ProjectileBase
     public float lastDuration = 10.0f;
     public float emmitYawAngle = 30.0f;
     public float gravityScale = 9.8f;
+    public GameObject flashMaskPrefab;
     
     private float heightFromGround;
     private Transform shadowTransform;
@@ -22,6 +24,31 @@ public class Projectile_ZaBingBullet : ProjectileBase
     private float shadwOriginalY;
     private bool isHitGround = false;
     private float hitLandTime;
+    private CheckBox checkBox; 
+    private void OnEnable()
+    {
+        checkBox = GetComponentInChildren<CheckBox>();
+        if (checkBox != null)
+        {
+            checkBox.OnHitEntity.AddListener(OnPlayerHit);
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (checkBox != null)
+        {
+            checkBox.OnHitEntity.RemoveListener(OnPlayerHit);
+        }
+    }
+
+    private void OnPlayerHit()
+    {
+        if (flashMaskPrefab)
+        {
+            Instantiate(flashMaskPrefab,UIManager.instance.transform);
+        }
+    }
 
     public override void EmmitProjectile(Vector3 direction)
     {
@@ -76,6 +103,12 @@ public class Projectile_ZaBingBullet : ProjectileBase
         SetAnimationParam();
     }
 
+    public override void Stop()
+    {
+        _rb.velocity = Vector2.zero;    //速度为0
+        Destroy(this.gameObject);
+    }
+    
     private void CalculateHeightAndVelocity()
     {
         heightFromGround = projectileTransform.position.y - shadowTransform.position.y;

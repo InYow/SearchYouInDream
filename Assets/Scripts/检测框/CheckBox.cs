@@ -2,12 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum CheckBoxType
 {
     attack = 0,
     pick,
     attack_throwitem,
+    flash
 }
 
 public enum AttackType
@@ -35,13 +37,16 @@ public class CheckBox : MonoBehaviour
     public AttackType attacktype = AttackType.none;       //攻击类型描述    
     public List<Entity> entities = new();
 
-
     //Pick
     public LayerMask pickLayer;
     public bool picked;
 
     //PickableItem
     public ProjectileBase pickableItem_master;
+    
+    //Flash
+    public UnityEvent OnHitEntity;//闪光类投射物触发回调
+
     private void OnEnable()
     {
         //初始化值
@@ -63,6 +68,11 @@ public class CheckBox : MonoBehaviour
         }
         //attack_throwitem
         else if (checkBoxType == CheckBoxType.attack_throwitem)
+        {
+            pickableItem_master = GetComponentInParent<ProjectileBase>();
+            entity_master = pickableItem_master.entity_master;
+        }
+        else if (checkBoxType == CheckBoxType.flash)
         {
             pickableItem_master = GetComponentInParent<ProjectileBase>();
             entity_master = pickableItem_master.entity_master;
@@ -148,7 +158,31 @@ public class CheckBox : MonoBehaviour
                 if (b)
                 {
                     pickableItem_master.Stop();             //攻击飞行停止
+                    
                     gameObject.SetActive(false);            //关闭攻击检测框
+                }
+            }
+        }
+        else if (checkBoxType == CheckBoxType.flash)
+        {
+            Collider2D[] hits = Physics2D.OverlapBoxAll(boxCenter, boxSize, 0f, attackLayer);
+            
+            if (hits.Length > 0)
+            {
+                bool b = false; //只攻击一次
+                foreach (Collider2D col in hits)
+                {
+                    var e = col.gameObject.GetComponent<Player>();
+                    if (e != null && e != entity_master)
+                    {
+                        OnHitEntity.Invoke();
+                        b = true;
+                    }
+                    if (b)
+                    {
+                        pickableItem_master.Stop();             //攻击飞行停止
+                        //gameObject.SetActive(false);            //关闭攻击检测框
+                    }
                 }
             }
         }
@@ -181,6 +215,10 @@ public class CheckBox : MonoBehaviour
         {
             pickableItem_master = null;
             entity_master = null;
+        }
+        else if (checkBoxType == CheckBoxType.flash)
+        {
+            OnHitEntity.RemoveAllListeners();
         }
     }
 }

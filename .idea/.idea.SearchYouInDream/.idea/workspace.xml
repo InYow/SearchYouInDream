@@ -6,15 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/Boomer/BoomerEnemyBehavior.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/Boomer/BoomerEnemyBehavior.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 1.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 1.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_击破.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_击破.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_暴怒.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_暴怒.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_终结技.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_终结技.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_进攻_幻影连斩.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_进攻_幻影连斩.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/Character/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/Character/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Projectile/ZaBingBullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Projectile/ZaBingBullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectile/Projectile_ZaBingBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectile/Projectile_ZaBingBullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/State/STEnemy_WarriorShoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/State/STEnemy_WarriorShoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/State/STEnemy_ZaBingShoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/State/STEnemy_ZaBingShoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/检测框/CheckBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/检测框/CheckBox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/检测框/Editor/CheckBoxEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/检测框/Editor/CheckBoxEditor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +39,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/CollectableItemAbstract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Projectile/ProjectileBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Projectile/Projectile_ZaBingBullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/FlashUIBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UISystem/UIFramework/UICanvas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/敌人/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/流程/AStarGraphController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.9/Scripts/Runtime/TextMeshProUGUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.6.5/Runtime/TrackAsset.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -177,6 +175,7 @@
       <workItem from="1748763956811" duration="1120000" />
       <workItem from="1749210347710" duration="2376000" />
       <workItem from="1749213093134" duration="4498000" />
+      <workItem from="1749542942611" duration="4463000" />
     </task>
     <servers />
   </component>
