@@ -15,6 +15,17 @@ public class BreakableItem_破碎 : State
 
     public override void StateStart(Entity entity)
     {
+        //不动
+        if (transform.parent.lossyScale.x == 1)
+        {
+        }
+        //动
+        else
+        {
+            Vector3 v = transform.GetChild(0).transform.localScale;
+            v.x = -1;
+            transform.GetChild(0).transform.localScale = v;
+        }
         //根据BreakableItem.Timeline改变播放的Timeline
 
         //绑定Timeline-Animator

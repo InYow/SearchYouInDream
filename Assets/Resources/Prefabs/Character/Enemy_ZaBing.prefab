@@ -123,7 +123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2516708375689414073}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.87, y: 1.25, z: 0}
+  m_LocalPosition: {x: 0.939, y: 1.763, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -217,6 +217,9 @@ MonoBehaviour:
     m_Bits: 128
   picked: 0
   pickableItem_master: {fileID: 0}
+  OnHitEntity:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6767691419478656132
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,7 +414,7 @@ Transform:
   m_GameObject: {fileID: 8186457544752307610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.54, y: -3.51, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalScale: {x: -0.7407408, y: 0.7407408, z: 0.7407408}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2559442798291432634}
@@ -444,11 +447,11 @@ MonoBehaviour:
   hitVFX_Pivot: {fileID: 4048563567773095411}
   camera_Pivot: {fileID: 5300062276099498693}
   _rb: {fileID: 8186457544752307612}
-  health: 15
-  health_Max: 15
-  resis: 5
-  resis_Max: 5
-  resis_ResponSpeed: 1
+  health: 42
+  health_Max: 42
+  resis: 10
+  resis_Max: 10
+  resis_ResponSpeed: 2.2
   attackValue: 1
   breakAttackTimes: 1
   breakAttackTimes_Max: 1
@@ -482,7 +485,7 @@ MonoBehaviour:
   - "\u7206\u88402"
   - "\u7206\u88403"
   - "\u7206\u88404"
-  photo: {fileID: 0}
+  photo: {fileID: 21300000, guid: ba1b281f86136bd43a5b1a9539f777ce, type: 3}
   projectileSpawnTransform: {fileID: 2559442798291432634}
   shootEnable: 1
   shootCD: 5
@@ -675,7 +678,7 @@ MonoBehaviour:
   traversableTags: -1
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
-    value: -1
+    value: 8
 --- !u!114 &8186457544752307611
 MonoBehaviour:
   m_ObjectHideFlags: 0
