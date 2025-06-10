@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6392d2f2ca40138489bd90a918dd44dd, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.56078434}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -136,11 +136,13 @@ MonoBehaviour:
   animator: {fileID: 3569910828149840241}
   shadow: {fileID: 3569910826413905955}
   projectileVisual: {fileID: 3569910828149840244}
+  landScale: 1.35
   initialSpeed: 6
   lastDuration: 5
   emmitYawAngle: 30
   gravityScale: 9.8
   flashMaskPrefab: {fileID: 508832314405925070, guid: e95b6e2f90d1d0448bf618081a5185b6, type: 3}
+  bEnableCheckBoxOnLand: 0
 --- !u!50 &4238966071032595840
 Rigidbody2D:
   serializedVersion: 4
@@ -248,7 +250,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &3569910828149840241
 Animator:
   serializedVersion: 5

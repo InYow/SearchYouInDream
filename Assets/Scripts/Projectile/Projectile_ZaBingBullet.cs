@@ -10,11 +10,13 @@ public class Projectile_ZaBingBullet : ProjectileBase
     public Animator animator;
     public GameObject shadow;
     public GameObject projectileVisual;
+    public float landScale = 1.35f;
     public float initialSpeed = 30.0f;
     public float lastDuration = 10.0f;
     public float emmitYawAngle = 30.0f;
     public float gravityScale = 9.8f;
     public GameObject flashMaskPrefab;
+    public bool bEnableCheckBoxOnLand = false;
     
     private float heightFromGround;
     private Transform shadowTransform;
@@ -112,13 +114,9 @@ public class Projectile_ZaBingBullet : ProjectileBase
     private void CalculateHeightAndVelocity()
     {
         heightFromGround = projectileTransform.position.y - shadowTransform.position.y;
-        if (heightFromGround <= 0.1f)
+        if (heightFromGround <= 0.01f)
         {
-            isHitGround = true;
-            hitLandTime = Time.time;
-                
-            velocity = Vector3.zero;
-            _rb.velocity = Vector2.zero;
+            OnHitGround();
         }
     }
 
@@ -128,6 +126,22 @@ public class Projectile_ZaBingBullet : ProjectileBase
         {
             animator.SetFloat("VelocityY", velocity.y);
             animator.SetFloat("HeightFromGround", heightFromGround);
+            if (isHitGround)
+            {
+                projectileVisual.transform.localScale = Vector3.one * landScale;
+            }
         }
+    }
+
+    private void OnHitGround()
+    {
+        isHitGround = true;
+        hitLandTime = Time.time;
+        
+        velocity = Vector3.zero;
+        _rb.velocity = Vector2.zero;
+
+        checkBox.enabled = bEnableCheckBoxOnLand;
+        Destroy(shadow);
     }
 }

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 508832314405925058}
   - component: {fileID: 508832314405925057}
   - component: {fileID: 508832314405925056}
+  - component: {fileID: 7891241275836857784}
   m_Layer: 0
   m_Name: FlashCanvas
   m_TagString: Untagged
@@ -55,6 +56,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashDuration: 1
+  flashSprites:
+  - {fileID: 21300000, guid: affd1652b37b5d24a8cfdd9f22d127a6, type: 3}
+  - {fileID: 21300000, guid: 615e247fbf25f23478ce660f45e06b59, type: 3}
+  - {fileID: 21300000, guid: ae97ff91309d3b647b3f0aa3a31801e3, type: 3}
+  fadeInDuration: 5
+  flashFadeInCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  fadeOutDuration: 0.3
+  flashFadeOutCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!223 &508832314405925060
 Canvas:
   m_ObjectHideFlags: 0
@@ -154,3 +173,15 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!225 &7891241275836857784
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508832314405925070}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
