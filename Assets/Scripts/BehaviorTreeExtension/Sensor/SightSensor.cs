@@ -13,6 +13,8 @@ public class SightSensor : SensorBase
     public BehaviorTree behaviourTree;
     
     public bool hasDetectedPlayer = false;
+
+    private Enemy _enemy;
     
     private void Awake()
     {
@@ -20,6 +22,8 @@ public class SightSensor : SensorBase
         {
             player = FindAnyObjectByType<Player>().transform;    
         }
+
+        _enemy = GetComponent<Enemy>();
     }
 
     public void Update()
@@ -38,7 +42,7 @@ public class SightSensor : SensorBase
             {
                 hasDetectedPlayer = true;
                 OnTargetDetect?.Invoke();
-
+                _enemy.target = player;
                 behaviourTree.SetVariableValue("PlayerTransform", player);
                 behaviourTree.SetVariableValue("bFoundPlayer", true);
             }

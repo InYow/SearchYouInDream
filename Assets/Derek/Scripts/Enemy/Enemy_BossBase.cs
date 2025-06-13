@@ -4,27 +4,74 @@ using BehaviorDesigner.Runtime;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Enemy_BossBase : Enemy
+public class Enemy_BossBase : Enemy_DashBase
 {
-    public ExternalBehaviorTree FirstStageBehaviorTree;
-    public ExternalBehaviorTree SecondStageBehaviorTree;
-
-    public override void Start()
-    {
-        base.Start();
-        SetBehaviorTree(FirstStageBehaviorTree);
-    }
+    private bool bInSecondState = false;
     
-    public void EnterSecondStage()
+    // old version
+    public override void GetHurt(Entity entity, CheckBox attackBox)
     {
-        SetBehaviorTree(SecondStageBehaviorTree);
-    }
-    
-    private void SetBehaviorTree(ExternalBehaviorTree treeAsset)
-    {
-        if (treeAsset)
+        Debug.Log(entity.name);
+        if (!BuffContain("BFPlayerUnselected"))
         {
-            behaviourTree.ExternalBehavior = treeAsset;    
+            health -= entity.attackValue;
+            EnemyInfoUIList.instance.AddEnemyInfoUI(this); //添加敌人信息UI
+
+            GetHurtVFX();
+            SoundEffectManager.PlaySFX01(transform);
+
+            if (transBreakStun || beingBreakStun)
+            {
+                isGetHurt = true;
+                behaviourTree.SetVariableValue("bIsGetHurt", isGetHurt);
+            }
+
+            //死掉了
+            if (health <= 0f)
+            {
+                Execution(entity, attackBox);
+                //behaviourTree.DisableBehavior();
+            }
+            else if (!bInSecondState && health <= health_Max*0.5f)
+            {
+                bInSecondState = true;
+                behaviourTree.SetVariableValue("bSecondState",bInSecondState);
+                //TODO: Broadcast Event 
+            }
+        }
+    }
+
+    // new version
+    public override void GetHurt(Entity entity, CheckAttackBoxBehaviour checkBoxBehaviour)
+    {
+        if (!BuffContain("BFPlayerUnselected"))
+        {
+            health -= entity.attackValue;
+            EnemyInfoUIList.instance.AddEnemyInfoUI(this); //添加敌人信息UI
+
+
+            //播放受伤特效
+            GetHurtVFX();
+            SoundEffectManager.PlaySFX01(transform);
+
+            if (transBreakStun || beingBreakStun)
+            {
+                isGetHurt = true;
+                behaviourTree.SetVariableValue("bIsGetHurt", isGetHurt);
+            }
+
+            //死掉了
+            if (health <= 0f)
+            {
+                Execution(entity, checkBoxBehaviour);
+                //behaviourTree.DisableBehavior();
+            }
+            else if (!bInSecondState && health <= health_Max/2)
+            {
+                bInSecondState = true;
+                behaviourTree.SetVariableValue("bSecondState",bInSecondState);
+                //TODO: Broadcast Event
+            }
         }
     }
 }

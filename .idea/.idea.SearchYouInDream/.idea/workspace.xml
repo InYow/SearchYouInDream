@@ -5,12 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Fungus/Integrations/Playmaker/Fungus-PlayMaker.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Fungus/Integrations/Spine/Fungus-Spine.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Attribute Processors.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Editor Windows.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Sample - RPG Editor.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/Boss/Boss01/Boss01_Stun.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/Boss/Boss01/Boss01_Stun.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/Boss/Boss01/Boss01_StunEnd.playable" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/Boss/Boss01/Boss01_StunEnd.playable.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/Boss/Boss01/Boss01_死亡.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/Boss/Boss01/Boss01_死亡.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/Boss/Boss01/Boss01_被击飞.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/Boss/Boss01/Boss01_被击飞.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01BreakStun.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01BreakStun.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01Dash.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01Dash.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01DieLayOn.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01DieLayOn.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01StunRecover.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01StunRecover.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/DashEnemyBehaviorBaseTemplate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/DashEnemyBehaviorBaseTemplate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/FatBall/FatBallEnemyBehaviorBaseTemplate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/FatBall/FatBallEnemyBehaviorBaseTemplate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Derek/Scripts/Enemy/Enemy_BossBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Scripts/Enemy/Enemy_BossBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_Dash.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_Dash.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_BoomerExecution.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_BoomerExecution.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_FatBallDash.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_FatBallDash.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_FatBallExecution.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_FatBallExecution.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Sensor/SightSensor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Sensor/SightSensor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +48,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Derek/Scripts/UITest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Action/BTAction_MoveToPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Action/BTAction_RandomPatrol.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Action/BTAction_TransitState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Composite/RunOnce.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DestroyableItem/IDestroyableItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/CollectableItemAbstract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Projectile/ProjectileBase.cs" root0="FORCE_HIGHLIGHTING" />
@@ -174,6 +191,8 @@
       <workItem from="1749210347710" duration="2376000" />
       <workItem from="1749213093134" duration="4498000" />
       <workItem from="1749542942611" duration="4463000" />
+      <workItem from="1749778135558" duration="4001000" />
+      <workItem from="1749814206171" duration="7236000" />
     </task>
     <servers />
   </component>
