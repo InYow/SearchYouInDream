@@ -4030,7 +4030,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.041042, y: -18.82888, z: -10}
+  m_LocalPosition: {x: -14.491307, y: -18.82888, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8413,7 +8413,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 990623859}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.41626367, y: 0.10740751, z: -10}
+  m_LocalPosition: {x: -0.41511273, y: 0.10740751, z: -10}
   m_LocalScale: {x: 0.02222222, y: 0.06666667, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20190,7 +20190,7 @@ SpriteRenderer:
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.8627467, y: 3.177052}
+  m_Size: {x: 3.90625, y: 3.90625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -20278,7 +20278,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.45, y: 0.02}
     oldSize: {x: 3.90625, y: 3.90625}
-    newSize: {x: 3.8627467, y: 3.177052}
+    newSize: {x: 3.90625, y: 3.90625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -20391,11 +20391,11 @@ MonoBehaviour:
   hitVFX_Pivot: {fileID: 1640049662571717209}
   camera_Pivot: {fileID: 1363103723248128650}
   _rb: {fileID: 6877525104035965494}
-  health: 100
+  health: 51
   health_Max: 100
   resis: 5
   resis_Max: 5
-  resis_ResponSpeed: 0.1
+  resis_ResponSpeed: 5
   attackValue: 2
   breakAttackTimes: 1
   breakAttackTimes_Max: 1

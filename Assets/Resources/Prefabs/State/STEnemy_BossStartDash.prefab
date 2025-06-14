@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 757702075433948752}
   - component: {fileID: 757702075433948754}
   - component: {fileID: 757702075433948753}
+  - component: {fileID: -3867167087241271126}
+  - component: {fileID: 2352018918708765070}
   m_Layer: 0
   m_Name: STEnemy_BossStartDash
   m_TagString: Untagged
@@ -44,12 +46,14 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 3cff5134ad7836b44bff1984c4bd7fe6, type: 2}
   m_InitialState: 0
-  m_WrapMode: 1
+  m_WrapMode: 0
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: 4042279457160757030, guid: 3cff5134ad7836b44bff1984c4bd7fe6, type: 2}
     value: {fileID: 0}
+  - key: {fileID: -5503473384891250227, guid: 3cff5134ad7836b44bff1984c4bd7fe6, type: 2}
+    value: {fileID: 2352018918708765070}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &757702075433948753
@@ -65,7 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playableDirector: {fileID: 757702075433948754}
-  wrapMode: 1
+  wrapMode: 0
   rankABCD: 0
   playableAsset_A: {fileID: 11400000, guid: 3cff5134ad7836b44bff1984c4bd7fe6, type: 2}
   playableAsset_B: {fileID: 0}
@@ -82,3 +86,48 @@ MonoBehaviour:
   inputWindTypeSectionClipList_D: []
   time: 0
   time_TransAttack: 2
+--- !u!114 &-3867167087241271126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757702075433948759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a26bc86dedd549c4386cc27d698f73a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  firstLayerIndex: 0
+  secondLayerIndex: 0
+--- !u!114 &2352018918708765070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757702075433948759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: b7af74d6f35a3984290bcec6d83eba8e, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: -3867167087241271126}
+          m_TargetAssemblyTypeName: SwitchAnimationLayer, Assembly-CSharp
+          m_MethodName: SwitchAnimation
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
