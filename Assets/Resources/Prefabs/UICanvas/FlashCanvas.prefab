@@ -60,17 +60,53 @@ MonoBehaviour:
   - {fileID: 21300000, guid: affd1652b37b5d24a8cfdd9f22d127a6, type: 3}
   - {fileID: 21300000, guid: 615e247fbf25f23478ce660f45e06b59, type: 3}
   - {fileID: 21300000, guid: ae97ff91309d3b647b3f0aa3a31801e3, type: 3}
-  fadeInDuration: 5
+  fadeInDuration: 0.1
   flashFadeInCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  fadeOutDuration: 0.3
+  fadeOutDuration: 0.4
   flashFadeOutCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.98727417
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.9973931
+      value: 0.0032989383
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4

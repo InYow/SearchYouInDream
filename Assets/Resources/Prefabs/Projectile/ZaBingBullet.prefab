@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3569910826413905954}
   - component: {fileID: 3569910826413905981}
+  - component: {fileID: 8150705739898520090}
   m_Layer: 0
   m_Name: Shadow
   m_TagString: Untagged
@@ -84,6 +85,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8150705739898520090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3569910826413905955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15edc2cdda12a7e45af0f217f807e9f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkBoxType: 3
+  boxSize: {x: 0.75, y: 0.4}
+  attackLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  attacktype: 0
+  entities: []
+  pickLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  picked: 0
+  pickableItem_master: {fileID: 0}
+  OnHitEntity:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3569910826777618787
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,10 +165,10 @@ MonoBehaviour:
   shadow: {fileID: 3569910826413905955}
   projectileVisual: {fileID: 3569910828149840244}
   landScale: 1.35
-  initialSpeed: 6
+  initialSpeed: 8
   lastDuration: 5
-  emmitYawAngle: 30
-  gravityScale: 9.8
+  emmitYawAngle: 0
+  gravityScale: 15
   flashMaskPrefab: {fileID: 508832314405925070, guid: e95b6e2f90d1d0448bf618081a5185b6, type: 3}
   bEnableCheckBoxOnLand: 0
 --- !u!50 &4238966071032595840
@@ -176,7 +204,6 @@ GameObject:
   - component: {fileID: 3569910828149840246}
   - component: {fileID: 3569910828149840241}
   - component: {fileID: 3569910828149840240}
-  - component: {fileID: 4728329144027335307}
   m_Layer: 0
   m_Name: "\u53E3\u6C341"
   m_TagString: Untagged
@@ -279,7 +306,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3569910828149840244}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -298,30 +325,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3381784, y: 0.2882796}
   m_EdgeRadius: 0
---- !u!114 &4728329144027335307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3569910828149840244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15edc2cdda12a7e45af0f217f807e9f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkBoxType: 3
-  boxSize: {x: 0.41, y: 0.35}
-  attackLayer:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  attacktype: 0
-  entities: []
-  pickLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  picked: 0
-  pickableItem_master: {fileID: 0}
-  OnHitEntity:
-    m_PersistentCalls:
-      m_Calls: []

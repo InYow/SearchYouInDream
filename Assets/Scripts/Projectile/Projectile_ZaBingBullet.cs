@@ -17,7 +17,7 @@ public class Projectile_ZaBingBullet : ProjectileBase
     public float gravityScale = 9.8f;
     public GameObject flashMaskPrefab;
     public bool bEnableCheckBoxOnLand = false;
-    
+
     private float heightFromGround;
     private Transform shadowTransform;
     private Transform projectileTransform;
@@ -26,7 +26,7 @@ public class Projectile_ZaBingBullet : ProjectileBase
     private float shadwOriginalY;
     private bool isHitGround = false;
     private float hitLandTime;
-    private CheckBox checkBox; 
+    private CheckBox checkBox;
     private void OnEnable()
     {
         checkBox = GetComponentInChildren<CheckBox>();
@@ -48,7 +48,7 @@ public class Projectile_ZaBingBullet : ProjectileBase
     {
         if (flashMaskPrefab)
         {
-            Instantiate(flashMaskPrefab,UIManager.instance.transform);
+            Instantiate(flashMaskPrefab, UIManager.instance.transform);
         }
     }
 
@@ -57,13 +57,13 @@ public class Projectile_ZaBingBullet : ProjectileBase
         shadowTransform = shadow.transform;
         projectileTransform = projectileVisual.transform;
         _rb = GetComponent<Rigidbody2D>();
-        
+
         shadwOriginalY = shadowTransform.position.y;
         Vector3 axis = direction.x > 0 ? Vector3.forward : Vector3.back;
         Quaternion rotation = Quaternion.AngleAxis(emmitYawAngle, axis);
         Vector3 velocityDirection = (rotation * direction).normalized;
         velocity = velocityDirection * initialSpeed; // 初始速度
-        
+
         // 设置刚体的初速度
         _rb.simulated = true;
         _rb.velocity = velocity; // 设置刚体速度
@@ -71,12 +71,12 @@ public class Projectile_ZaBingBullet : ProjectileBase
         // 更新子弹动画
         UpdateAnimation();
     }
-    
+
     void Update()
     {
         if (isHitGround)
         {
-            if (Time.time-hitLandTime>lastDuration)
+            if (Time.time - hitLandTime > lastDuration)
             {
                 Destroy(this.gameObject);
             }
@@ -93,12 +93,12 @@ public class Projectile_ZaBingBullet : ProjectileBase
             var vector3 = shadowTransform.position;
             vector3.y = shadwOriginalY;
             shadowTransform.position = vector3;
-        
+
             // 更新动画
             UpdateAnimation();
         }
     }
-    
+
     private void UpdateAnimation()
     {
         CalculateHeightAndVelocity();
@@ -110,7 +110,7 @@ public class Projectile_ZaBingBullet : ProjectileBase
         _rb.velocity = Vector2.zero;    //速度为0
         Destroy(this.gameObject);
     }
-    
+
     private void CalculateHeightAndVelocity()
     {
         heightFromGround = projectileTransform.position.y - shadowTransform.position.y;
@@ -137,11 +137,11 @@ public class Projectile_ZaBingBullet : ProjectileBase
     {
         isHitGround = true;
         hitLandTime = Time.time;
-        
+
         velocity = Vector3.zero;
         _rb.velocity = Vector2.zero;
 
         checkBox.enabled = bEnableCheckBoxOnLand;
-        Destroy(shadow);
+        shadow.GetComponent<SpriteRenderer>().enabled = false;
     }
 }

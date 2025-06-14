@@ -11,7 +11,7 @@ public class FlashUIBase : MonoBehaviour
     public AnimationCurve flashFadeInCurve;
     public float fadeOutDuration = 0.5f;
     public AnimationCurve flashFadeOutCurve;
-    
+
     private float startTime;
     private Image flashImage;
     private CanvasGroup canvasGroup;
@@ -29,19 +29,19 @@ public class FlashUIBase : MonoBehaviour
     private void Update()
     {
         if (Time.time - startTime > flashDuration)
-        if (startFlash && Time.time - startTime > flashDuration)
-        {
-            StartCoroutine(FadeOut());
-        }
+            if (startFlash && Time.time - startTime > flashDuration)
+            {
+                StartCoroutine(FadeOut());
+            }
     }
 
     private void SetRandomFlashCover()
     {
         if (flashImage)
         {
-            flashImage.sprite = flashSprites[Random.Range(0,flashSprites.Length)];
-            int xScale = Random.Range(0,2)*2-1;
-            int yScale = Random.Range(0,2)*2-1;
+            flashImage.sprite = flashSprites[Random.Range(0, flashSprites.Length)];
+            int xScale = Random.Range(0, 2) * 2 - 1;
+            int yScale = Random.Range(0, 2) * 2 - 1;
             transform.localScale = new Vector3(xScale, yScale, 1);
         }
     }
@@ -49,7 +49,7 @@ public class FlashUIBase : MonoBehaviour
     private IEnumerator FadeIn()
     {
         float t = 0;
-        while (t<fadeInDuration)
+        while (t < fadeInDuration)
         {
             float step = t / fadeInDuration;
             float alpha = flashFadeInCurve.Evaluate(step);
@@ -60,15 +60,14 @@ public class FlashUIBase : MonoBehaviour
         startTime = Time.time;
         startFlash = true;
     }
-    
+
     private IEnumerator FadeOut()
     {
         float t = 0;
-        while (t<fadeOutDuration)
+        while (t < fadeOutDuration)
         {
-            Destroy(gameObject);
             float step = t / fadeOutDuration;
-            float alpha = flashFadeOutCurve.Evaluate(step);;
+            float alpha = flashFadeOutCurve.Evaluate(step); ;
             canvasGroup.alpha = alpha;
             t += Time.deltaTime;
             yield return null;
