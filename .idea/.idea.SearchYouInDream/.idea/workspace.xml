@@ -6,13 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnTimeline/Boss/Boss01/Boss01_DashStart.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnTimeline/Boss/Boss01/Boss01_DashStart.playable" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/Boss/BossBehaviorTree.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/Boss/BossBehaviorTree.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_进攻_烈焰冲撞.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/Player_进攻_烈焰冲撞.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_BossDash.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_BossDash.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_BossStartDash.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_BossStartDash.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/State/STEnemy_BossDash.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/State/STEnemy_BossDash.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男死亡_1033x615.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男死亡_1033x615.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwitchAnimationLayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SwitchAnimationLayer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +182,8 @@
       <workItem from="1749542942611" duration="4463000" />
       <workItem from="1749778135558" duration="4001000" />
       <workItem from="1749814206171" duration="7832000" />
-      <workItem from="1749862503230" duration="2746000" />
+      <workItem from="1749862503230" duration="4285000" />
+      <workItem from="1749913824472" duration="516000" />
     </task>
     <servers />
   </component>

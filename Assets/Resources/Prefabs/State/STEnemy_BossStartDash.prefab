@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+  aiPath: {fileID: 0}
+  SecondStateSpeed: 4
   firstLayerIndex: 0
   secondLayerIndex: 0
 --- !u!114 &2352018918708765070

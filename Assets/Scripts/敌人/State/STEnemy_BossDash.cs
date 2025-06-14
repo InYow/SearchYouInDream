@@ -65,17 +65,6 @@ public class STEnemy_BossDash : State
     {
         if (isDashing)
         {
-            if (Time.time - startDashTime > maxDashTime)
-            {
-                dashEnemy._rb.velocity = Vector2.zero;
-                isDashing = false;
-                isDashEnd = true;
-                //playableDirector.playableAsset = dashEndAsset;
-                //playableDirector.extrapolationMode = DirectorWrapMode.Hold;
-                //BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
-                //playableDirector.Play();
-            }
-            
             float distance = (entity.transform.position - targetPosition).magnitude;
             if (distance <= stopDistance)
             {

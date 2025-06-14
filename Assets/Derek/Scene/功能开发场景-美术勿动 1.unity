@@ -18075,6 +18075,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5592159268507573294, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
+      propertyPath: health
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e380edeeb582c74f8670ea649be8410, type: 3}
 --- !u!1 &2076511892
@@ -19373,7 +19377,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -1618621003, guid: b5a705d4c98188f41aaf6188c2366ddb, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.34901962}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.9121094, y: 1.0664062}
@@ -20113,7 +20117,7 @@ MonoBehaviour:
   radius: 0.45
   height: 1.28
   canMove: 0
-  maxSpeed: 1.8
+  maxSpeed: 2
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
@@ -20391,7 +20395,7 @@ MonoBehaviour:
   hitVFX_Pivot: {fileID: 1640049662571717209}
   camera_Pivot: {fileID: 1363103723248128650}
   _rb: {fileID: 6877525104035965494}
-  health: 51
+  health: 2
   health_Max: 100
   resis: 5
   resis_Max: 5
@@ -20433,7 +20437,7 @@ MonoBehaviour:
   dashEnable: 1
   dashCD: 5
   dashSpeed: 8
-  dashDistance: 8
+  dashDistance: 12
 --- !u!1001 &7223349099233280454
 PrefabInstance:
   m_ObjectHideFlags: 0
