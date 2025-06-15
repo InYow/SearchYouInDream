@@ -33,6 +33,9 @@ public class SkillManager : MonoBehaviour
     public string skill6;       //无方向
                                 //Player_增幅_愤怒
 
+    public string skill7;       //冲刺期间
+                                //Player_击破_浩克掌_拍掌
+
     [Header("冲刺")]
     public float 冲刺恢复CDMax;
     public float 冲刺恢复CD;
@@ -190,6 +193,19 @@ public class SkillManager : MonoBehaviour
             case 6://无方向
                 {
                     return instance.skill6;
+                }
+            case 7://冲刺期间
+                {
+                    if (instance.energyBeans > 0)
+                    {
+                        instance.energyBeans--;
+                        RestoreHealth();
+                        return instance.skill7;
+                    }
+                    else
+                    {
+                        return "";
+                    }
                 }
             default:
                 {

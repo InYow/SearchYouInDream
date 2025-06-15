@@ -447,8 +447,8 @@ MonoBehaviour:
   hitVFX_Pivot: {fileID: 4048563567773095411}
   camera_Pivot: {fileID: 5300062276099498693}
   _rb: {fileID: 8186457544752307612}
-  health: 42
-  health_Max: 42
+  health: 24
+  health_Max: 24
   resis: 10
   resis_Max: 10
   resis_ResponSpeed: 2.2

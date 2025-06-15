@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Playables;
 
 
 public class Player_击破 : State_攻击
@@ -20,6 +16,7 @@ public class Player_击破 : State_攻击
     public override void StateStart(Entity entity)
     {
         base.StateStart(entity);
+        (entity.BuffGet("BFPlayerGuideBreakAttack") as BFPlayerGuideBreakAttack).actived = true;
         //推近镜头
         CameraZone.CameraZoneUseData(cameraZoneData);
 

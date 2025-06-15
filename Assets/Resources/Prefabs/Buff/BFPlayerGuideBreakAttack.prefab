@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0
-  time_Max: 999
+  time_Max: 3
   layer: 0
-  guideGO: {fileID: 0}
   e_target: {fileID: 0}
+  actived: 0
+  noactivedEndZoneData: {fileID: 11400000, guid: 9bf71e839c92a254daee43f6e88b8082, type: 2}

@@ -29,6 +29,12 @@ public class 击破Canvas : MonoBehaviour
     {
     }
 
+    public static void ReSetAnimation()
+    {
+        Instance._animator.Play("无");
+        Instance._animator.SetBool("continue", false);
+    }
+
     public static void PlayAnimation()
     {
         Instance._animator.Play("前半段");

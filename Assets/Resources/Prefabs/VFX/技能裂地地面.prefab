@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 424348331684125386}
   - component: {fileID: 424348331684125387}
   - component: {fileID: 424348331684125388}
+  - component: {fileID: 5593304140255136372}
   m_Layer: 14
   m_Name: "\u6280\u80FD\u88C2\u5730\u5730\u9762"
   m_TagString: Untagged
@@ -124,6 +125,21 @@ MonoBehaviour:
   finishEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5593304140255136372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424348331684125384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c3d40c0f1661d4fa5f7d4b3ca05e82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sr: {fileID: 424348331684125386}
+  flipXOnEnable: 1
+  Random: 1
 --- !u!1 &802052045413379031
 GameObject:
   m_ObjectHideFlags: 0

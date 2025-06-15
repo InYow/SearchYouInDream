@@ -94,9 +94,9 @@ public class Player : Entity
         }
         if (BuffContain("BFPlayerGuideBreakAttack"))
         {
-            if (Input.GetKeyDown(KeyCode.U))
+            if (Input.GetKeyDown(KeyCode.J))
             {
-                InputManager.LogPreInput(KeyCode.U);
+                InputManager.LogPreInput(KeyCode.J);
             }
         }
 
@@ -129,9 +129,10 @@ public class Player : Entity
         }
 
         //击破攻击  拥有GuideBreakAttack的buff
-        if (BuffContain("BFPlayerGuideBreakAttack") && 击破Canvas.IfFinish后半段())
+        if (BuffContain("BFPlayerGuideBreakAttack")
+        && !(BuffGet("BFPlayerGuideBreakAttack") as BFPlayerGuideBreakAttack).actived && 击破Canvas.IfFinish后半段())
         {
-            if (Input.GetKeyDown(KeyCode.U) || InputManager.ReadPreInput(KeyCode.U))
+            if (Input.GetKeyDown(KeyCode.J) || InputManager.ReadPreInput(KeyCode.J))
             {
                 InputManager.ClearPreInput();
                 StateCurrent = InstantiateState("Player_击破");
@@ -240,7 +241,7 @@ public class Player : Entity
                     StateCurrent = InstantiateState("Player_投掷");
                 }
             }
-            else if (Input.GetKey(KeyCode.I))        //技能
+            else if (Input.GetKey(KeyCode.U))        //技能
             {
                 if (Input.GetKey(KeyCode.W))
                 {
@@ -457,6 +458,12 @@ public class Player : Entity
                 {
                     StateCurrent = InstantiateState("Player_跑步");
                 }
+            }
+            else if (Input.GetKeyDown(KeyCode.U))   //浩克大列巴
+            {
+                var str = SkillManager.GetSkillName(7);
+                if (str != "")
+                    StateCurrent = InstantiateState(str);
             }
         }
 
