@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,7 +103,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "\u5B66\u6821\u8D70\u5ECA\u67DC\u5B50_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3
+        width: 1421
+        height: 843
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4246ea791b9c3874e856831b0475a7e0
+      internalID: 1774626979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u5B66\u6821\u8D70\u5ECA\u67DC\u5B50_1"
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 0
+        width: 731
+        height: 815
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de8206a44068a4449774a3b8a1bbc2a
+      internalID: 1726081999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u5B66\u6821\u8D70\u5ECA\u67DC\u5B50_2"
+      rect:
+        serializedVersion: 2
+        x: 7890
+        y: 202
+        width: 1394
+        height: 770
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d2590a1071cd9944b10531fe227ba17
+      internalID: -1961761728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +177,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "\u5B66\u6821\u8D70\u5ECA\u67DC\u5B50_0": 1774626979
+      "\u5B66\u6821\u8D70\u5ECA\u67DC\u5B50_1": 1726081999
+      "\u5B66\u6821\u8D70\u5ECA\u67DC\u5B50_2": -1961761728
+      "\u5B66\u6821\u8D70\u5ECA\u67DC\u5B50_3": 1111196145
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

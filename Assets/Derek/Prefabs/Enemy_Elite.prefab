@@ -58,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 2435947226491801795}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.004, y: 0.052, z: 0}
-  m_LocalScale: {x: 1, y: -1, z: 1}
+  m_LocalScale: {x: -1, y: -1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7806266618746643479}
@@ -337,7 +337,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7806266618746643475}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.04, y: -22.075, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -376,7 +376,7 @@ MonoBehaviour:
   health_Max: 100
   resis: 5
   resis_Max: 5
-  resis_ResponSpeed: 5
+  resis_ResponSpeed: 1
   attackValue: 2
   breakAttackTimes: 1
   breakAttackTimes_Max: 1
@@ -410,7 +410,7 @@ MonoBehaviour:
   - "\u7206\u88402"
   - "\u7206\u88403"
   - "\u7206\u88404"
-  photo: {fileID: 0}
+  photo: {fileID: 21300000, guid: 0052d72274c94364da6ceec501236c87, type: 3}
   dashEnable: 1
   dashCD: 5
   dashSpeed: 8
