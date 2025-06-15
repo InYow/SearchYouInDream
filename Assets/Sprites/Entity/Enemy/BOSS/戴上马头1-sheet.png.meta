@@ -183,7 +183,7 @@ TextureImporter:
       name: "\u6234\u4E0A\u9A6C\u59341-sheet_3"
       rect:
         serializedVersion: 2
-        x: 0
+        x: 500
         y: 0
         width: 500
         height: 600
@@ -204,7 +204,7 @@ TextureImporter:
       name: "\u6234\u4E0A\u9A6C\u59341-sheet_4"
       rect:
         serializedVersion: 2
-        x: 500
+        x: 1000
         y: 0
         width: 500
         height: 600

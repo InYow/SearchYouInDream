@@ -6,13 +6,41 @@
   <component name="ChangeListManager">
     <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/Boss/BossBehaviorTree.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/Boss/BossBehaviorTree.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01Dash.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01Dash.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01Excution.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01Excution.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01GetHit1.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01GetHit1.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01GetHit2.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01GetHit2.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01HeavyAttack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01HeavyAttack.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01NormalAttack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01NormalAttack.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01_StartDash.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anima/Entity/Boss/Boss01/Enemy_Boss01_StartDash.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/ZaBing/ZaBingEnemyBehavior.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/ZaBing/ZaBingEnemyBehavior.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Derek/Prefabs/Enemy_Elite.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Prefabs/Enemy_Elite.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Scene/功能开发场景-美术勿动 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_BossStartDash.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_BossStartDash.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/State/STEnemy_BossDash.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/State/STEnemy_BossDash.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Fungus/Integrations/Playmaker/Fungus-PlayMaker.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Fungus/Integrations/Spine/Fungus-Spine.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Attribute Processors.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Editor Windows.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Sample - RPG Editor.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Action/BTAction_RandomPatrol.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Action/BTAction_RandomPatrol.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/dash_run.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/dash_run.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/戴上马头1-sheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/戴上马头1-sheet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/戴上马头1-sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/戴上马头1-sheet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男冲撞.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男冲撞.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男冲撞.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男冲撞.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男受击1_490X504.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男受击1_490X504.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男受击1_490X504.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男受击1_490X504.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男呼吸_500x500.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男呼吸_500x500.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男呼吸_500x500.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男呼吸_500x500.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男攻击_800X500.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男攻击_800X500.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男攻击_800X500.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男攻击_800X500.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男死亡_1033x615.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男死亡_1033x615.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男死亡_1033x615.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男死亡_1033x615.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SwitchAnimationLayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SwitchAnimationLayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男跑步_500x500.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男跑步_500x500.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男重拳_800X500.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男重拳_800X500.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男重拳_800X500.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/肌肉男重拳_800X500.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/马头呼吸1-sheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/马头呼吸1-sheet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/马头呼吸1-sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Entity/Enemy/BOSS/马头呼吸1-sheet.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,6 +212,7 @@
       <workItem from="1749814206171" duration="7832000" />
       <workItem from="1749862503230" duration="4285000" />
       <workItem from="1749913824472" duration="516000" />
+      <workItem from="1749957165974" duration="1307000" />
     </task>
     <servers />
   </component>

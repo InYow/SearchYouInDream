@@ -183,7 +183,7 @@ TextureImporter:
       name: "\u9A6C\u5934\u547C\u54381-sheet_3"
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1000
         y: 0
         width: 500
         height: 600

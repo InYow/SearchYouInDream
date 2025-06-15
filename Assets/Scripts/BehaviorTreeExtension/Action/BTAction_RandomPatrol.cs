@@ -39,7 +39,7 @@ namespace BehaviorTreeExtension
                 lastMoveDirection = reflected; //Vector3.Reflect(lastMoveDirection,reflected).normalized;
             }
 
-            Vector3 targetPos = entity.transform.position + lastMoveDirection * Random.Range(0.6f,1.0f)*PatrolRange;
+            Vector3 targetPos = entity.transform.position + lastMoveDirection * Random.Range(0.5f,1.0f)*PatrolRange;
             aiPath.destination = targetPos;
             aiPath.canMove = true;
             
@@ -53,16 +53,13 @@ namespace BehaviorTreeExtension
                 return TaskStatus.Success;
             }
 
-            Vector3 dir = Vector3.Normalize(aiPath.destination - entity.transform.position);
+            //Vector3 dir = (aiPath.destination - entity.transform.position);
             animator.SetFloat("MoveSpeed", aiPath.maxSpeed);
-
-            if (dir.x < 0)
+            Debug.Log("ZaBing Move Direction = " + aiPath.desiredVelocity.x);
+            float moveX = aiPath.desiredVelocity.x;
+            if (Mathf.Abs(moveX) > 0.01f) // 防止抖动
             {
-                entity.transform.localScale = new Vector3(-1, 1, 1);
-            }
-            else if (dir.x > 0)
-            {
-                entity.transform.localScale = new Vector3(1, 1, 1);
+                entity.transform.localScale = new Vector3(Mathf.Sign(moveX), 1, 1);
             }
 
             return TaskStatus.Running;
