@@ -115,15 +115,43 @@ public class Player : Entity
             StateCurrent = InstantiateState(SkillManager.GetSkillNameTestArea(0));
             return;
         }
-        //硬直
+        //ST 硬直
         if (transStun)
         {
-            transStun = false;
-            StateCurrent = InstantiateState("Player_受击");
+            if (!dead)
+            {
+                transStun = false;
+                StateCurrent = InstantiateState("Player_受击");
+                return;
+            }
+            else
+            {
+                transStun = false;
+                StateCurrent = InstantiateState("Player_死亡");
+                return;
+            }
+        }
+        //ST 死亡
+        if (stateCurrentName == "Player_死亡")
+        {
             return;
         }
-        if (dead)
+        //ST 复活
+        if (stateCurrentName == "Player_复活")
+        {
+            if (StateCurrent.Finished(this))            //待机 or 移动
+            {
+                if (dic_Input == Vector2.zero)      //待机
+                {
+                    StateCurrent = InstantiateState("Player_待机");
+                }
+                else if (dic_Input != Vector2.zero) //移动
+                {
+                    StateCurrent = InstantiateState("Player_跑步");
+                }
+            }
             return;
+        }
         //冲刺
         if (stateCurrentName != "Player_冲刺" && stateCurrentName != "Player_受击" && SkillManager.IfCanDash() && Input.GetKeyDown(KeyCode.Space))
         {

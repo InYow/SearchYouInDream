@@ -36,6 +36,6 @@ public class StepSound : MonoBehaviour
         {
             //TODO播放默认脚步声
         }
-        Debug.Log("发出声音");
+        //  Debug.Log("发出声音");
     }
 }
