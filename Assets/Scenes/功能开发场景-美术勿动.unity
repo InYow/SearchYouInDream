@@ -1992,7 +1992,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &133296644
 Transform:
   m_ObjectHideFlags: 0
@@ -2030,7 +2030,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 521641263145245518, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 521641263145245555, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
       propertyPath: graphMask.value
@@ -3194,7 +3194,7 @@ CompositeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4887,21 +4887,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 488787937}
     m_Modifications:
-    - target: {fileID: 957254642314547679, guid: 259cee07f351cbc49acdc8d53f2e1214, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 957254644183700072, guid: 259cee07f351cbc49acdc8d53f2e1214, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 957254644338267105, guid: 259cee07f351cbc49acdc8d53f2e1214, type: 3}
       propertyPath: m_Name
       value: Enemy_PencilShooter
-      objectReference: {fileID: 0}
-    - target: {fileID: 957254644338267105, guid: 259cee07f351cbc49acdc8d53f2e1214, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 957254644338267109, guid: 259cee07f351cbc49acdc8d53f2e1214, type: 3}
       propertyPath: m_RootOrder
@@ -4951,10 +4939,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 589571563}
-    - target: {fileID: 957254644338267119, guid: 259cee07f351cbc49acdc8d53f2e1214, type: 3}
-      propertyPath: graphMask.value
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 259cee07f351cbc49acdc8d53f2e1214, type: 3}
 --- !u!1 &457696021
@@ -5198,17 +5182,7 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 481976741}
-    m_ColliderPaths:
-    - - X: 298216352
-        Y: 16434679
-      - X: 156062736
-        Y: 16478333
-      - X: 155837056
-        Y: -63660320
-      - X: 298286720
-        Y: -63632416
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 15.583706, y: -6.3660026}
@@ -5389,21 +5363,7 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 498071054}
-    m_ColliderPaths:
-    - - X: -165598112
-        Y: 24218922
-      - X: -165773072
-        Y: -12329140
-      - X: -68807560
-        Y: -71226576
-      - X: 140564576
-        Y: -71242224
-      - X: 140481984
-        Y: -13439232
-      - X: 80611784
-        Y: 24309602
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 14.056429, y: -7.1242223}
@@ -5823,7 +5783,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 93.57952, y: 8.677069, z: -10}
+  m_LocalPosition: {x: -7.7343764, y: -6.3024597, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7204,8 +7164,8 @@ PolygonCollider2D:
       - {x: 2.8507233, y: -2.8610775}
       - {x: 3.59758, y: -2.1577997}
       - {x: 4.2277412, y: -1.287236}
-      - {x: 3.1239967, y: 1.7516298}
-      - {x: -1.7655029, y: 1.6655126}
+      - {x: 2.900444, y: 2.024859}
+      - {x: -1.7903404, y: 2.0132585}
       - {x: -1.8091278, y: 0.84966326}
       - {x: -2.5136871, y: 0.417171}
       - {x: -2.491744, y: 0.2013183}
@@ -7663,7 +7623,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589571560}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.15, y: -8.26, z: 0}
+  m_LocalPosition: {x: -9.37, y: -8.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8038,7 +7998,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 614869958}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -81.53001, y: -13.129999, z: -10}
+  m_LocalPosition: {x: 13.489998, y: -0.46999884, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8106,7 +8066,7 @@ MonoBehaviour:
   m_Follow: {fileID: 589571563}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 4
+    OrthographicSize: 3.561847
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -8303,7 +8263,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 521641263145245518, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 521641263145245555, guid: 8a873d088550baf4aa5ca963a356e5fb, type: 3}
       propertyPath: graphMask.value
@@ -9490,7 +9450,7 @@ MonoBehaviour:
   m_Follow: {fileID: 915952803}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 4
+    OrthographicSize: 3.666401
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -10087,7 +10047,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871765571}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -49.61, y: -10.370001, z: -10}
+  m_LocalPosition: {x: 50.739998, y: 4.43, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10251,17 +10211,7 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 876125940}
-    m_ColliderPaths:
-    - - X: -6380911
-        Y: 34525600
-      - X: -6435227
-        Y: -45960812
-      - X: 487744256
-        Y: -45862732
-      - X: 487835968
-        Y: 34472336
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: -0.6435227, y: -4.596052}
@@ -12294,7 +12244,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1019275517
 Transform:
   m_ObjectHideFlags: 0
@@ -13850,10 +13800,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7806266618746643485, guid: 6224934806b4c9942a9663f28dd3d7bb, type: 3}
-      propertyPath: graphMask.value
-      value: 64
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6224934806b4c9942a9663f28dd3d7bb, type: 3}
 --- !u!1 &1207969900
@@ -14407,7 +14353,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1266685097
 Transform:
   m_ObjectHideFlags: 0
@@ -14529,28 +14475,14 @@ CompositeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 1279808883}
-    m_ColliderPaths:
-    - - X: -165598112
-        Y: 24218922
-      - X: -165773072
-        Y: -12329140
-      - X: -68807560
-        Y: -71226576
-      - X: 140564576
-        Y: -71242224
-      - X: 140481984
-        Y: -13439232
-      - X: 80611784
-        Y: 24309602
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 14.056429, y: -7.1242223}
@@ -15334,17 +15266,7 @@ CompositeCollider2D:
   m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 1358027060}
-    m_ColliderPaths:
-    - - X: 285838848
-        Y: 83898928
-      - X: -16787214
-        Y: 83824216
-      - X: -16717629
-        Y: -33294678
-      - X: 286451328
-        Y: -33334146
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 28.645103, y: -3.3334146}
@@ -16654,17 +16576,7 @@ CompositeCollider2D:
   m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 1419166690}
-    m_ColliderPaths:
-    - - X: 298216352
-        Y: 16434679
-      - X: 156062736
-        Y: 16478333
-      - X: 155837056
-        Y: -63660320
-      - X: 298286720
-        Y: -63632416
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 15.583706, y: -6.3660026}
@@ -18081,7 +17993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1073741824
   data:
-    dataString: UEsDBBQAAAgIAABAIexGrLRgxQIAAPwFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1v4jAQ/SvI56UKFCjd2y7QjwMtKl31sPTgJhNiYezIHwVa8d93xnFIYCUkzJs34zdvxnwzoWwJqdPm3ohsrjNgPzvs0eotOCNSAtmPTsN6gD1fa7UUX1CT30TmCiLxwHnhTmjEe5RW1/ml1pLIoz6iXolcm+0sW8NEW2cRz7m0gCGjHaUrhL47bI9f3ZsE8QOe+uH0hafbpHPEYwrKgWmow9urXuQOwom4FdWrVPJtCRkJbzIGw8gfBpbCjiKB0lMtpbBRDXOHMrT7wg/UbCY4thauJ24BYl04UtlOfM5zC4SScsMPU2HQoaoi+60r27bcbipJn1z6cHkyGA9vRkFTVXj+H2fY64d4bvT2ob68l9BFrhDpBmWm3LqWt214eq7eqx2XG/4h4a0A9aTvjfYqa+V6C/0p/nbGQ7vBSQHppsErsRegLxvD61nWk+z2Osdj8GC/dFCeGkmuBg36x4JdSh3sjzUpEpFbqgUGR/eIDYXtsfEGREkk5r/ydXvNYuBOGOswFF2IKHEXOCfIQKUQne8SQZG8D+0N1WKzoJXc8G6ijYIAR4ElKC7dYYEV3eUiXMRaui4id5yeXFQXY/VLukgJcMNPkovQQu9O0zZegg07XZ/+vtMQbKF3c7DFs3dSqJbbFHhCgydaqWp/22bWaUtvcp620hzsnTcw5Y6H21AOblh7rSx6GTKUl5KWOTQQFGED9HknfwuO98oAsyeNyhA8+w7y115k52+EcZ58ZKNxL88hT9LxsMtvrvu9PvSvR6PrcQ7AwhsSCu3mclH5FaeE26WaXhS+F6o452UyDO/f8N29+Nrq1tCFyvUyNQDquUo+9QkG6+M/SzbLBHa4BOeECivJvldM6nQD2epUaBU8ne2d4aumyoqV4lM7QlZsEv77Vozg02vErf0UsKPLz4qBxKlB9iokbHlJoeTIjv8AUEsDBBQAAAgIAABAIewtQusA0QIAAAkGAAALACQAZ3JhcGgxLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVNuO2jAQ/RXk54ISyrVvLbCXB3ZR2Wofyj6YZEIsjB35ssCu9t874yQkUAkp5syZmTMX+5MJZQtInDb3RqRLnQL70WGPVh/AGZEQyL51GtYDnPhOq7X4gJr8KlKXE4kHzm/uhEY8Jrc6zk+1k0QeDxH1SmTaHBbpDmbaOot4xqUFNBntyF0h9NlhJ/x0RxHiZzz1x3T6wNM06nzhMQHlwDTUuN8bxzW5N5pW7O4wsL1KJD8UkJL2xmlQh49LmsKqKgbFSrSUwlaKmDsXoeTf/EwFp4JjeUECcXMQu9xR8rbjc5ZZIJQSGX6eC4NdKiOyX7ps3YHbfanpnUtPOYb9QX8yCZLKuMv/KN04mDOjDw916jiiNC4XyR5FJty6Vnfb8Pxau1dHLvd8K+E1B/Wk7432KkWjM55cvYX+vPl7qW6WQ7Jv8FLqDeiLpt2XbvfiaT+a9qeLbjSuB4X1fIVmnNYOiktNUW/QoH8s2LXUYQ5VfLJUyJTig8EZPmJtYZVslRVREoz+L3zX3rnKcCeMdWiqGlKhxF3hwCAFlUA1gy4RFMnbam8oFlsErdQZ72baKAhwJbAAxaU7rzCiu92IG1tL143ljtP9q9RVtvpa3bgEuOFH0Y1ppY+XwRsvwYblrk9/32gINtfHJdj82TspVKvbZHjCBs+0UuUit5tZu629yXjScnNwct7AnDsesqEcXLa07Yq9DB7KS0l7HQoIirAA+r1Rf3OOeWWA2ZNGZQhefYP8nRfp9W1hvD+dZJDw7eD7JB2Osu5gOB5Hw2Q0jpPhaBsDC9dJKGw3l6uyX9WUcLtUU4vCq0MRl7yIBuEhMPx4Lz4OujV0oTK9TgyAei6dL3WCwfj4xKSLVGCFa3BOqLCS7HPDpE72kG4ugTahp4uTM3zTRNmwQrxrR8iGzcJDuGEEX24mbu27gCMlvwoGEqcG6YuQcOAFmaIv9vUPUEsDBBQAAAgIAABAIewDTaglywIAAAcGAAALACQAZ3JhcGgyLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1v4jAQ/SvI56VKKAWxt12gHwdaVLrqYenBxBNiYezIdgq04r/vjONAYFEl3Dfzxm/ejPlmUrsSMm/sg5ViZgSwnx325MwWvJUZgexH55z1CHu+Nnohv6BJfpfCF5TEQ84r99IgnhKtqfNLrxUld4d3CFda5sZup2INY+O8w0DOlQMMWeOJrxH67rA9UQYJ4gc89YZ0+sLTKOkc8ZiB9mBbqf2b/l2Cn94oUrq3N/3IqSmVzhTfliCogzOzN4iEdBDSNPYWM6iPzCglXZTF/KEMjY956SpsCxOE5Nho0EL5Bch14alum/yS5w4IpTYsP0ykRb/qquy3qU3ccrepdX1yVUHQ1kv7/SCrrjv7L6WbhnBuzfaxuTpN6BpfyGzzyg8Zd75lcxueXGqv9I6rDV8peC9AP5sHayotMOhtRdTKQW9y/vfU3biAbHPGa6lXYFWeLW+m2syUejgGA/YLD+WpjyRMMKJ/HLiFMsH/WJMiERlRLbA4uyfsJ+yRizcgSiKR/8bX7YWLgXtpncdQNCGilDvHIYEAnUH0vUsJmuStTGWpFpsGreRG5cfGaghwFFiC5sof5ljRX2/BVayl6ypyz+n1RXUx1jyqK0qAz/lJchWam91p2Bb314Wlbk5/P2gIrjC7GbjipfJK6pbbFHhGg8dG63p522Y2tEVlc561aB72vrIw4Z6H21AOLphoU9HLwNCVUrTLoYGgCBugvw/yt+B4rwowezY6PL6L7yB/XUlx+ULYqLdKExAp7w1Fwgd33VWaijznQ8gGOUCasPCEpEa7uZrXfsUp4Xbpcy8anwtVnPEyuQ2P3/Ldg/zamtbQpc7NIrMA+qUmn/oEi/Xxp0VMhcQOF+C91GEl2feSKZNtQCxPhZbB0+neW748V1myUn4aT8iSjcOv4JIRfHqNuLWfEnZ0+UUxUDg1EG9SwZaXFEqO7PgPUEsDBBQAAAgIAABAIewhfVlKygIAAAMGAAALACQAZ3JhcGgzLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1v4jAQ/SvI56VKQlmWve0C/TjQotJVD0sPJpkQC2NHtlOgFf99ZxyHBFZCwrz5evNmhi8mlC0hddrcG5HNdQbsZ489Wr0DZ0RKIPvWa70e4MA3Wi3FJzTObyJzBTlx7/PCndCIxxTW5PmlNpKcR0NEKyVybXazbAMTbZ1FPOfSApqMdhSuEPrqsQN+9b9HiB/xlYzo9YmvcdQ74TMF5cC0roObaByPx/GsH41CTP/HzW0I6g99UKVSyXclZNRCJ7apMvZeCnsLDtRHqqUUNvBi7lj6xl/4kdrOBMcmPRHyLUBsCkd8u4HPeW6BUKpj+HEqDGpVZ2S/dS3gjtttTemDy8oXH8TRKPGU6rzz/1z6sTfnRu8emtJxRGVcIdItkky5dR2Nu/D0knul9lxu+VrCWwHqSd8bXakMjc5UFFpZSKbtz3N3kwLSbYvXVK/AqmzVbsRuBko9nLwAh6WD8txH5KcX0D8W7FJqr33ISZaAjCkXGJzbI/bjl8iGCogSSYx/5ZvutgXDnTDWoSmIEFDyXeCQIAOVQtC9Tw6K6K11ZSgXm3mupEblJtoo8HAgWILi0h0XmNFdb8GVrcPrynLH6fICu2BrDuoqxMOtfxRdmRZ6fx62qSRYv9DN6+87DcEWej8HWzxXTgrVUZsMTyjwRCtVL29XzCZsWZmcp50wBwdXGZhyx301pIMLlnVDUUsfoSopaZd9A54RNkCfd9K34FhXepg9aWSG4MW3p7+pRHZ5ISxJeM7HAz7EWxrHyag/iG7XfM1hnfMkHcYj5k9IKJSby0WtV5gSbpdqe1F4LpRxzsso8cdv+P5efO50Z+hC5XqZGgD1XAef+wSD+fFvJZtlAjtcgnNC+ZVkXysmdbqFbHVOtPKazg7O8FWbZcVK8aEdISs28X+BK0bw+Rpxaz8E7Kn4RTKQODXIXoWEHS/JFJ3Y6R9QSwMEFAAACAgAAEAh7KKh7rDUAgAADQYAAAsAJABncmFwaDQuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAWVUTW/iMBD9K8jnBQUaUtjbLtCPAy0qXfWw9GCSCbEwdmQ7BVr1v++MY0hgq0qYN19v3szwxYSyJaROm3sjsrnOgP3ssEerd+CMSAlkPzqN1wMc+EarpfiEk/ObyFxBTtz7vHAnNOJ9Cjvl+aU2kpyTIaKVErk2u1m2gYm2ziKec2kBTUY7ClcIfXXYAT+6yQjxI74GtxG+PvE1jjrf+ExBOTCN6zDpJXFwHveGw+BdO1cqlXxXQkbUm5h+3Isj+ktC4Kg38v4KuwuuUY8opFpKYQM35o6lb37CS1tha+iQCY7NekLUewFiUzji3Q5+znMLhFIvhh+nwqBmdVb2W9dC7rjd1hQ/uKyoziAa3/aHA8+sTjz/z6fb9+bc6N3DqXY/ojquEOn2hR9Tbl1L7DY8vSRfqT2XW76W8FaAetL3RlcqQ6MzFYVWFgbT5uu5vUkB6bbBa6pXYFU28kdB9dNkqYdvr8Bh6aA89xH14gb9Y8EupfYDCDnJEpAx5QKD43vEfvw22VABUSKJ8a980167YLgTxjo0BRECSr4LnBJkoFIIunfJQRG9ta4M5WIzz5XUqNxEGwUeDgRLUFy64wIzuus1uLK1eF1Z7jidYGAXbKfLugrxcOMfRVemhd6fh21wga3f6tPr7zsNwRZ6PwdbPFdOCtVSmwxPKPBEK1Vvb1vMU9iyMjlPW2EODq4yMOWO+2pIBxcsa4eilj5CVVLSLvsGPCNsgP7fSd+CY13pYfaklb++i09Pf1OJ7PJC2E2eDpI4XifjhOcDGHZvRoNkEI+G8XjdHyXxDfMnJBTKzeWi1itMCberPRqF90Ip57yMEn/+hu/vxedOt6YuVK6XqQFQz5fRFgwWwJ+XbJYJbHEJzgnld5J9rZjU6Ray1TnRyos6OzjDV02WFSvFh3aErNjE/xiuGMHnc8S1/RCwp+IXyUDi2CB7FRJ2vCRT9M2+/wFQSwMEFAAACAgAAEAh7JoalH7cAgAAGQYAAAsAJABncmFwaDUuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAWVU227iMBD9FeTnBYVbCfu2C/TyQItKV31Y+mCSCbEwdmQ7BVrx7zvjGBJYhBTnzJmZMxfnmwllC0icNg9GpHOdAvvZYk9W78AZkRDIfrRq1iMc+EarpfiCM/ldpC4nEvecV+6ERrxLbuc4v9RGEvlu2BkgXiqRabObpRuYaOssWjIuLaDJaEcBFELfLXbAR/suRvyIp94owtMXnsZR64THBJQDU1PjQWcUuMPArIilSiTfFZCS8JrfvbA73Yh+/djTFZYWmFEnplCJllLYoIu5Y+FLn/DCllgYElLBsVQvhirPQWxyR5qbzi9ZZoFQqsPw41QY7FgVlf3WVRt33G4riZ9clpRn0B0P+tHAS6sCz//jtLvenBm9ezznxpoQcrlItq/8mHDrGo1uwtNr8aXac7nlawnvOahn/WB0qVI0OlOSa2mhN61fL+VNcki2NV5JvQHLom5/FLrf7nX68aAbD4fdWTsahclRRSffj8PSQXGpKvIrFNA/FuxSaj+OkIEsARlTBjA4zSeszu+VDXkRJcno/8Y3zQUMhnthrENTaElAibvAmUEKKoEwhTYRFMlb69JQLDbzWqk3pZtoo8DDQWABikt3XGBEd7sUN7aGrhvLPafrGNQF2/mW3bh4uOZH0Y1pofeX0RtcZ+t3/Hz6+0FDsLnez8HmL6WTQjW6TYZnbPBEK1XtcrOZZ7dlaTKeNNwcHFxpYMod99lQDq5b2nTFXnoPVUpJm+0L8IqwAPp/UH9zjnmlh9mzVv4uXj29/E0p0uv7wtaQ8ZhHd9DLolEG0I76w/Egy4bddRwlfT5m/kIJhe3mclH1K0wJt6s5GoW3h0LOeRGN/MfA8P2D+NrpxtSFyvQyMQDq5drbgsEE+LVJZ6nAEpfgnFB+J9n3ikmdbCFdXQKtfFNnB2f4qo6yYoX41I6QFZv4z+KKEXy5nLi2nwL2lPwqGEgcG6RvQsKOF2SKTuz0D1BLAwQUAAAICAAAQCHsY+jkpdICAAAOBgAACwAkAGdyYXBoNi5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BZVTbjtowEP0V5OeCwmUh6VsL7OWBXVS26kPZB5NMiIWxI9tZYFf7751xHAhUQsKcOXM7M8MnE8qWkDptHozIFjoD9r3DnqzegzMiJZB961xYj3DkW61W4gMa8kxwJIMhHve0X9wJjaY+eTahfqitJP7dqDcZ3o3JVimRa7OfZ1uYaussWnMuLaDJaEdBFEKfHXbEr+7kDvETvgaTCF8f+Eqizhc+U1CU/0xN4l6SBPK4lwwCuyZXKpV8X0JGPVx8BuPeKLiMPE9he4ES9WLKoqUUNtTE3Kn03U95aStsDAlZI0TdeQFiWzgK3XZ+yXMLhFIPhp9mwqBidVT2U7uCIu253dWlvXNZUZ54GMfjKPaV1YEX/3G6fW/Ojd4/Nrn7EeVxhUh3v/gp5da1RG7Ds+viK3Xgcsc3Ev4UoJ71g9GVytDoTEWulYXB7PLz3N60gHR3wetSb8CqvMgeBc2biVIPX16B48pBee4j8tMJ6G8LdiW1H0CISZaAJBQLDI7vCfvxW2RDBkSpSPR/5dv2ugXDvTDWoSmIEFDiLnFKkIFKIejeJYKi8ja6MhSLzX2tpEblptoo8HAosATFpTstMaK7XYMbW6uuG8s9pxsM1QVbc1c3Lh6+8KPoxrTUh/OwDS6w9VvdvP6+0RBsoQ8LsMVL5aRQLbXJ8IwCT7VS9fa2xWzcVpXJedpyc3B0lYEZd9xnw3JwwbK2K2rpPVQlJe2yb8BXhA3Q5430LTjmlR5mz1r567v69uVvK5FdXwgbDuM0j/rJmA/HsOG8m0wm4zwbZkk/G6SbEWf+hIRCublc1nqFKeF2tUej8F4o5IKXUezP3/DDg/jY69bUhcr1KjUA6uXa24LBBPj3ks0zgS2uwDmh/E6yzzWTOt1Btj4HWntR50dn+PoSZc1K8a4dIWs29X+Ca0bw+Rxxbd8FHCj5VTCQODbIXoWEPS/JFH2xr39QSwMEFAAACAgAAEAh7FNDq/v1AAAA6wEAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQHNkEFOQzEMRK9S/TWpYjtxEi7QHWKPurCTuP0L2qotSAhxd5JyCXZjz9NbzPfy2a+39XxanjdxS9vwtFkOV7kcb+OR5vGxtpnfFhGvjTOYdfM1RyeJELAjMVO23peBC5YRq2ig3CKbCzElHysnqJEVHlBBBd8bCKbmhaNTgGYmqVceHvATQhSTQhJ9wgKYHPmgotLVBGuENCGyihyCcmEx7NFRRsaQYygKmQNNSLtJFs8dzafhd55iCWYRNPtKUh4mytU8DA9xVxFXUmJr1Ao0rBpk2Q/q/nXpL/Le/xZ5lfvR1lNbT4ft7rq23Rxuyv5hsf/5BVBLAQItABQAAAgIAABAIexGrLRgxQIAAPwFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAABAIewtQusA0QIAAAkGAAALACQAAAAAAAAAAAAAABIDAABncmFwaDEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAABAIewDTaglywIAAAcGAAALACQAAAAAAAAAAAAAADAGAABncmFwaDIuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAABAIewhfVlKygIAAAMGAAALACQAAAAAAAAAAAAAAEgJAABncmFwaDMuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAABAIeyioe6w1AIAAA0GAAALACQAAAAAAAAAAAAAAF8MAABncmFwaDQuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAABAIeyaGpR+3AIAABkGAAALACQAAAAAAAAAAAAAAIAPAABncmFwaDUuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAABAIexj6OSl0gIAAA4GAAALACQAAAAAAAAAAAAAAKkSAABncmFwaDYuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAABAIexTQ6v79QAAAOsBAAAJACQAAAAAAAAAAAAAAMgVAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAgACADmAgAACBcAAAAA
+    dataString: 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
     file_cachedStartup: {fileID: 0}
     cacheStartup: 0
   showNavGraphs: 1
@@ -18398,17 +18310,7 @@ CompositeCollider2D:
   m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 1569160753}
-    m_ColliderPaths:
-    - - X: -6380911
-        Y: 34525600
-      - X: -6435227
-        Y: -45960812
-      - X: 487744256
-        Y: -45862732
-      - X: 487835968
-        Y: 34472336
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: -0.6435227, y: -4.596052}
@@ -19164,7 +19066,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635513260}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.4415562, y: -9.598887, z: -10}
+  m_LocalPosition: {x: -0.6169214, y: 0.18111277, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23813,7 +23715,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960592877}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.971556, y: -7.4288874, z: -10}
+  m_LocalPosition: {x: -9.226921, y: -7.4288874, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -24192,17 +24094,7 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 2035587590}
-    m_ColliderPaths:
-    - - X: 285838848
-        Y: 83898928
-      - X: -16787214
-        Y: 83824216
-      - X: -16717629
-        Y: -33294678
-      - X: 286451328
-        Y: -33334146
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 28.645103, y: -3.3334146}
@@ -26977,17 +26869,7 @@ CompositeCollider2D:
   m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 4109151989132283420}
-    m_ColliderPaths:
-    - - X: -137188304
-        Y: 39635128
-      - X: -137119936
-        Y: -40415460
-      - X: 148798720
-        Y: -40460440
-      - X: 148874096
-        Y: 39658044
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 14.879844, y: -4.046044}
@@ -27131,7 +27013,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4109151989286018008
 Transform:
   m_ObjectHideFlags: 0
@@ -27140,7 +27022,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4109151989286018011}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.699997, y: -0.4099989, z: -10}
+  m_LocalPosition: {x: 13.489998, y: -0.46999884, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27535,7 +27417,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4109151989343726126
 Transform:
   m_ObjectHideFlags: 0
@@ -28600,17 +28482,7 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 4109151990169927402}
-    m_ColliderPaths:
-    - - X: 163164944
-        Y: 28004938
-      - X: 163207664
-        Y: -65881696
-      - X: 338242848
-        Y: -65986228
-      - X: 338289984
-        Y: 27517180
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 33.824257, y: -6.598623}
@@ -28913,7 +28785,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4109151990519559251
 Transform:
   m_ObjectHideFlags: 0
@@ -28985,7 +28857,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4109151990526798456}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -103.66, y: -16.98, z: -10}
+  m_LocalPosition: {x: 0.58999634, y: -1.9100003, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29137,7 +29009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!66 &4109151990642786236
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -29292,17 +29164,7 @@ CompositeCollider2D:
   m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 4109151990733082721}
-    m_ColliderPaths:
-    - - X: 163164944
-        Y: 28004938
-      - X: 163207664
-        Y: -65881696
-      - X: 338242848
-        Y: -65986228
-      - X: 338289984
-        Y: 27517180
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 33.824257, y: -6.598623}
@@ -29490,17 +29352,7 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 4109151990767362199}
-    m_ColliderPaths:
-    - - X: -137188304
-        Y: 39635128
-      - X: -137119936
-        Y: -40415460
-      - X: 148798720
-        Y: -40460440
-      - X: 148874096
-        Y: 39658044
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 14.879844, y: -4.046044}

@@ -339,7 +339,7 @@ Transform:
   m_GameObject: {fileID: 7806266618746643475}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.04, y: -22.075, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2180784167149691132}
@@ -376,7 +376,7 @@ MonoBehaviour:
   health_Max: 100
   resis: 5
   resis_Max: 5
-  resis_ResponSpeed: 1
+  resis_ResponSpeed: 5
   attackValue: 2
   breakAttackTimes: 1
   breakAttackTimes_Max: 1
@@ -414,7 +414,7 @@ MonoBehaviour:
   dashEnable: 1
   dashCD: 5
   dashSpeed: 8
-  dashDistance: 8
+  dashDistance: 5
 --- !u!95 &7806266618746643478
 Animator:
   serializedVersion: 5
@@ -479,7 +479,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -1618621003, guid: b5a705d4c98188f41aaf6188c2366ddb, type: 3}
   m_Color: {r: 0.9811321, g: 0.9389249, b: 0.78120327, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 3.90625, y: 3.90625}
@@ -602,7 +602,7 @@ MonoBehaviour:
   traversableTags: -1
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
-    value: 16
+    value: 64
 --- !u!114 &7806266618746643474
 MonoBehaviour:
   m_ObjectHideFlags: 0

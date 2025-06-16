@@ -6,8 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/StartCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SceneLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/StartCanvas.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SceneLoader.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/Boss/BossBehaviorTree.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/Boss/BossBehaviorTree.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Derek/Prefabs/Enemy_Elite.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Prefabs/Enemy_Elite.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_PencilShooter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_PencilShooter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Projectile/铅笔.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Projectile/铅笔.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/功能开发场景-美术勿动.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/功能开发场景-美术勿动.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Action/BTAction_MoveToPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BehaviorTreeExtension/Action/BTAction_MoveToPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectile/Projectile_Pencil.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectile/Projectile_Pencil.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/State/STEnemy_TieTouShoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/State/STEnemy_TieTouShoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/检测框/CheckBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/检测框/CheckBox.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,6 +191,7 @@
       <workItem from="1749957165974" duration="1809000" />
       <workItem from="1749981168184" duration="4681000" />
       <workItem from="1750050022300" duration="408000" />
+      <workItem from="1750066639182" duration="2692000" />
     </task>
     <servers />
   </component>

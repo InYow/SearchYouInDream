@@ -46,7 +46,7 @@ public class CheckBox : MonoBehaviour
     
     //Flash
     public UnityEvent OnHitEntity;//闪光类投射物触发回调
-
+    
     private void OnEnable()
     {
         //初始化值
@@ -90,6 +90,11 @@ public class CheckBox : MonoBehaviour
         }
     }
 
+    public void SetEntityMaster(Entity entity)
+    {
+        entity_master = entity;
+    }
+    
     private bool OverlapBox()
     {
         Vector2 boxCenter = transform.position; // 以当前物体为检测中心
@@ -107,8 +112,6 @@ public class CheckBox : MonoBehaviour
                     {
 
                         Debug.Log("伤害" + e.name + entity_master.stateCurrentName);
-
-
                         entity_master.Hurt(e, this);
                         entities.Add(e);
                     }

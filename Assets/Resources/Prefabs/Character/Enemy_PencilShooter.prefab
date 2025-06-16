@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &957254642314547648
 Transform:
   m_ObjectHideFlags: 0
@@ -499,7 +499,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &957254644183700073
 Transform:
   m_ObjectHideFlags: 0
@@ -624,7 +624,7 @@ MonoBehaviour:
   resis: 10
   resis_Max: 10
   resis_ResponSpeed: 10
-  attackValue: 0
+  attackValue: 1
   breakAttackTimes: 1
   breakAttackTimes_Max: 1
   StartStateName: STEmpty
@@ -849,7 +849,7 @@ MonoBehaviour:
   traversableTags: -1
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
-    value: -1
+    value: 2
 --- !u!114 &957254644338267104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1087,6 +1087,9 @@ MonoBehaviour:
     m_Bits: 128
   picked: 0
   pickableItem_master: {fileID: 0}
+  OnHitEntity:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4970736869509897099
 GameObject:
   m_ObjectHideFlags: 0

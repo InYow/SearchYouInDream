@@ -29,6 +29,16 @@ public class STEnemy_TieTouShoot : State
         enemy = (Enemy_ShooterBase)entity;
         enemy.StartShootCD();
         playerTransform  = enemy.target;
+        
+        Vector3 dir = playerTransform.position - enemy.transform.position;
+        if (dir.x < 0.0f)
+        {
+            enemy.transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+        }
+        else if((dir.x > 0.0f))
+        {
+            enemy.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        }
     }
 
     public override void UPStateInit(Entity entity)

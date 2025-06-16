@@ -6,7 +6,7 @@ namespace Projectile
     {
         public float _prjectileSpeed;
         public float _projectileLastTime;
-
+        public CheckBox checkBox;
         private float spawnTime;
 
         public void OnEnable()
@@ -19,6 +19,7 @@ namespace Projectile
             _rb = GetComponent<Rigidbody2D>();
             _rb.simulated = true;
             _rb.velocity = direction * _prjectileSpeed;
+            checkBox.SetEntityMaster(entity_master);
         }
 
         public void Update()

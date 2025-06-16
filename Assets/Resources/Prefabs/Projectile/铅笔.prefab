@@ -163,6 +163,7 @@ MonoBehaviour:
   _rb: {fileID: 0}
   _prjectileSpeed: 15
   _projectileLastTime: 10
+  checkBox: {fileID: 534984887363052353}
 --- !u!50 &7194437213486788935
 Rigidbody2D:
   serializedVersion: 4

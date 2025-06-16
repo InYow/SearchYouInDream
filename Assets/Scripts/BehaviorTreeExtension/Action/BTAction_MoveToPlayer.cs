@@ -57,12 +57,12 @@ public class BTAction_MoveToPlayer : Action
         }
         
         animator.SetFloat("MoveSpeed", aiPath.maxSpeed);
-        Vector3 dir = Vector3.Normalize(distance);
-        if (dir.x < 0)
+        
+        if (aiPath.desiredVelocity.x < 0)
         {
             entity.gameObject.transform.localScale = new Vector3(-1, 1, 1);
         }
-        else if (dir.x > 0)
+        else if (aiPath.desiredVelocity.x > 0)
         {
             entity.gameObject.transform.localScale = new Vector3(1, 1, 1);
         }
