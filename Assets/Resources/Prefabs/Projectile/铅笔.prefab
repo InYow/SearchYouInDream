@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15edc2cdda12a7e45af0f217f807e9f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkBoxType: 2
+  checkBoxType: 0
   boxSize: {x: 1, y: 0.3}
   attackLayer:
     serializedVersion: 2
@@ -56,6 +56,9 @@ MonoBehaviour:
     m_Bits: 128
   picked: 0
   pickableItem_master: {fileID: 0}
+  OnHitEntity:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3351506413869471290
 GameObject:
   m_ObjectHideFlags: 0

@@ -729,6 +729,7 @@ MonoBehaviour:
   transBreakStun: 0
   beingBreakStun: 0
   stateCurrentName: 
+  dead: 0
   speed_walk: 5
   speed_fly: 6
   pickableItem_Pivot: {fileID: 5413978617140090465}

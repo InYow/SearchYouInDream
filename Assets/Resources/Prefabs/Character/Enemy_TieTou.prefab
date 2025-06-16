@@ -460,7 +460,7 @@ MonoBehaviour:
   photo: {fileID: 21300000, guid: cf1b2ed8707691748af766983c4c5d06, type: 3}
   projectileSpawnTransform: {fileID: 8029895497708539560}
   shootEnable: 1
-  shootCD: 10
+  shootCD: 8
   shootDistance: 0
 --- !u!114 &2138678840
 MonoBehaviour:
