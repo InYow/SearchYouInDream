@@ -296,7 +296,10 @@ public class Entity : MonoBehaviour
     {
         if (checkBoxBehaviour.attacktype == AttackType.none)
         {
-            gameObject.layer = 2;
+            //FIXME
+            //飞行途中被二次击杀
+            //但是 gameObject.layer = 2;的话，会导致层级紊乱
+            // gameObject.layer = 2;
 
             transExecution = true;
             var enemy = this as Enemy;

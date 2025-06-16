@@ -8,6 +8,7 @@ public class Player : Entity
     [Header("玩家")]
     // public float healthGray;
     // public float healthGray_LoseSpeed;
+    public bool dead = false;
     public float speed_walk;
     public float speed_fly;
     public Transform pickableItem_Pivot;
@@ -121,6 +122,8 @@ public class Player : Entity
             StateCurrent = InstantiateState("Player_受击");
             return;
         }
+        if (dead)
+            return;
         //冲刺
         if (stateCurrentName != "Player_冲刺" && stateCurrentName != "Player_受击" && SkillManager.IfCanDash() && Input.GetKeyDown(KeyCode.Space))
         {
@@ -789,6 +792,18 @@ public class Player : Entity
             transHitFly_SourceEntity = entity;
             transStun = true;//进入硬直}
         }
+    }
+
+    public override void Execution(Entity entity, CheckBox attackBox)
+    {
+        base.Execution(entity, attackBox);
+        dead = true;
+    }
+
+    public override void Execution(Entity entity, CheckAttackBoxBehaviour checkBoxBehaviour)
+    {
+        base.Execution(entity, checkBoxBehaviour);
+        dead = true;
     }
 
     public void AddHealth(float value)

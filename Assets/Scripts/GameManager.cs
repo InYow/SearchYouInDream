@@ -26,4 +26,14 @@ public class GameManager : MonoBehaviour
             player = GameObject.Find("Player").GetComponent<Player>();
         }
     }
+
+    public void GameOver()
+    {
+
+    }
+
+    public void GameContinue()
+    {
+
+    }
 }
