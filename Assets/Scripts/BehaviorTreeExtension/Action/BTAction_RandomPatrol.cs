@@ -55,7 +55,6 @@ namespace BehaviorTreeExtension
 
             //Vector3 dir = (aiPath.destination - entity.transform.position);
             animator.SetFloat("MoveSpeed", aiPath.maxSpeed);
-            Debug.Log("ZaBing Move Direction = " + aiPath.desiredVelocity.x);
             float moveX = aiPath.desiredVelocity.x;
             if (Mathf.Abs(moveX) > 0.01f) // 防止抖动
             {
