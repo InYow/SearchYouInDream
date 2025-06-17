@@ -415,6 +415,7 @@ MonoBehaviour:
   dashCD: 5
   dashSpeed: 8
   dashDistance: 5
+  stopDistance: 0
 --- !u!95 &7806266618746643478
 Animator:
   serializedVersion: 5

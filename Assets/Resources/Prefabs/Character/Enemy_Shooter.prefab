@@ -56,6 +56,9 @@ MonoBehaviour:
     m_Bits: 128
   picked: 0
   pickableItem_master: {fileID: 0}
+  OnHitEntity:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5803552295779684112
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,7 +329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d7b55c7ecdb49a4a89fa5e6f9022861, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startWhenEnabled: 1
+  startWhenEnabled: 0
   asynchronousLoad: 0
   pauseWhenDisabled: 0
   restartWhenComplete: 1
@@ -440,7 +443,7 @@ MonoBehaviour:
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   preventMovingBackwards: 0
-  constrainInsideGraph: 0
+  constrainInsideGraph: 1
 --- !u!114 &5803552295788461154
 MonoBehaviour:
   m_ObjectHideFlags: 0

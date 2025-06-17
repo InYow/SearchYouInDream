@@ -9,6 +9,7 @@ public class Enemy_DashBase : Enemy
     public float dashDistance;
 
     private float dashCDStartTime;
+    public float stopDistance;
 
     public override void UPStateBehaviour()
     {

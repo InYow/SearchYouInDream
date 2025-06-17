@@ -21,7 +21,7 @@ namespace 敌人
 
         public override void StateExit(Entity entity)
         {
-            Debug.LogWarning("ExitBreakStun");
+            //Debug.LogWarning("ExitBreakStun");
             Destroy(this.gameObject);
         }
 

@@ -30,7 +30,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3285599424869172534}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -65,8 +66,8 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 512
+  checkBox: {fileID: 2662082440587875147}
   dashLoopAsset: {fileID: 11400000, guid: b50b66045e79b854b93b0fddff4faf1a, type: 2}
-  stopDistance: 1
 --- !u!320 &407852731994976180
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -76,7 +77,7 @@ PlayableDirector:
   m_GameObject: {fileID: 407852731994976184}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 3cff5134ad7836b44bff1984c4bd7fe6, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: b50b66045e79b854b93b0fddff4faf1a, type: 2}
   m_InitialState: 0
   m_WrapMode: 1
   m_DirectorUpdateMode: 1
@@ -86,10 +87,6 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 4042279457160757030, guid: b50b66045e79b854b93b0fddff4faf1a, type: 2}
     value: {fileID: 0}
-  - key: {fileID: 4042279457160757030, guid: 3cff5134ad7836b44bff1984c4bd7fe6, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -5503473384891250227, guid: 3cff5134ad7836b44bff1984c4bd7fe6, type: 2}
-    value: {fileID: 1028019575}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1028019575
@@ -122,3 +119,62 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1 &5844130462886843975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3285599424869172534}
+  - component: {fileID: 2662082440587875147}
+  m_Layer: 0
+  m_Name: CheckBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3285599424869172534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5844130462886843975}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.9, y: 0.81, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 407852731994976187}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2662082440587875147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5844130462886843975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15edc2cdda12a7e45af0f217f807e9f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkBoxType: 0
+  boxSize: {x: 1.8, y: 2}
+  attackLayer:
+    serializedVersion: 2
+    m_Bits: 2048
+  attacktype: 0
+  entities: []
+  pickLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  picked: 0
+  pickableItem_master: {fileID: 0}
+  OnHitEntity:
+    m_PersistentCalls:
+      m_Calls: []

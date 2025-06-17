@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using BehaviorDesigner.Runtime;
 using BehaviorTreeExtension.Sensor;
+using DG.Tweening;
 using Pathfinding;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public enum EnemyType
@@ -27,7 +27,7 @@ public class Enemy : Entity
     public bool isGetHurt = false;
     public string bloodVFXName = "踩血特效1";
     public List<string> bloodVFXNameList = new List<string> { "爆血1", "爆血2", "爆血3", "爆血4" };
-    public Sprite photo;    //大头照
+    public Sprite photo; //大头照
 
     public void OnEnable()
     {
@@ -42,6 +42,12 @@ public class Enemy : Entity
         sensor.OnTargetLose -= LosePlayer;
     }
 
+    public override void Start()
+    {
+        base.Start();
+        StartCoroutine(DelayEnableBehaviourTree());
+    }
+
     public void AllowEnemyAttack(bool allow)
     {
         behaviourTree.SetVariableValue("bCanAttack", allow);
@@ -49,13 +55,11 @@ public class Enemy : Entity
 
     protected virtual void DetectPlayer()
     {
-        //  Debug.Log("FindPlayer");
         EnemyController.instance.RegisterEnemy(this);
     }
 
     protected virtual void LosePlayer()
     {
-        Debug.Log("LosePlayer");
         EnemyController.instance.UnregisterEnemy(this);
     }
 
@@ -67,15 +71,14 @@ public class Enemy : Entity
         {
             health -= entity.attackValue;
             EnemyInfoUIList.instance.AddEnemyInfoUI(this); //添加敌人信息UI
-
-            GetHurtVFX();
-            SoundEffectManager.PlaySFX01(transform);
-
+            
             if (transBreakStun || beingBreakStun)
             {
                 isGetHurt = true;
                 behaviourTree.SetVariableValue("bIsGetHurt", isGetHurt);
             }
+            
+            PlayOnHitEffect();
 
             //死掉了
             if (health <= 0f)
@@ -93,18 +96,15 @@ public class Enemy : Entity
         {
             health -= entity.attackValue;
             EnemyInfoUIList.instance.AddEnemyInfoUI(this); //添加敌人信息UI
-
-
-            //播放受伤特效
-            GetHurtVFX();
-            SoundEffectManager.PlaySFX01(transform);
-
+            
             if (transBreakStun || beingBreakStun)
             {
                 isGetHurt = true;
                 behaviourTree.SetVariableValue("bIsGetHurt", isGetHurt);
             }
-
+            
+            PlayOnHitEffect();
+            
             //死掉了
             if (health <= 0f)
             {
@@ -125,4 +125,41 @@ public class Enemy : Entity
 
         return stateParam;
     }
+
+    private IEnumerator DelayEnableBehaviourTree()
+    {
+        yield return null;
+        behaviourTree.EnableBehavior();
+    }
+
+    protected void PlayOnHitEffect()
+    {
+        //播放受伤特效
+        GetHurtVFX();
+        SoundEffectManager.PlaySFX01(transform);
+
+        if (!isGetHurt)
+        {
+            Sequence sequence = DOTween.Sequence();
+            sequence.SetUpdate(true);
+
+            sequence.AppendCallback
+            (() =>
+                {
+                    GetComponent<SpriteRenderer>().material.SetFloat("_PureColor", 1f);
+                    GetComponent<SpriteRenderer>().material.SetColor("_Color", Color.white);
+                }
+            );
+            //pure back 
+            sequence.AppendInterval(0.2f); //interval
+            sequence.AppendCallback
+            (() =>
+                {
+                    GetComponent<SpriteRenderer>().material.SetFloat("_PureColor", 0f);
+                    GetComponent<SpriteRenderer>().material.SetColor("_Color", Color.black);
+                }
+            );
+        }
+    }
+
 }

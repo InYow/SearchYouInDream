@@ -596,6 +596,7 @@ Transform:
   - {fileID: 4668006214725168331}
   - {fileID: 957254643375752897}
   - {fileID: 4970736869509897096}
+  - {fileID: 7715379987308035669}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -617,7 +618,7 @@ MonoBehaviour:
   - "\u88401"
   - "\u88402"
   hitVFX_Pivot: {fileID: 4970736869509897096}
-  camera_Pivot: {fileID: 0}
+  camera_Pivot: {fileID: 7715379987308035669}
   _rb: {fileID: 957254644338267111}
   health: 15
   health_Max: 15
@@ -794,7 +795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d7b55c7ecdb49a4a89fa5e6f9022861, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startWhenEnabled: 1
+  startWhenEnabled: 0
   asynchronousLoad: 0
   pauseWhenDisabled: 0
   restartWhenComplete: 1
@@ -896,7 +897,7 @@ MonoBehaviour:
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   preventMovingBackwards: 0
-  constrainInsideGraph: 0
+  constrainInsideGraph: 1
 --- !u!114 &957254644338267115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1151,4 +1152,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 957254644338267109}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8284637131108291867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7715379987308035669}
+  m_Layer: 6
+  m_Name: Camera Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7715379987308035669
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8284637131108291867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 957254644338267109}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -21,7 +21,7 @@ public class STEnemy_WarriorExecutionFly : State
 
         //值
         hitFly = GetComponent<HitFly>();
-        this.enemy = (Enemy)entity;
+        enemy = (Enemy)entity;
         //hitFly.sourceEntity = entity.transExecution_DamageSourceEntity;
         hitFly.sourceAttackBox = entity.transExecution_AttackBox;
         hitFly.checkBoxBehaviour = entity.transExecution_AttackBoxBehaviour;
@@ -35,6 +35,21 @@ public class STEnemy_WarriorExecutionFly : State
         enemy.behaviourTree.SetVariableValue("bIsGetHurt", enemy.isGetHurt);
 
         hitFly.FlyStart(enemy._rb);
+
+        UpdateFaceDirection(enemy._rb.velocity);
+    }
+
+    private void UpdateFaceDirection(Vector2 rbVelocity)
+    {
+        Debug.Log(rbVelocity);
+        if (rbVelocity.x > 0)
+        {
+            enemy.transform.localScale = new Vector3(-1,1,1);
+        }
+        else if(rbVelocity.x < 0)
+        {
+            enemy.transform.localScale = Vector3.one;    
+        }
     }
 
     public override void UPStateBehaviour(Entity entity)

@@ -28,7 +28,7 @@ namespace UI.UISystem.UIFramework
                 Destroy(this.gameObject);
             }
             m_Instance = this;
-            DontDestroyOnLoad(this.gameObject);
+            //DontDestroyOnLoad(this.gameObject);
         }
         
         /// <summary>

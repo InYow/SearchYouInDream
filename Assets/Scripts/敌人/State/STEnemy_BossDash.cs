@@ -1,3 +1,4 @@
+using Pathfinding;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Serialization;
@@ -5,11 +6,12 @@ using UnityEngine.Serialization;
 public class STEnemy_BossDash : State
 {
     public LayerMask obstacleLayer;
-    //public PlayableAsset dashStartAsset;
+    public CheckBox checkBox;
     public PlayableAsset dashLoopAsset;
-    public float stopDistance = 2.5f;
+    //public float stopDistance = 2.5f;
     
     private Enemy_DashBase dashEnemy;
+    private AIPath aiPath;
     private Vector3 targetDirection;
     private Vector3 targetPosition;
 
@@ -18,11 +20,13 @@ public class STEnemy_BossDash : State
     private float startDashTime;
     private bool isDashing = false;
     private bool isDashEnd = false;
+    private float originalMaxSpeed;
     
     public override void StateStart(Entity entity)
     {
         shouldBreak = false;
         dashEnemy = entity as Enemy_DashBase;
+        aiPath = dashEnemy.aiPath;
         if (!dashEnemy)
         {
             Debug.LogError($"{this.name} can only use for dash enemy!");
@@ -34,7 +38,6 @@ public class STEnemy_BossDash : State
         {
             shouldBreak = true;
         }
-        dashEnemy._rb.velocity = Vector2.zero;
         
         targetDirection = Vector3.Normalize(dashEnemy.target.position-dashEnemy.transform.position);
         Ray2D ray = new Ray2D(transform.position, targetDirection);
@@ -44,6 +47,9 @@ public class STEnemy_BossDash : State
             shouldBreak = true;
         }
         targetPosition = entity.transform.position + targetDirection*dashEnemy.dashDistance;
+        var node = AstarPath.active.GetNearest(targetPosition, NNConstraint.Walkable);
+        targetPosition = node.position;
+        aiPath.destination = targetPosition;
         if (targetDirection.x < 0)
         {
             dashEnemy.transform.localScale = new Vector3(-1, 1, 1);
@@ -54,9 +60,14 @@ public class STEnemy_BossDash : State
         }
         isDashing = true;
         startDashTime = Time.time;
+        checkBox.gameObject.SetActive(true);
         playableDirector.playableAsset = dashLoopAsset;
         BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
         playableDirector.Play();
+
+        originalMaxSpeed = aiPath.maxSpeed; 
+        aiPath.maxSpeed = dashEnemy.dashSpeed;
+        aiPath.canMove = true;
     }
 
     public override void UPStateInit(Entity entity) { }
@@ -65,20 +76,16 @@ public class STEnemy_BossDash : State
     {
         if (isDashing)
         {
-            float distance = (entity.transform.position - targetPosition).magnitude;
-            if (distance <= stopDistance)
+            if (aiPath.reachedEndOfPath || 
+                aiPath.remainingDistance <= dashEnemy.stopDistance)
             {
-                dashEnemy._rb.velocity = Vector2.zero;
+                aiPath.canMove = false;
                 isDashing = false;
                 isDashEnd = true;
                 //playableDirector.playableAsset = dashEndAsset;
                 //playableDirector.extrapolationMode = DirectorWrapMode.Hold;
                 //BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
                 //playableDirector.Play();
-            }
-            else
-            {
-                dashEnemy._rb.velocity = dashEnemy.dashSpeed * targetDirection;
             }
         }
     }
@@ -89,9 +96,11 @@ public class STEnemy_BossDash : State
         {
             dashEnemy._rb.velocity = Vector2.zero;
         }
-
+        checkBox.gameObject.SetActive(false);
         isDashing = false;
         isDashEnd = false;
+        aiPath.maxSpeed = originalMaxSpeed;
+        aiPath.canMove = false;
         
         Destroy(gameObject);
     }

@@ -11,14 +11,11 @@ public class Enemy_BossBase : Enemy_DashBase
     // old version
     public override void GetHurt(Entity entity, CheckBox attackBox)
     {
-        Debug.Log(entity.name);
+        //Debug.Log(entity.name);
         if (!BuffContain("BFPlayerUnselected"))
         {
             health -= entity.attackValue;
             EnemyInfoUIList.instance.AddEnemyInfoUI(this); //添加敌人信息UI
-
-            GetHurtVFX();
-            SoundEffectManager.PlaySFX01(transform);
 
             if (transBreakStun || beingBreakStun)
             {
@@ -26,6 +23,8 @@ public class Enemy_BossBase : Enemy_DashBase
                 behaviourTree.SetVariableValue("bIsGetHurt", isGetHurt);
             }
 
+            PlayOnHitEffect();
+            
             //死掉了
             if (health <= 0f)
             {
@@ -49,16 +48,13 @@ public class Enemy_BossBase : Enemy_DashBase
             health -= entity.attackValue;
             EnemyInfoUIList.instance.AddEnemyInfoUI(this); //添加敌人信息UI
 
-
-            //播放受伤特效
-            GetHurtVFX();
-            SoundEffectManager.PlaySFX01(transform);
-
             if (transBreakStun || beingBreakStun)
             {
                 isGetHurt = true;
                 behaviourTree.SetVariableValue("bIsGetHurt", isGetHurt);
             }
+            
+            PlayOnHitEffect();
 
             //死掉了
             if (health <= 0f)

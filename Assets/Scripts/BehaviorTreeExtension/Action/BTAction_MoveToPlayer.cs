@@ -10,8 +10,7 @@ public class BTAction_MoveToPlayer : Action
     private Animator animator;
     private Vector3 destinationCache;
     private string walkState = "STEmpty";
-    public bool tooCloseToPlayer = false;
-
+    
     public SharedTransform targetPosition;
     //[UnityEngine.Tooltip("距离目标多远时会停下")] public float tolerance = 0.1f;
     [UnityEngine.Tooltip("与TargetPosition的距离")] public float distanceWithTarget;
@@ -32,6 +31,7 @@ public class BTAction_MoveToPlayer : Action
         //tolerance = Mathf.Clamp(tolerance, 0.1f, tolerance);
         aiPath.canMove = true;
         destinationCache = CalculateTargetPosition();
+        
         aiPath.destination = destinationCache;
         animator.SetFloat("MoveSpeed", aiPath.maxSpeed);
     }
@@ -50,8 +50,9 @@ public class BTAction_MoveToPlayer : Action
             aiPath.destination = destinationCache;
         }
 
-        Vector3 distance = aiPath.destination - entity.transform.position;
-        if (distance.magnitude <= 0.0001f)
+        //Vector3 distance = aiPath.destination - entity.transform.position;
+        if (aiPath.reachedEndOfPath || 
+            aiPath.remainingDistance <= aiPath.endReachedDistance)
         {
             return TaskStatus.Success;
         }
@@ -89,7 +90,8 @@ public class BTAction_MoveToPlayer : Action
         // {
         //     tooCloseToPlayer = true;
         // }
-
-        return targetPos + new Vector3(offsetX, -yOffset, 0);
+        Vector3 pos = targetPos + new Vector3(offsetX, -yOffset, 0); 
+        var node = AstarPath.active.GetNearest(pos, NNConstraint.Walkable);
+        return node.position;
     }
 }

@@ -501,7 +501,7 @@ MonoBehaviour:
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   preventMovingBackwards: 0
-  constrainInsideGraph: 0
+  constrainInsideGraph: 1
 --- !u!114 &3225463772063427284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1129,6 +1129,9 @@ MonoBehaviour:
     m_Bits: 128
   picked: 0
   pickableItem_master: {fileID: 0}
+  OnHitEntity:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8583250163657952722
 GameObject:
   m_ObjectHideFlags: 0
