@@ -40,6 +40,18 @@ public class SoundManager_New : MonoBehaviour
         audioSource.Play();
     }
 
+    public static void PlayOneshot(string name)
+    {
+
+        GameObject go = instance.transform.Find(name).gameObject;
+        //get audio sources
+        var audioSources = go.GetComponents<AudioSource>();
+        //random select 
+        var audioSource = audioSources[Random.Range(0, audioSources.Length)];
+
+        audioSource.PlayOneShot(audioSource.clip);
+    }
+
     public static void Play(string name, float delay)
     {
         DOVirtual.DelayedCall(delay, () =>

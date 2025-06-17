@@ -30,6 +30,7 @@ public class MessageManager : MonoBehaviour
         }
         if (entity.breakAttackTimes > 0)
         {
+            SoundManager_New.Play("击破");
             entity.breakAttackTimes--;
             CameraFollow.SetFollow(entity.camera_Pivot);
             CameraZone.CameraZoneUseData(CameraZone.Instance.击破敌人时);

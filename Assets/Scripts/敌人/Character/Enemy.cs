@@ -71,13 +71,13 @@ public class Enemy : Entity
         {
             health -= entity.attackValue;
             EnemyInfoUIList.instance.AddEnemyInfoUI(this); //添加敌人信息UI
-            
+
             if (transBreakStun || beingBreakStun)
             {
                 isGetHurt = true;
                 behaviourTree.SetVariableValue("bIsGetHurt", isGetHurt);
             }
-            
+
             PlayOnHitEffect();
 
             //死掉了
@@ -96,15 +96,15 @@ public class Enemy : Entity
         {
             health -= entity.attackValue;
             EnemyInfoUIList.instance.AddEnemyInfoUI(this); //添加敌人信息UI
-            
+
             if (transBreakStun || beingBreakStun)
             {
                 isGetHurt = true;
                 behaviourTree.SetVariableValue("bIsGetHurt", isGetHurt);
             }
-            
+
             PlayOnHitEffect();
-            
+
             //死掉了
             if (health <= 0f)
             {
@@ -136,7 +136,8 @@ public class Enemy : Entity
     {
         //播放受伤特效
         GetHurtVFX();
-        SoundEffectManager.PlaySFX01(transform);
+        // SoundEffectManager.PlaySFX01(transform);
+        SoundManager_New.PlayOneshot("拳");
 
         if (!isGetHurt)
         {

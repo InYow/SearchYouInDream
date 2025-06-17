@@ -47,6 +47,10 @@ public class 击破Canvas : MonoBehaviour
 
         Instance._animator.Play("后半段");
 
+        // SFX
+        SoundManager_New.Play("面部特写");
+        // SoundManager_New.Get("击破")[0].Stop();
+
         //开启径向模糊
         RadialBlur.RadialBlurUseData(Instance.radialBlurData);
         //        Debug.LogError("测试");

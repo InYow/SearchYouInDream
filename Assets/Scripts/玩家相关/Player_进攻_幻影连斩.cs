@@ -19,6 +19,9 @@ public class Player_进攻_幻影连斩 : State_攻击
 
         entity.BuffAdd("BFPlayerUnselected");
 
+        // SFX 
+        SoundManager_New.Play("幻影连斩");
+
         if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D))
         {
         }

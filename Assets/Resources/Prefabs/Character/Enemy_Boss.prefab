@@ -196,8 +196,8 @@ MonoBehaviour:
   hitVFX_Pivot: {fileID: 8936529918867975641}
   camera_Pivot: {fileID: 8659570489219816714}
   _rb: {fileID: 3870754008385037750}
-  health: 100
-  health_Max: 100
+  health: 130
+  health_Max: 130
   resis: 18
   resis_Max: 18
   resis_ResponSpeed: 5
@@ -563,7 +563,7 @@ Transform:
   m_GameObject: {fileID: 8659570490009178464}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.004, y: 0.052, z: 0}
-  m_LocalScale: {x: -1, y: -1, z: 1}
+  m_LocalScale: {x: 1, y: -1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3870754008385037748}

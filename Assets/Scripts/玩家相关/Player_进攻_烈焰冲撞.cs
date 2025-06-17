@@ -29,6 +29,9 @@ public class Player_进攻_烈焰冲撞 : State
 
         Player player = (Player)entity;
 
+        // SFX
+        SoundManager_New.Play("烈焰冲锋");
+
         //求出冲锋方向
         //REVIEW 如果释放技能想换个方向怎么办？
         //给人的感觉是——AWSD选择释放对应的技能？；还是AWSD带有面朝方向的感觉？。

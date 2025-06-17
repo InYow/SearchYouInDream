@@ -21,7 +21,7 @@ public class Player_暴怒 : State
         playableDirector.Play();
 
         //音效
-        SoundManager_New.Play("Player暴怒", 0.3667f);
+        SoundManager_New.Play("释放技能", 0.3667f);
 
         //速度为0
         Player player = (Player)entity;

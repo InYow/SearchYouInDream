@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: CheckBoxClipAsset(Clone)(Clone)
   m_EditorClassIdentifier: 
   template:
-    boxSize: {x: 3.46, y: 0.5}
-    boxOffset: {x: 1.82, y: 0.05}
+    boxSize: {x: 3.46, y: 0.8}
+    boxOffset: {x: 1.82, y: 0.1}
     attackLayer:
       serializedVersion: 2
       m_Bits: 64
@@ -34,8 +34,8 @@ MonoBehaviour:
   m_Name: CheckBoxClipAsset(Clone)(Clone)
   m_EditorClassIdentifier: 
   template:
-    boxSize: {x: 3.46, y: 0.5}
-    boxOffset: {x: 1.82, y: 0.05}
+    boxSize: {x: 3.46, y: 0.8}
+    boxOffset: {x: 1.82, y: 0.1}
     attackLayer:
       serializedVersion: 2
       m_Bits: 64
@@ -55,8 +55,8 @@ MonoBehaviour:
   m_Name: CheckBoxClipAsset(Clone)(Clone)
   m_EditorClassIdentifier: 
   template:
-    boxSize: {x: 3.46, y: 0.5}
-    boxOffset: {x: 1.82, y: 0.05}
+    boxSize: {x: 3.46, y: 0.8}
+    boxOffset: {x: 1.82, y: 0.1}
     attackLayer:
       serializedVersion: 2
       m_Bits: 64
@@ -230,8 +230,8 @@ MonoBehaviour:
   m_Name: CheckBoxClipAsset(Clone)(Clone)
   m_EditorClassIdentifier: 
   template:
-    boxSize: {x: 3.46, y: 0.5}
-    boxOffset: {x: 1.82, y: 0.05}
+    boxSize: {x: 3.46, y: 0.8}
+    boxOffset: {x: 1.82, y: 0.1}
     attackLayer:
       serializedVersion: 2
       m_Bits: 64
@@ -251,8 +251,8 @@ MonoBehaviour:
   m_Name: CheckBoxClipAsset
   m_EditorClassIdentifier: 
   template:
-    boxSize: {x: 3.46, y: 0.5}
-    boxOffset: {x: 1.82, y: 0.05}
+    boxSize: {x: 3.46, y: 0.8}
+    boxOffset: {x: 1.82, y: 0.1}
     attackLayer:
       serializedVersion: 2
       m_Bits: 64
