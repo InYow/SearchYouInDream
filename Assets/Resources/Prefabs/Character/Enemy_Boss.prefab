@@ -196,10 +196,10 @@ MonoBehaviour:
   hitVFX_Pivot: {fileID: 8936529918867975641}
   camera_Pivot: {fileID: 8659570489219816714}
   _rb: {fileID: 3870754008385037750}
-  health: 51
+  health: 100
   health_Max: 100
-  resis: 5
-  resis_Max: 5
+  resis: 18
+  resis_Max: 18
   resis_ResponSpeed: 5
   attackValue: 2
   breakAttackTimes: 1
@@ -239,7 +239,7 @@ MonoBehaviour:
   dashCD: 5
   dashSpeed: 10
   dashDistance: 7
-  stopDistance: 0.3
+  stopDistance: 0.5
 --- !u!95 &3870754008385037749
 Animator:
   serializedVersion: 5
@@ -449,7 +449,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  endReachedDistance: 0.35
+  endReachedDistance: 0.5
   whenCloseToDestination: 0
   rvoDensityBehavior:
     enabled: 1
