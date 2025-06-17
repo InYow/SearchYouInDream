@@ -8,6 +8,17 @@ public class Enemy_BossBase : Enemy_DashBase
 {
     private bool bInSecondState = false;
     
+    public override void StartBreakStun(Entity entity)
+    {
+        transBreakStun = true;
+        var enemy = this as Enemy;
+        if (enemy)
+        {
+            enemy.behaviourTree.SetVariableValue("bStun", enemy.transBreakStun);
+        }
+        SoundManager_New.PlayIfFinish("Boss破防");
+    }
+    
     // old version
     public override void GetHurt(Entity entity, CheckBox attackBox)
     {
