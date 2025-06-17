@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31477793805606274}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
   windTypeSectionClipList_D: []
   inputWindTypeSectionClipList_D: []
   hitFly: {fileID: 0}
-  slowtime: 0.45
+  slowtime: 0.6
   slowfactor: 0.2
   time: 0
   cameraZoneData: {fileID: 11400000, guid: 57723091811ddcc409fb8b6b2f5fce37, type: 2}
