@@ -313,6 +313,8 @@ public class Entity : MonoBehaviour
             transExecution_DamageSourceEntity = entity;
             transExecution_AttackBoxBehaviour = checkBoxBehaviour;
 
+            // SFX
+            SoundManager_New.Play("受伤喊叫小孩");
 
             // kill vfx
             Sequence sequence = DOTween.Sequence();
