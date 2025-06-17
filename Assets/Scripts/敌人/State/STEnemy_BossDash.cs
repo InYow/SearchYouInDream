@@ -76,8 +76,9 @@ public class STEnemy_BossDash : State
     {
         if (isDashing)
         {
-            if (aiPath.reachedEndOfPath || 
-                aiPath.remainingDistance <= dashEnemy.stopDistance)
+            if ( !aiPath.pathPending &&
+                (aiPath.reachedEndOfPath || 
+                aiPath.remainingDistance <= dashEnemy.stopDistance))
             {
                 aiPath.canMove = false;
                 isDashing = false;
