@@ -430,6 +430,7 @@ public class Entity : MonoBehaviour
         {
             enemy.behaviourTree.SetVariableValue("bStun", enemy.transBreakStun);
         }
+        SoundManager_New.PlayIfFinish("Boss破防");
     }
 
     public virtual void ExitBreakStun()

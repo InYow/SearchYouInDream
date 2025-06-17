@@ -82,6 +82,8 @@ MonoBehaviour:
   windTypeSectionClipList_D: []
   inputWindTypeSectionClipList_D: []
   hitFly: {fileID: -2224446171219041177}
+  hitSFXSet:
+  - "Boss\u6B7B\u4EA1"
 --- !u!114 &-2224446171219041177
 MonoBehaviour:
   m_ObjectHideFlags: 0

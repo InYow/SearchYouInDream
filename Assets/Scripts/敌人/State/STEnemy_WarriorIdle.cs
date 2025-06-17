@@ -1,10 +1,14 @@
+using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 public class STEnemy_WarriorIdle : State
 {
     [ReadOnly]
     public float time;
     public float time_TransAttack;
+    public string[] hitSFXSet = Array.Empty<string>();
 
     public override void StateExit(Entity entity)
     {
@@ -15,6 +19,10 @@ public class STEnemy_WarriorIdle : State
     {
         BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
         playableDirector.Play();
+        if (hitSFXSet.Length>0)
+        {
+            PlayHitSFX();
+        }
 
         //普攻CD
         time = 0f;
@@ -28,6 +36,12 @@ public class STEnemy_WarriorIdle : State
     public override void UPStateInit(Entity entity)
     {
 
+    }
+    
+    private void PlayHitSFX()
+    {
+        int index = Random.Range(0,hitSFXSet.Length);
+        SoundManager_New.PlayIfFinish(hitSFXSet[index]);
     }
 
     //---------------------方法------------------------

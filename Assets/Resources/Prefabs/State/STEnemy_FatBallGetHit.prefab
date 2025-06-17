@@ -88,3 +88,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e6fa9377423a22946bf5810154d2fadc, type: 2}
   - {fileID: 11400000, guid: 7b5afd7527bcc0343802a90527b67a93, type: 2}
   - {fileID: 11400000, guid: 91cc2c2ef18ff56448ce0afd852e7396, type: 2}
+  hitSFXSet: []

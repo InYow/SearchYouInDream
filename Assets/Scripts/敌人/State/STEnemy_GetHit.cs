@@ -1,5 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
 using UnityEngine.Playables;
+using Random = UnityEngine.Random;
 
 namespace 敌人
 {
@@ -9,11 +10,17 @@ namespace 敌人
         private Enemy enemy;
         
         public PlayableAsset[] asset;
+        public string[] hitSFXSet = Array.Empty<string>();
         
         public override void StateStart(Entity entity)
         {
             enemy = entity as Enemy;
             lastAnimIndex = Random.Range(0, asset.Length);
+
+            if (hitSFXSet.Length>0)
+            {
+                PlayHitSFX();
+            }
             
             playableDirector.playableAsset = asset[lastAnimIndex];
             BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
@@ -31,6 +38,11 @@ namespace 敌人
             
             Destroy(this.gameObject);
         }
-        
+
+        private void PlayHitSFX()
+        {
+            int index = Random.Range(0,hitSFXSet.Length);
+            SoundManager_New.PlayIfFinish(hitSFXSet[index]);
+        }
     }
 }

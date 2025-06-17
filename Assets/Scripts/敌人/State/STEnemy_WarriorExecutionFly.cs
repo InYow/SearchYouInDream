@@ -1,9 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 public class STEnemy_WarriorExecutionFly : State
 {
     public HitFly hitFly;
+    public string[] hitSFXSet = Array.Empty<string>();
+    
     private Enemy enemy;
 
     public override void StateExit(Entity entity)
@@ -18,7 +23,11 @@ public class STEnemy_WarriorExecutionFly : State
     {
         BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
         playableDirector.Play();
-
+        if (hitSFXSet.Length>0)
+        {
+            PlayHitSFX();
+        }
+        
         //值
         hitFly = GetComponent<HitFly>();
         enemy = (Enemy)entity;
@@ -62,6 +71,12 @@ public class STEnemy_WarriorExecutionFly : State
     {
     }
 
+    private void PlayHitSFX()
+    {
+        int index = Random.Range(0,hitSFXSet.Length);
+        SoundManager_New.PlayIfFinish(hitSFXSet[index]);
+    }
+    
     //--------------------方法--------------------
     public override bool Finished(Entity entity)
     {

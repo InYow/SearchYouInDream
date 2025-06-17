@@ -7845,8 +7845,8 @@ BoxCollider2D:
   m_Offset: {x: -0.048124313, y: 0.049111724}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.52, y: 0.16}
-    oldSize: {x: 1.9253306, y: 2.0458732}
+    pivot: {x: 0.4422875, y: 0.01020025}
+    oldSize: {x: 1.5637034, y: 1.828227}
     newSize: {x: 3.5961828, y: 1.861711}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -23095,7 +23095,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: eaa95fb0544254c4e8c5dc670fa079b2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 56cd902756fcf864db238d1b70c91e43, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -33173,6 +33173,10 @@ PrefabInstance:
     - target: {fileID: 3870754008385037748, guid: cf0ff384789d95841a3d247ea5715aee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3870754008385037760, guid: cf0ff384789d95841a3d247ea5715aee, type: 3}
+      propertyPath: health
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf0ff384789d95841a3d247ea5715aee, type: 3}

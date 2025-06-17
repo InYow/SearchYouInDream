@@ -85,3 +85,5 @@ MonoBehaviour:
   asset:
   - {fileID: 11400000, guid: 2199491aacfee3548a1d5bdabf6f367f, type: 2}
   - {fileID: 11400000, guid: 724d0dbcb1c993c4cbacdc1e51c4de36, type: 2}
+  hitSFXSet:
+  - "Boss\u6328\u63CD"
