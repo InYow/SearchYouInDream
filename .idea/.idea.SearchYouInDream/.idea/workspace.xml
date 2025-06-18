@@ -83,7 +83,7 @@
       <method v="2" />
     </configuration>
     <configuration name="独立播放器" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="E:/UnityOutputTest/GameCreation\SearchYouInDream.exe" />
+      <option name="EXE_PATH" value="E:/UnityOutputTest/异拳小子\SearchYouInDream.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="E:\UnityOutputTest\GameCreation" />
       <option name="PASS_PARENT_ENVS" value="1" />
