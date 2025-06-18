@@ -56,14 +56,14 @@ namespace BehaviorTreeExtension
                 return TaskStatus.Success;
             }
 
-            if (!bStuck && aiPath.desiredVelocity.magnitude <= 0.001f)
+            if (!bStuck && aiPath.velocity.magnitude <= 0.01f)
             {
                 bStuck = true;
                 stuckTime = Time.time;
             }
             if (bStuck)
             {
-                if (Time.time - stuckTime >= 0.45f)
+                if (Time.time - stuckTime >= 0.2f)
                 {
                     return TaskStatus.Success;
                 }
