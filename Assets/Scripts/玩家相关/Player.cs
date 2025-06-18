@@ -153,7 +153,7 @@ public class Player : Entity
             return;
         }
         //冲刺
-        if (stateCurrentName != "Player_冲刺" && stateCurrentName != "Player_受击" && SkillManager.IfCanDash() && Input.GetKeyDown(KeyCode.Space))
+        if (!BuffContain("BFPlayerGuideBreakAttack") && stateCurrentName != "Player_冲刺" && stateCurrentName != "Player_受击" && SkillManager.IfCanDash() && Input.GetKeyDown(KeyCode.Space))
         {
             InputManager.ClearPreInput();
             StateCurrent = InstantiateState("Player_冲刺");
@@ -218,7 +218,7 @@ public class Player : Entity
                     StateCurrent = InstantiateState("Player_投掷");
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.R))
+            else if (Input.GetKeyDown(KeyCode.I))
             {
                 string nameR = SkillManager.GetSkillName(1);
                 if (nameR != "")
@@ -299,7 +299,7 @@ public class Player : Entity
                         StateCurrent = InstantiateState(name);
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.R))
+            else if (Input.GetKeyDown(KeyCode.I))
             {
                 string nameR = SkillManager.GetSkillName(1);
                 if (nameR != "")

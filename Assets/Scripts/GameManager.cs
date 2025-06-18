@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -35,6 +36,14 @@ public class GameManager : MonoBehaviour
         if (player == null)
         {
             player = GameObject.Find("Player").GetComponent<Player>();
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.RightControl) && Input.GetKeyDown(KeyCode.Q))
+        {
+            SceneManager.LoadScene(0);
         }
     }
 

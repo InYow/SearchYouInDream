@@ -67,6 +67,7 @@ public class RankSystem : MonoBehaviour
 
     public float time;  //评值降低的时间
     public float t;
+    public float loseSpeed;
 
     private void Awake()
     {
@@ -111,7 +112,7 @@ public class RankSystem : MonoBehaviour
                 t -= Time.deltaTime;
             else
             {
-                DetectRankValue(1f * Time.deltaTime); //减少评值
+                DetectRankValue(loseSpeed * Time.deltaTime); //减少评值
             }
         }
     }

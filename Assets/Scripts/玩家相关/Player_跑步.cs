@@ -6,6 +6,7 @@ using UnityEngine.Playables;
 //-根据输入方向移动(rb.velocity)
 public class Player_跑步 : State
 {
+    public float factor = 0.8f;
     public override void UPStateBehaviour(Entity entity)
     {
         Player player = (Player)entity;
@@ -19,7 +20,7 @@ public class Player_跑步 : State
         {
             player.FlipX(true);
         }
-        dic_input.y *= 0.8f;
+        dic_input.y *= factor;
         //移动
         player._rb.velocity = player.speed_walk * dic_input;
 

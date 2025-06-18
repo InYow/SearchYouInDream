@@ -137,6 +137,7 @@ MonoBehaviour:
   inputWindTypeSectionClipList_C: []
   windTypeSectionClipList_D: []
   inputWindTypeSectionClipList_D: []
+  factor: 0.55
 --- !u!320 &3751899750072831814
 PlayableDirector:
   m_ObjectHideFlags: 0
