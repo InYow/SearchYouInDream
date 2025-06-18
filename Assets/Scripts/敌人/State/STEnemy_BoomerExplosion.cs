@@ -8,6 +8,7 @@ using UnityEngine.Playables;
 public class STEnemy_BoomerExplosion : State
 {
     public float ExplosionRange;
+    public float RunRange;
     public PlayableAsset boomerExplosionAsset;
     
     private Enemy enemy;
@@ -15,7 +16,7 @@ public class STEnemy_BoomerExplosion : State
     private Animator animator;
     private Transform targetTransform;
     private bool isExploing = false;
-    
+    private float updateTargetTime; 
     public override void StateStart(Entity entity)
     {
         enemy = entity as Enemy;
@@ -30,11 +31,16 @@ public class STEnemy_BoomerExplosion : State
         aiPath.canMove = true;
         
         animator.SetFloat("MoveSpeed", aiPath.maxSpeed);
+        updateTargetTime = Time.time;
     }
 
     public override void UPStateInit(Entity entity)
     {
-        
+        if (Time.time-updateTargetTime > 0.8f)
+        {
+            updateTargetTime = Time.time;
+            aiPath.destination = targetTransform.position;
+        }
     }
 
     public override void UPStateBehaviour(Entity entity)
@@ -48,6 +54,14 @@ public class STEnemy_BoomerExplosion : State
                 aiPath.destination = targetTransform.position;
                 aiPath.canMove = true;
                 animator.SetFloat("MoveSpeed", aiPath.maxSpeed);
+                if (aiPath.desiredVelocity.x < 0)
+                {
+                    entity.transform.localScale = new Vector3(-1, 1, 1);
+                }
+                else if (aiPath.desiredVelocity.x > 0)
+                {
+                    entity.transform.localScale = new Vector3(1, 1, 1);
+                }
             }
             else if (!isExploing)
             {
@@ -64,12 +78,11 @@ public class STEnemy_BoomerExplosion : State
         else
         {
             animator.SetFloat("MoveSpeed", aiPath.maxSpeed);
-            dir = dir.normalized;
-            if (dir.x < 0)
+            if (aiPath.desiredVelocity.x < 0)
             {
                 entity.transform.localScale = new Vector3(-1, 1, 1);
             }
-            else if (dir.x > 0)
+            else if (aiPath.desiredVelocity.x > 0)
             {
                 entity.transform.localScale = new Vector3(1, 1, 1);
             }
@@ -80,6 +93,11 @@ public class STEnemy_BoomerExplosion : State
     {
         if (!isExploing)
         {
+            Vector3 dir = (aiPath.destination - entity.transform.position);
+            if (dir.magnitude > RunRange)
+            {
+                return true;
+            }
             return false;
         }
         return base.Finished(entity);
@@ -87,6 +105,9 @@ public class STEnemy_BoomerExplosion : State
 
     public override void StateExit(Entity entity)
     {
-        Destroy(entity.gameObject);
+        if (isExploing)
+        {
+            Destroy(entity.gameObject);    
+        }
     }
 }
