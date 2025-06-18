@@ -12,11 +12,13 @@ namespace BehaviorTreeExtension
         public SharedTransform playerTransform;
         public float moveMaxDistance;//敌人与玩家的最大距离
         public float moveMinDistance;//敌人与玩家的最小距离
-        
+
         private Enemy entity;
         private AIPath aiPath;
         private Animator animator;
-        
+        private bool bStuck = false;
+        private float stuckTime;
+
         public override void OnAwake()
         {
             base.OnAwake();
@@ -24,14 +26,15 @@ namespace BehaviorTreeExtension
             aiPath = entity.aiPath;
             animator = entity.GetComponent<Animator>();
         }
-      
+
         public override void OnStart()
         {
             base.OnStart();
             aiPath.destination = GetTargetPosition();
-            
+
             aiPath.canMove = true;
-            animator.SetFloat("MoveSpeed",aiPath.maxSpeed);
+            animator.SetFloat("MoveSpeed", aiPath.maxSpeed);
+            bStuck = false;
         }
 
         private Vector3 GetTargetPosition()
@@ -85,25 +88,38 @@ namespace BehaviorTreeExtension
             {
                 return TaskStatus.Success;
             }
-        
+
+            if (!bStuck && aiPath.desiredVelocity.magnitude <= 0.001f)
+            {
+                bStuck = true;
+                stuckTime = Time.time;
+            }
+            if (bStuck)
+            {
+                if (Time.time - stuckTime >= 0.45f)
+                {
+                    return TaskStatus.Success;
+                }
+            }
+
             Vector3 dir = Vector3.Normalize(aiPath.destination - entity.transform.position);
-            animator.SetFloat("MoveSpeed",aiPath.maxSpeed);
+            animator.SetFloat("MoveSpeed", aiPath.maxSpeed);
             if (dir.x < 0)
             {
                 entity.gameObject.transform.localScale = new Vector3(-1, 1, 1);
             }
-            else if(dir.x > 0)
+            else if (dir.x > 0)
             {
                 entity.gameObject.transform.localScale = new Vector3(1, 1, 1);
             }
-        
+
             return TaskStatus.Running;
         }
-      
+
         public override void OnEnd()
         {
             aiPath.canMove = false;
-            animator.SetFloat("MoveSpeed",0);
+            animator.SetFloat("MoveSpeed", 0);
 
             if (playerTransform.Value != null)
             {
@@ -112,12 +128,12 @@ namespace BehaviorTreeExtension
                 {
                     entity.gameObject.transform.localScale = new Vector3(-1, 1, 1);
                 }
-                else if(dir.x > 0)
+                else if (dir.x > 0)
                 {
                     entity.gameObject.transform.localScale = new Vector3(1, 1, 1);
                 }
             }
-            
+
             base.OnEnd();
         }
     }

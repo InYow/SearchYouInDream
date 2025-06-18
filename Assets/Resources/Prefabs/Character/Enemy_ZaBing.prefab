@@ -123,7 +123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2516708375689414073}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.939, y: 1.763, z: 0}
+  m_LocalPosition: {x: 1.16, y: 1.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -474,6 +474,7 @@ MonoBehaviour:
   stateCurrentName: 
   enemyType: 0
   behaviourTree: {fileID: 8186457544752307605}
+  externalBehavior: {fileID: 11400000, guid: 3594024df59abff4197126a086029b2e, type: 2}
   aiPath: {fileID: 8186457544752307611}
   target: {fileID: 0}
   sensor: {fileID: 0}
@@ -631,7 +632,7 @@ MonoBehaviour:
   resetValuesOnRestart: 0
   externalBehavior: {fileID: 11400000, guid: 3594024df59abff4197126a086029b2e, type: 2}
   mBehaviorSource:
-    behaviorName: WarriorBehaviorBase
+    behaviorName: BTZaBing
     behaviorDescription: 
     mTaskData:
       types: []
@@ -668,8 +669,8 @@ MonoBehaviour:
   detailedGizmos: 0
   startEndModifier:
     addPoints: 0
-    exactStartPoint: 3
-    exactEndPoint: 3
+    exactStartPoint: 0
+    exactEndPoint: 0
     useRaycasting: 0
     mask:
       serializedVersion: 2
@@ -678,7 +679,7 @@ MonoBehaviour:
   traversableTags: -1
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
-    value: 8
+    value: 2
 --- !u!114 &8186457544752307611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -692,7 +693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1073741824
-  radius: 0.45
+  radius: 0.6
   height: 1.28
   canMove: 0
   maxSpeed: 2.8
@@ -700,7 +701,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  endReachedDistance: 0.9
+  endReachedDistance: 0.5
   whenCloseToDestination: 0
   rvoDensityBehavior:
     enabled: 1

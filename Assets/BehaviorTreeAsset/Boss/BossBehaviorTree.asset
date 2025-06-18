@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BossBehaviorTree
   m_EditorClassIdentifier: 
   mBehaviorSource:
-    behaviorName: WarriorBehaviorBase
+    behaviorName: BTBoss
     behaviorDescription: 
     mTaskData:
       types: []

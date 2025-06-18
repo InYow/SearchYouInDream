@@ -10,11 +10,14 @@ public class BTAction_MoveToPlayer : Action
     private Animator animator;
     private Vector3 destinationCache;
     private string walkState = "STEmpty";
-    
+
     public SharedTransform targetPosition;
     //[UnityEngine.Tooltip("距离目标多远时会停下")] public float tolerance = 0.1f;
     [UnityEngine.Tooltip("与TargetPosition的距离")] public float distanceWithTarget;
     [UnityEngine.Tooltip("Y轴上的偏移量，>0")] public float yOffset = 0.15f;
+
+    private bool bStuck = false;
+    private float stuckTime;
 
     public override void OnAwake()
     {
@@ -31,9 +34,11 @@ public class BTAction_MoveToPlayer : Action
         //tolerance = Mathf.Clamp(tolerance, 0.1f, tolerance);
         aiPath.canMove = true;
         destinationCache = CalculateTargetPosition();
-        
+
         aiPath.destination = destinationCache;
         animator.SetFloat("MoveSpeed", aiPath.maxSpeed);
+
+        bStuck = false;
     }
 
     public override TaskStatus OnUpdate()
@@ -51,14 +56,27 @@ public class BTAction_MoveToPlayer : Action
         }
 
         //Vector3 distance = aiPath.destination - entity.transform.position;
-        if (aiPath.reachedEndOfPath || 
+        if (aiPath.reachedEndOfPath ||
             aiPath.remainingDistance <= aiPath.endReachedDistance)
         {
             return TaskStatus.Success;
         }
-        
+
+        if (!bStuck && aiPath.desiredVelocity.magnitude <= 0.001f)
+        {
+            bStuck = true;
+            stuckTime = Time.time;
+        }
+        if (bStuck)
+        {
+            if (Time.time - stuckTime >= 0.45f)
+            {
+                return TaskStatus.Success;
+            }
+        }
+
         animator.SetFloat("MoveSpeed", aiPath.maxSpeed);
-        
+
         if (aiPath.desiredVelocity.x < 0)
         {
             entity.gameObject.transform.localScale = new Vector3(-1, 1, 1);
@@ -90,7 +108,7 @@ public class BTAction_MoveToPlayer : Action
         // {
         //     tooCloseToPlayer = true;
         // }
-        Vector3 pos = targetPos + new Vector3(offsetX, -yOffset, 0); 
+        Vector3 pos = targetPos + new Vector3(offsetX, -yOffset, 0);
         var node = AstarPath.active.GetNearest(pos, NNConstraint.Walkable);
         return node.position;
     }

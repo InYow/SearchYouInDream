@@ -243,6 +243,7 @@ MonoBehaviour:
   stateCurrentName: 
   enemyType: 0
   behaviourTree: {fileID: 3225463772063427281}
+  externalBehavior: {fileID: 0}
   aiPath: {fileID: 3225463772063427295}
   target: {fileID: 0}
   sensor: {fileID: 0}
@@ -444,8 +445,8 @@ MonoBehaviour:
   detailedGizmos: 0
   startEndModifier:
     addPoints: 0
-    exactStartPoint: 3
-    exactEndPoint: 3
+    exactStartPoint: 0
+    exactEndPoint: 0
     useRaycasting: 0
     mask:
       serializedVersion: 2

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BoomerEnemyBehavior
   m_EditorClassIdentifier: 
   mBehaviorSource:
-    behaviorName: BoomerBT
+    behaviorName: BTBoomer
     behaviorDescription: 
     mTaskData:
       types: []

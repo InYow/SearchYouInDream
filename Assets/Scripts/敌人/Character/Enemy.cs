@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using BehaviorDesigner.Runtime;
 using BehaviorTreeExtension.Sensor;
 using DG.Tweening;
+using Fungus;
+using OfficeOpenXml.FormulaParsing.Excel.Functions.Information;
 using Pathfinding;
 using UnityEngine;
 
@@ -20,6 +22,7 @@ public class Enemy : Entity
 {
     public EnemyType enemyType;
     public BehaviorTree behaviourTree;
+    public ExternalBehaviorTree externalBehavior;
     public AIPath aiPath;
     public Transform target;
     public SensorBase sensor;
@@ -34,6 +37,8 @@ public class Enemy : Entity
         sensor = GetComponent<SensorBase>();
         sensor.OnTargetDetect += DetectPlayer;
         sensor.OnTargetLose += LosePlayer;
+
+        StartCoroutine(DelayEnableBehaviourTree());
     }
 
     private void OnDisable()
@@ -45,7 +50,6 @@ public class Enemy : Entity
     public override void Start()
     {
         base.Start();
-        StartCoroutine(DelayEnableBehaviourTree());
     }
 
     public void AllowEnemyAttack(bool allow)
@@ -66,7 +70,7 @@ public class Enemy : Entity
     // old version
     public override void GetHurt(Entity entity, CheckBox attackBox)
     {
-        Debug.Log(entity.name);
+        //Debug.Log(entity.name);
         if (!BuffContain("BFPlayerUnselected"))
         {
             health -= entity.attackValue;
@@ -128,7 +132,9 @@ public class Enemy : Entity
 
     private IEnumerator DelayEnableBehaviourTree()
     {
-        yield return null;
+        behaviourTree.DisableBehavior();
+        behaviourTree.ExternalBehavior = externalBehavior;
+        yield return new WaitFrames();
         behaviourTree.EnableBehavior();
     }
 

@@ -796,7 +796,11 @@ public class Player : Entity
             受伤Canvas.Instance.PlayAnimation();        //播放受伤UI动画
             transHitFly_SourceAttackBox = attackBox;
             transHitFly_SourceEntity = entity;
-            transStun = true;//进入硬直}
+            transStun = true;   //进入硬直 
+
+            // sfx
+            SoundManager_New.PlayOneshot("拳");
+
         }
     }
 
@@ -818,7 +822,10 @@ public class Player : Entity
             受伤Canvas.Instance.PlayAnimation();        //播放受伤UI动画
             transHitFly_SourceCheckBoxBehaviour = checkBoxBehaviour;
             transHitFly_SourceEntity = entity;
-            transStun = true;//进入硬直}
+            transStun = true;   //进入硬直 
+
+            // sfx
+            SoundManager_New.PlayOneshot("拳");
         }
     }
 

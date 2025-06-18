@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3569910826413905955}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.78, z: 0}
+  m_LocalPosition: {x: 0, y: -1.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -165,10 +165,10 @@ MonoBehaviour:
   shadow: {fileID: 3569910826413905955}
   projectileVisual: {fileID: 3569910828149840244}
   landScale: 1.35
-  initialSpeed: 8
+  initialSpeed: 10
   lastDuration: 5
   emmitYawAngle: 0
-  gravityScale: 15
+  gravityScale: 45
   flashMaskPrefab: {fileID: 508832314405925070, guid: e95b6e2f90d1d0448bf618081a5185b6, type: 3}
   bEnableCheckBoxOnLand: 0
 --- !u!50 &4238966071032595840

@@ -416,11 +416,11 @@ MonoBehaviour:
   hitVFX_Pivot: {fileID: 299515659862037582}
   camera_Pivot: {fileID: 287302813}
   _rb: {fileID: 5592159268507573281}
-  health: 20
-  health_Max: 20
-  resis: 10
-  resis_Max: 10
-  resis_ResponSpeed: 1
+  health: 28
+  health_Max: 28
+  resis: 13
+  resis_Max: 13
+  resis_ResponSpeed: 2.2
   attackValue: 1
   breakAttackTimes: 1
   breakAttackTimes_Max: 1
@@ -443,6 +443,7 @@ MonoBehaviour:
   stateCurrentName: 
   enemyType: 1
   behaviourTree: {fileID: 5592159268507573288}
+  externalBehavior: {fileID: 11400000, guid: 6390c3ee043caa847b0964af93f4fe6d, type: 2}
   aiPath: {fileID: 5592159268507573286}
   target: {fileID: 0}
   sensor: {fileID: 0}
@@ -557,7 +558,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.206578, y: 0.1662}
+  m_Size: {x: 2.1, y: 0.1662}
   m_EdgeRadius: 0
 --- !u!50 &5592159268507573281
 Rigidbody2D:
@@ -601,7 +602,7 @@ MonoBehaviour:
   resetValuesOnRestart: 0
   externalBehavior: {fileID: 11400000, guid: 6390c3ee043caa847b0964af93f4fe6d, type: 2}
   mBehaviorSource:
-    behaviorName: WarriorBehaviorBase
+    behaviorName: BTFatBall
     behaviorDescription: 
     mTaskData:
       types: []
@@ -637,8 +638,8 @@ MonoBehaviour:
   detailedGizmos: 0
   startEndModifier:
     addPoints: 0
-    exactStartPoint: 3
-    exactEndPoint: 3
+    exactStartPoint: 0
+    exactEndPoint: 0
     useRaycasting: 0
     mask:
       serializedVersion: 2
@@ -647,7 +648,7 @@ MonoBehaviour:
   traversableTags: -1
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
-    value: -1
+    value: 1
 --- !u!114 &5592159268507573286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,7 +662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1073741824
-  radius: 0.45
+  radius: 1.1
   height: 1.28
   canMove: 0
   maxSpeed: 1.8

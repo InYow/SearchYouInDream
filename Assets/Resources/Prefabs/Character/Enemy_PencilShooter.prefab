@@ -647,6 +647,7 @@ MonoBehaviour:
   stateCurrentName: 
   enemyType: 0
   behaviourTree: {fileID: 957254644338267118}
+  externalBehavior: {fileID: 11400000, guid: dffd2915d1a46dd4c89c1b01678a7e03, type: 2}
   aiPath: {fileID: 957254644338267104}
   target: {fileID: 0}
   sensor: {fileID: 0}
@@ -658,7 +659,7 @@ MonoBehaviour:
   - "\u7206\u88402"
   - "\u7206\u88403"
   - "\u7206\u88404"
-  photo: {fileID: 0}
+  photo: {fileID: 21300000, guid: 7d0b3a10303610b4a98b5e52d0567a5e, type: 3}
   projectileSpawnTransform: {fileID: 6868005303920671425}
   shootEnable: 1
   shootCD: 5
@@ -804,7 +805,7 @@ MonoBehaviour:
   resetValuesOnRestart: 0
   externalBehavior: {fileID: 11400000, guid: dffd2915d1a46dd4c89c1b01678a7e03, type: 2}
   mBehaviorSource:
-    behaviorName: WarriorBehaviorBase
+    behaviorName: BTPencilShooter
     behaviorDescription: 
     mTaskData:
       types: []
@@ -840,8 +841,8 @@ MonoBehaviour:
   detailedGizmos: 0
   startEndModifier:
     addPoints: 0
-    exactStartPoint: 3
-    exactEndPoint: 3
+    exactStartPoint: 0
+    exactEndPoint: 0
     useRaycasting: 0
     mask:
       serializedVersion: 2
@@ -864,7 +865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1073741824
-  radius: 0.45
+  radius: 0.5
   height: 1.28
   canMove: 0
   maxSpeed: 2.8
@@ -872,7 +873,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  endReachedDistance: 0.01
+  endReachedDistance: 0.5
   whenCloseToDestination: 0
   rvoDensityBehavior:
     enabled: 1

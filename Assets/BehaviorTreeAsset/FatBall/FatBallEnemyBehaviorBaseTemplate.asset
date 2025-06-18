@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FatBallEnemyBehaviorBaseTemplate
   m_EditorClassIdentifier: 
   mBehaviorSource:
-    behaviorName: WarriorBehaviorBase
+    behaviorName: BTFatBall
     behaviorDescription: 
     mTaskData:
       types: []

@@ -399,6 +399,7 @@ MonoBehaviour:
   stateCurrentName: 
   enemyType: 4
   behaviourTree: {fileID: 7806266618746643484}
+  externalBehavior: {fileID: 0}
   aiPath: {fileID: 7806266618746643474}
   target: {fileID: 0}
   sensor: {fileID: 0}

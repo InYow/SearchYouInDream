@@ -15,6 +15,9 @@ public class BreakableItem_破碎 : State
 
     public override void StateStart(Entity entity)
     {
+        // SFX
+        SoundManager_New.Play("垃圾桶");
+
         //不动
         if (transform.parent.lossyScale.x == 1)
         {

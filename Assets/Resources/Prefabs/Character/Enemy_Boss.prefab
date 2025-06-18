@@ -223,6 +223,7 @@ MonoBehaviour:
   stateCurrentName: 
   enemyType: 4
   behaviourTree: {fileID: 3870754008385037759}
+  externalBehavior: {fileID: 11400000, guid: 34a13ae4ac004bb48aab831b3d13856b, type: 2}
   aiPath: {fileID: 3870754008385037745}
   target: {fileID: 0}
   sensor: {fileID: 0}
@@ -239,7 +240,7 @@ MonoBehaviour:
   dashCD: 5
   dashSpeed: 10
   dashDistance: 7
-  stopDistance: 0.5
+  stopDistance: 0.7
 --- !u!95 &3870754008385037749
 Animator:
   serializedVersion: 5
@@ -326,7 +327,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.19781876, y: 0.0789}
+  m_Offset: {x: 0.15, y: 0.0789}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -337,7 +338,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0407486, y: 0.1662}
+  m_Size: {x: 1.75, y: 0.1662}
   m_EdgeRadius: 0
 --- !u!50 &3870754008385037750
 Rigidbody2D:
@@ -381,7 +382,7 @@ MonoBehaviour:
   resetValuesOnRestart: 0
   externalBehavior: {fileID: 11400000, guid: 34a13ae4ac004bb48aab831b3d13856b, type: 2}
   mBehaviorSource:
-    behaviorName: WarriorBehaviorBase
+    behaviorName: BTBoss
     behaviorDescription: 
     mTaskData:
       types: []
@@ -417,8 +418,8 @@ MonoBehaviour:
   detailedGizmos: 0
   startEndModifier:
     addPoints: 0
-    exactStartPoint: 3
-    exactEndPoint: 3
+    exactStartPoint: 0
+    exactEndPoint: 0
     useRaycasting: 0
     mask:
       serializedVersion: 2
@@ -441,7 +442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1073741824
-  radius: 0.45
+  radius: 0.7
   height: 1.28
   canMove: 0
   maxSpeed: 1.8
@@ -449,7 +450,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  endReachedDistance: 0.5
+  endReachedDistance: 0.7
   whenCloseToDestination: 0
   rvoDensityBehavior:
     enabled: 1

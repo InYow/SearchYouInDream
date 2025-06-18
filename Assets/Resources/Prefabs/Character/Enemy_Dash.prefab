@@ -337,6 +337,7 @@ MonoBehaviour:
   stateCurrentName: 
   enemyType: 0
   behaviourTree: {fileID: 8545397529654295124}
+  externalBehavior: {fileID: 0}
   aiPath: {fileID: 8545397529654295130}
   target: {fileID: 0}
   sensor: {fileID: 8545397529654295121}
@@ -353,6 +354,7 @@ MonoBehaviour:
   dashCD: 15
   dashSpeed: 10
   dashDistance: 8
+  stopDistance: 0
 --- !u!95 &8545397529654295134
 Animator:
   serializedVersion: 5
@@ -542,8 +544,8 @@ MonoBehaviour:
   detailedGizmos: 0
   startEndModifier:
     addPoints: 0
-    exactStartPoint: 3
-    exactEndPoint: 3
+    exactStartPoint: 0
+    exactEndPoint: 0
     useRaycasting: 0
     mask:
       serializedVersion: 2

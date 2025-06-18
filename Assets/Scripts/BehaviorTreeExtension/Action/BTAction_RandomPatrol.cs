@@ -7,12 +7,15 @@ namespace BehaviorTreeExtension
     public class BTAction_RandomPatrol : Action
     {
         public float PatrolRange = 5.0f;
-        
+
         private Enemy entity;
         private AIPath aiPath;
         private Animator animator;
         private float randomAngle = 20.0f;
         private Vector3 lastMoveDirection;
+
+        private bool bStuck = false;
+        private float stuckTime;
 
         public override void OnAwake()
         {
@@ -32,17 +35,17 @@ namespace BehaviorTreeExtension
             {
                 // 非边界位置，使用随机方向
                 Vector2 random = Random.insideUnitCircle.normalized;
-                lastMoveDirection = new Vector3(random.x,random.y, 0.0f);
+                lastMoveDirection = new Vector3(random.x, random.y, 0.0f);
             }
             else
             {
                 lastMoveDirection = reflected; //Vector3.Reflect(lastMoveDirection,reflected).normalized;
             }
 
-            Vector3 targetPos = entity.transform.position + lastMoveDirection * Random.Range(0.5f,1.0f)*PatrolRange;
+            Vector3 targetPos = entity.transform.position + lastMoveDirection * Random.Range(0.5f, 1.0f) * PatrolRange;
             aiPath.destination = targetPos;
             aiPath.canMove = true;
-            
+
             animator.SetFloat("MoveSpeed", aiPath.maxSpeed);
         }
 
@@ -51,6 +54,19 @@ namespace BehaviorTreeExtension
             if (aiPath.reachedEndOfPath)
             {
                 return TaskStatus.Success;
+            }
+
+            if (!bStuck && aiPath.desiredVelocity.magnitude <= 0.001f)
+            {
+                bStuck = true;
+                stuckTime = Time.time;
+            }
+            if (bStuck)
+            {
+                if (Time.time - stuckTime >= 0.45f)
+                {
+                    return TaskStatus.Success;
+                }
             }
 
             //Vector3 dir = (aiPath.destination - entity.transform.position);
@@ -99,11 +115,11 @@ namespace BehaviorTreeExtension
             else if (z >= depth - 1) reflectDir += Vector3.down;
 
             reflectDir = reflectDir.normalized;
-            
+
             float t = Random.value; // [0, 1] 均匀分布
             t = Mathf.Sqrt(t);      // 变成 [0, 1] 的「两头高中间低」分布
             float angleOffset = Mathf.Lerp(-randomAngle, randomAngle, t); // 映射回角度区间
-            
+
             Quaternion q = Quaternion.AngleAxis(angleOffset, Vector3.forward);
             reflectDir = q * reflectDir;
 

@@ -16,6 +16,7 @@ public class 操作指南Canvas : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            SoundManager_New.Play("打开纸条");
             if (!opening)
                 Open();
             else
