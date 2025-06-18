@@ -16,7 +16,7 @@ public class BTAction_MoveToPlayer : Action
     [UnityEngine.Tooltip("与TargetPosition的距离")] public float distanceWithTarget;
     [UnityEngine.Tooltip("Y轴上的偏移量，>0")] public float yOffset = 0.15f;
 
-    private bool bStuck = false;
+    public bool bStuck = false;
     private float stuckTime;
 
     public override void OnAwake()
@@ -37,8 +37,6 @@ public class BTAction_MoveToPlayer : Action
 
         aiPath.destination = destinationCache;
         animator.SetFloat("MoveSpeed", aiPath.maxSpeed);
-
-        bStuck = false;
     }
 
     public override TaskStatus OnUpdate()
@@ -61,15 +59,15 @@ public class BTAction_MoveToPlayer : Action
         {
             return TaskStatus.Success;
         }
-
-        if (!bStuck && aiPath.desiredVelocity.magnitude <= 0.001f)
+        
+        if (!bStuck && aiPath.velocity.magnitude <= 0.01f)
         {
             bStuck = true;
             stuckTime = Time.time;
         }
         if (bStuck)
         {
-            if (Time.time - stuckTime >= 0.45f)
+            if (Time.time - stuckTime >= 0.2f)
             {
                 return TaskStatus.Success;
             }
@@ -93,6 +91,7 @@ public class BTAction_MoveToPlayer : Action
     {
         aiPath.canMove = false;
         animator.SetFloat("MoveSpeed", 0);
+        bStuck = false;
         base.OnEnd();
     }
 
