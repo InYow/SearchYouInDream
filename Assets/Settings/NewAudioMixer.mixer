@@ -14,6 +14,25 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!243 &-8297212774161721450
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: "Boss\u51B2\u649E"
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 29a5462f0c0277345a4db012c1060246
+  m_Children: []
+  m_Volume: 36ac6f30419dc2942aab365acdd50543
+  m_Pitch: 20fd969e87b08d345824963461a8228a
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 5974089964755413628}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!244 &-7930123475718214024
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -52,6 +71,20 @@ AudioMixerEffectController:
   m_EffectID: 2732038b870c7394ab3607af27226a22
   m_EffectName: Attenuation
   m_MixLevel: 15ab3d30fa30f8c4d91138d79194e92d
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &-6460735040528561402
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 016088ecfe3c4214382669e297232c8e
+  m_EffectName: Attenuation
+  m_MixLevel: 9b0a785e3c2932b488e0cd70c080bc79
   m_Parameters: []
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
@@ -339,6 +372,8 @@ AudioMixerController:
     - a7bbeba48ed1aec40a69902d1779c893
     - f4cb6d7f143365f43b3c1e9fe9ba6320
     - f3db754082a7aa34ca0f9ef844645c99
+    - 29a5462f0c0277345a4db012c1060246
+    - 780d0a6b0185a3445bcf127acb1b93db
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -358,6 +393,8 @@ AudioMixerGroupController:
   - {fileID: -5905868199336476611}
   - {fileID: 1922435737983216377}
   - {fileID: -2645360696101547602}
+  - {fileID: 798098968501676182}
+  - {fileID: -8297212774161721450}
   - {fileID: -1597111785497140638}
   - {fileID: -5372744235888577510}
   - {fileID: 7909942643807858677}
@@ -403,6 +440,7 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 5f22533528714ac47af9ba2c6c8a0973
   m_FloatValues:
+    36ac6f30419dc2942aab365acdd50543: 6.2251883
     0a15a7a0381cc524bae08c4b86781e62: 5.1526957
     7346d0322e9bd10438d8786c9e6affda: 20
     ad2e1f23d2af990429f4ea7e907c02f4: 5.1526957
@@ -415,6 +453,7 @@ AudioMixerSnapshotController:
     a06f218d2a05fb04d97d0ba187eed645: 3.7041535
     361bbb9d62eca2840885023f53348425: -2.5738313
     403d656e53cf852419dd75e14060515c: 6.792385
+    44b6e4afe94eb484bbca477c86b54d07: 5.6785126
   m_TransitionOverrides: {}
 --- !u!243 &29087194137029478
 AudioMixerGroupController:
@@ -463,6 +502,25 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!243 &798098968501676182
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: "Boss\u653B\u51FB"
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 780d0a6b0185a3445bcf127acb1b93db
+  m_Children: []
+  m_Volume: 44b6e4afe94eb484bbca477c86b54d07
+  m_Pitch: 64a5d7b4f6f2a7a428176a978e8a7998
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -6460735040528561402}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!243 &1922435737983216377
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -605,6 +663,20 @@ AudioMixerEffectController:
   m_EffectID: 91ca1886e8039e64fa343eae20b89eba
   m_EffectName: Attenuation
   m_MixLevel: 1d466b614e6dfb14aa0f14875f187b5a
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &5974089964755413628
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 21bd5a0381f5a8341bed2c1a528ea54a
+  m_EffectName: Attenuation
+  m_MixLevel: 0df563dc6e7a8a04cb6d41ba63f0537e
   m_Parameters: []
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
