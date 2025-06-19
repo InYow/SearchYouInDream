@@ -19695,7 +19695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mono: {x: 0, y: 7}
-  wonderMono: {x: 0, y: 1}
+  wonderMono: {x: 0, y: 100}
   healthRestore: 2
   energyBeans: 0
   energyBeansMax: 4
