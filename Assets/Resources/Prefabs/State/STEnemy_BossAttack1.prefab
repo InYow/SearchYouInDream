@@ -61,6 +61,8 @@ MonoBehaviour:
   inputWindTypeSectionClipList_C: []
   windTypeSectionClipList_D: []
   inputWindTypeSectionClipList_D: []
+  hitSFXSet:
+  - "Boss\u653B\u51FB"
 --- !u!320 &9117474669274388365
 PlayableDirector:
   m_ObjectHideFlags: 0

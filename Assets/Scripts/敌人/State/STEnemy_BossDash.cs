@@ -1,7 +1,9 @@
+using System;
 using Pathfinding;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class STEnemy_BossDash : State
 {
@@ -21,6 +23,8 @@ public class STEnemy_BossDash : State
     private bool isDashing = false;
     private bool isDashEnd = false;
     private float originalMaxSpeed;
+    
+    public string[] hitSFXSet = Array.Empty<string>();
     
     public override void StateStart(Entity entity)
     {
@@ -134,10 +138,18 @@ public class STEnemy_BossDash : State
         BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
         playableDirector.Play();
         isDashing = true;
+
+        PlayHitSFX();
     }
     
     public void OnDashEndFinish()
     {
         isDashEnd = true;
+    }
+    
+    private void PlayHitSFX()
+    {
+        int index = Random.Range(0,hitSFXSet.Length);
+        SoundManager_New.PlayOneshot(hitSFXSet[index]);
     }
 }

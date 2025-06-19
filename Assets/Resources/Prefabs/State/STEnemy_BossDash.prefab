@@ -68,6 +68,8 @@ MonoBehaviour:
     m_Bits: 512
   checkBox: {fileID: 2662082440587875147}
   dashLoopAsset: {fileID: 11400000, guid: b50b66045e79b854b93b0fddff4faf1a, type: 2}
+  hitSFXSet:
+  - "Boss\u51B2\u649E"
 --- !u!320 &407852731994976180
 PlayableDirector:
   m_ObjectHideFlags: 0
