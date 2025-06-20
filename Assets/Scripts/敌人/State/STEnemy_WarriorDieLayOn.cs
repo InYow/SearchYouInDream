@@ -18,6 +18,7 @@ public class STEnemy_WarriorDieLayOn : State
 
         enemy = (Enemy)entity;
         enemy._rb.simulated = false;
+        enemy.isDead = true;
 
         //踩血特效
         VisualEffectManager.PlayEffectWithoutRotation(enemy.bloodVFXName, enemy.transform);

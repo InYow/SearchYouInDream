@@ -6,17 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="32564b51-fb0b-4039-b3ab-ba5c1b96c9a4" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SearchYouInDream/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Fungus/Integrations/Playmaker/Fungus-PlayMaker.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Fungus/Integrations/Spine/Fungus-Spine.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Attribute Processors.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Editor Windows.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Sample - RPG Editor.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/Boomer/BoomerEnemyBehavior.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/Boomer/BoomerEnemyBehavior.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/Boss/BossBehaviorTree.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/Boss/BossBehaviorTree.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/DashEnemyBehaviorBaseTemplate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/DashEnemyBehaviorBaseTemplate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/FatBall/FatBallEnemyBehaviorBaseTemplate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/FatBall/FatBallEnemyBehaviorBaseTemplate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/PencilMonster/PencilMonsterBehaviorBaseTemplate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/PencilMonster/PencilMonsterBehaviorBaseTemplate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/ShooterEnemyBehaviorBaseTemplate.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/ShooterEnemyBehaviorBaseTemplate.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/TieTou/TieTouEnemyBehavior.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/TieTou/TieTouEnemyBehavior.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/ZaBing/ZaBingEnemyBehavior.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BehaviorTreeAsset/ZaBing/ZaBingEnemyBehavior.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Derek/Prefabs/Enemy_Elite.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Derek/Prefabs/Enemy_Elite.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GraphCaches/GraphCache.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GraphCaches/GraphCache.bytes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_Boomer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_Boomer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_Boss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_Boss.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_PencilShooter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Character/Enemy_PencilShooter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_TieTouIdle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/State/STEnemy_TieTouIdle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/功能开发场景-美术勿动.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/功能开发场景-美术勿动.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/Character/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/Character/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/State/STEnemy_BossDash.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/State/STEnemy_BossDash.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/敌人/State/STEnemy_WarriorDieLayOn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/敌人/State/STEnemy_WarriorDieLayOn.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,6 +204,7 @@
       <workItem from="1750253915554" duration="1541000" />
       <workItem from="1750296738410" duration="300000" />
       <workItem from="1750385414809" duration="820000" />
+      <workItem from="1750420968447" duration="1715000" />
     </task>
     <servers />
   </component>

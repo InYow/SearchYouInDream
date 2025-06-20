@@ -31,6 +31,7 @@ public class Enemy : Entity
     public string bloodVFXName = "踩血特效1";
     public List<string> bloodVFXNameList = new List<string> { "爆血1", "爆血2", "爆血3", "爆血4" };
     public Sprite photo; //大头照
+    public bool isDead = false;
 
     public void OnEnable()
     {
@@ -136,6 +137,8 @@ public class Enemy : Entity
         behaviourTree.ExternalBehavior = externalBehavior;
         yield return new WaitFrames();
         behaviourTree.EnableBehavior();
+
+        behaviourTree.SetVariableValue("bIsDead", isDead);
     }
 
     protected void PlayOnHitEffect()

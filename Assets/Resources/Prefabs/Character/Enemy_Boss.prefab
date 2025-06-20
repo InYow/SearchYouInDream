@@ -236,6 +236,7 @@ MonoBehaviour:
   - "\u7206\u88403"
   - "\u7206\u88404"
   photo: {fileID: 21300000, guid: 0052d72274c94364da6ceec501236c87, type: 3}
+  isDead: 0
   dashEnable: 1
   dashCD: 5
   dashSpeed: 10
@@ -389,7 +390,7 @@ MonoBehaviour:
       parentIndex: 
       startIndex: 
       variableStartIndex: 
-      JSONSerialization: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"FoundPlayer","IsShared":true,"IsDynamic":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"PlayerTransform","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanExecute","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bInCD","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bIsGetHurt","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bBingStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanAttack","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bSecondState","IsShared":true,"BooleanmValue":false}]}'
+      JSONSerialization: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"FoundPlayer","IsShared":true,"IsDynamic":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bFoundPlayer","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DistanceFromPlayer","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"PlayerTransform","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanExecute","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bInCD","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bIsGetHurt","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bBingStun","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bCanAttack","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bSecondState","IsShared":true,"BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"bIsDead","IsShared":true,"BooleanmValue":false}]}'
       fieldSerializationData:
         typeName: []
         fieldNameHash: 

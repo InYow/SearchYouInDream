@@ -68,8 +68,14 @@ public class STEnemy_BossDash : State
         playableDirector.playableAsset = dashLoopAsset;
         BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
         playableDirector.Play();
-        PlayHitSFX();        
 
+        if (!aiPath.pathPending &&
+            (aiPath.reachedEndOfPath ||
+             aiPath.remainingDistance <= dashEnemy.stopDistance))
+        {
+            PlayHitSFX();        
+        }
+        
         originalMaxSpeed = aiPath.maxSpeed; 
         aiPath.maxSpeed = dashEnemy.dashSpeed;
         aiPath.canMove = true;
@@ -81,7 +87,7 @@ public class STEnemy_BossDash : State
     {
         if (isDashing)
         {
-            if ( !aiPath.pathPending &&
+            if (!aiPath.pathPending &&
                 (aiPath.reachedEndOfPath || 
                 aiPath.remainingDistance <= dashEnemy.stopDistance))
             {
