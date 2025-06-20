@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.RightControl) && Input.GetKeyDown(KeyCode.Q))
         {
-            SceneManager.LoadScene(0);
+            SceneLoader.instance.LoadScene("开始界面");
         }
     }
 

@@ -68,6 +68,7 @@ public class STEnemy_BossDash : State
         playableDirector.playableAsset = dashLoopAsset;
         BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
         playableDirector.Play();
+        PlayHitSFX();        
 
         originalMaxSpeed = aiPath.maxSpeed; 
         aiPath.maxSpeed = dashEnemy.dashSpeed;
@@ -138,8 +139,6 @@ public class STEnemy_BossDash : State
         BindMethod.BindAnimator(playableDirector, transform.parent.gameObject);
         playableDirector.Play();
         isDashing = true;
-
-        PlayHitSFX();
     }
     
     public void OnDashEndFinish()

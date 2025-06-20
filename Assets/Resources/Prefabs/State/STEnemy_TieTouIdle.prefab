@@ -82,3 +82,4 @@ MonoBehaviour:
   inputWindTypeSectionClipList_D: []
   time: 0
   time_TransAttack: 2
+  hitSFXSet: []
