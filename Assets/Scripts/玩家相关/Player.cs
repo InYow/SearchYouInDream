@@ -763,9 +763,9 @@ public class Player : Entity
         entity.DetectResis(this);
     }
 
-    public override void Hurt(Entity entity, CheckAttackBoxBehaviour checkBoxBehaviour)
+    public override void Hurt(Entity entity, CheckAttackBoxBehaviour checkBoxBehaviour, float attackValue)
     {
-        base.Hurt(entity, checkBoxBehaviour);
+        base.Hurt(entity, checkBoxBehaviour, attackValue);
 
         // //治疗灰色生命
         // float h = healthGray - health;
@@ -804,7 +804,7 @@ public class Player : Entity
         }
     }
 
-    public override void GetHurt(Entity entity, CheckAttackBoxBehaviour checkBoxBehaviour)
+    public override void GetHurt(Entity entity, CheckAttackBoxBehaviour checkBoxBehaviour, float attackValue)
     {
         if (stateCurrentName == "Player_防御")
         {
@@ -817,7 +817,7 @@ public class Player : Entity
         }
         else
         {
-            base.GetHurt(entity, checkBoxBehaviour);    //扣health
+            base.GetHurt(entity, checkBoxBehaviour, attackValue);    //扣health
             CameraShake.ShakeRecoil(new Vector3(1, 0, 0), 1f);  //镜头抖动
             受伤Canvas.Instance.PlayAnimation();        //播放受伤UI动画
             transHitFly_SourceCheckBoxBehaviour = checkBoxBehaviour;

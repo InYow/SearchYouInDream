@@ -233,6 +233,7 @@ MonoBehaviour:
     attacktype: 0
     canBreakAttackType: 0
     entity_master: {fileID: 0}
+    attackValue: 0
   transBreakStun: 0
   beingBreakStun: 0
   stateCurrentName: 

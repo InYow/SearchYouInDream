@@ -95,11 +95,20 @@ public class Enemy : Entity
     }
 
     // new version
-    public override void GetHurt(Entity entity, CheckAttackBoxBehaviour checkBoxBehaviour)
+    public override void GetHurt(Entity entity, CheckAttackBoxBehaviour checkBoxBehaviour, float attackValue)
     {
         if (!BuffContain("BFPlayerUnselected"))
         {
-            health -= entity.attackValue;
+            if (attackValue == 0f)
+            {
+                Debug.Log("entity.attackValue" + entity.attackValue);
+                health -= entity.attackValue;
+            }
+            else
+            {
+                Debug.Log("attackValue" + attackValue);
+                health -= attackValue;
+            }
             EnemyInfoUIList.instance.AddEnemyInfoUI(this); //添加敌人信息UI
 
             if (transBreakStun || beingBreakStun)

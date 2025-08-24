@@ -177,6 +177,7 @@ MonoBehaviour:
     attacktype: 0
     canBreakAttackType: 0
     entity_master: {fileID: 0}
+    attackValue: 24
 --- !u!114 &1049287761318448201
 MonoBehaviour:
   m_ObjectHideFlags: 1

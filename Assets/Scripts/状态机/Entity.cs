@@ -195,9 +195,9 @@ public class Entity : MonoBehaviour
         SkillManager.AddMono(1f);
         //CameraShake.Shake(new Vector3(1, 0, 0), 0.3f);
     }
-    public virtual void Hurt(Entity entity, CheckAttackBoxBehaviour checkBoxBehaviour)
+    public virtual void Hurt(Entity entity, CheckAttackBoxBehaviour checkBoxBehaviour, float attackValue)
     {
-        entity.GetHurt(this, checkBoxBehaviour);
+        entity.GetHurt(this, checkBoxBehaviour, attackValue);
         SkillManager.AddMono(1f);
         SkillManager.AddWonderMono(1f);
         //CameraShake.Shake(new Vector3(1, 0, 0), 0.3f);
@@ -224,11 +224,20 @@ public class Entity : MonoBehaviour
         }
     }
 
-    public virtual void GetHurt(Entity entity, CheckAttackBoxBehaviour checkBoxBehaviour)
+    public virtual void GetHurt(Entity entity, CheckAttackBoxBehaviour checkBoxBehaviour, float attackValue)
     {
         if (!BuffContain("BFPlayerUnselected"))
         {
-            health -= entity.attackValue;
+            if (attackValue == 0f)
+            {
+                Debug.Log("entity.attackValue" + entity.attackValue);
+                health -= entity.attackValue;
+            }
+            else
+            {
+                Debug.Log("attackValue" + attackValue);
+                health -= attackValue;
+            }
             GetHurtVFX();
             if (beingBreakStun)
                 CameraShake.ShakeRecoil(new Vector3(1, 0, 0), 0.3f);

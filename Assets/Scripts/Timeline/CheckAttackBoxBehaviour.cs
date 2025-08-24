@@ -12,7 +12,7 @@ public class CheckAttackBoxBehaviour : PlayableBehaviour
     public AttackType attacktype = AttackType.none;       //攻击类型描述    
     public CanBreakAttackType canBreakAttackType = CanBreakAttackType.cannot; //打断眩晕类型
     public Entity entity_master;
-
+    public float attackValue;
 
     public override void OnBehaviourPlay(Playable playable, FrameData info)
     {
@@ -48,7 +48,7 @@ public class CheckAttackBoxBehaviour : PlayableBehaviour
                 var e = col.gameObject.GetComponent<Entity>();
                 if (e != null && e != entity_master)
                 {
-                    entity_master.Hurt(e, this);
+                    entity_master.Hurt(e, this, attackValue);
                     if (e.beingBreakStun)
                     {
                         //顿帧
