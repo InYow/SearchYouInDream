@@ -14,7 +14,6 @@ public class JustDebug : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-#if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.P))
         {
             foreach (var go in gameObjects)
@@ -25,6 +24,5 @@ public class JustDebug : MonoBehaviour
                 }
             }
         }
-#endif
     }
 }
