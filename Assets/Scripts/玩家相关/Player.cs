@@ -109,12 +109,14 @@ public class Player : Entity
         base.UPCheckStateTrans();
 
         //-----------任意状态-----------
+#if UNITY_EDITOR
         //测试区
         if (Input.GetKeyDown(KeyCode.T))
         {
             StateCurrent = InstantiateState(SkillManager.GetSkillNameTestArea(0));
             return;
         }
+#endif
         //ST 硬直
         if (transStun)
         {

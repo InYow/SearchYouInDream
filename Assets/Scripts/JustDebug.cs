@@ -8,21 +8,23 @@ public class JustDebug : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+#if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.P))
         {
             foreach (var go in gameObjects)
             {
                 if (go.activeSelf == true)
-                { 
+                {
                     GameManager.Instance.player.transform.position = go.transform.Find("Point").position;
                 }
             }
         }
+#endif
     }
 }

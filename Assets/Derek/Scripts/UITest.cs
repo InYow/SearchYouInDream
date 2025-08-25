@@ -6,11 +6,12 @@ using UnityEngine;
 
 public class UITest : MonoBehaviour
 {
-    public string canvasName ="PlayerMenuCanvas";
+    public string canvasName = "PlayerMenuCanvas";
     public UIType canvasType;
     private bool gate = true;
     void Update()
     {
+#if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.C))
         {
             if (gate)
@@ -24,5 +25,6 @@ public class UITest : MonoBehaviour
                 gate = true;
             }
         }
+#endif
     }
 }

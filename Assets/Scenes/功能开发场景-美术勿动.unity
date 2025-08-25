@@ -3315,6 +3315,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 589571563}
     m_Modifications:
     - target: {fileID: 3742095662500285873, guid: 046d283750073f8469cbef1c92fa434e, type: 3}
+      propertyPath: m_SceneBindings.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3742095662500285873, guid: 046d283750073f8469cbef1c92fa434e, type: 3}
+      propertyPath: m_SceneBindings.Array.data[14].key
+      value: 
+      objectReference: {fileID: 4880805171454628939, guid: 605a8574cb7f9c245aebae57eaf737a4, type: 2}
+    - target: {fileID: 3742095662500285873, guid: 046d283750073f8469cbef1c92fa434e, type: 3}
+      propertyPath: m_SceneBindings.Array.data[15].key
+      value: 
+      objectReference: {fileID: 1760727433980049975, guid: 605a8574cb7f9c245aebae57eaf737a4, type: 2}
+    - target: {fileID: 3742095662500285873, guid: 046d283750073f8469cbef1c92fa434e, type: 3}
       propertyPath: m_SceneBindings.Array.data[11].value
       value: 
       objectReference: {fileID: 589571565}
@@ -8919,6 +8931,7 @@ MonoBehaviour:
     attacktype: 0
     canBreakAttackType: 0
     entity_master: {fileID: 0}
+    attackValue: 0
   transBreakStun: 0
   beingBreakStun: 0
   stateCurrentName: 
@@ -8955,6 +8968,7 @@ MonoBehaviour:
     attacktype: 0
     canBreakAttackType: 0
     entity_master: {fileID: 0}
+    attackValue: 0
   transDefend_Achieve: 0
   transDefend_achieve_TgtEntity: {fileID: 0}
   "eTarget_\u51FB\u7834": {fileID: 0}
@@ -9111,8 +9125,8 @@ BoxCollider2D:
   m_Offset: {x: -0.048124313, y: 0.049111724}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.4422875, y: 0.01020025}
-    oldSize: {x: 1.5637034, y: 1.828227}
+    pivot: {x: 0.4589893, y: 0.4757875}
+    oldSize: {x: 37.48062, y: 14.217054}
     newSize: {x: 3.5961828, y: 1.861711}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -15505,8 +15519,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 1096934683}
-  center: {x: 85.05, y: 5.65}
-  size: {x: 1.1, y: 0.4}
+  center: {x: -8.36, y: -6.34}
+  size: {x: 6.91, y: 6.2}
 --- !u!1 &1117490577
 GameObject:
   m_ObjectHideFlags: 0

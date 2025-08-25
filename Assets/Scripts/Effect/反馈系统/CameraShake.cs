@@ -72,9 +72,11 @@ public class CameraShake : MonoBehaviour
 
     private void Update()
     {
+#if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.M))
         {
             ShakeExplosion(new Vector3(1, 0, 0), 0.3f);
         }
+#endif
     }
 }
