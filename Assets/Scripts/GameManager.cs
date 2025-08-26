@@ -91,4 +91,9 @@ public class GameManager : MonoBehaviour
         player.StateCurrent = player.InstantiateState("Player_复活");
         player.health = player.health_Max;
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
